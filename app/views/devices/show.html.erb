@@ -1,0 +1,22 @@
+<h1>Artikeleigenschaften</h1>
+
+<%= render :partial => 'details' %>
+
+<% if @device.rental_periods.any? %>
+  <h2>Vermietzeiträume</h2>
+
+  <p>Dieser Artikel ist in folgenden Zeiträumen vermietet/ausgeliehen:</p>
+
+  <dl>
+    <% @device.rental_periods.each do |item| %>
+      <dt>vom <%= item.from_date.to_date %> bis <%= item.to_date.to_date %></dt>
+      <dd>Vermietet an <%= link_to item.client.full_name, item.client %></dd>
+    <% end %>
+  </dl>
+<% end %>
+
+<p class="bottom-actions">
+  <%= link_to 'Löschen', device_path(@device), :method => :delete, :confirm => 'WIRKLICH löschen?', :class => 'delete' %>
+  <%= link_to 'Bearbeiten', edit_device_path(@device), :class => 'edit' %>
+  <%= link_to 'Zurück zur Übersicht', devices_path, :class => 'back' %>
+</p>

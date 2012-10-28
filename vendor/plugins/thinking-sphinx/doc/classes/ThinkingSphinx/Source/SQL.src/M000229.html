@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>sql_where_clause (ThinkingSphinx::Source::SQL)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/thinking_sphinx/source/sql.rb, line 72</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sql_where_clause</span>(<span class="ruby-identifier">options</span>)
+        <span class="ruby-identifier">logic</span> = []
+        <span class="ruby-identifier">logic</span> <span class="ruby-operator">+=</span> [
+          <span class="ruby-node">&quot;#{@model.quoted_table_name}.#{quote_column(@model.primary_key_for_sphinx)} &gt;= $start&quot;</span>,
+          <span class="ruby-node">&quot;#{@model.quoted_table_name}.#{quote_column(@model.primary_key_for_sphinx)} &lt;= $end&quot;</span>
+        ] <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@index</span>.<span class="ruby-identifier">options</span>[<span class="ruby-identifier">:disable_range</span>]
+
+        <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">delta?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@index</span>.<span class="ruby-identifier">delta_object</span>.<span class="ruby-identifier">clause</span>(<span class="ruby-ivar">@model</span>, <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:delta</span>]).<span class="ruby-identifier">blank?</span>
+          <span class="ruby-identifier">logic</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{@index.delta_object.clause(@model, options[:delta])}&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-identifier">logic</span> <span class="ruby-operator">+=</span> (<span class="ruby-ivar">@conditions</span> <span class="ruby-operator">||</span> [])
+        <span class="ruby-identifier">logic</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-value">? </span><span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;WHERE #{logic.join(' AND ')}&quot;</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

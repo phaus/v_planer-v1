@@ -1,0 +1,39 @@
+<fieldset>
+  <legend>Kontaktdaten</legend>
+
+  <% f.fields_for :address do |af| %>
+    <%= render :partial => 'addresses/form', :locals => {:f => af} %>
+  <% end %>
+
+  <p>
+    <%= f.label :email, 'E-Mailadresse' %><br />
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :homepage, 'Homepage-URL' %><br />
+    <%= f.text_field :homepage %>
+  </p>
+
+  <p>
+    <%= f.label :sender_address_block, 'Absender-Adressblock für Briefe' %> (Folgende Variablen stehen zur Verfügung: &#37;name, &#37;street, &#37;postalcode, &#37;locality, &#37;country, &#37;email, &#37;homepage, &#37;phone, &#37;fax, &#37;mobile)<br />
+    <%= f.text_area :sender_address_block, :size => '50x6' %>
+  </p>
+
+  <p>
+    <%= f.label :sender_address_block, 'Absender-Adresse für Fenster in Briefumschlag' %><br />
+    <%= f.text_field :sender_address_window %>
+  </p>
+
+  <p>
+    <%= f.label :vat_id, 'Umsatzsteuer-ID' %><br />
+    <%= f.text_field :vat_id %>
+  </p>
+</fieldset>
+
+<% optional_fieldset 'Kontodaten', false do %>
+  <% f.fields_for :bank_account do |af| %>
+    <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
+  <% end %>
+<% end %>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Artikelverwaltung</title>
+    <%= stylesheet_link_tag 'scaffold' %>
+    <%= javascript_include_tag 'prototype', 'effects', 'currency', 'application' %>
+    <%= yield :javascript %>
+    <style type="text/css">
+      ul#search_result {
+        list-style: none;
+        margin: .2em;
+        padding: .2em 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="logged-in">
+      eingeloggt als <%= current_user.login %>
+    </div>
+
+    <%= main_navigation :active => 'Artikel' %>
+
+    <% aux_navigation do %>
+      <%= link_to 'Übersicht',           products_path,           :class => (params[:action] == 'index' ? 'active' : '') %>
+      <%= link_to 'Vermietung',          rentable_products_path,  :class => (params[:action] == 'rentable' ? 'active' : '') %>
+      <%= link_to 'Verkauf',             sellable_products_path,  :class => (params[:action] == 'sellable' ? 'active' : '') %>
+      <%= link_to 'Dienstleistungen',    service_products_path,   :class => (params[:action] == 'service'  ? 'active' : '') %>
+      <%= link_to 'Spesen',              expense_products_path,   :class => (params[:action] == 'expense'  ? 'active' : '') %>
+      <%= link_to 'Neuer Artikel',       new_device_path,         :class => (params[:action] == 'new' && params[:device]  ? 'active' : '')  %>
+      <%= link_to 'Neue Dienstleistung', new_service_path,        :class => (params[:action] == 'new' && params[:sercice] ? 'active' : '')  %>
+<!--       <%= link_to 'Neuer Spesenartikel', new_expense_path,        :class => (params[:action] == 'new' && params[:expense] ? 'active' : '')  %> -->
+      <% form_tag products_path, :method => :get do %>
+        <div id="search">
+          <%= label_tag :q, 'Suche' %>
+          <%= text_field_tag(:q, params['q']) %>
+          <%= image_tag('loading.gif', :id => 'spinner1', :style => 'display: none; width: 18px; height: 18px;', :class => 'small_spinner') %>
+        </div>
+      <% end %>
+
+      <% if ['index', 'rentable', 'sellable', 'service', 'devices'].include? params[:action] %>
+        <%= observe_field 'q', :frequency => 2,
+            :update   => 'products',
+            :before   => "Element.show('spinner1')",
+            :success  => "Element.hide('spinner1')",
+            :url      => url_for(:action => params[:action]),
+            :method   => :get,
+            :with     => "Form.Element.serialize('q')" %>
+      <% end %>
+    <% end %>
+
+    <div class="main_content">
+      <%= flash_message %>
+      <%= yield  %>
+    </div>
+
+    <%= footer %>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<h1><%=h @service.name %></h1>
+
+<p>
+  <b>Owner:</b>
+  <%=h @service.owner_id %>
+</p>
+
+<%= render :partial => 'details' %>
+
+<p>
+  <%= link_to 'Bearbeiten', edit_service_path(@service) %> |
+  <%= link_to 'Zurück zur Übersicht', services_path %>
+</p>

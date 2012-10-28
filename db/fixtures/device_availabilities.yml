@@ -1,0 +1,25 @@
+--- 
+device_availabilities_00001: 
+  count: "1"
+  device_id: "442"
+  value: "2010-04-15"
+device_availabilities_00002: 
+  count: "1"
+  device_id: "442"
+  value: "2010-04-16"
+device_availabilities_00003: 
+  count: "1"
+  device_id: "442"
+  value: "2010-04-17"
+device_availabilities_00004: 
+  count: "5"
+  device_id: "443"
+  value: "2010-04-28"
+device_availabilities_00005: 
+  count: "5"
+  device_id: "443"
+  value: "2010-04-29"
+device_availabilities_00006: 
+  count: "5"
+  device_id: "443"
+  value: "2010-04-30"

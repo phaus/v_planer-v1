@@ -1,0 +1,79 @@
+<% fields_for 'product[expense]', @expense do |f|%>
+  <p>
+    <%= f.label :name, 'Bezeichnung' %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description, 'Anmerkungen/Leistungsbeschreibung' %><br />
+    <%= f.text_area :description, :cols => 75, :rows => 5 %>
+  </p>
+
+  <p>Der Produktpreis berechnet sich auf der Bestellung wie Folgt: Konstante + Einheitspreis * Menge 1 * Faktor 1 * Menge 2 * Faktor 2.</p>
+
+  <fieldset style="width: 28%; float: left;">
+    <legend>Faktor 1</legend>
+    <p>
+      <%= f.label :factor1_name, 'Name' %><br />
+      <%= f.text_field :factor1_name %>
+    </p>
+    <p>
+      <%= f.label :factor1, 'Wert' %><br />
+      <%= f.text_field :factor1 %>
+    </p>
+    <p>
+      <%= f.label :unit1, 'Einheit' %><br />
+      <%= f.text_field :unit1 %>
+    </p>
+  </fieldset>
+  <fieldset style="width: 28%; float: left; margin-left: 1%;">
+    <legend>Faktor 2</legend>
+    <p>
+      <%= f.label :factor2_name, 'Name' %><br />
+      <%= f.text_field :factor2_name %>
+    </p>
+    <p>
+      <%= f.label :factor2, 'Wert' %><br />
+      <%= f.text_field :factor2 %>
+    </p>
+    <p>
+      <%= f.label :unit2, 'Einheit' %><br />
+      <%= f.text_field :unit2 %>
+    </p>
+  </fieldset>
+  <fieldset style="width: 28%; float: left; margin-left: 1%;">
+    <legend>Einheitspreis</legend>
+<!--    <p>
+      <%= f.label :factor3_name, 'Name' %><br />
+      <%= f.text_field :factor3_name %>
+    </p>-->
+    <p>
+      <%= f.label :factor3, 'Wert' %><br />
+      <%= f.text_field :factor3, :class => 'money' %>&thinsp;&euro;
+    </p>
+  </fieldset>
+  <fieldset style="width: 28%; float: left; margin-left: 1%">
+    <legend>Konstante</legend>
+    <p>
+      <%= f.label :const1_name, 'Name' %><br />
+      <%= f.text_field :const1_name%>
+    </p>
+    <p>
+      <%= f.label :const, 'Wert' %><br />
+      <%= f.text_field :const1, :class => 'money' %>&thinsp;&euro;
+    </p>
+  </fieldset>
+  <hr />
+<% end %>
+
+<% javascript_on_load do %><script>
+  function init_units() {
+    $$('.device_unit').invoke('update', $F('product_service_unit'));
+  }
+  $('product_service_unit').observe('change', init_units);
+
+  $$('.money').each(function(element) {
+    monetize(element);
+    element.observe('change', function(event) {monetize(event.element())});
+  });
+<% end %>

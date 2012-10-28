@@ -1,0 +1,30 @@
+<p>Sie sind mit folgenden Daten bei uns registriert. Sollten Sie diese Daten ändern wollen, setzen Sie sich bitte mit unserem Support-Team in Verbindung.</p>
+
+<dl>
+  <td>Firmenname</td>
+  <dd><%=h @user.company.name %></dd>
+  <td>Ansprechperson</td>
+  <dd><%= link_to h(@user.company.admin.full_name), @user.company.admin %></dd>
+  <td>Anschrift</td>
+  <dd><pre><%=h @user.company.sender_address_block %></pre></dd>
+  <td>E-Mail</td>
+  <dd><%=h @user.company.email || 'Nicht angegeben' %></dd>
+  <td>Telefon</td>
+  <dd><%=h @user.company.phone || 'Nicht angegeben' %></dd>
+  <td>Telefax</td>
+  <dd><%=h @user.company.fax || 'Nicht angegeben' %></dd>
+  <td>Steuernummer</td>
+  <dd><%=h @user.company.tax_id || 'Nicht angegeben' %></dd>
+  <td>USt-ID</td>
+  <dd><%=h @user.company.vat_id || 'Nicht angegeben' %></dd>
+</dl>
+
+<% if is_company_admin? %>
+  <p><%= link_to_remote 'Firmendaten bearbeiten',
+    :update => 'company_details',
+    :url    => edit_company_path,
+    :method => :get,
+    :after  => "new Effect.BlindDown('company_details', {duration: 0.5})",
+    :html   => {:href => edit_company_path}%>
+  </p>
+<% end %>

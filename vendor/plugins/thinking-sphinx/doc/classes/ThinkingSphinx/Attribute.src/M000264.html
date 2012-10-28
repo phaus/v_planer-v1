@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>to_select_sql (ThinkingSphinx::Attribute)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/thinking_sphinx/attribute.rb, line 91</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_select_sql</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">include_as_association?</span>
+      
+      <span class="ruby-identifier">separator</span> = <span class="ruby-identifier">all_ints?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">all_datetimes?</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@crc</span> <span class="ruby-operator">?</span> <span class="ruby-value str">','</span> <span class="ruby-operator">:</span> <span class="ruby-value str">' '</span>
+      
+      <span class="ruby-identifier">clause</span> = <span class="ruby-identifier">columns_with_prefixes</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">column</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">type</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:string</span>
+          <span class="ruby-identifier">adapter</span>.<span class="ruby-identifier">convert_nulls</span>(<span class="ruby-identifier">column</span>)
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:datetime</span>
+          <span class="ruby-identifier">adapter</span>.<span class="ruby-identifier">cast_to_datetime</span>(<span class="ruby-identifier">column</span>)
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:multi</span>
+          <span class="ruby-identifier">column</span> = <span class="ruby-identifier">adapter</span>.<span class="ruby-identifier">cast_to_datetime</span>(<span class="ruby-identifier">column</span>)   <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_many_datetimes?</span>
+          <span class="ruby-identifier">column</span> = <span class="ruby-identifier">adapter</span>.<span class="ruby-identifier">convert_nulls</span>(<span class="ruby-identifier">column</span>, <span class="ruby-value str">'0'</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_many_ints?</span>
+          <span class="ruby-identifier">column</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">column</span>
+        <span class="ruby-keyword kw">end</span>
+      }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">', '</span>)
+      
+      <span class="ruby-identifier">clause</span> = <span class="ruby-identifier">adapter</span>.<span class="ruby-identifier">crc</span>(<span class="ruby-identifier">clause</span>)                          <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@crc</span>
+      <span class="ruby-identifier">clause</span> = <span class="ruby-identifier">adapter</span>.<span class="ruby-identifier">concatenate</span>(<span class="ruby-identifier">clause</span>, <span class="ruby-identifier">separator</span>)       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">concat_ws?</span>
+      <span class="ruby-identifier">clause</span> = <span class="ruby-identifier">adapter</span>.<span class="ruby-identifier">group_concatenate</span>(<span class="ruby-identifier">clause</span>, <span class="ruby-identifier">separator</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_many?</span>
+      
+      <span class="ruby-node">&quot;#{clause} AS #{quote_column(unique_name)}&quot;</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

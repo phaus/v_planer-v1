@@ -1,0 +1,33 @@
+<p>Die hier angegebenen Kontodaten werden ausschließlich auf den Rechnungen für Ihre Kunden verwendet.</p>
+
+<p>
+  <b>Name der Bank:</b>
+  <%=h @company.bank_account.bank_name %>
+</p>
+
+<p>
+  <b>Kontobesitzer:</b>
+  <%=h @company.bank_account.registrar_name %>
+</p>
+
+<p>
+  <b>Kontonummer:</b>
+  <%=h @company.bank_account.number %>
+</p>
+
+<p>
+  <b>Bankleitzahl (BLZ):</b>
+  <%=h @company.bank_account.blz %>
+</p>
+
+<% unless @company.bank_account.iban.blank? or @company.bank_account.bic.blank? %>
+  <p>
+    <b>IBAN:</b>
+    <%=h @company.bank_account.iban %>
+  </p>
+
+  <p>
+    <b>BIC:</b>
+    <%=h @company.bank_account.bic %>
+  </p>
+<% end %>

@@ -1,0 +1,49 @@
+--- 
+unavailabilities_00006: 
+  created_at: 2010-04-20 17:44:40
+  rental_period_id: 
+  updated_at: 2010-04-20 17:44:40
+  product_stock_entry_id: "866"
+  from_date: 2010-04-28 00:00:00
+  id: "29"
+  to_date: 2010-04-30 00:00:00
+unavailabilities_00001: 
+  created_at: 2010-04-19 18:30:44
+  rental_period_id: "136"
+  updated_at: 2010-04-19 18:30:44
+  product_stock_entry_id: "859"
+  from_date: 2010-04-15 00:00:00
+  id: "15"
+  to_date: 2010-04-17 00:00:00
+unavailabilities_00002: 
+  created_at: 2010-04-20 17:44:40
+  rental_period_id: 
+  updated_at: 2010-04-20 17:44:40
+  product_stock_entry_id: "862"
+  from_date: 2010-04-28 00:00:00
+  id: "25"
+  to_date: 2010-04-30 00:00:00
+unavailabilities_00003: 
+  created_at: 2010-04-20 17:44:40
+  rental_period_id: 
+  updated_at: 2010-04-20 17:44:40
+  product_stock_entry_id: "863"
+  from_date: 2010-04-28 00:00:00
+  id: "26"
+  to_date: 2010-04-30 00:00:00
+unavailabilities_00004: 
+  created_at: 2010-04-20 17:44:40
+  rental_period_id: 
+  updated_at: 2010-04-20 17:44:40
+  product_stock_entry_id: "864"
+  from_date: 2010-04-28 00:00:00
+  id: "27"
+  to_date: 2010-04-30 00:00:00
+unavailabilities_00005: 
+  created_at: 2010-04-20 17:44:40
+  rental_period_id: 
+  updated_at: 2010-04-20 17:44:40
+  product_stock_entry_id: "865"
+  from_date: 2010-04-28 00:00:00
+  id: "28"
+  to_date: 2010-04-30 00:00:00

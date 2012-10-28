@@ -1,0 +1,24 @@
+<td class="item product_id">
+  <%= pf.hidden_field :product_id %>
+  <%= pf.hidden_field :id %>
+  <%= link_to h(pf.object.product.full_name), pf.object.product rescue pf.object.inspect %><br />
+  <%= pf.text_area :comments, :class => 'product_comments' %>
+  <%= pf.hidden_field :_destroy, :class => '_delete' %>
+</td>
+<td class="decimal item available_count">
+  <% unless pf.object.product.service? %>
+    <%= pf.object.product.availability(f.object.from_date, f.object.to_date).collect(&:last).min rescue 0 %>
+  <% end %>
+</td>
+<td class="decimal item count">
+  <%= pf.text_field :count, :title => 'Menge/Anzahl' %>
+</td>
+<td class="decimal item unit_price">
+  <%= pf.text_field :unit_price, :title => 'Netto-Einzelpreis pro Tag für diesen Artikel' %>&thinsp;&euro;
+</td>
+<td class="decimal item price">
+  <%= pf.text_field :price, :title => 'Netto-Gesamtpreis pro Tag für diesen Artikel' %>&thinsp;&euro;
+</td>
+<td class="toolbox">
+  <button type="button" class="remove_line" title="Diese Position entfernen"></button>
+</td>

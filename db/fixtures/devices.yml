@@ -1,0 +1,3248 @@
+--- 
+devices_00131: 
+  name: 4HE 57cm
+  created_at: 2010-02-13 17:41:26
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:44:41
+  weight: "11"
+  available_count: "3"
+  id: "365"
+  unit: Stk.
+  selling_price_i: "12000"
+  manufacturer: ""
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "10700"
+  image: 
+  width: 
+devices_00048: 
+  name: N-19
+  created_at: 2010-01-02 14:29:36
+  rental_price_i: "700"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:29:36
+  weight: 
+  available_count: "1"
+  id: "278"
+  unit: 
+  selling_price_i: 
+  manufacturer: Eurolite
+  height: 
+  length: 
+  description: Nebelmaschine 700W
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00103: 
+  name: Triax Kabel 50m
+  created_at: 2010-01-02 18:15:28
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-02 18:15:28
+  weight: 
+  available_count: "1"
+  id: "337"
+  unit: 
+  selling_price_i: "10000"
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: |-
+    Damar&Hagen Stecker
+    ev. verkauft an das AMG passend zu den Kameras
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00076: 
+  name: 32A CEE 25m
+  created_at: 2010-01-02 15:56:36
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:56:36
+  weight: 
+  available_count: "2"
+  id: "307"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: braun
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00160: 
+  name: .info-Domain
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "141"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "424"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Mindestlaufzeit 1 Jahr
+  buying_price_i: 
+  image: 
+  width: 
+devices_00132: 
+  name: 4HE 47cm
+  created_at: 2010-02-13 17:46:34
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:59:51
+  weight: "10"
+  available_count: "1"
+  id: "366"
+  unit: Stk.
+  selling_price_i: "8400"
+  manufacturer: ""
+  height: 
+  length: 
+  description: eingebauter Starkstromverteiler
+  buying_price_i: "7400"
+  image: 
+  width: 
+devices_00049: 
+  name: Hexacon
+  created_at: 2010-01-02 14:41:08
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:41:08
+  weight: 
+  available_count: "1"
+  id: "279"
+  unit: 
+  selling_price_i: 
+  manufacturer: Showtec
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00104: 
+  name: Triax Kabel 25m
+  created_at: 2010-01-02 18:16:18
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-02 19:46:07
+  weight: 
+  available_count: "1"
+  id: "338"
+  unit: 
+  selling_price_i: "7500"
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: |-
+    Damar&Hagen
+    ev. verkauft an das AMG passend zu den Kameras
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00077: 
+  name: 16A CEE 25m
+  created_at: 2010-01-02 15:57:21
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:57:21
+  weight: 
+  available_count: "3"
+  id: "308"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: braun
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00161: 
+  name: .name-Domain
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "166"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "423"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Mindestlaufzeit 1 Jahr
+  buying_price_i: 
+  image: 
+  width: 
+devices_00133: 
+  name: Mixercase 6HE
+  created_at: 2010-02-13 17:50:04
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:50:04
+  weight: "6"
+  available_count: "1"
+  id: "367"
+  unit: Stk
+  selling_price_i: "7400"
+  manufacturer: ""
+  height: 
+  length: 
+  description: Hybridkonsole
+  buying_price_i: "5900"
+  image: 
+  width: 
+devices_00105: 
+  name: Vox Mini
+  created_at: 2010-01-02 18:17:42
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 18:17:42
+  weight: 
+  available_count: "1"
+  id: "339"
+  unit: 
+  selling_price_i: 
+  manufacturer: MSI
+  height: 
+  length: 
+  description: USB Video Grabber
+  buying_price_i: "2500"
+  image: 
+  width: 
+devices_00078: 
+  name: 500VA
+  created_at: 2010-01-02 15:59:59
+  rental_price_i: "750"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:59:59
+  weight: 
+  available_count: "1"
+  id: "309"
+  unit: 
+  selling_price_i: 
+  manufacturer: PowerWare
+  height: 
+  length: 
+  description: 500W USV
+  buying_price_i: "5000"
+  image: 
+  width: 
+devices_00162: 
+  name: "Webspace: 50GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "3000"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "422"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 60GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00134: 
+  name: Farbfoliencase
+  created_at: 2010-02-13 17:51:58
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:51:58
+  weight: "14"
+  available_count: "1"
+  id: "368"
+  unit: Stk
+  selling_price_i: "5000"
+  manufacturer: ""
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "4000"
+  image: 
+  width: 
+devices_00106: 
+  name: Recording Rechner
+  created_at: 2010-01-02 18:18:19
+  rental_price_i: "2500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 18:18:19
+  weight: 
+  available_count: "1"
+  id: "340"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: Im Case
+  buying_price_i: "50000"
+  image: 
+  width: 
+devices_00020: 
+  name: Boxenstativ
+  created_at: 2010-01-02 13:45:43
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:45:43
+  weight: 
+  available_count: "2"
+  id: "250"
+  unit: 
+  selling_price_i: 
+  manufacturer: Stagg
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00079: 
+  name: 32A Unterverteilung
+  created_at: 2010-01-02 16:12:36
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 16:12:36
+  weight: 
+  available_count: "1"
+  id: "310"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: 1x 16A CEE Ausgang funktioniert nicht
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00163: 
+  name: "Webspace: 30GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "2000"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "421"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 40GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00135: 
+  name: Universalcase (blau)
+  created_at: 2010-02-13 17:54:04
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:54:04
+  weight: "5"
+  available_count: "1"
+  id: "369"
+  unit: Stk
+  selling_price_i: "3000"
+  manufacturer: ""
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00107: 
+  name: PAR56
+  created_at: 2010-01-03 22:46:44
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-02-13 18:08:34
+  weight: 
+  available_count: "4"
+  id: "341"
+  unit: Stk.
+  selling_price_i: 
+  manufacturer: Ultralite
+  height: 
+  length: 
+  description: |-
+    300W
+    neue Leuchtmittel liegen bei Karsten
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00021: 
+  name: Boxenstativ
+  created_at: 2010-01-02 13:47:02
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-04-14 21:03:10
+  weight: 
+  available_count: "4"
+  id: "251"
+  unit: Stk
+  selling_price_i: "0"
+  manufacturer: K&M
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00164: 
+  name: "Webspace: 20GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "1250"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "420"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 30GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00136: 
+  name: Mixercase SEG-2000AP
+  created_at: 2010-02-13 17:55:01
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:55:01
+  weight: "12"
+  available_count: "1"
+  id: "370"
+  unit: Stk
+  selling_price_i: "7500"
+  manufacturer: ""
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "1000"
+  image: 
+  width: 
+devices_00050: 
+  name: Giant Strobe 6KW
+  created_at: 2010-01-02 15:03:22
+  rental_price_i: "2500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:03:22
+  weight: 
+  available_count: "1"
+  id: "280"
+  unit: 
+  selling_price_i: 
+  manufacturer: Litecraft
+  height: 
+  length: 
+  description: DMX-5pol
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00022: 
+  name: Boxenstativ
+  created_at: 2010-01-02 13:48:17
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:48:17
+  weight: 
+  available_count: "2"
+  id: "252"
+  unit: 
+  selling_price_i: 
+  manufacturer: Monacor
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00108: 
+  name: HSC-2
+  created_at: 2010-01-04 22:26:31
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-04 22:26:31
+  weight: 
+  available_count: "1"
+  id: "342"
+  unit: 
+  selling_price_i: 
+  manufacturer: AV - Audio Video Engineering
+  height: 
+  length: 
+  description: FBAS GLI
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00165: 
+  name: Mailingliste
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "100"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "419"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: basierend auf der Mailman-Software
+  buying_price_i: 
+  image: 
+  width: 
+devices_00137: 
+  name: Truhencase 60x50x50
+  created_at: 2010-02-13 17:56:01
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:56:01
+  weight: "15"
+  available_count: "2"
+  id: "371"
+  unit: Stk
+  selling_price_i: "8499"
+  manufacturer: Casetec
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00051: 
+  name: minim F
+  created_at: 2010-01-02 15:04:17
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:04:17
+  weight: 
+  available_count: "4"
+  id: "281"
+  unit: 
+  selling_price_i: 
+  manufacturer: Strand Lighting
+  height: 
+  length: 
+  description: 500W
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00023: 
+  name: SPX 90
+  created_at: 2010-01-02 13:50:46
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:50:46
+  weight: 
+  available_count: "1"
+  id: "253"
+  unit: 
+  selling_price_i: 
+  manufacturer: Yamaha
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00109: 
+  name: UN 360
+  created_at: 2010-01-04 22:27:13
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-04 22:27:13
+  weight: 
+  available_count: "1"
+  id: "343"
+  unit: 
+  selling_price_i: 
+  manufacturer: Matthey
+  height: 
+  length: 
+  description: Video Delayer
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00166: 
+  name: "Webspace: 10GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "750"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "418"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 15GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00138: 
+  name: "Systemzugang \xC3\xBCber SSH/SFTP"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "100"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "415"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: 
+  buying_price_i: 
+  image: 
+  width: 
+devices_00024: 
+  name: SRV-3030
+  created_at: 2010-01-02 13:51:36
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:51:36
+  weight: 
+  available_count: "1"
+  id: "254"
+  unit: 
+  selling_price_i: 
+  manufacturer: Roland
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00080: 
+  name: 3-Punkt Truss 2m
+  created_at: 2010-01-02 16:21:02
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 16:21:02
+  weight: 
+  available_count: "2"
+  id: "311"
+  unit: 
+  selling_price_i: "6500"
+  manufacturer: Astralite
+  height: 
+  length: 
+  description: "ev. Verkauft an Marco Gibis f\xC3\xBCr Herdecke\r\n\
+    inkl. Bodenplatten"
+  buying_price_i: "5000"
+  image: 
+  width: 
+devices_00052: 
+  name: PAR56
+  created_at: 2010-01-02 15:06:10
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-03 22:45:49
+  weight: 
+  available_count: "3"
+  id: "282"
+  unit: 
+  selling_price_i: 
+  manufacturer: Ultralite
+  height: 
+  length: 
+  description: 300W
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00167: 
+  name: "Webspace: 5GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "500"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "417"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 15GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00139: 
+  name: Entwicklerumgebung
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "50"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "414"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enth\xC3\xA4lt: Subversion-Zugang, Redmine-Projekt. Preos gilt pro Projekt."
+  buying_price_i: 
+  image: 
+  width: 
+devices_00025: 
+  name: 166xl
+  created_at: 2010-01-02 13:52:11
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-03 22:50:01
+  weight: 
+  available_count: "1"
+  id: "255"
+  unit: 
+  selling_price_i: 
+  manufacturer: dbx
+  height: 
+  length: 
+  description: 2-Kanal Kompressor/Gate
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00081: 
+  name: 4-Punkt Truss 2m
+  created_at: 2010-01-02 16:22:30
+  rental_price_i: "750"
+  vat_rate: "19"
+  updated_at: 2010-01-02 16:22:30
+  weight: 
+  available_count: "2"
+  id: "312"
+  unit: 
+  selling_price_i: 
+  manufacturer: Prolyte
+  height: 
+  length: 
+  description: 
+  buying_price_i: "7500"
+  image: 
+  width: 
+devices_00053: 
+  name: USB-DMX Adapter
+  created_at: 2010-01-02 15:08:00
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:08:00
+  weight: 
+  available_count: "1"
+  id: "283"
+  unit: 
+  selling_price_i: 
+  manufacturer: Monacor
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00168: 
+  name: "Webspace: 100GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "5000"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "416"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 110GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00026: 
+  name: TB 202
+  created_at: 2010-01-02 13:54:18
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:54:18
+  weight: 
+  available_count: "2"
+  id: "256"
+  unit: 
+  selling_price_i: 
+  manufacturer: SM Pro Audio
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00082: 
+  name: SV-10A
+  created_at: 2010-01-02 17:06:02
+  rental_price_i: "700"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:06:02
+  weight: 
+  available_count: "1"
+  id: "316"
+  unit: 
+  selling_price_i: 
+  manufacturer: Kramer
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00054: 
+  name: PAR64
+  created_at: 2010-01-02 15:11:10
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-02-03 23:32:56
+  weight: 
+  available_count: "4"
+  id: "284"
+  unit: 
+  selling_price_i: 
+  manufacturer: Showtec
+  height: 
+  length: 
+  description: 500W
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00169: 
+  name: Neuer Artikel
+  created_at: 2010-03-15 19:09:14
+  rental_price_i: "1200"
+  vat_rate: 
+  updated_at: 2010-03-15 19:16:24
+  weight: "23"
+  available_count: "0"
+  id: "434"
+  unit: Stk
+  selling_price_i: "0"
+  manufacturer: !binary |
+    YXPDtmRrYcO2c2xrZA==
+
+  height: 
+  length: 
+  description: "asdjf \xC3\xB6asdlkf jsad\xC3\xB6flkajdsfasd f"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00027: 
+  name: Noisegate 4-fach
+  created_at: 2010-01-02 13:55:15
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:55:15
+  weight: 
+  available_count: "1"
+  id: "257"
+  unit: 
+  selling_price_i: 
+  manufacturer: Ross
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00083: 
+  name: PVM-8040 ME
+  created_at: 2010-01-02 17:06:41
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:06:41
+  weight: 
+  available_count: "1"
+  id: "317"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sony
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00055: 
+  name: Harting - 6x SchuKo
+  created_at: 2010-01-02 15:12:05
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-03 22:44:22
+  weight: 
+  available_count: "1"
+  id: "285"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00110: 
+  name: "Kabelbr\xC3\xBCcke"
+  created_at: 2010-01-04 22:28:23
+  rental_price_i: "25"
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:37:13
+  weight: 
+  available_count: "16"
+  id: "344"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: Rot, Plastik
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00028: 
+  name: DXC 2496
+  created_at: 2010-01-02 13:56:05
+  rental_price_i: "2000"
+  vat_rate: "19"
+  updated_at: 2010-02-13 18:09:33
+  weight: 
+  available_count: "0"
+  id: "258"
+  unit: Stk.
+  selling_price_i: 
+  manufacturer: Behringer
+  height: 
+  length: 
+  description: Ist bei Karsten in Wien
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00084: 
+  name: WV-5200BU/G
+  created_at: 2010-01-02 17:09:13
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:09:13
+  weight: 
+  available_count: "1"
+  id: "318"
+  unit: 
+  selling_price_i: 
+  manufacturer: Panasonic
+  height: 
+  length: 
+  description: 3x inkl. Rackmount (S/W)
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00056: 
+  name: XLR Kabel 2m
+  created_at: 2010-01-02 15:18:23
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:18:23
+  weight: 
+  available_count: "5"
+  id: "286"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: !binary |
+    d2Vpw58=
+
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00111: 
+  name: Safety 6mm, 30cm
+  created_at: 2010-01-04 22:29:19
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-04 22:29:19
+  weight: 
+  available_count: "4"
+  id: "345"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00140: 
+  name: "Webspace: 5GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "400"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "413"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 15GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00029: 
+  name: MD Recorder
+  created_at: 2010-01-02 13:56:46
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:56:46
+  weight: 
+  available_count: "1"
+  id: "259"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sony
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00085: 
+  name: SEG-2000AP
+  created_at: 2010-01-02 17:10:09
+  rental_price_i: "2000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:10:09
+  weight: 
+  available_count: "1"
+  id: "319"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sony
+  height: 
+  length: 
+  description: inkl. Case und Patchfeld
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00057: 
+  name: XLR Kabel 4m
+  created_at: 2010-01-02 15:20:25
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:20:25
+  weight: 
+  available_count: "5"
+  id: "287"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: rot
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00112: 
+  name: DMX 120 Ohm, 3-Pol
+  created_at: 2010-01-04 22:31:21
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-01-04 22:34:33
+  weight: 
+  available_count: "2"
+  id: "346"
+  unit: 
+  selling_price_i: "500"
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00141: 
+  name: .org-Domain
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "160"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "412"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Mindstlaufzeit 1 Jahr
+  buying_price_i: 
+  image: 
+  width: 
+devices_00086: 
+  name: LDK-4210
+  created_at: 2010-01-02 17:11:08
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:28:26
+  weight: 
+  available_count: "1"
+  id: "320"
+  unit: 
+  selling_price_i: 
+  manufacturer: Philipps
+  height: 
+  length: 
+  description: "f\xC3\xA4llt teilweise aus"
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00058: 
+  name: XLR 3Pol M - XLR 5Pol F
+  created_at: 2010-01-02 15:22:32
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:22:32
+  weight: 
+  available_count: "2"
+  id: "288"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: DMX Adapter
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00113: 
+  name: DMX 120 Ohm, 5-Pol
+  created_at: 2010-01-04 22:34:14
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-01-04 22:34:14
+  weight: 
+  available_count: "1"
+  id: "347"
+  unit: 
+  selling_price_i: "500"
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00170: 
+  name: asdas dasd
+  created_at: 2010-04-13 17:10:26
+  rental_price_i: "2100"
+  vat_rate: 
+  updated_at: 2010-04-13 17:10:26
+  weight: 
+  available_count: "2"
+  id: "435"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "asdasdasdalsdj "
+  buying_price_i: 
+  image: 
+  width: 
+devices_00142: 
+  name: .net-Domain
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "120"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "411"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Mindstlaufzeit 1 Jahr
+  buying_price_i: 
+  image: 
+  width: 
+devices_00087: 
+  name: 528A
+  created_at: 2010-01-02 17:11:51
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:13:26
+  weight: 
+  available_count: "1"
+  id: "321"
+  unit: 
+  selling_price_i: 
+  manufacturer: Tektronix
+  height: 
+  length: 
+  description: inkl. Rackmount
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00059: 
+  name: XLR 5Pol M - XLR 3Pol F
+  created_at: 2010-01-02 15:23:18
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:23:18
+  weight: 
+  available_count: "2"
+  id: "289"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: DMX Adapter
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00114: 
+  name: TL-WR941ND
+  created_at: 2010-01-04 22:36:53
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-04 22:36:53
+  weight: 
+  available_count: "1"
+  id: "348"
+  unit: 
+  selling_price_i: 
+  manufacturer: TP-Link
+  height: 
+  length: 
+  description: 
+  buying_price_i: "3790"
+  image: 
+  width: 
+devices_00171: 
+  name: sdakshda hdaksd
+  created_at: 2010-04-14 18:42:36
+  rental_price_i: "200"
+  vat_rate: 
+  updated_at: 2010-04-16 20:38:01
+  weight: 
+  available_count: "6"
+  id: "436"
+  unit: Stk
+  selling_price_i: "0"
+  manufacturer: wqerwerw
+  height: 
+  length: 
+  description: kajhda ksjdhsad
+  buying_price_i: 
+  image: 
+  width: 
+devices_00143: 
+  name: .com-Domain
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "120"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "410"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Mindstlaufzeit 1 Jahr
+  buying_price_i: 
+  image: 
+  width: 
+devices_00115: 
+  name: Cat 5 Kabel 5m
+  created_at: 2010-01-04 22:38:54
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-02-03 23:28:22
+  weight: 
+  available_count: "2"
+  id: "349"
+  unit: 
+  selling_price_i: "450"
+  manufacturer: InLine
+  height: 
+  length: 
+  description: rot
+  buying_price_i: "390"
+  image: 
+  width: 
+devices_00088: 
+  name: Camera Setup Switcher
+  created_at: 2010-01-02 17:13:04
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:13:04
+  weight: 
+  available_count: "2"
+  id: "322"
+  unit: 
+  selling_price_i: 
+  manufacturer: Ikegami
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00001: 
+  name: Spirit Live 16/4
+  created_at: 2010-01-02 12:45:15
+  rental_price_i: "3000"
+  vat_rate: "19"
+  updated_at: 2010-04-14 21:47:08
+  weight: 
+  available_count: "1"
+  id: "231"
+  unit: Stk.
+  selling_price_i: "0"
+  manufacturer: Soundcraft
+  height: 
+  length: 
+  description: Netzteil defekt, bei KE
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00172: 
+  name: afdskf sadkfhdsakjfa hdskfjsh
+  created_at: 2010-04-14 20:21:41
+  rental_price_i: "1200"
+  vat_rate: 
+  updated_at: 2010-04-14 20:22:36
+  weight: 
+  available_count: "5"
+  id: "437"
+  unit: Stk
+  selling_price_i: "0"
+  manufacturer: kskdjhfaskdjf
+  height: 
+  length: 
+  description: dsakfh dsalkhfkjsad fkajsdksdjhf askdjfh
+  buying_price_i: 
+  image: 
+  width: 
+devices_00144: 
+  name: .eu-Domain
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "100"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "409"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Mindestlaufzeit 1 Jahr
+  buying_price_i: 
+  image: 
+  width: 
+devices_00116: 
+  name: Cat 5 Kabel 7,5m
+  created_at: 2010-01-04 22:39:38
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-01-04 22:39:38
+  weight: 
+  available_count: "2"
+  id: "350"
+  unit: 
+  selling_price_i: "550"
+  manufacturer: InLine
+  height: 
+  length: 
+  description: !binary |
+    Z3LDvG4=
+
+  buying_price_i: "390"
+  image: 
+  width: 
+devices_00030: 
+  name: SM 58
+  created_at: 2010-01-02 13:59:53
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:59:53
+  weight: 
+  available_count: "4"
+  id: "260"
+  unit: 
+  selling_price_i: 
+  manufacturer: Shure
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00089: 
+  name: TM14-17RP
+  created_at: 2010-01-02 17:14:21
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:14:21
+  weight: 
+  available_count: "1"
+  id: "323"
+  unit: 
+  selling_price_i: 
+  manufacturer: Ikegami
+  height: 
+  length: 
+  description: "Bildr\xC3\xB6hre nicht justiert"
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00002: 
+  name: Power Mixer 749
+  created_at: 2010-01-02 12:50:48
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-02-28 18:58:36
+  weight: 
+  available_count: "1"
+  id: "232"
+  unit: Stk.
+  selling_price_i: 
+  manufacturer: Montarbo
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "20000"
+  image: 
+  width: 
+devices_00173: 
+  name: "asd fasdfasdfasdf "
+  created_at: 2010-04-14 21:07:30
+  rental_price_i: "2300"
+  vat_rate: 
+  updated_at: 2010-04-14 21:07:30
+  weight: "2"
+  available_count: "2"
+  id: "438"
+  unit: Stk
+  selling_price_i: "0"
+  manufacturer: asdasd
+  height: 
+  length: 
+  description: asdasda sd
+  buying_price_i: 
+  image: 
+  width: 
+devices_00145: 
+  name: .de-Domain
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "100"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "408"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Mindestlaufzeit 1 Jahr
+  buying_price_i: 
+  image: 
+  width: 
+devices_00117: 
+  name: MKi
+  created_at: 2010-01-19 23:05:44
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-19 23:06:26
+  weight: 
+  available_count: "1"
+  id: "351"
+  unit: Stk
+  selling_price_i: 
+  manufacturer: Sennheiser
+  height: 
+  length: 
+  description: bevorzugt HiHat, bei direkter Ausrichtung etwas Basslastig
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00003: 
+  name: Mikrofonstativ (lang)
+  created_at: 2010-01-02 12:53:07
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:23:40
+  weight: 
+  available_count: "5"
+  id: "233"
+  unit: 
+  selling_price_i: 
+  manufacturer: C.Aemon
+  height: 
+  length: 
+  description: 
+  buying_price_i: "1000"
+  image: 
+  width: 
+devices_00031: 
+  name: SM 57
+  created_at: 2010-01-02 14:00:46
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:00:46
+  weight: 
+  available_count: "3"
+  id: "261"
+  unit: 
+  selling_price_i: 
+  manufacturer: Shure
+  height: 
+  length: 
+  description: inkl. Rimmklemme
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00174: 
+  name: "asd fasdfasdfasdf "
+  created_at: 2010-04-14 21:07:36
+  rental_price_i: "2300"
+  vat_rate: 
+  updated_at: 2010-04-14 21:07:36
+  weight: "2"
+  available_count: "2"
+  id: "439"
+  unit: Stk
+  selling_price_i: "0"
+  manufacturer: asdasd
+  height: 
+  length: 
+  description: asdasda sd
+  buying_price_i: 
+  image: 
+  width: 
+devices_00146: 
+  name: "Webspace: 2GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "300"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "407"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 10GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00118: 
+  name: TR125
+  created_at: 2010-01-28 21:16:00
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:16:00
+  weight: 
+  available_count: "2"
+  id: "352"
+  unit: 
+  selling_price_i: 
+  manufacturer: JBL
+  height: 
+  length: 
+  description: |-
+    450W
+    2x 6,3mm Klinke
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00004: 
+  name: Intercom Sprechstelle
+  created_at: 2010-01-02 12:53:43
+  rental_price_i: "750"
+  vat_rate: "19"
+  updated_at: 2010-01-02 12:57:37
+  weight: 
+  available_count: "1"
+  id: "234"
+  unit: 
+  selling_price_i: 
+  manufacturer: Delta System
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00060: 
+  name: XLR Kabel 6m
+  created_at: 2010-01-02 15:29:39
+  rental_price_i: "75"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:29:39
+  weight: 
+  available_count: "27"
+  id: "291"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: !binary |
+    Z3LDvG4=
+
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00032: 
+  name: Beta 52a
+  created_at: 2010-01-02 14:01:32
+  rental_price_i: "600"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:01:32
+  weight: 
+  available_count: "1"
+  id: "262"
+  unit: 
+  selling_price_i: 
+  manufacturer: Shure
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00175: 
+  name: "asd fasdfasdfasdf "
+  created_at: 2010-04-14 21:07:49
+  rental_price_i: "2300"
+  vat_rate: 
+  updated_at: 2010-04-14 21:07:49
+  weight: "2"
+  available_count: "2"
+  id: "440"
+  unit: Stk
+  selling_price_i: "0"
+  manufacturer: asdasd
+  height: 
+  length: 
+  description: asdasda sd
+  buying_price_i: 
+  image: 
+  width: 
+devices_00147: 
+  name: "Webspace: 1GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "200"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "406"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 7GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00119: 
+  name: STV-405
+  created_at: 2010-01-28 21:17:52
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:17:52
+  weight: 
+  available_count: "1"
+  id: "353"
+  unit: 
+  selling_price_i: 
+  manufacturer: Eurolite
+  height: 
+  length: 
+  description: "Traglast: 18kg\r\n\
+    min. H\xC3\xB6he: 1,5m\r\n\
+    max. H\xC3\xB6he: 3,4m\r\n\
+    TV-Zapfen"
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00005: 
+  name: Boxenstativ
+  created_at: 2010-01-02 12:54:40
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 12:57:49
+  weight: 
+  available_count: "1"
+  id: "235"
+  unit: 
+  selling_price_i: "1000"
+  manufacturer: K&M
+  height: 
+  length: 
+  description: zum abverkauf
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00061: 
+  name: XLR Kabel 10m
+  created_at: 2010-01-02 15:30:26
+  rental_price_i: "100"
+  vat_rate: "19"
+  updated_at: 2010-01-19 23:38:44
+  weight: 
+  available_count: "26"
+  id: "292"
+  unit: Stk
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: blau
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00033: 
+  name: MCE 86N(C)S
+  created_at: 2010-01-02 14:02:32
+  rental_price_i: "600"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:02:32
+  weight: 
+  available_count: "1"
+  id: "263"
+  unit: 
+  selling_price_i: 
+  manufacturer: Beyerdynamic
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00176: 
+  name: "asd fasdfasdfasdf "
+  created_at: 2010-04-14 21:07:56
+  rental_price_i: "2300"
+  vat_rate: 
+  updated_at: 2010-04-14 21:07:56
+  weight: "2"
+  available_count: "2"
+  id: "441"
+  unit: Stk
+  selling_price_i: "0"
+  manufacturer: asdasd
+  height: 
+  length: 
+  description: asdasda sd
+  buying_price_i: 
+  image: 
+  width: 
+devices_00148: 
+  name: "Webspace: 0.5GB"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "100"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "405"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Enthaltenes Transfervolumen: 5GB"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00006: 
+  name: HD-25
+  created_at: 2010-01-02 12:56:26
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-02-13 13:48:30
+  weight: 
+  available_count: "1"
+  id: "236"
+  unit: Stk.
+  selling_price_i: 
+  manufacturer: Sennheiser
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00090: 
+  name: DVM-2000
+  created_at: 2010-01-02 17:15:37
+  rental_price_i: "2000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:15:37
+  weight: 
+  available_count: "1"
+  id: "324"
+  unit: 
+  selling_price_i: 
+  manufacturer: Blaupunkt
+  height: 
+  length: 
+  description: "Faderkn\xC3\xB6pfe fehlen\r\n\
+    Von Ulli Drechsel"
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00062: 
+  name: XLR Kabel 25m
+  created_at: 2010-01-02 15:31:29
+  rental_price_i: "250"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:31:29
+  weight: 
+  available_count: "2"
+  id: "293"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: grau
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00034: 
+  name: Messerleisten Multicore 25m
+  created_at: 2010-01-02 14:03:42
+  rental_price_i: "2000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:27:05
+  weight: 
+  available_count: "1"
+  id: "264"
+  unit: 
+  selling_price_i: 
+  manufacturer: Siemens
+  height: 
+  length: 
+  description: |-
+    inkl. Plugbox und Peitsche
+    Peitsche kaputt
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00177: 
+  name: zuruuuuuuuuuuuuuuuuuuuuuuuztrzutrz
+  created_at: 2010-04-17 15:18:24
+  rental_price_i: "4000"
+  vat_rate: 
+  updated_at: 2010-04-17 16:21:44
+  weight: 
+  available_count: 
+  id: "442"
+  unit: Stk
+  selling_price_i: "0"
+  manufacturer: ""
+  height: 
+  length: 
+  description: u rtzuz urtzu rtzu rtzu trzuuuu
+  buying_price_i: 
+  image: 
+  width: 
+devices_00149: 
+  name: Programmierarbeiten
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "6000"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "404"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Allg. Programmierarbeiten
+  buying_price_i: 
+  image: 
+  width: 
+devices_00007: 
+  name: Tonangelset
+  created_at: 2010-01-02 13:00:06
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:12:19
+  weight: 
+  available_count: "1"
+  id: "237"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: |-
+    Besteht aus:
+    t.bone SSM6
+    K&M    23770
+    beyerdynamic MCE 86N(C)S
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00091: 
+  name: DXC-M3AP
+  created_at: 2010-01-02 17:16:43
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:16:43
+  weight: 
+  available_count: "1"
+  id: "325"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sony
+  height: 
+  length: 
+  description: ohne Netzteil
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00063: 
+  name: Speakon 3m
+  created_at: 2010-01-02 15:32:19
+  rental_price_i: "200"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:32:19
+  weight: 
+  available_count: "1"
+  id: "294"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: gelb
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00035: 
+  name: 16/4 Multicore 25m
+  created_at: 2010-01-02 14:04:40
+  rental_price_i: "2500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:27:29
+  weight: 
+  available_count: "1"
+  id: "265"
+  unit: 
+  selling_price_i: 
+  manufacturer: IMG Stage Line
+  height: 
+  length: 
+  description: Stagebox defekt
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00178: 
+  name: "sdfjdsalkfjdsa lfjdsalfjds "
+  created_at: 2010-04-19 18:35:13
+  rental_price_i: "1000"
+  vat_rate: 
+  updated_at: 2010-04-19 18:35:13
+  weight: 
+  available_count: 
+  id: "443"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: sdlkfj dsalkf jds
+  buying_price_i: 
+  image: 
+  width: 
+devices_00008: 
+  name: MDS-JE330
+  created_at: 2010-01-02 13:01:44
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:01:44
+  weight: 
+  available_count: "1"
+  id: "238"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sony
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00092: 
+  name: RM-E300
+  created_at: 2010-01-02 17:17:14
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:17:14
+  weight: 
+  available_count: "1"
+  id: "326"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sony
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00064: 
+  name: Speakon 5m
+  created_at: 2010-01-02 15:33:07
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:33:07
+  weight: 
+  available_count: "1"
+  id: "295"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: rot
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00036: 
+  name: XLR Kabel 2,5m
+  created_at: 2010-01-02 14:06:51
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-02-13 12:42:58
+  weight: 
+  available_count: "10"
+  id: "266"
+  unit: Stk.
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: gelb
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00120: 
+  name: Disco- Kugel
+  created_at: 2010-01-28 21:20:12
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:20:12
+  weight: 
+  available_count: "1"
+  id: "354"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: |-
+    30cm Durchmesser
+    Kein Motor
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00093: 
+  name: PVM-270QM
+  created_at: 2010-01-02 17:18:07
+  rental_price_i: "2500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:18:07
+  weight: 
+  available_count: "4"
+  id: "327"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sony
+  height: 
+  length: 
+  description: |-
+    1x bei Jan
+    1x Werkstatt
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00065: 
+  name: Speakon 10m
+  created_at: 2010-01-02 15:33:57
+  rental_price_i: "350"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:33:57
+  weight: 
+  available_count: "2"
+  id: "296"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: blau
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00037: 
+  name: XLR Kabel 5m
+  created_at: 2010-01-02 14:07:34
+  rental_price_i: "75"
+  vat_rate: "19"
+  updated_at: 2010-02-03 23:30:54
+  weight: 
+  available_count: "10"
+  id: "267"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: rot
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00009: 
+  name: TDD-2000
+  created_at: 2010-01-02 13:03:29
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:03:29
+  weight: 
+  available_count: "1"
+  id: "239"
+  unit: 
+  selling_price_i: 
+  manufacturer: Monacor
+  height: 
+  length: 
+  description: Tape Deck
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00121: 
+  name: Vertigo
+  created_at: 2010-01-28 21:21:31
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:21:31
+  weight: 
+  available_count: "1"
+  id: "355"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: |-
+    Disco Effekt
+    2x300W
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00066: 
+  name: LS Kabel Klinke 10m
+  created_at: 2010-01-02 15:35:09
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:35:09
+  weight: 
+  available_count: "2"
+  id: "297"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: blau
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00038: 
+  name: XLR Kabel 7,5m
+  created_at: 2010-01-02 14:08:57
+  rental_price_i: "100"
+  vat_rate: "19"
+  updated_at: 2010-02-03 23:28:44
+  weight: 
+  available_count: "10"
+  id: "268"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: !binary |
+    Z3LDvG4=
+
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00094: 
+  name: DSR-200
+  created_at: 2010-01-02 17:18:59
+  rental_price_i: "6500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:18:59
+  weight: 
+  available_count: "2"
+  id: "328"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sony
+  height: 
+  length: 
+  description: Film Kreativ
+  buying_price_i: "6000"
+  image: 
+  width: 
+devices_00150: 
+  name: "Webseite: Inhalts\xC3\xA4nderungen"
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "4000"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:40
+  weight: 
+  available_count: "0"
+  id: "403"
+  unit: Stk.
+  selling_price_i: "0"
+  manufacturer: ""
+  height: 
+  length: 
+  description: "\xC3\x84nderungen am Inhalt einer Webseite, ohne neues Design oder strukturelle \xC3\x84nderungen"
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00122: 
+  name: GP8
+  created_at: 2010-01-28 21:24:25
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:24:25
+  weight: 
+  available_count: "1"
+  id: "356"
+  unit: 
+  selling_price_i: 
+  manufacturer: Roland
+  height: 
+  length: 
+  description: Guitar Effekt Prozessor
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00067: 
+  name: Klinke Kabel 6m
+  created_at: 2010-01-02 15:36:01
+  rental_price_i: "250"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:36:01
+  weight: 
+  available_count: "8"
+  id: "298"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: !binary |
+    Z3LDvG4=
+
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00039: 
+  name: XLR Kabel 10m
+  created_at: 2010-01-02 14:13:25
+  rental_price_i: "125"
+  vat_rate: "19"
+  updated_at: 2010-02-03 23:29:01
+  weight: 
+  available_count: "10"
+  id: "269"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: blau
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00095: 
+  name: Variocomb Pal Decoder
+  created_at: 2010-01-02 17:19:36
+  rental_price_i: "2000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:19:36
+  weight: 
+  available_count: "1"
+  id: "329"
+  unit: 
+  selling_price_i: 
+  manufacturer: Vistek
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00151: 
+  name: Sponsoring
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "0"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "433"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Sponsoring f\xC3\xBCr x"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00123: 
+  name: Full Coupler
+  created_at: 2010-01-28 21:29:52
+  rental_price_i: "200"
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:29:52
+  weight: 
+  available_count: "2"
+  id: "357"
+  unit: 
+  selling_price_i: 
+  manufacturer: Manfrotto
+  height: 
+  length: 
+  description: 5cm
+  buying_price_i: "2000"
+  image: 
+  width: 
+devices_00068: 
+  name: Hartingmulticore 30m
+  created_at: 2010-01-02 15:37:19
+  rental_price_i: "750"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:37:19
+  weight: 
+  available_count: "2"
+  id: "299"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: braun
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00096: 
+  name: NV-HS900
+  created_at: 2010-01-02 17:20:18
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:27:49
+  weight: 
+  available_count: "1"
+  id: "330"
+  unit: 
+  selling_price_i: 
+  manufacturer: Panasonic
+  height: 
+  length: 
+  description: S-VHS Recoder
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00152: 
+  name: Hosting Vermiet-Planer
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "5000"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "432"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: 
+  buying_price_i: 
+  image: 
+  width: 
+devices_00124: 
+  name: Full Coupler
+  created_at: 2010-01-28 21:30:34
+  rental_price_i: "100"
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:30:34
+  weight: 
+  available_count: "2"
+  id: "358"
+  unit: 
+  selling_price_i: 
+  manufacturer: Doughty
+  height: 
+  length: 
+  description: 2,5cm
+  buying_price_i: "1500"
+  image: 
+  width: 
+devices_00069: 
+  name: Hartingmulticore 10m
+  created_at: 2010-01-02 15:38:10
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:38:10
+  weight: 
+  available_count: "1"
+  id: "300"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: blau
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00097: 
+  name: BNC Kabel 1m
+  created_at: 2010-01-02 17:22:07
+  rental_price_i: "10"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:22:07
+  weight: 
+  available_count: "25"
+  id: "331"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: !binary |
+    d2Vpw58=
+
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00010: 
+  name: Blackfire
+  created_at: 2010-01-02 13:25:45
+  rental_price_i: "700"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:26:29
+  weight: 
+  available_count: "2"
+  id: "240"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sennheiser
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00153: 
+  name: Vermiet-Planer
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "22000"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "431"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Vermiet-Planungssoftware mit iCal-Export und interaktiver Kalenderansicht
+  buying_price_i: 
+  image: 
+  width: 
+devices_00125: 
+  name: Full Coupler
+  created_at: 2010-01-28 21:32:24
+  rental_price_i: "100"
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:32:24
+  weight: 
+  available_count: "1"
+  id: "359"
+  unit: 
+  selling_price_i: 
+  manufacturer: Manfrotto
+  height: 
+  length: 
+  description: 2,5cm
+  buying_price_i: "1500"
+  image: 
+  width: 
+devices_00098: 
+  name: BNC Kabel 2,5m
+  created_at: 2010-01-02 17:22:36
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-04 22:24:50
+  weight: 
+  available_count: "9"
+  id: "332"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: gelb
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00011: 
+  name: e609
+  created_at: 2010-01-02 13:27:46
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:27:52
+  weight: 
+  available_count: "1"
+  id: "241"
+  unit: 
+  selling_price_i: 
+  manufacturer: Sennheiser
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00154: 
+  name: Wartungspauschale 1h
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "1500"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "430"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "Wartungspauschale f\xC3\xBCr KLEINERE Arbeiten"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00126: 
+  name: Safety 1m
+  created_at: 2010-01-28 21:35:48
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-28 21:35:48
+  weight: 
+  available_count: "4"
+  id: "360"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: 6mm
+  buying_price_i: "500"
+  image: 
+  width: 
+devices_00040: 
+  name: D-Pack 6x10A
+  created_at: 2010-01-02 14:18:15
+  rental_price_i: "2000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:25:49
+  weight: 
+  available_count: "1"
+  id: "270"
+  unit: 
+  selling_price_i: 
+  manufacturer: Showtec
+  height: 
+  length: 
+  description: inkl. Case
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00099: 
+  name: BNC Kabel 5m
+  created_at: 2010-01-02 17:23:56
+  rental_price_i: "30"
+  vat_rate: "19"
+  updated_at: 2010-01-04 22:25:09
+  weight: 
+  available_count: "5"
+  id: "333"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: rot
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00012: 
+  name: D11
+  created_at: 2010-01-02 13:28:56
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:29:06
+  weight: 
+  available_count: "1"
+  id: "242"
+  unit: 
+  selling_price_i: 
+  manufacturer: AKG
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00155: 
+  name: iCal-Kalenderresource
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "100"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "429"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "WebDAV-Basierter Online-Kalender im iCal-Format, wahlweise kennwortgesch\xC3\xBCtzt zur privaten Nutzung oder \xC3\xB6ffentlich. Das iCal-Format wird von allen g\xC3\xA4ngigen PIM-Diensten unterst\xC3\xBCtzt (Thunderbird, iCal, KDEPIM (Korganizer), Outlook uvam.)."
+  buying_price_i: 
+  image: 
+  width: 
+devices_00127: 
+  name: Truhencase 80x40x43
+  created_at: 2010-02-13 17:28:03
+  rental_price_i: "0"
+  vat_rate: "19"
+  updated_at: 2010-02-21 15:43:13
+  weight: "12"
+  available_count: "1"
+  id: "361"
+  unit: Stk.
+  selling_price_i: "13000"
+  manufacturer: ""
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "9000"
+  image: 
+  width: 
+devices_00041: 
+  name: PAR64 Bar
+  created_at: 2010-01-02 14:19:40
+  rental_price_i: "3000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:19:40
+  weight: 
+  available_count: "2"
+  id: "271"
+  unit: 
+  selling_price_i: 
+  manufacturer: Ultralite
+  height: 
+  length: 
+  description: 4x1KW
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00013: 
+  name: Perception 170
+  created_at: 2010-01-02 13:29:35
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:29:41
+  weight: 
+  available_count: "2"
+  id: "243"
+  unit: 
+  selling_price_i: 
+  manufacturer: AKG
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00156: 
+  name: Spamfilter
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "100"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "428"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: "f\xC3\xBCr alle Konten"
+  buying_price_i: 
+  image: 
+  width: 
+devices_00128: 
+  name: Truhencase 60x40x43
+  created_at: 2010-02-13 17:36:31
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:38:32
+  weight: "10"
+  available_count: "1"
+  id: "362"
+  unit: Stk.
+  selling_price_i: 
+  manufacturer: ""
+  height: 
+  length: 
+  description: ""
+  buying_price_i: "8200"
+  image: 
+  width: 
+devices_00070: 
+  name: Farbfolien
+  created_at: 2010-01-02 15:48:59
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:48:59
+  weight: 
+  available_count: "50"
+  id: "301"
+  unit: 
+  selling_price_i: 
+  manufacturer: Lee
+  height: 
+  length: 
+  description: Diverse Farben
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00042: 
+  name: F-80Z
+  created_at: 2010-01-02 14:21:48
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:21:48
+  weight: 
+  available_count: "1"
+  id: "272"
+  unit: 
+  selling_price_i: 
+  manufacturer: Antari
+  height: 
+  length: 
+  description: Defekt, FB Eingang mit 48V versorgt
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00014: 
+  name: Stereo DI
+  created_at: 2010-01-02 13:32:10
+  rental_price_i: "200"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:32:50
+  weight: 
+  available_count: "1"
+  id: "244"
+  unit: 
+  selling_price_i: 
+  manufacturer: Behringer
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00157: 
+  name: Zusendung einer Papierrechnung
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "150"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "427"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: 
+  buying_price_i: 
+  image: 
+  width: 
+devices_00129: 
+  name: Truhencase 80x60x43
+  created_at: 2010-02-13 17:39:28
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:45:26
+  weight: "14"
+  available_count: "1"
+  id: "363"
+  unit: Stk
+  selling_price_i: "12000"
+  manufacturer: ""
+  height: 
+  length: 
+  description: inkl. Bluewheels
+  buying_price_i: "10999"
+  image: 
+  width: 
+devices_00071: 
+  name: Hazer
+  created_at: 2010-01-02 15:49:53
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:49:53
+  weight: 
+  available_count: "1"
+  id: "302"
+  unit: 
+  selling_price_i: 
+  manufacturer: Showtec
+  height: 
+  length: 
+  description: 700W
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00043: 
+  name: Lightdesk Pro 136
+  created_at: 2010-01-02 14:25:38
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:25:38
+  weight: 
+  available_count: "1"
+  id: "273"
+  unit: 
+  selling_price_i: 
+  manufacturer: Showtec
+  height: 
+  length: 
+  description: inkl. Case
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00015: 
+  name: DI aktiv
+  created_at: 2010-01-02 13:33:23
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:33:38
+  weight: 
+  available_count: "2"
+  id: "245"
+  unit: 
+  selling_price_i: 
+  manufacturer: ART
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00158: 
+  name: Consolving-SSL-Zertifikat
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "750"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "426"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Erstellung von uns signierter Client-Zertifikate auf Ihre(n) Benutzernamen zur Nutzung auf allen Consolving-Servern, inklusive Zusendung per Einschreiben auf einem USB-Stick (Preis pro Auftrag, Anzahl der Zertifikate unerheblich)
+  buying_price_i: 
+  image: 
+  width: 
+devices_00072: 
+  name: Harting Plugbox 6 Kanal
+  created_at: 2010-01-02 15:50:49
+  rental_price_i: "500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:50:49
+  weight: 
+  available_count: "3"
+  id: "303"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: In/Out
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00044: 
+  name: Strobe 200 DMX
+  created_at: 2010-01-02 14:26:52
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:26:52
+  weight: 
+  available_count: "1"
+  id: "274"
+  unit: 
+  selling_price_i: 
+  manufacturer: Stairville
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00016: 
+  name: Mikrofonstativ (Kurz)
+  created_at: 2010-01-02 13:35:25
+  rental_price_i: "200"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:35:31
+  weight: 
+  available_count: "1"
+  id: "246"
+  unit: 
+  selling_price_i: 
+  manufacturer: K&M
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00159: 
+  name: .biz-Domain
+  created_at: 2010-02-20 18:43:58
+  rental_price_i: "141"
+  vat_rate: 
+  updated_at: 2010-02-20 18:48:07
+  weight: 
+  available_count: 
+  id: "425"
+  unit: 
+  selling_price_i: 
+  manufacturer: 
+  height: 
+  length: 
+  description: Mindestlaufzeit 2 Jahre
+  buying_price_i: 
+  image: 
+  width: 
+devices_00045: 
+  name: Quadro 650W
+  created_at: 2010-01-02 14:27:32
+  rental_price_i: "700"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:28:19
+  weight: 
+  available_count: "4"
+  id: "275"
+  unit: 
+  selling_price_i: 
+  manufacturer: Ultralite
+  height: 
+  length: 
+  description: Grau
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00100: 
+  name: BNC YUV Kabel 2,5m
+  created_at: 2010-01-02 17:24:48
+  rental_price_i: "50"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:24:48
+  weight: 
+  available_count: "2"
+  id: "334"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: gelb
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00017: 
+  name: Stereoschiene
+  created_at: 2010-01-02 13:39:15
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:39:24
+  weight: 
+  available_count: "2"
+  id: "247"
+  unit: 
+  selling_price_i: 
+  manufacturer: K&M
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00073: 
+  name: Harting - 6x SchuKo
+  created_at: 2010-01-02 15:51:59
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:51:59
+  weight: 
+  available_count: "1"
+  id: "304"
+  unit: 
+  selling_price_i: "500"
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00046: 
+  name: Quadro 1 KW
+  created_at: 2010-01-02 14:28:05
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:28:05
+  weight: 
+  available_count: "4"
+  id: "276"
+  unit: 
+  selling_price_i: 
+  manufacturer: Ultralite
+  height: 
+  length: 
+  description: Schwarz
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00101: 
+  name: Box 250W
+  created_at: 2010-01-02 17:40:53
+  rental_price_i: "1000"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:41:57
+  weight: 
+  available_count: "2"
+  id: "335"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: |-
+    Selbstbau
+    Klinke Eingang
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00018: 
+  name: Mikrofonstativ (lang)
+  created_at: 2010-01-02 13:41:21
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:41:21
+  weight: 
+  available_count: "1"
+  id: "248"
+  unit: 
+  selling_price_i: 
+  manufacturer: K&M
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00074: 
+  name: Kabelmatte
+  created_at: 2010-01-02 15:53:01
+  rental_price_i: "250"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:54:01
+  weight: 
+  available_count: "4"
+  id: "305"
+  unit: 
+  selling_price_i: 
+  manufacturer: DMPW
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00130: 
+  name: 10HE 57cm
+  created_at: 2010-02-13 17:41:15
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-02-13 17:42:57
+  weight: "21"
+  available_count: "3"
+  id: "364"
+  unit: Stk
+  selling_price_i: 
+  manufacturer: ""
+  height: 
+  length: 
+  description: Amprack
+  buying_price_i: "16399"
+  image: 
+  width: 
+devices_00047: 
+  name: Lichtstativ
+  created_at: 2010-01-02 14:29:04
+  rental_price_i: 
+  vat_rate: "19"
+  updated_at: 2010-01-02 14:29:04
+  weight: 
+  available_count: "1"
+  id: "277"
+  unit: 
+  selling_price_i: "1000"
+  manufacturer: 
+  height: 
+  length: 
+  description: Querbalken defekt
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00102: 
+  name: Box 350W
+  created_at: 2010-01-02 17:41:38
+  rental_price_i: "1500"
+  vat_rate: "19"
+  updated_at: 2010-01-02 17:41:38
+  weight: 
+  available_count: "2"
+  id: "336"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: |-
+    Selbstbau
+    Klinke Eingang
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00019: 
+  name: Mikrofonstativ (lang)
+  created_at: 2010-01-02 13:42:11
+  rental_price_i: "300"
+  vat_rate: "19"
+  updated_at: 2010-01-02 13:42:11
+  weight: 
+  available_count: "8"
+  id: "249"
+  unit: 
+  selling_price_i: 
+  manufacturer: C.Aemon
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 
+devices_00075: 
+  name: Kabelmatte
+  created_at: 2010-01-02 15:53:42
+  rental_price_i: "250"
+  vat_rate: "19"
+  updated_at: 2010-01-02 15:53:42
+  weight: 
+  available_count: "2"
+  id: "306"
+  unit: 
+  selling_price_i: 
+  manufacturer: Karsten Elsner
+  height: 
+  length: 
+  description: 
+  buying_price_i: "0"
+  image: 
+  width: 

@@ -1,0 +1,40 @@
+<h1>Firma <%=h @company.name %></h1>
+
+<p>
+  <b>Ansprechpartner:</b><br />
+  <%= link_to h(@company.admin.full_name), [:admin, @company.admin] %>
+</p>
+
+<p>
+  <b>E-Mail:</b><br />
+  <%=h @company.email %>
+</p>
+
+<p>
+  <b>Telefon:</b><br />
+  <%=h @company.phone %>
+</p>
+
+<p>
+  <b>Fax:</b><br />
+  <%=h @company.fax %>
+</p>
+
+<p>
+  <b>Absender-Block für Briefe:</b><br />
+  <pre><%=h @company.sender_address_block %></pre>
+</p>
+
+<% if @company.non_main_sections.any? %>
+  <h2>Sektionen</h2>
+
+  <% @company.non_main_sections.each do |section| %>
+    <h3><%= section.name %></h3>
+    <p>...</p>
+  <% end %>
+<% end %>
+
+<p class="bottom-actions">
+  <%= link_to 'Zurück zur Übersicht', admin_companies_path, :class => 'back' %>
+</p>
+

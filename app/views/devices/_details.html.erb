@@ -1,0 +1,44 @@
+
+<p>
+  <b>Hersteller:</b>
+  <%=h @device.manufacturer %>
+</p>
+
+<p>
+  <b>Bezeichnung:</b>
+  <%=h @device.name %>
+</p>
+
+<% unless @device.description.blank? %>
+  <p>
+    <b>Anmerkungen:</b>
+    <%=h @device.description %>
+  </p>
+<% end %>
+
+<%  unless @device.weight.blank? %>
+  <p>
+    <b>Masse:</b>
+    <%=h @device.weight %>&thinsp;kg
+  </p>
+<% end %>
+
+<% if @device.is_sellable? %>
+  <p>
+    <b>Verkaufspreis:</b>
+    <%=m @device.selling_price %>
+  </p>
+<% end %>
+
+<% if @device.is_rentable?%>
+  <p>
+    <b>Vermietpreis:</b>
+    <%=m @device.rental_price %>/Tag
+  </p>
+<% end %>
+
+<p>
+  <b>Verfügbare Menge</b><br />
+  <%=h @device.available_count %>&thinsp;<%=h @device.unit %>
+</p>
+

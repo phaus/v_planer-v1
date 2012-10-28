@@ -1,0 +1,77 @@
+<p>
+  <%= f.label :name, 'Firmenname' %><br />
+  <%= f.text_field :name %>
+</p>
+
+<%= f.hidden_field :main_section_id %>
+<% f.fields_for :main_section do |af| -%>
+  <p>
+    <%= af.label :street, 'Anschrift' %><br />
+    <%= af.text_field :street %>
+  </p>
+
+  <p>
+    <%= af.label :postalcode, 'PLZ' %>/<%= af.label :locality, 'Ort' %><br />
+    <%= af.text_field :postalcode, :size => 6 %><%= af.text_field :locality %>
+  </p>
+
+  <p>
+    <%= af.label :country, 'Land' %><br />
+    <%= af.text_field :country %>
+  </p>
+
+  <p>
+    <%= af.label :sender_address_block, 'Absender-Adressblock für Briefe' %><br />
+    <%= af.text_area :sender_address_block, :size => '50x6' %>
+  </p>
+
+  <p>
+    <%= af.label :sender_address_block, 'Absender-Adresse für Fenster in Briefumschlag' %><br />
+    <%= af.text_field :sender_address_window %>
+  </p>
+
+  <p>
+    <%= af.label :email, 'E-Mailadresse' %><br />
+    <%= af.text_field :email %>
+  </p>
+
+  <p>
+    <%= af.label :homepage, 'Homepage' %><br />
+    <%= af.text_field :homepage%>
+  </p>
+
+  <p>
+    <%= af.label :phone, 'Telefonnummer' %><br />
+    <%= af.text_field :phone %>
+  </p>
+
+  <p>
+    <%= af.label :mobile, 'Mobilfunknummer' %><br />
+    <%= af.text_field :mobile %>
+  </p>
+
+  <p>
+    <%= af.label :tax_id, 'Steuernummer' %><br />
+    <%= af.text_field :tax_id %>
+  </p>
+
+  <p>
+    <%= af.label :vat_id, 'Ust.-ID' %><br />
+    <%= af.text_field :vat_id %>
+  </p>
+
+  <p>
+    <%= af.label :fax, 'Fax-Nummer' %><br />
+    <%= af.text_field :fax %>
+  </p>
+
+  <p>
+    <%= f.label :rental_process_no_format, 'Format für Vermietvorgangs-Nummern' %><br />
+    <%= f.text_field :rental_process_no_format %>
+  </p>
+
+  <p>
+    <%= f.label :selling_process_no_format, 'Format für Verkaufsvorgangs-Nummern' %><br />
+    <%= f.text_field :selling_process_no_format %>
+  </p>
+<% end -%>

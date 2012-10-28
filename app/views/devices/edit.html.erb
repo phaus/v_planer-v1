@@ -1,0 +1,76 @@
+<h1>Artikel bearbeiten</h1>
+
+<%= error_messages_for :device %>
+
+<% form_for @device do |f| %>
+  <p>
+    <%= f.label :owner_id, 'Besitzer' %><br />
+    <%= f.collection_select :owner_id, User.all, :id, :full_name %>
+  </p>
+
+  <p>
+    <%= f.label :manufacturer, 'Hersteller' %><br />
+    <%= f.text_field :manufacturer %>
+  </p>
+
+  <p>
+    <%= f.label :name, 'Anmerkungen' %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :code, 'Lager-Code' %><br />
+    <%= f.text_field :code %>
+  </p>
+
+  <p>
+    <%= f.label :description, 'Beschreibung' %><br />
+    <%= f.text_area :description, :cols => 75, :rows => 5 %>
+  </p>
+
+  <p>
+    <%= f.label :weight, 'Verfügbare Menge, Einheit' %><br />
+    <%= f.text_field :available_count, :class => 'decimal' %>&thinsp;
+    <%= f.text_field :unit, :size => 3 %>
+  </p>
+
+  <p>
+    <%= f.label :weight, 'Masse' %><br />
+    <%= f.text_field :weight, :class => 'decimal' %>&thinsp;kg/<span class="device_unit"><%= @device.unit %></span>
+  </p>
+
+  <p>
+    <%= f.label :rental_price, 'Tagesmietpreis' %><br />
+    <%= f.text_field :rental_price, :class => 'decimal' %>&thinsp;&euro;/<span class="device_unit"><%= @device.unit %></span>
+  </p>
+
+  <p>
+    <%= f.label :selling_price, 'Verkaufspreis' %><br />
+    <%= f.text_field :selling_price, :class => 'decimal' %>&thinsp;&euro;/<span class="device_unit"><%= @device.unit %></span>
+  </p>
+
+  <p>
+    <%= f.label :buying_price, 'Einkaufspreis' %><br />
+    <%= f.text_field :buying_price, :class => 'decimal' %>&thinsp;&euro;/<span class="device_unit"><%= @device.unit %></span>
+  </p>
+
+  <p>
+    <%= f.label :cagetory_ids, 'Kateorien' %><br />
+    <%= f.collection_select :category_ids, current_company.categories.all, :id, :name, {}, :multiple => true  %>
+  </p>
+
+  <p>
+    <%= f.submit 'Speichern' %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to 'Ansehen', @device %> |
+  <%= link_to 'Zurück zur Übersicht', devices_path %>
+</p>
+
+<script type="text/javascript">
+  $('device_unit').observe('change', function(event){
+    $$('.device_unit').invoke('update', $F(event.element()));
+  });
+</script>

@@ -1,0 +1,1457 @@
+--- 
+products_00170: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-33
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "202"
+  article_id: "432"
+products_00142: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-2
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "174"
+  article_id: "404"
+products_00114: 
+  created_at: 2010-02-13 10:10:12
+  code: NW-DMPW-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "114"
+  article_id: "348"
+products_00087: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-006
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "87"
+  article_id: "321"
+products_00059: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-016
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "59"
+  article_id: "289"
+products_00171: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-34
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "203"
+  article_id: "433"
+products_00143: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-3
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "175"
+  article_id: "405"
+products_00115: 
+  created_at: 2010-02-13 10:10:12
+  code: NW-DMPW-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "115"
+  article_id: "349"
+products_00088: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-007
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "88"
+  article_id: "322"
+products_00001: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-DMPW-001
+  updated_at: 2010-02-14 13:32:52
+  company_section_id: "10"
+  article_type: Device
+  id: "1"
+  article_id: "231"
+products_00172: 
+  created_at: 2010-03-15 19:09:14
+  code: skjd-s0815
+  updated_at: 2010-03-15 19:09:14
+  company_section_id: "10"
+  article_type: Device
+  id: "204"
+  article_id: "434"
+products_00144: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-4
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "176"
+  article_id: "406"
+products_00116: 
+  created_at: 2010-02-13 10:10:12
+  code: NW-DMPW-003
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "116"
+  article_id: "350"
+products_00030: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-019
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "30"
+  article_id: "260"
+products_00089: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-008
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "89"
+  article_id: "323"
+products_00002: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-DMPW-002
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "2"
+  article_id: "232"
+products_00173: 
+  created_at: 2010-04-13 17:10:26
+  code: 
+  updated_at: 2010-04-13 17:10:26
+  company_section_id: "10"
+  article_type: Device
+  id: "205"
+  article_id: "435"
+products_00145: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-5
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "177"
+  article_id: "407"
+products_00117: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-034
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "117"
+  article_id: "351"
+products_00031: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-020
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "31"
+  article_id: "261"
+products_00003: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-DMPW-003
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "3"
+  article_id: "233"
+products_00174: 
+  created_at: 2010-04-13 17:19:35
+  code: 
+  updated_at: 2010-04-13 17:19:35
+  company_section_id: "10"
+  article_type: Device
+  id: "206"
+  article_id: 
+products_00146: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-6
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "178"
+  article_id: "408"
+products_00118: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-JAPE-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "118"
+  article_id: "352"
+products_00032: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-021
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "32"
+  article_id: "262"
+products_00004: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-DMPW-004
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "4"
+  article_id: "234"
+products_00060: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-024
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "60"
+  article_id: "291"
+products_00175: 
+  created_at: 2010-04-14 18:42:36
+  code: qwrwerewr
+  updated_at: 2010-04-16 20:38:01
+  company_section_id: "10"
+  article_type: Device
+  id: "207"
+  article_id: "436"
+products_00147: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-7
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "179"
+  article_id: "409"
+products_00119: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-JAPE-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "119"
+  article_id: "353"
+products_00033: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-DMPW-010
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "33"
+  article_id: "263"
+products_00005: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-DMPW-005
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "5"
+  article_id: "235"
+products_00061: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-025
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "61"
+  article_id: "292"
+products_00176: 
+  created_at: 2010-04-14 20:21:41
+  code: sdasd
+  updated_at: 2010-04-14 20:22:36
+  company_section_id: "10"
+  article_type: Device
+  id: "208"
+  article_id: "437"
+products_00148: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-8
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "180"
+  article_id: "410"
+products_00034: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-DMPW-011
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "34"
+  article_id: "264"
+products_00006: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-DMPW-006
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "6"
+  article_id: "236"
+products_00090: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-009
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "90"
+  article_id: "324"
+products_00062: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-026
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "62"
+  article_id: "293"
+products_00177: 
+  created_at: 2010-04-14 21:07:30
+  code: sadasdasd
+  updated_at: 2010-04-14 21:07:30
+  company_section_id: "10"
+  article_type: Device
+  id: "209"
+  article_id: "438"
+products_00149: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-9
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "181"
+  article_id: "411"
+products_00035: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-DMPW-012
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "35"
+  article_id: "265"
+products_00007: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-DMPW-007
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "7"
+  article_id: "237"
+products_00091: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-010
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "91"
+  article_id: "325"
+products_00063: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-027
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "63"
+  article_id: "294"
+products_00178: 
+  created_at: 2010-04-14 21:07:36
+  code: sadasdasd
+  updated_at: 2010-04-14 21:07:36
+  company_section_id: "10"
+  article_type: Device
+  id: "210"
+  article_id: "439"
+products_00036: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-DMPW-013
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "36"
+  article_id: "266"
+products_00008: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-DMPW-008
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "8"
+  article_id: "238"
+products_00092: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-011
+  updated_at: 2010-02-13 10:19:10
+  company_section_id: "10"
+  article_type: Device
+  id: "92"
+  article_id: "327"
+products_00064: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-028
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "64"
+  article_id: "295"
+products_00179: 
+  created_at: 2010-04-14 21:07:49
+  code: sadasdasd
+  updated_at: 2010-04-14 21:07:49
+  company_section_id: "10"
+  article_type: Device
+  id: "211"
+  article_id: "440"
+products_00120: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-JAPE-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "120"
+  article_id: "354"
+products_00009: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-DMPW-009
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "9"
+  article_id: "239"
+products_00093: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-011
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "93"
+  article_id: "327"
+products_00065: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-029
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "65"
+  article_id: "296"
+products_00037: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-DMPW-014
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "37"
+  article_id: "267"
+products_00121: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-JAPE-003
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "121"
+  article_id: "355"
+products_00094: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-012
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "94"
+  article_id: "328"
+products_00066: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-030
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "66"
+  article_id: "297"
+products_00038: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-DMPW-015
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "38"
+  article_id: "268"
+products_00150: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-10
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "182"
+  article_id: "412"
+products_00122: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-JAPE-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "122"
+  article_id: "356"
+products_00095: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-013
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "95"
+  article_id: "329"
+products_00067: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-031
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "67"
+  article_id: "298"
+products_00039: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-DMPW-016
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "39"
+  article_id: "269"
+products_00151: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-11
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "183"
+  article_id: "413"
+products_00123: 
+  created_at: 2010-02-13 10:10:12
+  code: TR-DMPW-003
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "123"
+  article_id: "357"
+products_00096: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-005
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "96"
+  article_id: "330"
+products_00068: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-017
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "68"
+  article_id: "299"
+products_00180: 
+  created_at: 2010-04-14 21:07:56
+  code: sadasdasd
+  updated_at: 2010-04-14 21:07:56
+  company_section_id: "10"
+  article_type: Device
+  id: "212"
+  article_id: "441"
+products_00152: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-12
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "184"
+  article_id: "414"
+products_00124: 
+  created_at: 2010-02-13 10:10:12
+  code: TR-DMPW-004
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "124"
+  article_id: "358"
+products_00097: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-015
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "97"
+  article_id: "331"
+products_00010: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-002
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "10"
+  article_id: "240"
+products_00069: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-018
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "69"
+  article_id: "300"
+products_00181: 
+  created_at: 2010-04-17 15:18:24
+  code: ""
+  updated_at: 2010-04-17 16:21:07
+  company_section_id: "10"
+  article_type: Device
+  id: "213"
+  article_id: "442"
+products_00153: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-13
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "185"
+  article_id: "415"
+products_00125: 
+  created_at: 2010-02-13 10:10:12
+  code: TR-DMPW-005
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "125"
+  article_id: "359"
+products_00098: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-016
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "98"
+  article_id: "332"
+products_00011: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-001
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "11"
+  article_id: "241"
+products_00182: 
+  created_at: 2010-04-19 18:35:13
+  code: 
+  updated_at: 2010-04-19 18:35:13
+  company_section_id: "10"
+  article_type: Device
+  id: "214"
+  article_id: "443"
+products_00154: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-14
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "186"
+  article_id: "416"
+products_00126: 
+  created_at: 2010-02-13 10:10:12
+  code: TR-DMPW-006
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "126"
+  article_id: "360"
+products_00099: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-017
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "99"
+  article_id: "333"
+products_00012: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-003
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "12"
+  article_id: "242"
+products_00040: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "40"
+  article_id: "270"
+products_00155: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-15
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "187"
+  article_id: "417"
+products_00127: 
+  created_at: 2010-02-13 10:19:10
+  code: AT-DMPW-001
+  updated_at: 2010-02-13 10:19:10
+  company_section_id: "10"
+  article_type: Device
+  id: "128"
+  article_id: "231"
+products_00013: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-004
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "13"
+  article_id: "243"
+products_00041: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "41"
+  article_id: "271"
+products_00156: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-16
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "188"
+  article_id: "418"
+products_00128: 
+  created_at: 2010-02-13 17:28:03
+  code: CA-DMPW-001
+  updated_at: 2010-02-13 17:33:57
+  company_section_id: "10"
+  article_type: Device
+  id: "129"
+  article_id: "361"
+products_00014: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-005
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "14"
+  article_id: "244"
+products_00070: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-019
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "70"
+  article_id: "301"
+products_00042: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-003
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "42"
+  article_id: "272"
+products_00157: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-17
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "189"
+  article_id: "419"
+products_00129: 
+  created_at: 2010-02-13 17:36:31
+  code: CA-DMPW-002
+  updated_at: 2010-02-13 17:36:31
+  company_section_id: "10"
+  article_type: Device
+  id: "130"
+  article_id: "362"
+products_00015: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-006
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "15"
+  article_id: "245"
+products_00071: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-KAEL-003
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "71"
+  article_id: "302"
+products_00043: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-004
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "43"
+  article_id: "273"
+products_00158: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-18
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "190"
+  article_id: "420"
+products_00072: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-020
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "72"
+  article_id: "303"
+products_00044: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-005
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "44"
+  article_id: "274"
+products_00016: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-007
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "16"
+  article_id: "246"
+products_00159: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-19
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "191"
+  article_id: "421"
+products_00073: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-KAEL-004
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "73"
+  article_id: "304"
+products_00045: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-006
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "45"
+  article_id: "275"
+products_00100: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-018
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "100"
+  article_id: "334"
+products_00017: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-008
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "17"
+  article_id: "247"
+products_00074: 
+  created_at: 2010-02-13 10:10:12
+  code: S-DMPW-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "74"
+  article_id: "305"
+products_00046: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-007
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "46"
+  article_id: "276"
+products_00101: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-032
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "101"
+  article_id: "335"
+products_00018: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-009
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "18"
+  article_id: "248"
+products_00130: 
+  created_at: 2010-02-13 17:39:28
+  code: CA-DMPW-003
+  updated_at: 2010-02-13 17:39:28
+  company_section_id: "10"
+  article_type: Device
+  id: "131"
+  article_id: "363"
+products_00075: 
+  created_at: 2010-02-13 10:10:12
+  code: S-KAEL-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "75"
+  article_id: "306"
+products_00047: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-008
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "47"
+  article_id: "277"
+products_00102: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-033
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "102"
+  article_id: "336"
+products_00019: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-010
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "19"
+  article_id: "249"
+products_00131: 
+  created_at: 2010-02-13 17:41:15
+  code: CA-DMPW-004
+  updated_at: 2010-02-13 17:43:25
+  company_section_id: "10"
+  article_type: Device
+  id: "132"
+  article_id: "364"
+products_00076: 
+  created_at: 2010-02-13 10:10:12
+  code: ST-KAEL-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "76"
+  article_id: "307"
+products_00048: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-010
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "48"
+  article_id: "278"
+products_00103: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-019
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "103"
+  article_id: "337"
+products_00160: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-20
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "192"
+  article_id: "422"
+products_00132: 
+  created_at: 2010-02-13 17:41:26
+  code: CA-DMPW-005
+  updated_at: 2010-02-13 17:41:26
+  company_section_id: "10"
+  article_type: Device
+  id: "133"
+  article_id: "365"
+products_00077: 
+  created_at: 2010-02-13 10:10:12
+  code: ST-KAEL-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "77"
+  article_id: "308"
+products_00049: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-011
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "49"
+  article_id: "279"
+products_00104: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-022
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "104"
+  article_id: "338"
+products_00161: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-21
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "193"
+  article_id: "423"
+products_00133: 
+  created_at: 2010-02-13 17:46:34
+  code: CA-DMPW-006
+  updated_at: 2010-02-13 17:46:34
+  company_section_id: "10"
+  article_type: Device
+  id: "134"
+  article_id: "366"
+products_00078: 
+  created_at: 2010-02-13 10:10:12
+  code: ST-DMPW-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "78"
+  article_id: "309"
+products_00105: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-020
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "105"
+  article_id: "339"
+products_00162: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-22
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "194"
+  article_id: "424"
+products_00134: 
+  created_at: 2010-02-13 17:50:04
+  code: CA-DMPW-007
+  updated_at: 2010-02-13 17:50:04
+  company_section_id: "10"
+  article_type: Device
+  id: "135"
+  article_id: "367"
+products_00106: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-021
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "106"
+  article_id: "340"
+products_00020: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-011
+  updated_at: 2010-02-13 10:19:10
+  company_section_id: "10"
+  article_type: Device
+  id: "20"
+  article_id: "251"
+products_00079: 
+  created_at: 2010-02-13 10:10:12
+  code: ST-DMPW-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "79"
+  article_id: "310"
+products_00163: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-23
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "195"
+  article_id: "425"
+products_00135: 
+  created_at: 2010-02-13 17:51:58
+  code: CA-DMPW-007
+  updated_at: 2010-02-13 17:51:58
+  company_section_id: "10"
+  article_type: Device
+  id: "136"
+  article_id: "368"
+products_00107: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-KAEL-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "107"
+  article_id: "341"
+products_00021: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-011
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "21"
+  article_id: "251"
+products_00164: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-24
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "196"
+  article_id: "426"
+products_00136: 
+  created_at: 2010-02-13 17:54:04
+  code: CA-DMPW-008
+  updated_at: 2010-02-13 17:54:04
+  company_section_id: "10"
+  article_type: Device
+  id: "137"
+  article_id: "369"
+products_00108: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-023
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "108"
+  article_id: "342"
+products_00050: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-012
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "50"
+  article_id: "280"
+products_00022: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-012
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "22"
+  article_id: "252"
+products_00165: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-25
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "197"
+  article_id: "427"
+products_00137: 
+  created_at: 2010-02-13 17:55:01
+  code: CA-DMPW-009
+  updated_at: 2010-02-13 17:55:01
+  company_section_id: "10"
+  article_type: Device
+  id: "138"
+  article_id: "370"
+products_00109: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-024
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "109"
+  article_id: "343"
+products_00051: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-013
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "51"
+  article_id: "281"
+products_00023: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-013
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "23"
+  article_id: "253"
+products_00166: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-26
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "198"
+  article_id: "428"
+products_00138: 
+  created_at: 2010-02-13 17:56:01
+  code: CA-DMPW-010
+  updated_at: 2010-02-13 17:56:01
+  company_section_id: "10"
+  article_type: Device
+  id: "139"
+  article_id: "371"
+products_00052: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-KAEL-001
+  updated_at: 2010-02-13 10:19:10
+  company_section_id: "10"
+  article_type: Device
+  id: "52"
+  article_id: "341"
+products_00024: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-014
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "24"
+  article_id: "254"
+products_00080: 
+  created_at: 2010-02-13 10:10:12
+  code: TR-DMPW-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "80"
+  article_id: "311"
+products_00167: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-27
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "199"
+  article_id: "429"
+products_00139: 
+  created_at: 2010-02-20 14:12:00
+  code: 0815-foobar
+  updated_at: 2010-02-20 14:12:00
+  company_section_id: "10"
+  article_type: Service
+  id: "140"
+  article_id: "2"
+products_00053: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-KAEL-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "53"
+  article_id: "283"
+products_00025: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-015
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "25"
+  article_id: "255"
+products_00081: 
+  created_at: 2010-02-13 10:10:12
+  code: TR-DMPW-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "81"
+  article_id: "312"
+products_00168: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-29
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "200"
+  article_id: "430"
+products_00054: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-014
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "54"
+  article_id: "284"
+products_00026: 
+  created_at: 2010-02-13 10:10:11
+  code: AT-KAEL-016
+  updated_at: 2010-02-13 10:10:11
+  company_section_id: "10"
+  article_type: Device
+  id: "26"
+  article_id: "256"
+products_00082: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-001
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "82"
+  article_id: "316"
+products_00169: 
+  created_at: 2010-02-20 18:43:58
+  code: WH-32
+  updated_at: 2010-02-20 18:43:58
+  company_section_id: "13"
+  article_type: Device
+  id: "201"
+  article_id: "431"
+products_00055: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-021
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "55"
+  article_id: "285"
+products_00110: 
+  created_at: 2010-02-13 10:10:12
+  code: S-DMPW-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "110"
+  article_id: "344"
+products_00027: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-017
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "27"
+  article_id: "257"
+products_00083: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-002
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "83"
+  article_id: "317"
+products_00056: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-022
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "56"
+  article_id: "286"
+products_00111: 
+  created_at: 2010-02-13 10:10:12
+  code: S-DMPW-003
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "111"
+  article_id: "345"
+products_00028: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-018
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "28"
+  article_id: "258"
+products_00084: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-003
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "84"
+  article_id: "318"
+products_00140: 
+  created_at: 2010-02-20 14:12:34
+  code: 2342-foobar
+  updated_at: 2010-02-20 14:12:34
+  company_section_id: "10"
+  article_type: Service
+  id: "141"
+  article_id: "3"
+products_00057: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-023
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "57"
+  article_id: "287"
+products_00112: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-022
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "112"
+  article_id: "346"
+products_00029: 
+  created_at: 2010-02-13 10:10:12
+  code: AT-KAEL-019
+  updated_at: 2010-02-13 10:19:10
+  company_section_id: "10"
+  article_type: Device
+  id: "29"
+  article_id: "260"
+products_00085: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-004
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "85"
+  article_id: "319"
+products_00141: 
+  created_at: 2010-02-20 18:43:58
+  code: WD-0001
+  updated_at: 2010-02-20 18:48:40
+  company_section_id: "13"
+  article_type: Device
+  id: "173"
+  article_id: "403"
+products_00113: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-023
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "113"
+  article_id: "347"
+products_00086: 
+  created_at: 2010-02-13 10:10:12
+  code: VT-DMPW-014
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "86"
+  article_id: "320"
+products_00058: 
+  created_at: 2010-02-13 10:10:12
+  code: LT-DMPW-015
+  updated_at: 2010-02-13 10:10:12
+  company_section_id: "10"
+  article_type: Device
+  id: "58"
+  article_id: "288"

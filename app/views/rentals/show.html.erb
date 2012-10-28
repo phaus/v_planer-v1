@@ -1,0 +1,182 @@
+<h1>Vermiet-Vorgang <%= @rental.process_no %>: <%= @rental.title %></h1>
+
+<h2>Angebot</h2>
+
+<div style="float: right; width: 50%" class="full_width_input">
+  <% form_for [:remarks, @rental] do |f| %>
+    <%= f.label :remarks, 'Anmerkungen:' %><br />
+    <%= f.text_area :remarks, :size => '50x10', :class => 'initial' %>
+  <% end %>
+</div>
+
+<dl>
+  <dt>VG-Nr.:</dt>
+  <dd><%=h @rental.process_no %></dd>
+
+  <dt>Kunde:</dt>
+  <dd><%= link_to h(@rental.client.full_name), @rental.client %></dd>
+
+  <dt>Von:</dt>
+  <dd><%=h @rental.begin.to_date %></dd>
+
+  <dt>Bis:</dt>
+  <dd><%=h @rental.end.to_date %></dd>
+
+  <dt>Nutzungsdauer:</dt>
+  <dd><%=h @rental.duration %> Tage, davon abgerechnet: <%=h @rental.billed_duration %> Tage</dd>
+
+  <dt>Status:</dt>
+  <dd><%=h @rental.workflow_state %></dd>
+
+  <% if @process.invoice %>
+    <dt>Rechnungsdatum:</dt>
+    <dd><%= @process.invoice.date %></dd>
+
+    <dt>Rechnungs-Nr.:</dt>
+    <dd><%= @process.invoice.invoice_no %></dd>
+  <% end %>
+</p>
+
+<hr />
+
+<h2>Vermietete Artikel</h2>
+
+<table class="data" style="width: 100%">
+  <thead>
+    <tr>
+      <th>Anz.</th>
+      <th colspan="2">Artikel/Anmerkungen</th>
+      <th>Einzelpreis</th>
+      <th>Dauer</th>
+      <th>Gesamt</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rental.device_items.each do |item| %>
+      <tr class="<%= cycle 'odd', 'even' %>">
+        <td class="decimal">
+          <%= item.count %> x
+        </td>
+        <td colspan="2">
+          <%= link_to item.product.full_name, item.product %><br />
+          <em><%=h item.comments %></em>
+        </td>
+        <td class="money">
+          <%= m item.unit_price %>/<%= item.product.unit %>
+        </td>
+        <td class="decimal">
+          <%= item.billed_duration %>&thinsp;<%= item.unit %>
+        </td>
+        <td class="money">
+          <%= m item.price %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <th colspan="4">Zwischensumme Artikel</th>
+      <td></td>
+      <td class="money"><%= m @rental.device_sum %></td>
+    </tr>
+  </tfoot>
+</table>
+
+<% unless @rental.service_items.empty? %>
+  <%= render :partial => 'service_items/show' %>
+<% end %>
+
+<table class="data" style="width: 100%; margin-top: 1em;">
+  <tfoot>
+    <tr>
+      <th colspan="4">Summe</th>
+      <td></td>
+      <td class="money"><%= m @rental.sum %></td>
+    </tr>
+    <% if @rental.client_discount.to_f != 0.0 %>
+      <tr>
+        <th colspan="4">Kundenrabatt</th>
+        <td class="decimal"><%= @rental.client_discount_percent %>&thinsp;% </td>
+        <td class="money"><%= m @rental.client_discount %></td>
+      </tr>
+    <% end %>
+    <% if @rental.discount.to_f != 0.0 %>
+      <tr>
+        <th colspan="4">Auftragsrabatt</th>
+        <td></td>
+        <td class="money"><%= m @rental.discount %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <th colspan="4">Total Netto</th>
+      <td></td>
+      <td class="money"><%= m @rental.net_total_price %></td>
+    </tr>
+    <tr>
+      <th colspan="4">zzgl. MwSt.</th>
+      <td class="decimal">19,00&thinsp;%</td>
+      <td class="money"><%= m @rental.vat %></td>
+    </tr>
+    <tr>
+      <th colspan="4">Total Brutto</th>
+      <td></td>
+      <td class="money"><%= m @rental.gross_total_price %></td>
+    </tr>
+  </tfoot>
+</table>
+
+<p class="bottom-actions">
+  <%= link_to 'Angebot (PDF)', offer_rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+  <% if @rental.new? %>
+    <%= link_to 'Bearbeiten', edit_rental_path(@rental), :class => 'edit' %>
+    <%= link_to 'Annehmen', rental_path(@rental, 'rental[action]' => 'accept'), :class => 'accept', :method => :put %>
+    <%= link_to 'Ablehnen', rental_path(@rental, 'rental[action]' => 'reject'), :class => 'reject', :method => :put %>
+  <% elsif @rental.accepted? %>
+    <%= link_to 'Leihschein (PDF)', rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Packschein (PDF)', packing_note_rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Auftragsbestätigung (PDF)', offer_confirmation_rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Bearbeiten', edit_rental_path(@rental), :class => 'edit' %>
+    <%= link_to 'Rechnung erstellen', new_rental_invoice_path(@rental), :class => 'invoice' %>
+    <%= link_to 'Ablehnen', rental_path(@rental, 'rental[action]' => 'reject'), :class => 'reject', :method => :put %>
+  <% elsif @rental.billed? %>
+    <%= link_to 'Leihschein (PDF)', rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Packschein (PDF)', packing_note_rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Auftragsbestätigung (PDF)', offer_confirmation_rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Rechnung (PDF)', rental_invoice_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Bezahlung Eingetroffen', rental_path(@rental, 'rental[action]' => 'receive_payment'), :class => 'receive_payment', :method => :put %>
+  <% elsif @rental.payed? %>
+    <%= link_to 'Leihschein (PDF)', rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Packschein (PDF)', packing_note_rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Auftragsbestätigung (PDF)', offer_confirmation_rental_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Rechnung (PDF)', rental_invoice_path(@rental, :format => 'pdf'), :class => 'pdf' %>
+  <% elsif @rental.rejected? %>
+    <%= link_to 'Annehmen', rental_path(@rental, 'rental[action]' => 'accept'), :class => 'accept', :method => :put %>
+  <% end %>
+
+  <% unless @rental.closed? %>
+    <%= link_to 'Schließen', rental_path(@rental, 'rental[action]' => 'close'), :method => :put, :confirm => 'Nach dem Schließen kann ein Vorgang nicht mehr verändert werden. Vorgang wirklich schließen?', :class => 'close' %>
+  <% end %>
+  <%= link_to 'Löschen', rental_path(@rental), :method => :delete, :confirm => 'wirklich löschen?', :class => 'delete' %>
+  <%= link_to 'Zurück zur Übersicht', rentals_path, :class => 'back' %>
+</p>
+
+<p class="alternative_formats">
+  Alternative Formate:
+  <%= link_to image_tag('icons_16/application-pdf.png') + ' PDF (Druckansicht)', :format => 'pdf' %>
+</p>
+
+<% javascript_on_load do %><script>
+$('rental_remarks').observe('focus', function(event) {
+  event.element().removeClassName('saved');
+});
+
+$('rental_remarks').observe('change', function(event) {
+  event.element().up('form').request({
+    onSuccess: function(response) {
+      $('rental_remarks').addClassName('saved');
+    }
+  });
+});
+<% end %>

@@ -1,0 +1,35 @@
+<h1>Firmen</h1>
+
+<table class="data">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ansprechpartner</th>
+      <th>Adresse</th>
+      <th>Telefon</th>
+      <th>E-Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr class="<%= cycle 'odd', 'even' %>">
+        <td><%=h company.name %></td>
+        <td><%= link_to h(company.admin.full_name), [:admin, company.admin] rescue 'KEIN ANSPRECHPARTNER ANGEGEBEN' %></td>
+        <td><pre><%=h company.sender_address_block rescue 'SHIT HAPPENS!'  %></pre></td>
+        <td><%=h company.phone rescue 'SHIT HAPPENS!' %></td>
+        <td><%=h company.email rescue 'SHIT HAPPENS!' %></td>
+        <td>
+          <ul class="toolchain">
+            <li><%= link_to image_tag('icons_16/contents.png'), [:admin, company] %></li>
+            <li><%= link_to image_tag('icons_16/edit.png'), edit_admin_company_path(company) %></li>
+            <li><%= link_to image_tag('icons_16/editdelete.png'), [:admin, company], :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete %></li>
+          </ul>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p class="bottom-actions">
+  <%= link_to 'Neue Firma', new_admin_company_path, :class => 'new' %>
+</p>

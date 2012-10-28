@@ -1,0 +1,49 @@
+<h1>Rechnungen für Monat <%= @from_date.strftime '%m-%Y' %></h1>
+
+<p>
+  <%= link_to '<<< Vormonat',   :from_date => @from_date.last_month %>
+  <%= link_to 'Folgemonat >>>', :from_date => @from_date.next_month %>
+</p>
+
+<% if @invoices.any? %>
+  <table class="data" style="width: 100%">
+    <thead>
+      <tr>
+        <th>Re-Nr.</th>
+        <th>Titel</th>
+        <th>Vorgang</th>
+        <th>Datum</th>
+        <th>Kunde</th>
+        <th>Bearbeiter</th>
+        <th>Brutto-Preis</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @invoices.each do |invoice| %>
+        <tr class="<%= cycle 'odd', 'even' %>">
+          <td class="decimal"><%= link_to invoice.invoice_no, invoice %></td>
+          <td class="decimal"><%= link_to invoice.process.title, invoice rescue 'OOPS' %></td>
+          <td class="decimal"><%= link_to(invoice.process.process_no, invoice.process) rescue 'OOPS' %></td>
+          <td><%=h invoice.date %></td>
+          <td><%= link_to h(invoice.client.full_name), invoice.client %></td>
+          <td><%= link_to h(invoice.user.full_name), invoice.user %></td>
+          <td class="money"><%= m invoice.price %></td>
+          <td>
+            <ul class="toolchain">
+              <li><%= link_to image_tag('icons_16/goto.png'), invoice %></li>
+            </ul>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="6">Summe</th>
+        <td class="money"><%=m @invoices.collect(&:price).sum %></td>
+      </tr>
+    </tfoot>
+  </table>
+<% else %>
+  <p>Noch keine Rechnungen für diesen Monat angelegt.</p>
+<% end %>
+

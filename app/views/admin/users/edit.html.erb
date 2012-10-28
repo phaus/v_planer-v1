@@ -1,0 +1,38 @@
+<h1>Benutzerkonto bearbeiten</h1>
+
+<% form_for([:admin, @user]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :company_section_id, 'Firmen-Sektion' %><br />
+    <%= f.collection_select :company_section_id, CompanySection.all, :id, :full_name %>
+  </p>
+  <p>
+    <%= f.label :forename, 'Vorname' %><br />
+    <%= f.text_field :forename %>
+  </p>
+  <p>
+    <%= f.label :surname, 'Familienname' %><br />
+    <%= f.text_field :surname %>
+  </p>
+  <p>
+    <%= f.label :login, 'Benutzername' %><br />
+    <%= f.text_field :login %>
+  </p>
+  <p>
+    <%= f.label :password, 'Kennwort' %> (nur angeben, wenn dieses geändert werden soll)<br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, 'Kennwortbestätigung' %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.submit 'abschicken' %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to 'Ansehen', [:admin, @user] %> |
+  <%= link_to 'Zurück zur Übersicht', admin_users_path %>
+</p>

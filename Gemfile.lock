@@ -1,0 +1,52 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    actionmailer (2.3.14)
+      actionpack (= 2.3.14)
+    actionpack (2.3.14)
+      activesupport (= 2.3.14)
+      rack (~> 1.1.0)
+    activerecord (2.3.14)
+      activesupport (= 2.3.14)
+    activeresource (2.3.14)
+      activesupport (= 2.3.14)
+    activesupport (2.3.14)
+    authlogic (2.1.6)
+      activesupport
+    fastercsv (1.5.4)
+    mysql (2.8.1)
+    nokogiri (1.5.0)
+    rack (1.1.2)
+    rack-test (0.6.1)
+      rack (>= 1.0)
+    rails (2.3.14)
+      actionmailer (= 2.3.14)
+      actionpack (= 2.3.14)
+      activerecord (= 2.3.14)
+      activeresource (= 2.3.14)
+      activesupport (= 2.3.14)
+      rake (>= 0.8.3)
+    rake (0.8.7)
+    rdoc (2.4.2)
+    sass (3.1.12)
+    vpim (0.695)
+    webrat (0.7.3)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
+    workflow (0.8.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  authlogic
+  fastercsv
+  mysql
+  rails (~> 2.3.5)
+  rake
+  rdoc (= 2.4.2)
+  sass
+  vpim
+  webrat
+  workflow

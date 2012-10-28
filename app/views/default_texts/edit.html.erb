@@ -1,0 +1,24 @@
+<h1>Text bearbeiten</h1>
+
+<% form_for(@default_text) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, 'Schlüssel' %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :value, 'Wert' %><br />
+    <%= f.text_area :value %>
+  </p>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<p class="bottom-actions">
+  <%= link_to 'Show', @default_text, :class => 'show' %>
+  <%= link_to 'Back', default_texts_path, :class => 'back' %>
+</p>

@@ -1,0 +1,14 @@
+<p>
+  <b>Name:</b>
+  <%=h @user.full_name %>
+</p>
+
+<p>
+  <b>Benutzername:</b>
+  <%=h @user.login %>
+</p>
+
+<p>
+  <%= link_to 'Bearbeiten', edit_admin_user_path(@user) %> |
+  <%= link_to 'Zurück zur Übersicht', admin_users_path %>
+</p>

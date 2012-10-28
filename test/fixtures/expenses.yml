@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  factor1: 1
+  factor2: 1
+  factor3: 1
+  unit1: MyString
+  unit2: MyString
+  unit3: MyString
+
+two:
+  name: MyString
+  description: MyString
+  factor1: 1
+  factor2: 1
+  factor3: 1
+  unit1: MyString
+  unit2: MyString
+  unit3: MyString

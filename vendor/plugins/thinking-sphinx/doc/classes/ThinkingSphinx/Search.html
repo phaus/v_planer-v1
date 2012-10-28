@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: ThinkingSphinx::Search</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">ThinkingSphinx::Search</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/thinking_sphinx/search_rb.html">
+                lib/thinking_sphinx/search.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Once you&#8216;ve got those <a href="Search.html#M000145">indexes</a> in
+and built, this is the stuff that matters - how to search! This class
+provides a generic <a href="Search.html#M000124">search</a> interface -
+which you can use to <a href="Search.html#M000124">search</a> all your
+indexed models at once. Most times, you will just want a specific
+model&#8216;s <a href="Search.html#M000134">results</a> - to <a
+href="Search.html#M000124">search</a> and <a
+href="Search.html#M000125">search_for_ids</a> methods will do the job in
+exactly the same manner when called from a model.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000127">count</a>&nbsp;&nbsp;
+      <a href="#M000137">current_page</a>&nbsp;&nbsp;
+      <a href="#M000147">each_with_group_and_count</a>&nbsp;&nbsp;
+      <a href="#M000146">each_with_groupby_and_count</a>&nbsp;&nbsp;
+      <a href="#M000148">each_with_weighting</a>&nbsp;&nbsp;
+      <a href="#M000149">excerpt_for</a>&nbsp;&nbsp;
+      <a href="#M000128">facets</a>&nbsp;&nbsp;
+      <a href="#M000132">freeze</a>&nbsp;&nbsp;
+      <a href="#M000145">indexes</a>&nbsp;&nbsp;
+      <a href="#M000129">matching_fields</a>&nbsp;&nbsp;
+      <a href="#M000135">method_missing</a>&nbsp;&nbsp;
+      <a href="#M000130">new</a>&nbsp;&nbsp;
+      <a href="#M000138">next_page</a>&nbsp;&nbsp;
+      <a href="#M000144">offset</a>&nbsp;&nbsp;
+      <a href="#M000142">page_count</a>&nbsp;&nbsp;
+      <a href="#M000140">per_page</a>&nbsp;&nbsp;
+      <a href="#M000133">populated?</a>&nbsp;&nbsp;
+      <a href="#M000139">previous_page</a>&nbsp;&nbsp;
+      <a href="#M000136">respond_to?</a>&nbsp;&nbsp;
+      <a href="#M000134">results</a>&nbsp;&nbsp;
+      <a href="#M000124">search</a>&nbsp;&nbsp;
+      <a href="#M000150">search</a>&nbsp;&nbsp;
+      <a href="#M000126">search_for_id</a>&nbsp;&nbsp;
+      <a href="#M000125">search_for_ids</a>&nbsp;&nbsp;
+      <a href="#M000131">to_a</a>&nbsp;&nbsp;
+      <a href="#M000143">total_entries</a>&nbsp;&nbsp;
+      <a href="#M000141">total_pages</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">CoreMethods</td>
+          <td>=</td>
+          <td class="context-item-value">%w( == class class_eval extend frozen? id instance_eval       instance_of? instance_values instance_variable_defined?       instance_variable_get instance_variable_set instance_variables is_a?       kind_of? member? method methods nil? object_id respond_to? send should       type )</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">SafeMethods</td>
+          <td>=</td>
+          <td class="context-item-value">%w( partition private_methods protected_methods       public_methods send class )</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">HashOptions</td>
+          <td>=</td>
+          <td class="context-item-value">[:conditions, :with, :without, :with_all]</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">ArrayOptions</td>
+          <td>=</td>
+          <td class="context-item-value">[:classes, :without_ids]</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">args</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">options</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000127" class="method-detail">
+        <a name="M000127"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000127.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000127.html');return false;">
+          <span class="method-name">count</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Deprecated. Use ThinkingSphinx.count
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000128" class="method-detail">
+        <a name="M000128"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000128.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000128.html');return false;">
+          <span class="method-name">facets</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Deprecated. Use ThinkingSphinx.facets
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000129" class="method-detail">
+        <a name="M000129"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000129.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000129.html');return false;">
+          <span class="method-name">matching_fields</span><span class="method-args">(fields, bitmask)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000130" class="method-detail">
+        <a name="M000130"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000130.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000130.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000124" class="method-detail">
+        <a name="M000124"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000124.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000124.html');return false;">
+          <span class="method-name">search</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Deprecated. Use ThinkingSphinx.search
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000126" class="method-detail">
+        <a name="M000126"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000126.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000126.html');return false;">
+          <span class="method-name">search_for_id</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Deprecated. Use ThinkingSphinx.search_for_ids
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000125" class="method-detail">
+        <a name="M000125"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000125.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000125.html');return false;">
+          <span class="method-name">search_for_ids</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Deprecated. Use ThinkingSphinx.search_for_ids
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000137" class="method-detail">
+        <a name="M000137"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000137.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000137.html');return false;">
+          <span class="method-name">current_page</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The current page number of the result set. Defaults to 1 if no page was
+explicitly requested.
+</p>
+<p>
+@return [Integer]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000147" class="method-detail">
+        <a name="M000147"></a>
+
+        <div class="method-heading">
+          <span class="method-name">each_with_group_and_count</span><span class="method-args">(&amp;block)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Search.html#M000146">each_with_groupby_and_count</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000146" class="method-detail">
+        <a name="M000146"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000146.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000146.html');return false;">
+          <span class="method-name">each_with_groupby_and_count</span><span class="method-args">() {|self[index], match[:attributes][&quot;@groupby&quot;], match[:attributes][&quot;@count&quot;]| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000148" class="method-detail">
+        <a name="M000148"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000148.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000148.html');return false;">
+          <span class="method-name">each_with_weighting</span><span class="method-args">() {|self[index], match[:weight]| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000149" class="method-detail">
+        <a name="M000149"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000149.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000149.html');return false;">
+          <span class="method-name">excerpt_for</span><span class="method-args">(string, model = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000132" class="method-detail">
+        <a name="M000132"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000132.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000132.html');return false;">
+          <span class="method-name">freeze</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000145" class="method-detail">
+        <a name="M000145"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000145.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000145.html');return false;">
+          <span class="method-name">indexes</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000135" class="method-detail">
+        <a name="M000135"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000135.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000135.html');return false;">
+          <span class="method-name">method_missing</span><span class="method-args">(method, *args, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000138" class="method-detail">
+        <a name="M000138"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000138.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000138.html');return false;">
+          <span class="method-name">next_page</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The next page number of the result set. If there are no more pages
+available, nil is returned.
+</p>
+<p>
+@return [Integer, nil]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000144" class="method-detail">
+        <a name="M000144"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000144.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000144.html');return false;">
+          <span class="method-name">offset</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The current page&#8216;s <a href="Search.html#M000144">offset</a>, based on
+the number of records per page. Or explicit :<a
+href="Search.html#M000144">offset</a> if given.
+</p>
+<p>
+@return [Integer]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000142" class="method-detail">
+        <a name="M000142"></a>
+
+        <div class="method-heading">
+          <span class="method-name">page_count</span><span class="method-args">()</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="Search.html#M000141">total_pages</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000140" class="method-detail">
+        <a name="M000140"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000140.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000140.html');return false;">
+          <span class="method-name">per_page</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The amount of records per set of paged <a
+href="Search.html#M000134">results</a>. Defaults to 20 unless a specific
+page size is requested.
+</p>
+<p>
+@return [Integer]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000133" class="method-detail">
+        <a name="M000133"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000133.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000133.html');return false;">
+          <span class="method-name">populated?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Indication of whether the request has been made to Sphinx for the <a
+href="Search.html#M000124">search</a> query.
+</p>
+<p>
+@return [Boolean] true if the <a href="Search.html#M000134">results</a>
+have been requested.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000139" class="method-detail">
+        <a name="M000139"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000139.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000139.html');return false;">
+          <span class="method-name">previous_page</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The previous page number of the result set. If this is the first page, then
+nil is returned.
+</p>
+<p>
+@return [Integer, nil]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000136" class="method-detail">
+        <a name="M000136"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000136.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000136.html');return false;">
+          <span class="method-name">respond_to?</span><span class="method-args">(method, include_private = false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns true if the <a href="Search.html">Search</a> object or the
+underlying Array object respond to the requested method.
+</p>
+<p>
+@param [Symbol] method The method name @return [Boolean] true if either <a
+href="Search.html">Search</a> or Array responds to the method.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000134" class="method-detail">
+        <a name="M000134"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000134.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000134.html');return false;">
+          <span class="method-name">results</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The query result hash from Riddle.
+</p>
+<p>
+@return [Hash] Raw Sphinx <a href="Search.html#M000134">results</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000150" class="method-detail">
+        <a name="M000150"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000150.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000150.html');return false;">
+          <span class="method-name">search</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000131" class="method-detail">
+        <a name="M000131"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000131.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000131.html');return false;">
+          <span class="method-name">to_a</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000143" class="method-detail">
+        <a name="M000143"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000143.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000143.html');return false;">
+          <span class="method-name">total_entries</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The total number of <a href="Search.html#M000124">search</a> <a
+href="Search.html#M000134">results</a> available.
+</p>
+<p>
+@return [Integer]
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000141" class="method-detail">
+        <a name="M000141"></a>
+
+        <div class="method-heading">
+          <a href="Search.src/M000141.html" target="Code" class="method-signature"
+            onclick="popupCode('Search.src/M000141.html');return false;">
+          <span class="method-name">total_pages</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The total number of pages available if the <a
+href="Search.html#M000134">results</a> are paginated.
+</p>
+<p>
+@return [Integer]
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

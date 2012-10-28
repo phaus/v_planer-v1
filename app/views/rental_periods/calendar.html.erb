@@ -1,0 +1,44 @@
+<h1>Kalender</h1>
+
+<div id="help_icon"><%= link_to_function 'Hilfe ' + image_tag('help.png', :title => 'Hilfe anzeigen'), visual_effect(:toggle_slide, :help_div, :duration => 0.75) %></div>
+<div style="display: none;" id="help_div">
+  <div>
+    <h3>Hilfe</h3>
+    <ul>
+      <li>Anlegen eines neuen Vermietzeitraumes: auf eine freie Stelle des entsprechenden Artikels klicken und ziehen.</li>
+      <li>Vermietzeitraum löschen: Klick auf <%= image_tag '/stylesheets/images/remove.png' %>.</li>
+      <li>Änderungen speichern: Klick auf <%= image_tag '/stylesheets/images/nyok.png' %>.</li>
+      <li>Letzte Änderung rückgängig (wenn verfügbar): Klick auf <%= image_tag '/stylesheets/images/edit-undo.png' %>.</li>
+      <li><%= link_to_function 'Hilfe schließen', visual_effect(:toggle_slide, :help_div, :duration => 0.75) %>: Nochmal da klicken wo Sie gerade geklickt haben <%= image_tag '/images/icons_16/face-smile.png' %></li>
+      <li>Klicken und ziehen auf einen Vermietzeitraum verschiebt diesen</li>
+      <li>Klicken und ziehen auf den rechten Rand eines Vermietzeitraumes vergrößert/verkleinert diesen</li>
+    </ul>
+  </div>
+</div>
+
+<div style="width: 100%; display: block; float: left; max-height: 45em; clear: both; overflow: auto">
+  <div id="engagement_container" style="clear: both;"><div id="loading_div">Lade ... <%= image_tag 'loading.gif' %></div></div>
+</div>
+
+<script type="text/javascript">
+//<!--
+  var d = new Date();
+  if (d.getMonth()-1 < 0) from = 0;
+  else from = d.getMonth();
+
+  if (d.getMonth() + 1 > 11) to = 11;
+  else to = d.getMonth() + 2;
+
+  $('from_month_sel').options[from].selected = true;
+  $('to_month_sel').options[to].selected = true;
+  $('year_sel').options[d.getFullYear() - 2005].selected = true;
+//-->
+</script>
+
+<hr />
+
+<p><%= link_to 'als iCal herunterladen', rental_periods_path(:format => :ics) %></p>
+<p><%= link_to 'Artikel vermieten', new_rental_period_path %></p>
+
+<!-- <div id="debug_div" style=" margin: 1em; border: 2px solid yellow; background: lightyellow;"></div> -->
+

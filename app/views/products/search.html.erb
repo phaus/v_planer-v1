@@ -1,0 +1,68 @@
+<ul id="search_result">
+  <% @products.each do |product| %>
+    <% availability = product.availability(@from_date, @to_date).collect(&:last).min %>
+    <li id="<%= product.code %>">
+      <%= product.code %>
+      <span class="informal">
+        <%= product.full_name %><br />
+        <div style="position: relative;">
+          <% unless product.service? %>
+            <div style="position: absolute; top: 2px; right: 2px;">verfügbar: <%= availability %></div>
+          <% end %>
+          <span style="font-size: smaller; color: #ccc"><%= product.description %></span>
+        </div>
+        <div class="new_row_for_form" style="display: none">
+          <table>
+            <% if product.service? %>
+              <tr class="product service">
+                <td class="item product_id">
+                  <%= hidden_field_tag 'process[new_service_items_attributes][][product_id]', product.id %>
+                  <%= link_to h(product.full_name), product, :class => 'product_info' %><br />
+                  <%= text_area_tag 'process[new_service_items_attributes][][comments]', product.description, :class => 'product_comments' %>
+                </td>
+                <td class="decimal item duration">
+                    <%= text_field_tag 'process[new_service_items_attributes][][duration]', 0, :title => 'Anzahl geleisteter Stunden pro Person' %>
+                </td>
+                <td class="decimal item count">
+                  <%= text_field_tag 'process[new_service_items_attributes][][count]', 0, :title => 'Anzahl der Personen' %>
+                </td>
+                <td class="decimal item unit_price">
+                  <%= text_field_tag 'process[new_service_items_attributes][][unit_price]', 0 %>&thinsp;&euro;
+                </td>
+                <td class="decimal item price">
+                  <%= text_field_tag 'process[new_service_items_attributes][][price]', 0 %>&thinsp;&euro;
+                </td>
+                <td class="toolbox">
+                  <button type="button" class="remove_line" title="Diese Position entfernen"></button>
+                </td>
+              </tr>
+            <% else %>
+              <tr class="product device">
+                <td class="item product_id">
+                  <%= hidden_field_tag 'process[new_device_items_attributes][][product_id]', product.id %>
+                  <%= link_to h(product.full_name), product, :class => 'product_info' %><br />
+                  <%= text_area_tag 'process[new_device_items_attributes][][comments]', product.description, :class => 'product_comments' %>
+                </td>
+                <td class="decimal item available_count">
+                  <%= availability %>
+                </td>
+                <td class="decimal item count">
+                  <%= text_field_tag 'process[new_device_items_attributes][][count]', 0 %>
+                </td>
+                <td class="decimal item unit_price">
+                  <%= text_field_tag 'process[new_device_items_attributes][][unit_price]', 0 %>&thinsp;&euro;
+                </td>
+                <td class="decimal item price">
+                  <%= text_field_tag 'process[new_device_items_attributes][][price]', 0 %>&thinsp;&euro;
+                </td>
+                <td class="toolbox">
+                  <button type="button" class="remove_line" title="Diese Position entfernen"></button>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+      </span>
+    </li>
+  <% end %>
+</ul>

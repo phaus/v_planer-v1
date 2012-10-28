@@ -1,0 +1,30 @@
+<table class="data" id="base_data">
+  <tr>
+    <th><%= f.label :title, 'Titel (optional)' %></th>
+    <td><%= f.text_field :title %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :client_id, 'Kunde' %></th>
+    <td style="width: 15em">
+      <span id="indicator1" style="display: none">
+        <%= image_tag 'loading.gif' %>
+      </span>
+      <div id="client_info">
+        <% if @selling.client %>
+          <%= @selling.client.full_name %><br />
+          <%= @selling.client.address.try :street %><br />
+          <%= @selling.client.address.try :postalcode %> <%= @selling.client.address.try :locality %><br />
+          <%= mail_to @selling.client.email unless @selling.client.email.blank? %>
+        <% end %>
+      </div>
+      <%= f.hidden_field :client_id %>
+      <%= text_field_tag :cq, '', :class => 'search_field' %>
+      <div id="autocomplete_client_choices" class="autocomplete"></div>
+      <button id="change_client">ändern</button>
+    </td>
+  </tr>
+</table>
+
+<div id="spinner" style="display: none;">
+  <%= image_tag 'loading.gif' %>
+</div>

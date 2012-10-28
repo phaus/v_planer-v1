@@ -1,0 +1,35 @@
+<h1>Artikel</h1>
+
+<% form_tag devices_path, :method => :get do %>
+  <div id="search">
+    <%= label_tag :q, 'Suche' %>
+    <%= text_field_tag(:q, params['q']) %>
+    <%= image_tag('loading.gif', :id => 'spinner1', :style => 'display: none;', :class => 'small_spinner') %>
+  </div>
+<% end %>
+
+<%= observe_field 'q', :frequency => 2,
+    :update   => 'devices',
+    :before   => "Element.show('spinner1')",
+    :success  => "Element.hide('spinner1')",
+    :url      => devices_path,
+    :method   => :get,
+    :with     => "Form.Element.serialize('q')" %>
+
+<div id="devices">
+  <%= render :partial => 'list' %>
+</div>
+
+<hr>
+
+<% if APP_SETTINGS[:enable_client_csv_import] %>
+  <h3>Artikeldaten von CSV importieren</h3>
+  <% form_for(Device.new, {}, :html => {:multipart => true}) do |f| %>
+    <p>
+      <%= file_field_tag :csv_file %> <%= f.submit 'Importieren' %></p>
+  <% end %>
+<% end %>
+
+<p>
+  <%= link_to 'Neuen Artikel anlegen', new_device_path %>
+</p>

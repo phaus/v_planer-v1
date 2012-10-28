@@ -1,0 +1,169 @@
+--- 
+users_00006: 
+  last_request_at: 
+  single_access_token: 7EExXOSCEf03CEaZpLDk
+  created_at: 2010-02-20 17:25:14
+  crypted_password: 7cb2d4591852837ea6f2e6f5319057a068d3aa70ecfe39850b9b5ebd4e29c48736ece2edfac92787d5db91f09d8ccb3f9d919300c04ea17d5ab22a60c09c82ac
+  company_section_id: "13"
+  perishable_token: yreYBW0GK6nC9ADh7neh
+  updated_at: 2010-02-20 19:07:24
+  bank_account_id: 
+  current_login_ip: 
+  failed_login_count: "0"
+  id: "10"
+  address_id: 
+  current_login_at: 
+  password_salt: dIfR26XRSvbWg37q90nV
+  login_count: "0"
+  persistence_token: 964455931332402ee4f0df5b08d880623db0660e959b60b62ffe39b2927302a247f4919a9928b51d361ed25d7a8c9d37a3a850819a9bbd81cf3f2b422f8cee4e
+  last_login_ip: 
+  last_login_at: 
+  password_hash: 
+  login: philipp
+  surname: "Hau\xC3\x9Fleiter"
+  forename: Philipp
+  email: philipp@consolving.de
+users_00007: 
+  last_request_at: 
+  single_access_token: yaq1UlNifOv7rRTWC3rq
+  created_at: 2010-03-18 18:10:48
+  crypted_password: ea58d8269c3150a958ac44342e99358c3a8361ec04b7e47603d2154bfeb19f789b7a45f5d92e0c31883b0c672cdbf68230ec4524985be51a32818f68f16c90a4
+  company_section_id: "10"
+  perishable_token: NCHry9etMzVQIaq43OK9
+  updated_at: 2010-03-18 18:10:48
+  bank_account_id: "1"
+  current_login_ip: 
+  failed_login_count: "0"
+  id: "11"
+  address_id: "1"
+  current_login_at: 
+  password_salt: pkiXIz9dX-KUyc9sJSsB
+  login_count: "0"
+  persistence_token: 1776c3c3a046599683491ea9803a760068f07a102810d2dc9ac7a2da8b42854e0550b3579fdf4877eb4a085f5fd0605a2d0936156ba0ef33d7097600b7f54353
+  last_login_ip: 
+  last_login_at: 
+  password_hash: 
+  login: alsjdla djalksd
+  surname: " aksdhskd jah"
+  forename: lkajlkas jd
+  email: asdasd@asdada.as
+users_00001: 
+  last_request_at: 
+  single_access_token: fC_OLOJFUkKuGvRPmogr
+  created_at: 2009-12-17 08:54:16
+  crypted_password: 8bfe25ba2d63cf81dc20c38551a8385eaf3b56ce54d2991cd095006c2609a40ffb6ad2c42c374e965e1d56e490d91002d2227a193d336e8054dddfd43c1256a8
+  company_section_id: "10"
+  perishable_token: 65V7cOZB7mKwJ-6lB1q1
+  updated_at: 2010-02-13 10:19:09
+  bank_account_id: 
+  current_login_ip: 
+  failed_login_count: "0"
+  id: "1"
+  address_id: 
+  current_login_at: 
+  password_salt: YUdzbSMwoHpOi_8S4HRh
+  login_count: "0"
+  persistence_token: ab18321d2ab97aa8063d49ee1bf1934a9056743db714f940f31c4440ac2b289093bf63ae845a0944e1c478fc95e292272c507d600cd4097e9c86706bc918e079
+  last_login_ip: 
+  last_login_at: 
+  password_hash: $1$fZntHlbZ$Rz/UvGb7rqGxfukMJVkjm1
+  login: DMPW
+  surname: Digital Media Productions Witten
+  forename: DMPW -
+  email: ""
+users_00002: 
+  last_request_at: 2010-02-13 12:24:35
+  single_access_token: 0dQpK1lj7atn-M2fIBeP
+  created_at: 2009-12-17 08:54:16
+  crypted_password: 27328dd0a75b1c8c6f40d6c8ab6626aea10d0b9ddbeaf8f1dcce6d846c78363423f53710e292d9a02ba5eebf6e5e7fa9964f69ef1e2d2052a7e0871a7e98c59c
+  company_section_id: "11"
+  perishable_token: e4wxJaybgQCwkEyFdwvW
+  updated_at: 2010-02-13 12:24:35
+  bank_account_id: 
+  current_login_ip: 62.99.212.215
+  failed_login_count: "0"
+  id: "2"
+  address_id: 
+  current_login_at: 2010-02-13 12:21:48
+  password_salt: 9UuQtSgLIYHL0Zk_S0WK
+  login_count: "2"
+  persistence_token: aa21095558b284508dd2b7df153ee12bfd60d157dc7098a8afd8017e6eb965f33772cf8fea5a8636f0f2afee147c138d632a9cb38d1ee4f723fd7c4df0e02838
+  last_login_ip: 62.99.212.215
+  last_login_at: 2010-02-13 12:18:08
+  password_hash: $1$S5kwEI3Q$j9u.zWEDlcwaJFWOf110H.
+  login: karel
+  surname: Elsner
+  forename: Karsten
+  email: ""
+users_00003: 
+  last_request_at: 
+  single_access_token: W_vMs0tiCf73ShPOgCT-
+  created_at: 2010-01-02 20:05:35
+  crypted_password: 049d9a2755556980b7646df1f435da90a025a1dd47272f68978c0bca09341dc11d5d5545985c32ed77af267a53374075c8014bf9fa85e06218ab7f1cbfb63b2d
+  company_section_id: "10"
+  perishable_token: zXuRKBv4KXf14EVCMQXD
+  updated_at: 2010-02-13 10:19:09
+  bank_account_id: 
+  current_login_ip: 
+  failed_login_count: "0"
+  id: "4"
+  address_id: 
+  current_login_at: 
+  password_salt: qUXELcF0usNnZWZVIeEA
+  login_count: "0"
+  persistence_token: 2c1e93315ecdbbd51a592c20dc7d43c01871e161c3debe38cbd5cc29898051f645916a2b6aa562c9f5129013ca5825181ccc8e03e4f5270fce6c200b4f44c9f0
+  last_login_ip: 
+  last_login_at: 
+  password_hash: $1$5LfIVDCc$NLco1Y5O5EpgGi3yehbY0/
+  login: j-greese
+  surname: Greese
+  forename: Jan
+  email: ""
+users_00004: 
+  last_request_at: 2010-02-14 12:15:30
+  single_access_token: hnRV1L-0hoIoDHqQI8Ta
+  created_at: 2010-01-02 20:06:04
+  crypted_password: 1aefa81d415d5ae61de0aece9331423df95bfa9ad39714280665068f59863292786ec4fa51fd5c230dc0a937bf43b5e29f222dee766edf2d92d1d563f15676e3
+  company_section_id: "10"
+  perishable_token: ow0nX3Nwv08wXtnq1Wyp
+  updated_at: 2010-02-14 12:15:30
+  bank_account_id: 
+  current_login_ip: 92.227.164.197
+  failed_login_count: "0"
+  id: "5"
+  address_id: 
+  current_login_at: 2010-02-14 12:07:49
+  password_salt: 5AdkPZ9DDL7OroEGfov9
+  login_count: "11"
+  persistence_token: 0f32e8e26eb58f7cc38e1a40303a9b86c611f88e8c597884ce266179c9c73f169cc7b72caa5c02bbdce72deaa58df20ad0b94755975425c2194daf6a82791a1e
+  last_login_ip: 92.227.164.197
+  last_login_at: 2010-02-14 11:57:07
+  password_hash: $1$c6xi1doB$ZRmsC85Zf14uxqMhg4XXJ/
+  login: t-weber
+  surname: Weber
+  forename: Tobias
+  email: t-weber@dmpw.de
+users_00005: 
+  last_request_at: 2010-04-20 17:44:41
+  single_access_token: Z4azimIunO_EcUbXh3_i
+  created_at: 2010-02-12 21:00:18
+  crypted_password: 93a01f6d26af359edc7312852e861b78aa77d41d084d85ba3fbad1c793048ba65d84040275fc782be84200a3eab774fdafa8ab8bcd3b84164e0234e78df1e061
+  company_section_id: "10"
+  perishable_token: Ui3_Bt9NrYLD7lWzBNTW
+  updated_at: 2010-04-20 17:44:41
+  bank_account_id: 
+  current_login_ip: 127.0.0.1
+  failed_login_count: "0"
+  id: "7"
+  address_id: 
+  current_login_at: 2010-04-20 17:43:29
+  password_salt: XLwMu1n_qf9XLK47vIrQ
+  login_count: "82"
+  persistence_token: e07bbaf6936018f65cc9c5c44b32e6d41c14ad88dc2b2628e9f82abde96486696b59ec268e09815430762ca13feb6f5734e01eb16326ed5c931981d6b2d232c6
+  last_login_ip: 127.0.0.1
+  last_login_at: 2010-04-19 17:42:00
+  password_hash: 
+  login: wvk
+  surname: van Kerkhof
+  forename: Willem
+  email: wvk@wvk-astro.com

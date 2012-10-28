@@ -1,0 +1,18 @@
+<h1><%=h @product.name %> <span style="font-size: small">(<%= @product.code %>)</span></h1>
+
+<%= last_changed_info @product %>
+
+<%= render :partial => 'details' %>
+
+<p class="bottom-actions">
+  <%= link_to 'Bearbeiten', edit_product_path(@product), :class => 'edit' %>
+  <%= link_to 'Neuer Artikel', new_device_path, :class => 'new' %>
+  <%= link_to 'Neuer Dienstleistung', new_service_path, :class => 'new' %>
+  <%= link_to 'Zurück zur Übersicht', products_path, :class => 'back' %>
+</p>
+
+<p class="alternative_formats">
+  Alternative Formate:
+  <%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %> |
+  <%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %>
+</p>

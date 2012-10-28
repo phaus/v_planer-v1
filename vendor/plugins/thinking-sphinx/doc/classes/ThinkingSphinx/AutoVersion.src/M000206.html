@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>detect (ThinkingSphinx::AutoVersion)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/thinking_sphinx/auto_version.rb, line 3</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">detect</span>
+      <span class="ruby-identifier">version</span> = <span class="ruby-constant">ThinkingSphinx</span><span class="ruby-operator">::</span><span class="ruby-constant">Configuration</span>.<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">version</span>
+      <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">version</span>
+      <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'0.9.8'</span>, <span class="ruby-value str">'0.9.9'</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-node">&quot;riddle/#{version}&quot;</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">%Q{
+Sphinx cannot be found on your system. You may need to configure the following
+settings in your config/sphinx.yml file:
+  * bin_path
+  * searchd_binary_name
+  * indexer_binary_name
+
+For more information, read the documentation:
+http://freelancing-god.github.com/ts/en/advanced_config.html
+}</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

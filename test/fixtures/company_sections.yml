@@ -1,0 +1,91 @@
+--- 
+company_sections_00001: 
+  bank_iban: DE93 4525 0035 0000 6899 92
+  name: DMPW - Digital Media Productions Witten
+  created_at: 2010-02-13 09:51:22
+  country: ""
+  sender_address_block: |-
+    %name
+    Tobias Weber
+    %street
+    %postalcode %locality
+    Tel: %phone
+    Web: %homepage
+    E-Mail: %email
+  updated_at: 2010-02-20 12:19:26
+  postalcode: D-58453
+  bank_account_id: 
+  street: Waldstr. 52
+  bank_name: Sparkasse Witten
+  id: "10"
+  address_id: 
+  vat_id: ""
+  mobile: ""
+  bank_blz: 452 500 35
+  locality: Witten
+  homepage: http://dmpw.de
+  fax: ""
+  phone: +49 (0) 2302 / 2848980
+  bank_bic: weladed1wtn
+  company_id: "6"
+  sender_address_window: DMPW - Digital Media Productions Witten, Waldstr. 52, D - 58453 Witten
+  email: info@dmpw.de
+  bank_account_owner: Tobias Weber
+  bank_account: "689992"
+company_sections_00002: 
+  bank_iban: ""
+  name: Karsten Elsner
+  created_at: 2010-02-13 12:03:45
+  country: ""
+  sender_address_block: ""
+  updated_at: 2010-02-13 12:03:45
+  postalcode: ""
+  bank_account_id: 
+  street: ""
+  bank_name: ""
+  id: "11"
+  address_id: 
+  vat_id: ""
+  mobile: 
+  bank_blz: ""
+  locality: ""
+  homepage: 
+  fax: ""
+  phone: ""
+  bank_bic: ""
+  company_id: "6"
+  sender_address_window: ""
+  email: ""
+  bank_account_owner: ""
+  bank_account: ""
+company_sections_00003: 
+  bank_iban: ""
+  name: Consolving Network Solutions
+  created_at: 2010-02-20 17:25:14
+  country: ""
+  sender_address_block: |-
+    %name
+    %street
+    %postalcode %locality
+    %homepage
+    %email
+  updated_at: 2010-02-20 17:25:14
+  postalcode: "58455"
+  bank_account_id: 
+  street: "Marienstra\xC3\x9Fe 12"
+  bank_name: ""
+  id: "13"
+  address_id: 
+  vat_id: ""
+  mobile: ""
+  bank_blz: ""
+  locality: Witten
+  homepage: http://consolving.de
+  fax: ""
+  phone: ""
+  bank_bic: ""
+  company_id: "8"
+  sender_address_window: ""
+  email: info@consolving.de
+  bank_account_owner: ""
+  bank_account: ""

@@ -1,0 +1,50 @@
+<h1>Neuer Lieferant</h1>
+
+<%= error_messages_for :distributor %>
+
+<% form_for(@distributor) do |f| %>
+  <p>
+    <%= f.label :client_no, 'Kundennummer beim Lieferanten' %><br />
+    <%= f.text_field :client_no %>
+  </p>
+
+  <p>
+    <%= f.label :company_name, 'Firma' %><br />
+    <%= f.text_field :company_name %>
+  </p>
+
+  <p>
+    <%= f.label :contact_person, 'Ansprechpartner' %><br />
+    <%= f.text_field :contact_person %>
+  </p>
+
+  <p>
+    <%= f.label :email, 'E-Mail' %><br />
+    <%= f.text_field :email %>
+  </p>
+
+  <% optional_fieldset 'Adressdaten', false do %>
+    <% f.fields_for :address do |af| %>
+      <%= render :partial => 'addresses/form', :locals => {:f => af} %>
+    <% end %>
+  <% end %>
+
+  <% optional_fieldset 'Kontodaten', false do %>
+    <% f.fields_for :bank_account do |af| %>
+      <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
+    <% end %>
+  <% end %>
+
+  <p>
+    <%= f.label :remarks, 'Anmerkungen' %><br />
+    <%= f.text_area :remarks, :size => '76x4' %>
+  </p>
+
+  <p>
+    <%= f.submit 'Speichern' %>
+  </p>
+<% end %>
+
+<p class="bottom-actions">
+  <%= link_to 'Zurück zur Übersicht', distributors_path %>
+</p>

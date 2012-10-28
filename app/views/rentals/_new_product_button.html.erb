@@ -1,0 +1,29 @@
+<button id="insert_new_product">Neues Produkt</button>
+<span id="indicator3" style="display: none">
+  <%= image_tag 'loading.gif' %>
+</span>
+
+<table style="display: none" id="new_product">
+  <tr>
+    <td class="item product_details">
+      <%= hidden_field_tag 'process[new_device_items_attributes][][product_id]', nil %>
+      <%= text_field_tag 'process[new_device_items_attributes][][product_attributes][device_attributes][name]',        '', :class => 'product_name', :title => 'Bezeichnun des neu anzulegenden Produktes' %>
+      <%= text_area_tag  'process[new_device_items_attributes][][product_attributes][device_attributes][description]', '', :class => 'product_description', :title => 'Beschreibung/Anmerkungen zum neu anzulegenden Produkt' %>
+    </td>
+    <td class="decimal item available_count">
+      <%= text_field_tag 'process[new_device_items_attributes][][product_attributes][device_attributes][available_count]' %>
+    </td>
+    <td class="decimal item count">
+      <%= text_field_tag 'process[new_device_items_attributes][][count]', 1 %>
+    </td>
+    <td class="decimal item unit_price">
+      <%= text_field_tag 'process[new_device_items_attributes][][unit_price]', 0 %>&thinsp;&euro;
+    </td>
+    <td class="decimal item price">
+      <%= text_field_tag 'process[new_device_items_attributes][][price]', 0 %>&thinsp;&euro;
+    </td>
+    <td class="toolbox">
+      <button type="button" class="remove_line"></button>
+    </td>
+  </tr>
+</table>

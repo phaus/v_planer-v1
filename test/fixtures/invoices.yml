@@ -1,0 +1,71 @@
+--- 
+invoices_00001: 
+  created_at: 2010-02-26 18:35:15
+  remarks: 
+  process_id: "14"
+  updated_at: 2010-02-26 18:35:15
+  process_type: Rental
+  date: "2010-02-26"
+  id: "4"
+  user_id: "7"
+  client_id: "34"
+  company_id: "6"
+  sender_id: "10"
+  invoice_no: "4"
+  price_i: "33613"
+invoices_00002: 
+  created_at: 2010-02-26 18:44:56
+  remarks: 
+  process_id: "13"
+  updated_at: 2010-02-26 18:44:56
+  process_type: Rental
+  date: "2010-02-26"
+  id: "5"
+  user_id: "7"
+  client_id: "35"
+  company_id: "6"
+  sender_id: "10"
+  invoice_no: "5"
+  price_i: "24405"
+invoices_00003: 
+  created_at: 2010-03-10 19:35:54
+  remarks: 
+  process_id: "9"
+  updated_at: 2010-03-10 19:35:54
+  process_type: Rental
+  date: "2010-03-10"
+  id: "6"
+  user_id: "4"
+  client_id: "52"
+  company_id: "6"
+  sender_id: "10"
+  invoice_no: "6"
+  price_i: "34769"
+invoices_00004: 
+  created_at: 2010-04-03 12:22:44
+  remarks: 
+  process_id: "16"
+  updated_at: 2010-04-03 12:22:44
+  process_type: Rental
+  date: "2010-04-03"
+  id: "11"
+  user_id: "7"
+  client_id: "35"
+  company_id: "6"
+  sender_id: "10"
+  invoice_no: "11"
+  price_i: "11999"
+invoices_00005: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_id: "20"
+  updated_at: 2010-04-14 20:54:53
+  process_type: Rental
+  date: "2010-04-14"
+  id: "12"
+  user_id: "7"
+  client_id: "64"
+  company_id: "6"
+  sender_id: "10"
+  invoice_no: "12"
+  price_i: "12590"

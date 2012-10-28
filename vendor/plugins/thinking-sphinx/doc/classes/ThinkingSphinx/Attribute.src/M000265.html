@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>type_to_config (ThinkingSphinx::Attribute)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/thinking_sphinx/attribute.rb, line 118</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">type_to_config</span>
+      {
+        <span class="ruby-identifier">:multi</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:sql_attr_multi</span>,
+        <span class="ruby-identifier">:datetime</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:sql_attr_timestamp</span>,
+        <span class="ruby-identifier">:string</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:sql_attr_str2ordinal</span>,
+        <span class="ruby-identifier">:float</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:sql_attr_float</span>,
+        <span class="ruby-identifier">:boolean</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:sql_attr_bool</span>,
+        <span class="ruby-identifier">:integer</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:sql_attr_uint</span>,
+        <span class="ruby-identifier">:bigint</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">:sql_attr_bigint</span>
+      }[<span class="ruby-identifier">type</span>]
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

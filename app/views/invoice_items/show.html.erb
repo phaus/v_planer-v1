@@ -1,0 +1,28 @@
+<p>
+  <b>Process item:</b>
+  <%=h @invoice_item.process_item_id %>
+</p>
+
+<p>
+  <b>Process item type:</b>
+  <%=h @invoice_item.process_item_type %>
+</p>
+
+<p>
+  <b>Invoice:</b>
+  <%=h @invoice_item.invoice_id %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @invoice_item.price %>
+</p>
+
+<p>
+  <b>Remarks:</b>
+  <%=h @invoice_item.remarks %>
+</p>
+
+
+<%= link_to 'Edit', edit_invoice_item_path(@invoice_item) %> |
+<%= link_to 'Back', invoice_items_path %>

@@ -1,0 +1,22 @@
+<% cal = Vpim::Icalendar.create2
+current_company.rentals.all(:conditions => {:workflow_state => %w(new accepted billed payed)}).each do |rental|
+  summary = "Vermietete Artikel:\n"
+  rental.items.each do |item|
+    next unless item.product
+    summary << "#{item.product.code}: #{item.count} x #{item.product.full_name}\n"
+  end
+  summary << "Gesamtpreis: #{ptm rental.gross_total_price}"
+  cal.add_event do |e|
+    e.dtstart       rental.from_date.to_date
+    e.dtend         rental.to_date.to_date
+    e.summary       "#{rental.process_no}: #{rental.client.full_name}"
+    e.description   summary
+    e.categories    ['VERMIETZEITRAUM']
+    e.url           rental_url(rental)
+    e.sequence      0
+    e.access_class  'PRIVATE'
+    e.created       rental.created_at
+    e.lastmod       rental.updated_at
+  end
+end %>
+<%= cal.encode %>

@@ -1,0 +1,31 @@
+<h1>Sektionen</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Firma</th>
+      <th>Adresse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @company_sections.each do |company_section| %>
+      <tr>
+        <td><%=h company_section.name %></td>
+        <td><%=h company_section.company.name %></td>
+        <td><pre><%=h company_section.sender_address_block %></pre></td>
+        <td>
+          <ul class="toolchain">
+            <li><%= link_to image_tag('icons_16/contents.png'), [:admin, company_section] %></li>
+            <li><%= link_to image_tag('icons_16/edit.png'), edit_admin_company_section_path(company_section) %></li>
+            <li><%= link_to image_tag('icons_16/editdelete.png'), [:admin, company_section], :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete %></li>
+          </ul>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p class="bottom-actions">
+  <%= link_to 'Neue Sektion', new_admin_company_section_path, :class => 'new' %>
+</p>

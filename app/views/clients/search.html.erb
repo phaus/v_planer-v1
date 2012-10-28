@@ -1,0 +1,13 @@
+<ul>
+  <% @clients.each do |client| %>
+    <li id="<%= client.id %>">
+      <%= client.client_no %>: <%= client.full_name %>
+      <span class="informal" style="display: none">
+        <%= client.full_name %><br />
+        <%= client.address.street %><br />
+        <%= client.address.postalcode %> <%= client.address.locality %><br />
+        <%= mail_to client.email unless client.email.blank? %>
+      </span>
+    </li>
+  <% end %>
+</ul>

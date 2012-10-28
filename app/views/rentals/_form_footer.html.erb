@@ -1,0 +1,46 @@
+<tfoot>
+  <tr>
+    <td class="empty"></td>
+    <th colspan="2">Summe</th>
+    <td></th>
+    <td class="decimal rental sum"><%= f.object.sum.to_s %></td>
+  </tr>
+  <tr>
+    <td class="empty"></td>
+    <th colspan="2">Kundenrabatt</th>
+    <td class="decimal rental client_discount_percent" id="rental_client_discount_percent">
+      <%= f.object.client_discount_percent %>&thinsp;%
+    </td>
+    <td class="decimal rental client_discount">
+      &ndash;&nbsp;<%= f.text_field :client_discount, :class => 'decimal' %>&thinsp;&euro;
+    </td>
+  </tr>
+  <tr>
+    <td class="empty"></td>
+    <th colspan="2">Auftragsrabatt</th>
+    <td></td>
+    <td class="decimal rental discount">
+      &ndash;&nbsp;<%= f.text_field :discount, :class => 'decimal' %>&thinsp;&euro;
+    </td>
+  </tr>
+  <tr>
+    <td class="empty"></td>
+    <th colspan="2">Total (Netto)</th>
+    <td></td>
+    <td class="decimal rental net_total_price">0&thinsp;&euro;</td>
+  </tr>
+  <tr>
+    <td class="empty"></td>
+    <th colspan="2">MwSt</th>
+    <td class="decimal">19,00&thinsp;%</td>
+    <td class="decimal rental vat">0&thinsp;&euro;</td>
+  </tr>
+  <tr>
+    <td class="empty"></td>
+    <th colspan="2">Total (Brutto)</th>
+    <td></td>
+    <td class="decimal rental gross_total_price">
+      <%= text_field_tag :rental_gross_total_price, @rental.gross_total_price %>&thinsp;&euro;
+    </td>
+  </tr>
+</tfoot>

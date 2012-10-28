@@ -1,0 +1,37 @@
+<h1>Neue Dienstleistung</h1>
+
+<% form_for(@service) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :owner_id, 'Besitzer' %><br />
+    <%= f.collection_select :owner_id, User.all, :id, :full_name %>
+  </p>
+  <p>
+    <%= f.label :name, 'Bezeichnung' %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :code, 'Code' %><br />
+    <%= f.text_field :code %>
+  </p>
+  <p>
+    <%= f.label :description, 'Anmerkungen/Leistungsbeschreibung' %><br />
+    <%= f.text_area :description, :cols => 75, :rows => 5 %>
+  </p>
+  <p>
+    <%= f.label :unit_price, 'Einheitspreis' %><br />
+    <%= f.text_field :unit_price, :class => 'decimal' %>&thinsp;&euro;
+  </p>
+  <p>
+    <%= f.label :unit, 'Abrechnungseinheit' %><br />
+    <%= f.text_field :unit %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to 'Zurück zur Übersicht', services_path %>
+</p>

@@ -1,0 +1,11 @@
+--- 
+bank_accounts_00001: 
+  number: ""
+  created_at: 2010-03-18 18:10:48
+  updated_at: 2010-03-18 18:10:48
+  blz: ""
+  bank_name: ""
+  id: "1"
+  bic: ""
+  iban: ""
+  registrar_name: ""

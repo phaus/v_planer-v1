@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Rechnung: <%= controller.action_name %></title>
+    <%= javascript_include_tag :all %>
+    <%= stylesheet_link_tag 'scaffold' %>
+    <%= calendar_date_select_includes %>
+  </head>
+  <body>
+    <%= main_navigation :active => 'Rechnungen' %>
+
+    <% aux_navigation do %>
+      <%= link_to 'Übersicht', invoices_path %>
+      <%= link_to 'Offene Rechnungen', open_invoices_path %>
+<!--       <%= link_to 'Neuer Verkaufsvorgang', new_selling_path %> -->
+<!--       <%= link_to 'Neuer Vermietvorgang', new_rental_path %> -->
+    <% end %>
+
+    <div id="main_content" class="main_content">
+      <%= flash_message %>
+      <%= yield  %>
+    </div>
+
+    <%= footer %>
+  </body>
+</html>

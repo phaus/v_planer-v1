@@ -1,0 +1,93 @@
+<h1>Verkaufs-Vorgang <%= @selling.id %></h1>
+
+<h2>Angebot</h2>
+
+<p>
+  <b>Kunde:</b>
+  <%= link_to h(@selling.client.full_name), @selling.client %>
+</p>
+
+<table class="data" style="width: 100%">
+  <thead>
+    <tr>
+      <th>Anz.</th>
+      <th>Artikel/Anmerkungen</th>
+      <th>Einzelpreis</th>
+      <th>Gesamt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @selling.items.each do |item| %>
+      <tr class="<%= cycle 'odd', 'even' %>">
+        <td class="decimal">
+          <%= item.count %> x
+        </td>
+        <td>
+          <%= link_to item.product.full_name, item.product %><br />
+          <em><%=h item.comments %></em>
+        </td>
+        <td class="money">
+          <%= m item.unit_price %>/<%= item.product.unit %>
+        </td>
+        <td class="money">
+          <%= m item.price %>/<%= item.product.unit %>
+        </td>
+        <td class="money">
+          <%= m item.price %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <th colspan="3">Summe</th>
+      <td></td>
+      <td class="money"><%= m @selling.sum %></td>
+    </tr>
+    <% if @selling.client_discount.to_f != 0.0 %>
+      <tr>
+        <th colspan="3">Kundenrabatt</th>
+        <td class="decimal"><%= @selling.client_discount_percent %>&thinsp;% </td>
+        <td class="money"><%= m @selling.client_discount %></td>
+      </tr>
+    <% end %>
+    <% if @selling.discount.to_f != 0.0 %>
+      <tr>
+        <th colspan="3">Auftragsrabatt</th>
+        <td></td>
+        <td class="money"><%= m @selling.discount %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <th colspan="3">Total Netto</th>
+      <td></td>
+      <td class="money"><%= m @selling.net_total_price %></td>
+    </tr>
+    <tr>
+      <th colspan="3">zzgl. MwSt.</th>
+      <td class="decimal">19&thinsp;%</td>
+      <td class="money"><%= m @selling.vat %></td>
+    </tr>
+    <tr>
+      <th colspan="3">Total Brutto</th>
+      <td></td>
+      <td class="money"><%= m @selling.gross_total_price %></td>
+    </tr>
+  </tfoot>
+</table>
+
+<p>
+  <%= link_to 'Lieferschein anzeigen', rental_path(@selling) %> |
+  <%= link_to 'Packschein anzeigen', packing_note_rental_path(@selling) %> |
+  <%= link_to 'Bearbeiten', edit_rental_path(@selling) %> |
+  <%= link_to 'Löschen', rental_path(@selling), :method => :delete, :confirm => 'wirklich löschen?' %> |
+  <%= link_to 'Zurück zur Übersicht', rentals_path %>
+</p>
+
+<p class="alternative_formats">
+  Alternative Formate:
+  <%= link_to image_tag('icons_16/application-pdf.png') + ' PDF (Druckansicht)', :format => 'pdf' %>
+</p>
+
+

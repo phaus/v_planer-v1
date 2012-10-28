@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>trigger_after_commit_on_destroy_callbacks (AfterCommit::ConnectionAdapters)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File vendor/after_commit/lib/after_commit/connection_adapters.rb, line 133</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">trigger_after_commit_on_destroy_callbacks</span>
+          <span class="ruby-comment cmt"># Trigger the after_commit_on_destroy callback for each of the committed</span>
+          <span class="ruby-comment cmt"># records.</span>
+          <span class="ruby-constant">AfterCommit</span>.<span class="ruby-identifier">destroyed_records</span>(<span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">record</span><span class="ruby-operator">|</span>
+            <span class="ruby-keyword kw">begin</span>
+              <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span> <span class="ruby-identifier">:callback</span>, <span class="ruby-identifier">:after_commit_on_destroy</span>
+            <span class="ruby-keyword kw">rescue</span>
+              <span class="ruby-comment cmt">#</span>
+            <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

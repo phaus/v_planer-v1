@@ -1,0 +1,30 @@
+<h1>Firma bearbeiten</h1>
+
+<% form_for([:admin, @company]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, 'Firmenname' %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :admin_id, 'Administrativer Benutzer' %><br />
+    <%= f.collection_select :admin_id, User.all, :id, :full_name_with_company_and_section %>
+  </p>
+
+  <%= f.hidden_field :main_section_id %>
+  <% f.fields_for :main_section do |af| %>
+    <%= render :partial => 'admin/company_sections/form', :locals => {:f => af} %>
+  <% end %>
+
+  <p>
+    <%= f.submit 'Speichern' %>
+  </p>
+<% end %>
+
+<p class="bottom-actions">
+  <%= link_to 'Zurück zur Ansicht', [:admin, @company], :class => 'back' %>
+  <%= link_to 'Zurück zur Übersicht', admin_companies_path, :class => 'back' %>
+</p>
+

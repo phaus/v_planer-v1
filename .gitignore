@@ -1,0 +1,6 @@
+log/*
+tmp/**/*
+db/sphinx/*
+db/*.sqlite
+config/database.yml
+config/development.sphinx.config

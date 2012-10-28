@@ -1,0 +1,47 @@
+<table class="data" style="width: 100%">
+  <colgroup width="8%" />
+  <colgroup width="8%" />
+  <colgroup width="22%" />
+  <colgroup width="12%" />
+  <colgroup width="25%" />
+  <colgroup width="8%" />
+  <colgroup width="6%" />
+  <colgroup width="6%" />
+  <thead>
+    <tr>
+      <th>VG-Nr.</th>
+      <th>RE-Nr.</th>
+      <th>Titel</th>
+      <th>Bearbeiter</th>
+      <th>Kunde</th>
+      <th>Brutto-Total</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% processes.each do |process| %>
+      <tr class="<%= cycle 'odd', 'even' %>">
+        <td class="decimal"><%= link_to process.process_no, process %></td>
+        <td class="decimal"><%= link_to process.invoice.invoice_no, process if process.invoice %></td>
+        <td><%= link_to h(process.title), process %></td>
+        <td><%= link_to((process.user.surname rescue 'OOPS'), process.user) %></td>
+        <td><%= link_to((process.client.full_name rescue 'OOPS'), process.client) %></td>
+        <td class="decimal price"><%= m process.gross_total_price %></td>
+        <td class="workflow <%= process.workflow_state %>"><%= process.workflow_state %></td>
+        <td>
+          <ul class="toolchain">
+            <li><%= link_to image_tag('icons_16/editdelete.png'), process, :method => :delete, :confirm => 'Wirklich löschen?' %></li>
+            <li><%= link_to image_tag('icons_16/goto.png'), process %></li>
+          </ul>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="5">Summe</th>
+      <td class="decimal"><%= m processes.collect(&:gross_total_price).sum %></td>
+    </tr>
+  </tfoot>
+</table>

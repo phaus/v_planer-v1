@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: AfterCommit::ConnectionAdapters</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">AfterCommit::ConnectionAdapters</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/vendor/after_commit/lib/after_commit/connection_adapters_rb.html">
+                vendor/after_commit/lib/after_commit/connection_adapters.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000473">commit_db_transaction_with_callback</a>&nbsp;&nbsp;
+      <a href="#M000489">decrement_transaction_pointer</a>&nbsp;&nbsp;
+      <a href="#M000472">included</a>&nbsp;&nbsp;
+      <a href="#M000488">increment_transaction_pointer</a>&nbsp;&nbsp;
+      <a href="#M000476">old_transaction_key</a>&nbsp;&nbsp;
+      <a href="#M000474">rollback_db_transaction_with_callback</a>&nbsp;&nbsp;
+      <a href="#M000487">transaction_pointer</a>&nbsp;&nbsp;
+      <a href="#M000482">trigger_after_commit_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000483">trigger_after_commit_on_create_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000485">trigger_after_commit_on_destroy_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000484">trigger_after_commit_on_update_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000486">trigger_after_rollback_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000477">trigger_before_commit_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000478">trigger_before_commit_on_create_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000480">trigger_before_commit_on_destroy_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000479">trigger_before_commit_on_update_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000481">trigger_before_rollback_callbacks</a>&nbsp;&nbsp;
+      <a href="#M000475">unique_transaction_key</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000472" class="method-detail">
+        <a name="M000472"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000472.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000472.html');return false;">
+          <span class="method-name">included</span><span class="method-args">(base)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000473" class="method-detail">
+        <a name="M000473"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000473.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000473.html');return false;">
+          <span class="method-name">commit_db_transaction_with_callback</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The commit_db_transaction method gets called when the outermost transaction
+finishes and everything inside commits. We want to override it so that
+after this happens, any records that were saved or destroyed within this
+transaction now get their after_commit callback fired.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000489" class="method-detail">
+        <a name="M000489"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000489.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000489.html');return false;">
+          <span class="method-name">decrement_transaction_pointer</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000488" class="method-detail">
+        <a name="M000488"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000488.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000488.html');return false;">
+          <span class="method-name">increment_transaction_pointer</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000476" class="method-detail">
+        <a name="M000476"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000476.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000476.html');return false;">
+          <span class="method-name">old_transaction_key</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000474" class="method-detail">
+        <a name="M000474"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000474.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000474.html');return false;">
+          <span class="method-name">rollback_db_transaction_with_callback</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+In the event the transaction fails and rolls back, nothing inside should
+recieve the after_commit callback, but do fire the after_rollback callback
+for each record that failed to be committed.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000487" class="method-detail">
+        <a name="M000487"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000487.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000487.html');return false;">
+          <span class="method-name">transaction_pointer</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000482" class="method-detail">
+        <a name="M000482"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000482.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000482.html');return false;">
+          <span class="method-name">trigger_after_commit_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000483" class="method-detail">
+        <a name="M000483"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000483.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000483.html');return false;">
+          <span class="method-name">trigger_after_commit_on_create_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000485" class="method-detail">
+        <a name="M000485"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000485.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000485.html');return false;">
+          <span class="method-name">trigger_after_commit_on_destroy_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000484" class="method-detail">
+        <a name="M000484"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000484.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000484.html');return false;">
+          <span class="method-name">trigger_after_commit_on_update_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000486" class="method-detail">
+        <a name="M000486"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000486.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000486.html');return false;">
+          <span class="method-name">trigger_after_rollback_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000477" class="method-detail">
+        <a name="M000477"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000477.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000477.html');return false;">
+          <span class="method-name">trigger_before_commit_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000478" class="method-detail">
+        <a name="M000478"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000478.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000478.html');return false;">
+          <span class="method-name">trigger_before_commit_on_create_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000480" class="method-detail">
+        <a name="M000480"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000480.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000480.html');return false;">
+          <span class="method-name">trigger_before_commit_on_destroy_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000479" class="method-detail">
+        <a name="M000479"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000479.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000479.html');return false;">
+          <span class="method-name">trigger_before_commit_on_update_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000481" class="method-detail">
+        <a name="M000481"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000481.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000481.html');return false;">
+          <span class="method-name">trigger_before_rollback_callbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000475" class="method-detail">
+        <a name="M000475"></a>
+
+        <div class="method-heading">
+          <a href="ConnectionAdapters.src/M000475.html" target="Code" class="method-signature"
+            onclick="popupCode('ConnectionAdapters.src/M000475.html');return false;">
+          <span class="method-name">unique_transaction_key</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

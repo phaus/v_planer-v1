@@ -1,0 +1,7 @@
+<%= FasterCSV.generate(:force_quotes => true) do |csv|
+  fields = @devices.first.attributes.keys
+  csv << fields
+  @devices.each do |device|
+    csv << fields.collect{|f| device.send f }
+  end
+end %>

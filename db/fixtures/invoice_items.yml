@@ -1,0 +1,838 @@
+--- 
+invoice_items_00074: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "94"
+  invoice_id: "12"
+  id: "74"
+  price_i: "0"
+invoice_items_00011: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "45"
+  invoice_id: "3"
+  id: "11"
+  price_i: "168"
+invoice_items_00009: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "43"
+  invoice_id: "3"
+  id: "9"
+  price_i: "0"
+invoice_items_00032: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "36"
+  invoice_id: "6"
+  id: "32"
+  price_i: "2513"
+invoice_items_00053: 
+  created_at: 2010-04-03 11:54:58
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 11:54:58
+  process_item_id: "83"
+  invoice_id: "7"
+  id: "53"
+  price_i: "2500"
+invoice_items_00075: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "95"
+  invoice_id: "12"
+  id: "75"
+  price_i: "0"
+invoice_items_00033: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "37"
+  invoice_id: "6"
+  id: "33"
+  price_i: "3350"
+invoice_items_00054: 
+  created_at: 2010-04-03 11:54:58
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 11:54:58
+  process_item_id: "84"
+  invoice_id: "7"
+  id: "54"
+  price_i: "2500"
+invoice_items_00076: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "96"
+  invoice_id: "12"
+  id: "76"
+  price_i: "0"
+invoice_items_00012: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "46"
+  invoice_id: "3"
+  id: "12"
+  price_i: "5025"
+invoice_items_00055: 
+  created_at: 2010-04-03 12:02:25
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:02:25
+  process_item_id: "81"
+  invoice_id: "8"
+  id: "55"
+  price_i: "6000"
+invoice_items_00077: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "97"
+  invoice_id: "12"
+  id: "77"
+  price_i: "0"
+invoice_items_00013: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "47"
+  invoice_id: "3"
+  id: "13"
+  price_i: "1675"
+invoice_items_00034: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "38"
+  invoice_id: "6"
+  id: "34"
+  price_i: "4188"
+invoice_items_00014: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "48"
+  invoice_id: "3"
+  id: "14"
+  price_i: "5025"
+invoice_items_00035: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "39"
+  invoice_id: "6"
+  id: "35"
+  price_i: "20100"
+invoice_items_00056: 
+  created_at: 2010-04-03 12:02:25
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:02:25
+  process_item_id: "82"
+  invoice_id: "8"
+  id: "56"
+  price_i: "2500"
+invoice_items_00080: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "100"
+  invoice_id: "12"
+  id: "80"
+  price_i: "0"
+invoice_items_00078: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "98"
+  invoice_id: "12"
+  id: "78"
+  price_i: "0"
+invoice_items_00015: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "49"
+  invoice_id: "3"
+  id: "15"
+  price_i: "1005"
+invoice_items_00036: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "40"
+  invoice_id: "6"
+  id: "36"
+  price_i: "9380"
+invoice_items_00057: 
+  created_at: 2010-04-03 12:02:25
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:02:25
+  process_item_id: "83"
+  invoice_id: "8"
+  id: "57"
+  price_i: "2500"
+invoice_items_00081: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "101"
+  invoice_id: "12"
+  id: "81"
+  price_i: "0"
+invoice_items_00079: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "99"
+  invoice_id: "12"
+  id: "79"
+  price_i: "0"
+invoice_items_00016: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "50"
+  invoice_id: "3"
+  id: "16"
+  price_i: "5025"
+invoice_items_00037: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "41"
+  invoice_id: "6"
+  id: "37"
+  price_i: "6700"
+invoice_items_00060: 
+  created_at: 2010-04-03 12:09:16
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:09:16
+  process_item_id: "78"
+  invoice_id: "9"
+  id: "60"
+  price_i: "2760"
+invoice_items_00058: 
+  created_at: 2010-04-03 12:02:25
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:02:25
+  process_item_id: "84"
+  invoice_id: "8"
+  id: "58"
+  price_i: "2500"
+invoice_items_00082: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "102"
+  invoice_id: "12"
+  id: "82"
+  price_i: "0"
+invoice_items_00017: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "56"
+  invoice_id: "3"
+  id: "17"
+  price_i: "0"
+invoice_items_00040: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "44"
+  invoice_id: "6"
+  id: "40"
+  price_i: "168"
+invoice_items_00038: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "42"
+  invoice_id: "6"
+  id: "38"
+  price_i: "6700"
+invoice_items_00061: 
+  created_at: 2010-04-03 12:09:16
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:09:16
+  process_item_id: "79"
+  invoice_id: "9"
+  id: "61"
+  price_i: "5750"
+invoice_items_00059: 
+  created_at: 2010-04-03 12:09:16
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:09:16
+  process_item_id: "77"
+  invoice_id: "9"
+  id: "59"
+  price_i: "3450"
+invoice_items_00083: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "103"
+  invoice_id: "12"
+  id: "83"
+  price_i: "0"
+invoice_items_00018: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "57"
+  invoice_id: "3"
+  id: "18"
+  price_i: "0"
+invoice_items_00041: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "45"
+  invoice_id: "6"
+  id: "41"
+  price_i: "168"
+invoice_items_00039: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "43"
+  invoice_id: "6"
+  id: "39"
+  price_i: "0"
+invoice_items_00062: 
+  created_at: 2010-04-03 12:09:16
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:09:16
+  process_item_id: "80"
+  invoice_id: "9"
+  id: "62"
+  price_i: "2760"
+invoice_items_00020: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "61"
+  invoice_id: "3"
+  id: "20"
+  price_i: "10000"
+invoice_items_00084: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "104"
+  invoice_id: "12"
+  id: "84"
+  price_i: "0"
+invoice_items_00063: 
+  created_at: 2010-04-03 12:20:22
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:20:22
+  process_item_id: "77"
+  invoice_id: "10"
+  id: "63"
+  price_i: "3450"
+invoice_items_00021: 
+  created_at: 2010-02-26 18:35:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:35:15
+  process_item_id: "72"
+  invoice_id: "4"
+  id: "21"
+  price_i: "20000"
+invoice_items_00019: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "60"
+  invoice_id: "3"
+  id: "19"
+  price_i: "6900"
+invoice_items_00042: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "46"
+  invoice_id: "6"
+  id: "42"
+  price_i: "5025"
+invoice_items_00085: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "105"
+  invoice_id: "12"
+  id: "85"
+  price_i: "0"
+invoice_items_00022: 
+  created_at: 2010-02-26 18:35:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:35:15
+  process_item_id: "73"
+  invoice_id: "4"
+  id: "22"
+  price_i: "12000"
+invoice_items_00043: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "47"
+  invoice_id: "6"
+  id: "43"
+  price_i: "1675"
+invoice_items_00064: 
+  created_at: 2010-04-03 12:20:22
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:20:22
+  process_item_id: "78"
+  invoice_id: "10"
+  id: "64"
+  price_i: "2760"
+invoice_items_00086: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "106"
+  invoice_id: "12"
+  id: "86"
+  price_i: "0"
+invoice_items_00001: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "35"
+  invoice_id: "3"
+  id: "1"
+  price_i: "1675"
+invoice_items_00044: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "48"
+  invoice_id: "6"
+  id: "44"
+  price_i: "5025"
+invoice_items_00065: 
+  created_at: 2010-04-03 12:20:22
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:20:22
+  process_item_id: "79"
+  invoice_id: "10"
+  id: "65"
+  price_i: "5750"
+invoice_items_00087: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "107"
+  invoice_id: "12"
+  id: "87"
+  price_i: "0"
+invoice_items_00002: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "36"
+  invoice_id: "3"
+  id: "2"
+  price_i: "2513"
+invoice_items_00023: 
+  created_at: 2010-02-26 18:35:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:35:15
+  process_item_id: "74"
+  invoice_id: "4"
+  id: "23"
+  price_i: "4600"
+invoice_items_00066: 
+  created_at: 2010-04-03 12:20:22
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:20:22
+  process_item_id: "80"
+  invoice_id: "10"
+  id: "66"
+  price_i: "2760"
+invoice_items_00088: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "108"
+  invoice_id: "12"
+  id: "88"
+  price_i: "0"
+invoice_items_00003: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "37"
+  invoice_id: "3"
+  id: "3"
+  price_i: "3350"
+invoice_items_00024: 
+  created_at: 2010-02-26 18:44:56
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:44:56
+  process_item_id: "65"
+  invoice_id: "5"
+  id: "24"
+  price_i: "3300"
+invoice_items_00045: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "49"
+  invoice_id: "6"
+  id: "45"
+  price_i: "1005"
+invoice_items_00090: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "110"
+  invoice_id: "12"
+  id: "90"
+  price_i: "0"
+invoice_items_00067: 
+  created_at: 2010-04-03 12:22:44
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:22:44
+  process_item_id: "77"
+  invoice_id: "11"
+  id: "67"
+  price_i: "3450"
+invoice_items_00004: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "38"
+  invoice_id: "3"
+  id: "4"
+  price_i: "4188"
+invoice_items_00025: 
+  created_at: 2010-02-26 18:44:56
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:44:56
+  process_item_id: "66"
+  invoice_id: "5"
+  id: "25"
+  price_i: "10000"
+invoice_items_00046: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "50"
+  invoice_id: "6"
+  id: "46"
+  price_i: "5025"
+invoice_items_00091: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "111"
+  invoice_id: "12"
+  id: "91"
+  price_i: "0"
+invoice_items_00089: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "109"
+  invoice_id: "12"
+  id: "89"
+  price_i: "0"
+invoice_items_00070: 
+  created_at: 2010-04-03 12:22:44
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:22:44
+  process_item_id: "80"
+  invoice_id: "11"
+  id: "70"
+  price_i: "2760"
+invoice_items_00068: 
+  created_at: 2010-04-03 12:22:44
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:22:44
+  process_item_id: "78"
+  invoice_id: "11"
+  id: "68"
+  price_i: "2760"
+invoice_items_00005: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "39"
+  invoice_id: "3"
+  id: "5"
+  price_i: "20100"
+invoice_items_00026: 
+  created_at: 2010-02-26 18:44:56
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:44:56
+  process_item_id: "67"
+  invoice_id: "5"
+  id: "26"
+  price_i: "6000"
+invoice_items_00047: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "56"
+  invoice_id: "6"
+  id: "47"
+  price_i: "0"
+invoice_items_00092: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "112"
+  invoice_id: "12"
+  id: "92"
+  price_i: "0"
+invoice_items_00071: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "92"
+  invoice_id: "12"
+  id: "71"
+  price_i: "2300"
+invoice_items_00069: 
+  created_at: 2010-04-03 12:22:44
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 12:22:44
+  process_item_id: "79"
+  invoice_id: "11"
+  id: "69"
+  price_i: "5750"
+invoice_items_00006: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "40"
+  invoice_id: "3"
+  id: "6"
+  price_i: "9380"
+invoice_items_00027: 
+  created_at: 2010-02-26 18:44:56
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:44:56
+  process_item_id: "68"
+  invoice_id: "5"
+  id: "27"
+  price_i: "2300"
+invoice_items_00050: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "61"
+  invoice_id: "6"
+  id: "50"
+  price_i: "10000"
+invoice_items_00048: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "57"
+  invoice_id: "6"
+  id: "48"
+  price_i: "0"
+invoice_items_00093: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "113"
+  invoice_id: "12"
+  id: "93"
+  price_i: "0"
+invoice_items_00072: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "91"
+  invoice_id: "12"
+  id: "72"
+  price_i: "8280"
+invoice_items_00007: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "41"
+  invoice_id: "3"
+  id: "7"
+  price_i: "6700"
+invoice_items_00030: 
+  created_at: 2010-02-26 18:44:56
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:44:56
+  process_item_id: "71"
+  invoice_id: "5"
+  id: "30"
+  price_i: "825"
+invoice_items_00028: 
+  created_at: 2010-02-26 18:44:56
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:44:56
+  process_item_id: "69"
+  invoice_id: "5"
+  id: "28"
+  price_i: "1155"
+invoice_items_00051: 
+  created_at: 2010-04-03 11:54:58
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 11:54:58
+  process_item_id: "81"
+  invoice_id: "7"
+  id: "51"
+  price_i: "6000"
+invoice_items_00049: 
+  created_at: 2010-03-10 19:35:55
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:55
+  process_item_id: "60"
+  invoice_id: "6"
+  id: "49"
+  price_i: "6900"
+invoice_items_00073: 
+  created_at: 2010-04-14 20:54:53
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-14 20:54:53
+  process_item_id: "93"
+  invoice_id: "12"
+  id: "73"
+  price_i: "0"
+invoice_items_00029: 
+  created_at: 2010-02-26 18:44:56
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-26 18:44:56
+  process_item_id: "70"
+  invoice_id: "5"
+  id: "29"
+  price_i: "825"
+invoice_items_00052: 
+  created_at: 2010-04-03 11:54:58
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-04-03 11:54:58
+  process_item_id: "82"
+  invoice_id: "7"
+  id: "52"
+  price_i: "2500"
+invoice_items_00010: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "44"
+  invoice_id: "3"
+  id: "10"
+  price_i: "168"
+invoice_items_00008: 
+  created_at: 2010-02-25 18:17:15
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-02-25 18:17:15
+  process_item_id: "42"
+  invoice_id: "3"
+  id: "8"
+  price_i: "6700"
+invoice_items_00031: 
+  created_at: 2010-03-10 19:35:54
+  remarks: 
+  process_item_type: RentalPeriod
+  updated_at: 2010-03-10 19:35:54
+  process_item_id: "35"
+  invoice_id: "6"
+  id: "31"
+  price_i: "1675"

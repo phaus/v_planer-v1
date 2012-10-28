@@ -1,0 +1,3095 @@
+--- 
+product_stock_entries_00310: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "734"
+  device_id: "331"
+product_stock_entries_00120: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "544"
+  device_id: "281"
+product_stock_entries_00311: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "735"
+  device_id: "331"
+product_stock_entries_00121: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "545"
+  device_id: "281"
+product_stock_entries_00312: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "736"
+  device_id: "331"
+product_stock_entries_00122: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "546"
+  device_id: "281"
+product_stock_entries_00360: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "784"
+  device_id: "341"
+product_stock_entries_00170: 
+  serial: "24"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "594"
+  device_id: "291"
+product_stock_entries_00313: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "737"
+  device_id: "331"
+product_stock_entries_00123: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "547"
+  device_id: "282"
+product_stock_entries_00361: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "785"
+  device_id: "341"
+product_stock_entries_00171: 
+  serial: "25"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "595"
+  device_id: "291"
+product_stock_entries_00314: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "738"
+  device_id: "331"
+product_stock_entries_00124: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "548"
+  device_id: "282"
+product_stock_entries_00172: 
+  serial: "26"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "596"
+  device_id: "291"
+product_stock_entries_00315: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "739"
+  device_id: "331"
+product_stock_entries_00125: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "549"
+  device_id: "282"
+product_stock_entries_00362: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "786"
+  device_id: "341"
+product_stock_entries_00173: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "597"
+  device_id: "292"
+product_stock_entries_00316: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "740"
+  device_id: "331"
+product_stock_entries_00126: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "550"
+  device_id: "283"
+product_stock_entries_00363: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "787"
+  device_id: "342"
+product_stock_entries_00317: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "741"
+  device_id: "331"
+product_stock_entries_00127: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "551"
+  device_id: "284"
+product_stock_entries_00364: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "788"
+  device_id: "343"
+product_stock_entries_00174: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "598"
+  device_id: "292"
+product_stock_entries_00318: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "742"
+  device_id: "331"
+product_stock_entries_00128: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "552"
+  device_id: "284"
+product_stock_entries_00365: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "789"
+  device_id: "344"
+product_stock_entries_00175: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "599"
+  device_id: "292"
+product_stock_entries_00319: 
+  serial: "9"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "743"
+  device_id: "331"
+product_stock_entries_00129: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "553"
+  device_id: "284"
+product_stock_entries_00366: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "790"
+  device_id: "344"
+product_stock_entries_00176: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "600"
+  device_id: "292"
+product_stock_entries_00367: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "791"
+  device_id: "344"
+product_stock_entries_00177: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "601"
+  device_id: "292"
+product_stock_entries_00368: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "792"
+  device_id: "344"
+product_stock_entries_00178: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "602"
+  device_id: "292"
+product_stock_entries_00369: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "793"
+  device_id: "344"
+product_stock_entries_00179: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "603"
+  device_id: "292"
+product_stock_entries_00420: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "844"
+  device_id: "368"
+product_stock_entries_00230: 
+  serial: "12"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "654"
+  device_id: "301"
+product_stock_entries_00040: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "464"
+  device_id: "251"
+product_stock_entries_00421: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "845"
+  device_id: "369"
+product_stock_entries_00231: 
+  serial: "13"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "655"
+  device_id: "301"
+product_stock_entries_00041: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "465"
+  device_id: "252"
+product_stock_entries_00422: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "846"
+  device_id: "370"
+product_stock_entries_00090: 
+  serial: "9"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "514"
+  device_id: "268"
+product_stock_entries_00232: 
+  serial: "14"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "656"
+  device_id: "301"
+product_stock_entries_00042: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "466"
+  device_id: "252"
+product_stock_entries_00423: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "847"
+  device_id: "371"
+product_stock_entries_00280: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "704"
+  device_id: "307"
+product_stock_entries_00233: 
+  serial: "15"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "657"
+  device_id: "301"
+product_stock_entries_00043: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "467"
+  device_id: "253"
+product_stock_entries_00424: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "848"
+  device_id: "371"
+product_stock_entries_00091: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "515"
+  device_id: "269"
+product_stock_entries_00234: 
+  serial: "16"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "658"
+  device_id: "301"
+product_stock_entries_00044: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "468"
+  device_id: "254"
+product_stock_entries_00281: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "705"
+  device_id: "308"
+product_stock_entries_00425: 
+  serial: "1"
+  created_at: 2010-04-16 21:08:58
+  remarks: ""
+  updated_at: 2010-04-16 21:08:58
+  id: "849"
+  device_id: "436"
+product_stock_entries_00092: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "516"
+  device_id: "269"
+product_stock_entries_00235: 
+  serial: "17"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "659"
+  device_id: "301"
+product_stock_entries_00045: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "469"
+  device_id: "255"
+product_stock_entries_00282: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "706"
+  device_id: "308"
+product_stock_entries_00426: 
+  serial: "2"
+  created_at: 2010-04-16 21:08:58
+  remarks: ""
+  updated_at: 2010-04-16 21:08:58
+  id: "850"
+  device_id: "436"
+product_stock_entries_00236: 
+  serial: "18"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "660"
+  device_id: "301"
+product_stock_entries_00046: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "470"
+  device_id: "256"
+product_stock_entries_00283: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "707"
+  device_id: "308"
+product_stock_entries_00093: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "517"
+  device_id: "269"
+product_stock_entries_00427: 
+  serial: "3"
+  created_at: 2010-04-16 21:08:58
+  remarks: ""
+  updated_at: 2010-04-16 21:08:58
+  id: "851"
+  device_id: "436"
+product_stock_entries_00237: 
+  serial: "19"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "661"
+  device_id: "301"
+product_stock_entries_00047: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "471"
+  device_id: "256"
+product_stock_entries_00284: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "708"
+  device_id: "309"
+product_stock_entries_00094: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "518"
+  device_id: "269"
+product_stock_entries_00428: 
+  serial: "4"
+  created_at: 2010-04-16 21:08:58
+  remarks: ""
+  updated_at: 2010-04-16 21:08:58
+  id: "852"
+  device_id: "436"
+product_stock_entries_00238: 
+  serial: "20"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "662"
+  device_id: "301"
+product_stock_entries_00048: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "472"
+  device_id: "257"
+product_stock_entries_00285: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "709"
+  device_id: "310"
+product_stock_entries_00095: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "519"
+  device_id: "269"
+product_stock_entries_00429: 
+  serial: "5"
+  created_at: 2010-04-16 21:08:58
+  remarks: ""
+  updated_at: 2010-04-16 21:08:58
+  id: "853"
+  device_id: "436"
+product_stock_entries_00239: 
+  serial: "21"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "663"
+  device_id: "301"
+product_stock_entries_00049: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "473"
+  device_id: "259"
+product_stock_entries_00286: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "710"
+  device_id: "311"
+product_stock_entries_00096: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "520"
+  device_id: "269"
+product_stock_entries_00287: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "711"
+  device_id: "311"
+product_stock_entries_00097: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "521"
+  device_id: "269"
+product_stock_entries_00100: 
+  serial: "9"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "524"
+  device_id: "269"
+product_stock_entries_00288: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "712"
+  device_id: "312"
+product_stock_entries_00098: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "522"
+  device_id: "269"
+product_stock_entries_00101: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "525"
+  device_id: "270"
+product_stock_entries_00289: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "713"
+  device_id: "312"
+product_stock_entries_00099: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "523"
+  device_id: "269"
+product_stock_entries_00102: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "526"
+  device_id: "271"
+product_stock_entries_00340: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "764"
+  device_id: "332"
+product_stock_entries_00150: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "574"
+  device_id: "291"
+product_stock_entries_00103: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "527"
+  device_id: "271"
+product_stock_entries_00341: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "765"
+  device_id: "332"
+product_stock_entries_00151: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "575"
+  device_id: "291"
+product_stock_entries_00104: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "528"
+  device_id: "272"
+product_stock_entries_00342: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "766"
+  device_id: "332"
+product_stock_entries_00152: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "576"
+  device_id: "291"
+product_stock_entries_00105: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "529"
+  device_id: "273"
+product_stock_entries_00343: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "767"
+  device_id: "332"
+product_stock_entries_00153: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "577"
+  device_id: "291"
+product_stock_entries_00106: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "530"
+  device_id: "274"
+product_stock_entries_00390: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "814"
+  device_id: "349"
+product_stock_entries_00344: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "768"
+  device_id: "333"
+product_stock_entries_00154: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "578"
+  device_id: "291"
+product_stock_entries_00107: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "531"
+  device_id: "275"
+product_stock_entries_00391: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "815"
+  device_id: "350"
+product_stock_entries_00345: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "769"
+  device_id: "333"
+product_stock_entries_00155: 
+  serial: "9"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "579"
+  device_id: "291"
+product_stock_entries_00108: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "532"
+  device_id: "275"
+product_stock_entries_00392: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "816"
+  device_id: "350"
+product_stock_entries_00346: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "770"
+  device_id: "333"
+product_stock_entries_00156: 
+  serial: "10"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "580"
+  device_id: "291"
+product_stock_entries_00109: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "533"
+  device_id: "275"
+product_stock_entries_00393: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "817"
+  device_id: "351"
+product_stock_entries_00347: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "771"
+  device_id: "333"
+product_stock_entries_00157: 
+  serial: "11"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "581"
+  device_id: "291"
+product_stock_entries_00394: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "818"
+  device_id: "352"
+product_stock_entries_00348: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "772"
+  device_id: "333"
+product_stock_entries_00158: 
+  serial: "12"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "582"
+  device_id: "291"
+product_stock_entries_00395: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "819"
+  device_id: "352"
+product_stock_entries_00349: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "773"
+  device_id: "334"
+product_stock_entries_00159: 
+  serial: "13"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "583"
+  device_id: "291"
+product_stock_entries_00396: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "820"
+  device_id: "353"
+product_stock_entries_00397: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "821"
+  device_id: "354"
+product_stock_entries_00400: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "824"
+  device_id: "357"
+product_stock_entries_00210: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "634"
+  device_id: "298"
+product_stock_entries_00020: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "444"
+  device_id: "244"
+product_stock_entries_00398: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "822"
+  device_id: "355"
+product_stock_entries_00401: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "825"
+  device_id: "357"
+product_stock_entries_00211: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "635"
+  device_id: "298"
+product_stock_entries_00021: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "445"
+  device_id: "245"
+product_stock_entries_00399: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "823"
+  device_id: "356"
+product_stock_entries_00402: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "826"
+  device_id: "358"
+product_stock_entries_00212: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "636"
+  device_id: "298"
+product_stock_entries_00022: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "446"
+  device_id: "245"
+product_stock_entries_00403: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "827"
+  device_id: "358"
+product_stock_entries_00260: 
+  serial: "42"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "684"
+  device_id: "301"
+product_stock_entries_00070: 
+  serial: "9"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "494"
+  device_id: "266"
+product_stock_entries_00213: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "637"
+  device_id: "298"
+product_stock_entries_00023: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "447"
+  device_id: "246"
+product_stock_entries_00404: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "828"
+  device_id: "359"
+product_stock_entries_00261: 
+  serial: "43"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "685"
+  device_id: "301"
+product_stock_entries_00071: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "495"
+  device_id: "267"
+product_stock_entries_00214: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "638"
+  device_id: "298"
+product_stock_entries_00024: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "448"
+  device_id: "247"
+product_stock_entries_00405: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "829"
+  device_id: "360"
+product_stock_entries_00262: 
+  serial: "44"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "686"
+  device_id: "301"
+product_stock_entries_00072: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "496"
+  device_id: "267"
+product_stock_entries_00215: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "639"
+  device_id: "299"
+product_stock_entries_00025: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "449"
+  device_id: "247"
+product_stock_entries_00406: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "830"
+  device_id: "360"
+product_stock_entries_00263: 
+  serial: "45"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "687"
+  device_id: "301"
+product_stock_entries_00073: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "497"
+  device_id: "267"
+product_stock_entries_00216: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "640"
+  device_id: "299"
+product_stock_entries_00026: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "450"
+  device_id: "248"
+product_stock_entries_00407: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "831"
+  device_id: "360"
+product_stock_entries_00264: 
+  serial: "46"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "688"
+  device_id: "301"
+product_stock_entries_00074: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "498"
+  device_id: "267"
+product_stock_entries_00217: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "641"
+  device_id: "300"
+product_stock_entries_00027: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "451"
+  device_id: "249"
+product_stock_entries_00408: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "832"
+  device_id: "360"
+product_stock_entries_00265: 
+  serial: "47"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "689"
+  device_id: "301"
+product_stock_entries_00075: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "499"
+  device_id: "267"
+product_stock_entries_00218: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "642"
+  device_id: "301"
+product_stock_entries_00028: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "452"
+  device_id: "249"
+product_stock_entries_00409: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "833"
+  device_id: "361"
+product_stock_entries_00266: 
+  serial: "48"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "690"
+  device_id: "301"
+product_stock_entries_00076: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "500"
+  device_id: "267"
+product_stock_entries_00219: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "643"
+  device_id: "301"
+product_stock_entries_00029: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "453"
+  device_id: "249"
+product_stock_entries_00267: 
+  serial: "49"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "691"
+  device_id: "301"
+product_stock_entries_00077: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "501"
+  device_id: "267"
+product_stock_entries_00268: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "692"
+  device_id: "302"
+product_stock_entries_00078: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "502"
+  device_id: "267"
+product_stock_entries_00269: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "693"
+  device_id: "303"
+product_stock_entries_00079: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "503"
+  device_id: "267"
+product_stock_entries_00320: 
+  serial: "10"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "744"
+  device_id: "331"
+product_stock_entries_00130: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "554"
+  device_id: "284"
+product_stock_entries_00321: 
+  serial: "11"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "745"
+  device_id: "331"
+product_stock_entries_00131: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "555"
+  device_id: "285"
+product_stock_entries_00322: 
+  serial: "12"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "746"
+  device_id: "331"
+product_stock_entries_00132: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "556"
+  device_id: "286"
+product_stock_entries_00370: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "794"
+  device_id: "344"
+product_stock_entries_00180: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "604"
+  device_id: "292"
+product_stock_entries_00323: 
+  serial: "13"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "747"
+  device_id: "331"
+product_stock_entries_00133: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "557"
+  device_id: "286"
+product_stock_entries_00371: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "795"
+  device_id: "344"
+product_stock_entries_00181: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "605"
+  device_id: "292"
+product_stock_entries_00324: 
+  serial: "14"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "748"
+  device_id: "331"
+product_stock_entries_00134: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "558"
+  device_id: "286"
+product_stock_entries_00372: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "796"
+  device_id: "344"
+product_stock_entries_00182: 
+  serial: "9"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "606"
+  device_id: "292"
+product_stock_entries_00325: 
+  serial: "15"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "749"
+  device_id: "331"
+product_stock_entries_00135: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "559"
+  device_id: "286"
+product_stock_entries_00373: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "797"
+  device_id: "344"
+product_stock_entries_00183: 
+  serial: "10"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "607"
+  device_id: "292"
+product_stock_entries_00326: 
+  serial: "16"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "750"
+  device_id: "331"
+product_stock_entries_00136: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "560"
+  device_id: "286"
+product_stock_entries_00374: 
+  serial: "9"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "798"
+  device_id: "344"
+product_stock_entries_00184: 
+  serial: "11"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "608"
+  device_id: "292"
+product_stock_entries_00327: 
+  serial: "17"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "751"
+  device_id: "331"
+product_stock_entries_00137: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "561"
+  device_id: "287"
+product_stock_entries_00375: 
+  serial: "10"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "799"
+  device_id: "344"
+product_stock_entries_00185: 
+  serial: "12"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "609"
+  device_id: "292"
+product_stock_entries_00328: 
+  serial: "18"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "752"
+  device_id: "331"
+product_stock_entries_00138: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "562"
+  device_id: "287"
+product_stock_entries_00376: 
+  serial: "11"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "800"
+  device_id: "344"
+product_stock_entries_00186: 
+  serial: "13"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "610"
+  device_id: "292"
+product_stock_entries_00329: 
+  serial: "19"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "753"
+  device_id: "331"
+product_stock_entries_00139: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "563"
+  device_id: "287"
+product_stock_entries_00377: 
+  serial: "12"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "801"
+  device_id: "344"
+product_stock_entries_00187: 
+  serial: "14"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "611"
+  device_id: "292"
+product_stock_entries_00378: 
+  serial: "13"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "802"
+  device_id: "344"
+product_stock_entries_00188: 
+  serial: "15"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "612"
+  device_id: "292"
+product_stock_entries_00001: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "425"
+  device_id: "231"
+product_stock_entries_00379: 
+  serial: "14"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "803"
+  device_id: "344"
+product_stock_entries_00189: 
+  serial: "16"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "613"
+  device_id: "292"
+product_stock_entries_00002: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "426"
+  device_id: "232"
+product_stock_entries_00430: 
+  serial: "6"
+  created_at: 2010-04-16 21:08:58
+  remarks: ""
+  updated_at: 2010-04-16 21:08:58
+  id: "854"
+  device_id: "436"
+product_stock_entries_00003: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "427"
+  device_id: "233"
+product_stock_entries_00240: 
+  serial: "22"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "664"
+  device_id: "301"
+product_stock_entries_00050: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "474"
+  device_id: "260"
+product_stock_entries_00431: 
+  serial: "7"
+  created_at: 2010-04-16 21:13:55
+  remarks: ""
+  updated_at: 2010-04-16 21:13:55
+  id: "855"
+  device_id: "436"
+product_stock_entries_00004: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "428"
+  device_id: "233"
+product_stock_entries_00241: 
+  serial: "23"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "665"
+  device_id: "301"
+product_stock_entries_00051: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "475"
+  device_id: "260"
+product_stock_entries_00432: 
+  serial: "1"
+  created_at: 2010-04-18 21:39:05
+  remarks: ""
+  updated_at: 2010-04-18 21:39:05
+  id: "856"
+  device_id: "442"
+product_stock_entries_00005: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "429"
+  device_id: "233"
+product_stock_entries_00242: 
+  serial: "24"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "666"
+  device_id: "301"
+product_stock_entries_00052: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "476"
+  device_id: "260"
+product_stock_entries_00433: 
+  serial: "2"
+  created_at: 2010-04-18 21:39:05
+  remarks: ""
+  updated_at: 2010-04-18 21:39:05
+  id: "857"
+  device_id: "442"
+product_stock_entries_00006: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "430"
+  device_id: "233"
+product_stock_entries_00290: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "714"
+  device_id: "316"
+product_stock_entries_00243: 
+  serial: "25"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "667"
+  device_id: "301"
+product_stock_entries_00053: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "477"
+  device_id: "260"
+product_stock_entries_00434: 
+  serial: "3"
+  created_at: 2010-04-18 21:39:05
+  remarks: ""
+  updated_at: 2010-04-18 21:39:05
+  id: "858"
+  device_id: "442"
+product_stock_entries_00007: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "431"
+  device_id: "233"
+product_stock_entries_00291: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "715"
+  device_id: "317"
+product_stock_entries_00244: 
+  serial: "26"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "668"
+  device_id: "301"
+product_stock_entries_00054: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "478"
+  device_id: "261"
+product_stock_entries_00435: 
+  serial: "4"
+  created_at: 2010-04-18 21:39:05
+  remarks: ""
+  updated_at: 2010-04-18 21:39:05
+  id: "859"
+  device_id: "442"
+product_stock_entries_00008: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "432"
+  device_id: "234"
+product_stock_entries_00292: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "716"
+  device_id: "318"
+product_stock_entries_00245: 
+  serial: "27"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "669"
+  device_id: "301"
+product_stock_entries_00055: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "479"
+  device_id: "261"
+product_stock_entries_00436: 
+  serial: "5"
+  created_at: 2010-04-19 17:47:32
+  remarks: ""
+  updated_at: 2010-04-19 17:47:32
+  id: "860"
+  device_id: "442"
+product_stock_entries_00009: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "433"
+  device_id: "235"
+product_stock_entries_00293: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "717"
+  device_id: "319"
+product_stock_entries_00246: 
+  serial: "28"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "670"
+  device_id: "301"
+product_stock_entries_00056: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "480"
+  device_id: "261"
+product_stock_entries_00437: 
+  serial: "6"
+  created_at: 2010-04-19 17:47:32
+  remarks: ""
+  updated_at: 2010-04-19 17:47:32
+  id: "861"
+  device_id: "442"
+product_stock_entries_00294: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "718"
+  device_id: "320"
+product_stock_entries_00247: 
+  serial: "29"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "671"
+  device_id: "301"
+product_stock_entries_00057: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "481"
+  device_id: "262"
+product_stock_entries_00438: 
+  serial: "1"
+  created_at: 2010-04-19 18:35:13
+  remarks: ""
+  updated_at: 2010-04-19 18:35:13
+  id: "862"
+  device_id: "443"
+product_stock_entries_00295: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "719"
+  device_id: "321"
+product_stock_entries_00248: 
+  serial: "30"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "672"
+  device_id: "301"
+product_stock_entries_00058: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "482"
+  device_id: "263"
+product_stock_entries_00439: 
+  serial: "2"
+  created_at: 2010-04-19 18:35:13
+  remarks: ""
+  updated_at: 2010-04-19 18:35:13
+  id: "863"
+  device_id: "443"
+product_stock_entries_00296: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "720"
+  device_id: "322"
+product_stock_entries_00249: 
+  serial: "31"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "673"
+  device_id: "301"
+product_stock_entries_00059: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "483"
+  device_id: "264"
+product_stock_entries_00297: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "721"
+  device_id: "322"
+product_stock_entries_00300: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "724"
+  device_id: "325"
+product_stock_entries_00110: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "534"
+  device_id: "275"
+product_stock_entries_00298: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "722"
+  device_id: "323"
+product_stock_entries_00301: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "725"
+  device_id: "326"
+product_stock_entries_00111: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "535"
+  device_id: "276"
+product_stock_entries_00299: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "723"
+  device_id: "324"
+product_stock_entries_00302: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "726"
+  device_id: "327"
+product_stock_entries_00112: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "536"
+  device_id: "276"
+product_stock_entries_00303: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "727"
+  device_id: "327"
+product_stock_entries_00113: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "537"
+  device_id: "276"
+product_stock_entries_00350: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "774"
+  device_id: "334"
+product_stock_entries_00160: 
+  serial: "14"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "584"
+  device_id: "291"
+product_stock_entries_00304: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "728"
+  device_id: "327"
+product_stock_entries_00114: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "538"
+  device_id: "276"
+product_stock_entries_00351: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "775"
+  device_id: "335"
+product_stock_entries_00161: 
+  serial: "15"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "585"
+  device_id: "291"
+product_stock_entries_00305: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "729"
+  device_id: "327"
+product_stock_entries_00115: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "539"
+  device_id: "277"
+product_stock_entries_00352: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "776"
+  device_id: "335"
+product_stock_entries_00162: 
+  serial: "16"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "586"
+  device_id: "291"
+product_stock_entries_00306: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "730"
+  device_id: "328"
+product_stock_entries_00116: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "540"
+  device_id: "278"
+product_stock_entries_00353: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "777"
+  device_id: "336"
+product_stock_entries_00163: 
+  serial: "17"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "587"
+  device_id: "291"
+product_stock_entries_00307: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "731"
+  device_id: "328"
+product_stock_entries_00117: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "541"
+  device_id: "279"
+product_stock_entries_00354: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "778"
+  device_id: "336"
+product_stock_entries_00164: 
+  serial: "18"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "588"
+  device_id: "291"
+product_stock_entries_00308: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "732"
+  device_id: "329"
+product_stock_entries_00118: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "542"
+  device_id: "280"
+product_stock_entries_00355: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "779"
+  device_id: "337"
+product_stock_entries_00165: 
+  serial: "19"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "589"
+  device_id: "291"
+product_stock_entries_00309: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "733"
+  device_id: "330"
+product_stock_entries_00119: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "543"
+  device_id: "281"
+product_stock_entries_00356: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "780"
+  device_id: "338"
+product_stock_entries_00166: 
+  serial: "20"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "590"
+  device_id: "291"
+product_stock_entries_00357: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "781"
+  device_id: "339"
+product_stock_entries_00167: 
+  serial: "21"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "591"
+  device_id: "291"
+product_stock_entries_00358: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "782"
+  device_id: "340"
+product_stock_entries_00168: 
+  serial: "22"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "592"
+  device_id: "291"
+product_stock_entries_00359: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "783"
+  device_id: "341"
+product_stock_entries_00169: 
+  serial: "23"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "593"
+  device_id: "291"
+product_stock_entries_00410: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "834"
+  device_id: "362"
+product_stock_entries_00220: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "644"
+  device_id: "301"
+product_stock_entries_00030: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "454"
+  device_id: "249"
+product_stock_entries_00411: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "835"
+  device_id: "363"
+product_stock_entries_00221: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "645"
+  device_id: "301"
+product_stock_entries_00031: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "455"
+  device_id: "249"
+product_stock_entries_00412: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "836"
+  device_id: "364"
+product_stock_entries_00222: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "646"
+  device_id: "301"
+product_stock_entries_00032: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "456"
+  device_id: "249"
+product_stock_entries_00413: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "837"
+  device_id: "364"
+product_stock_entries_00223: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "647"
+  device_id: "301"
+product_stock_entries_00033: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "457"
+  device_id: "249"
+product_stock_entries_00270: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "694"
+  device_id: "303"
+product_stock_entries_00080: 
+  serial: "9"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "504"
+  device_id: "267"
+product_stock_entries_00414: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "838"
+  device_id: "364"
+product_stock_entries_00224: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "648"
+  device_id: "301"
+product_stock_entries_00034: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "458"
+  device_id: "249"
+product_stock_entries_00271: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "695"
+  device_id: "303"
+product_stock_entries_00081: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "505"
+  device_id: "268"
+product_stock_entries_00415: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "839"
+  device_id: "365"
+product_stock_entries_00225: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "649"
+  device_id: "301"
+product_stock_entries_00035: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "459"
+  device_id: "250"
+product_stock_entries_00272: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "696"
+  device_id: "304"
+product_stock_entries_00082: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "506"
+  device_id: "268"
+product_stock_entries_00416: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "840"
+  device_id: "365"
+product_stock_entries_00226: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "650"
+  device_id: "301"
+product_stock_entries_00036: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "460"
+  device_id: "250"
+product_stock_entries_00273: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "697"
+  device_id: "305"
+product_stock_entries_00083: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "507"
+  device_id: "268"
+product_stock_entries_00417: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "841"
+  device_id: "365"
+product_stock_entries_00227: 
+  serial: "9"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "651"
+  device_id: "301"
+product_stock_entries_00037: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "461"
+  device_id: "251"
+product_stock_entries_00274: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "698"
+  device_id: "305"
+product_stock_entries_00084: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "508"
+  device_id: "268"
+product_stock_entries_00418: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "842"
+  device_id: "366"
+product_stock_entries_00228: 
+  serial: "10"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "652"
+  device_id: "301"
+product_stock_entries_00038: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "462"
+  device_id: "251"
+product_stock_entries_00275: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "699"
+  device_id: "305"
+product_stock_entries_00085: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "509"
+  device_id: "268"
+product_stock_entries_00419: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "843"
+  device_id: "367"
+product_stock_entries_00039: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "463"
+  device_id: "251"
+product_stock_entries_00276: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "700"
+  device_id: "305"
+product_stock_entries_00086: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "510"
+  device_id: "268"
+product_stock_entries_00229: 
+  serial: "11"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "653"
+  device_id: "301"
+product_stock_entries_00277: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "701"
+  device_id: "306"
+product_stock_entries_00087: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "511"
+  device_id: "268"
+product_stock_entries_00278: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "702"
+  device_id: "306"
+product_stock_entries_00088: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "512"
+  device_id: "268"
+product_stock_entries_00279: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "703"
+  device_id: "307"
+product_stock_entries_00089: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "513"
+  device_id: "268"
+product_stock_entries_00330: 
+  serial: "20"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "754"
+  device_id: "331"
+product_stock_entries_00140: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "564"
+  device_id: "287"
+product_stock_entries_00331: 
+  serial: "21"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "755"
+  device_id: "331"
+product_stock_entries_00141: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "565"
+  device_id: "287"
+product_stock_entries_00332: 
+  serial: "22"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "756"
+  device_id: "331"
+product_stock_entries_00142: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "566"
+  device_id: "288"
+product_stock_entries_00333: 
+  serial: "23"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "757"
+  device_id: "331"
+product_stock_entries_00143: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "567"
+  device_id: "288"
+product_stock_entries_00380: 
+  serial: "15"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "804"
+  device_id: "344"
+product_stock_entries_00190: 
+  serial: "17"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "614"
+  device_id: "292"
+product_stock_entries_00334: 
+  serial: "24"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "758"
+  device_id: "331"
+product_stock_entries_00144: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "568"
+  device_id: "289"
+product_stock_entries_00381: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "805"
+  device_id: "345"
+product_stock_entries_00191: 
+  serial: "18"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "615"
+  device_id: "292"
+product_stock_entries_00335: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "759"
+  device_id: "332"
+product_stock_entries_00145: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "569"
+  device_id: "289"
+product_stock_entries_00382: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "806"
+  device_id: "345"
+product_stock_entries_00192: 
+  serial: "19"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "616"
+  device_id: "292"
+product_stock_entries_00146: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "570"
+  device_id: "291"
+product_stock_entries_00383: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "807"
+  device_id: "345"
+product_stock_entries_00193: 
+  serial: "20"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "617"
+  device_id: "292"
+product_stock_entries_00336: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "760"
+  device_id: "332"
+product_stock_entries_00147: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "571"
+  device_id: "291"
+product_stock_entries_00384: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "808"
+  device_id: "345"
+product_stock_entries_00194: 
+  serial: "21"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "618"
+  device_id: "292"
+product_stock_entries_00337: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "761"
+  device_id: "332"
+product_stock_entries_00385: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "809"
+  device_id: "346"
+product_stock_entries_00195: 
+  serial: "22"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "619"
+  device_id: "292"
+product_stock_entries_00338: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "762"
+  device_id: "332"
+product_stock_entries_00148: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "572"
+  device_id: "291"
+product_stock_entries_00386: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "810"
+  device_id: "346"
+product_stock_entries_00196: 
+  serial: "23"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "620"
+  device_id: "292"
+product_stock_entries_00339: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "763"
+  device_id: "332"
+product_stock_entries_00149: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "573"
+  device_id: "291"
+product_stock_entries_00387: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "811"
+  device_id: "347"
+product_stock_entries_00197: 
+  serial: "24"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "621"
+  device_id: "292"
+product_stock_entries_00200: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "624"
+  device_id: "293"
+product_stock_entries_00010: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "434"
+  device_id: "236"
+product_stock_entries_00388: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "812"
+  device_id: "348"
+product_stock_entries_00198: 
+  serial: "25"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "622"
+  device_id: "292"
+product_stock_entries_00201: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "625"
+  device_id: "294"
+product_stock_entries_00011: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "435"
+  device_id: "237"
+product_stock_entries_00389: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:41
+  remarks: ""
+  updated_at: 2010-03-09 21:45:41
+  id: "813"
+  device_id: "349"
+product_stock_entries_00199: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "623"
+  device_id: "293"
+product_stock_entries_00202: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "626"
+  device_id: "295"
+product_stock_entries_00012: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "436"
+  device_id: "238"
+product_stock_entries_00440: 
+  serial: "3"
+  created_at: 2010-04-19 18:35:13
+  remarks: ""
+  updated_at: 2010-04-19 18:35:13
+  id: "864"
+  device_id: "443"
+product_stock_entries_00250: 
+  serial: "32"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "674"
+  device_id: "301"
+product_stock_entries_00060: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "484"
+  device_id: "265"
+product_stock_entries_00203: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "627"
+  device_id: "296"
+product_stock_entries_00013: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "437"
+  device_id: "239"
+product_stock_entries_00441: 
+  serial: "4"
+  created_at: 2010-04-19 18:35:13
+  remarks: ""
+  updated_at: 2010-04-19 18:35:13
+  id: "865"
+  device_id: "443"
+product_stock_entries_00251: 
+  serial: "33"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "675"
+  device_id: "301"
+product_stock_entries_00061: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "485"
+  device_id: "266"
+product_stock_entries_00204: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "628"
+  device_id: "296"
+product_stock_entries_00014: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "438"
+  device_id: "240"
+product_stock_entries_00442: 
+  serial: "5"
+  created_at: 2010-04-19 18:35:13
+  remarks: ""
+  updated_at: 2010-04-19 18:35:13
+  id: "866"
+  device_id: "443"
+product_stock_entries_00252: 
+  serial: "34"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "676"
+  device_id: "301"
+product_stock_entries_00062: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "486"
+  device_id: "266"
+product_stock_entries_00205: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "629"
+  device_id: "297"
+product_stock_entries_00015: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "439"
+  device_id: "240"
+product_stock_entries_00253: 
+  serial: "35"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "677"
+  device_id: "301"
+product_stock_entries_00063: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "487"
+  device_id: "266"
+product_stock_entries_00206: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "630"
+  device_id: "297"
+product_stock_entries_00016: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "440"
+  device_id: "241"
+product_stock_entries_00254: 
+  serial: "36"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "678"
+  device_id: "301"
+product_stock_entries_00064: 
+  serial: "3"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "488"
+  device_id: "266"
+product_stock_entries_00207: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "631"
+  device_id: "298"
+product_stock_entries_00017: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "441"
+  device_id: "242"
+product_stock_entries_00065: 
+  serial: "4"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "489"
+  device_id: "266"
+product_stock_entries_00208: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "632"
+  device_id: "298"
+product_stock_entries_00018: 
+  serial: "0"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "442"
+  device_id: "243"
+product_stock_entries_00255: 
+  serial: "37"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "679"
+  device_id: "301"
+product_stock_entries_00066: 
+  serial: "5"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "490"
+  device_id: "266"
+product_stock_entries_00209: 
+  serial: "2"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "633"
+  device_id: "298"
+product_stock_entries_00019: 
+  serial: "1"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "443"
+  device_id: "243"
+product_stock_entries_00256: 
+  serial: "38"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "680"
+  device_id: "301"
+product_stock_entries_00257: 
+  serial: "39"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "681"
+  device_id: "301"
+product_stock_entries_00067: 
+  serial: "6"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "491"
+  device_id: "266"
+product_stock_entries_00258: 
+  serial: "40"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "682"
+  device_id: "301"
+product_stock_entries_00068: 
+  serial: "7"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "492"
+  device_id: "266"
+product_stock_entries_00259: 
+  serial: "41"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "683"
+  device_id: "301"
+product_stock_entries_00069: 
+  serial: "8"
+  created_at: 2010-03-09 21:45:40
+  remarks: ""
+  updated_at: 2010-03-09 21:45:40
+  id: "493"
+  device_id: "266"

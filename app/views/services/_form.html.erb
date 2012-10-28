@@ -1,0 +1,33 @@
+<% fields_for 'product[service]', @service do |f|%>
+  <p>
+    <%= f.label :name, 'Bezeichnung' %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description, 'Anmerkungen/Leistungsbeschreibung' %><br />
+    <%= f.text_area :description, :cols => 75, :rows => 5 %>
+  </p>
+
+  <p>
+    <%= f.label :unit, 'Abrechnungseinheit' %><br />
+    <%= f.text_field :unit %>
+  </p>
+
+  <p>
+    <%= f.label :unit_price, 'Einheitspreis' %><br />
+    <%= f.text_field :unit_price, :class => 'money' %>&thinsp;&euro;/<span class="device_unit"><%= @service.unit %></span>
+  </p>
+<% end %>
+
+<% javascript_on_load do %><script>
+  function init_units() {
+    $$('.device_unit').invoke('update', $F('product_service_unit'));
+  }
+  $('product_service_unit').observe('change', init_units);
+
+  $$('.money').each(function(element) {
+    monetize(element);
+    element.observe('change', function(event) {monetize(event.element())});
+  });
+<% end %>

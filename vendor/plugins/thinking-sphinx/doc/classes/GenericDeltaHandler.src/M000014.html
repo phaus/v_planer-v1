@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>index (GenericDeltaHandler)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File features/support/lib/generic_delta_handler.rb, line 3</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index</span>(<span class="ruby-identifier">model</span>, <span class="ruby-identifier">instance</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-comment cmt">#do nothing but set a bit for every record </span>
+    <span class="ruby-comment cmt">#this is just a demonstration of extensibility</span>
+    <span class="ruby-identifier">model</span>.<span class="ruby-identifier">update_all</span>(<span class="ruby-identifier">:changed_by_generic</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

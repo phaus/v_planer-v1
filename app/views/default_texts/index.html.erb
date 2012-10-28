@@ -1,0 +1,28 @@
+<h1>Standardtexte</h1>
+
+<table class="data">
+  <thead>
+    <tr>
+      <th>Schlüssel</th>
+      <th>Wert</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @default_texts.each do |default_text| %>
+      <tr class="<%= cycle :odd, :even %>">
+        <td><%= default_text.name %></td>
+        <td><%= truncate(default_text.value, 75) %></td>
+        <td><%= link_to 'Show', default_text %></td>
+        <td><%= link_to 'Edit', edit_default_text_path(default_text) %></td>
+        <td><%= link_to 'Destroy', default_text, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<p class="bottom-actions">
+  <%= link_to 'Neues Textfragment', new_default_text_path, :class => 'new' %>
+</p>

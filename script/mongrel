@@ -1,0 +1,14 @@
+#!/usr/bin/ruby
+
+environ = ARGV[0] || "development"
+p "will now kill all running mongrel instances for this project and restart them in #{environ} mode."
+
+1.upto 3 do |i|
+  pidfile = "log/mongrel#{i}.pid"
+  if File.exists? pidfile
+    pid = File.read pidfile
+    p "killing pid #{pid}"
+    `kill #{pid}`
+  end
+  `mongrel_rails start -d -p 400#{i} -P #{pidfile} -e #{environ}`
+end

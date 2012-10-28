@@ -1,0 +1,78 @@
+<% fields_for 'product[device]', @device do |f|%>
+
+  <p>
+    <%= f.label :manufacturer, 'Hersteller' %><br />
+    <%= f.text_field :manufacturer %>
+  </p>
+
+  <p>
+    <%= f.label :name, 'Bezeichnung' %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description, 'Anmerkungen' %><br />
+    <%= f.text_area :description, :cols => 75, :rows => 5 %>
+  </p>
+
+  <p>
+    <%= f.label :weight, 'Verfügbare Menge, Einheit' %><br />
+    <%= f.text_field :available_count, :class => 'decimal' %>&thinsp;<%= f.text_field :unit, :size => 3, :value => f.object.unit %>
+  </p>
+
+  <p>
+    <%= f.label :weight, 'Masse' %><br />
+    <%= f.text_field :weight, :class => 'decimal' %>&thinsp;kg
+  </p>
+
+  <%= f.hidden_field :rental_price, :value => '', :id => 'product_device_rental_price_h' %>
+  <% optional_fieldset 'Artikel kann vermietet werden', f, :is_rentable? do %>
+    <div class="input">
+      <%= f.label :rental_price, 'Tagesmietpreis' %> (netto/brutto)<br />
+      <%= f.text_field :rental_price, :class => 'money' %>&thinsp;&euro;/<span class="device_unit"><%= @device.unit %></span>
+      <%= f.text_field :gross_rental_price, :class => 'money' %>&thinsp;&euro;/<span class="device_unit"><%= @device.unit %></span>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :selling_price, :value => '', :id => 'product_device_selling_price_h' %>
+  <% optional_fieldset 'Artikel kann verkauft werden', f, :is_sellable? do %>
+    <div class="input">
+      <%= f.label :selling_price, 'Verkaufspreis' %> (netto/brutto)<br />
+      <%= f.text_field :selling_price, :class => 'money' %>&thinsp;&euro;/<span class="device_unit"><%= @device.unit %></span>
+      <%= f.text_field :gross_selling_price, :class => 'money' %>&thinsp;&euro;/<span class="device_unit"><%= @device.unit %></span>
+    </div>
+  <% end %>
+
+  <% if vat_applicable? %>
+    <p>
+      <%= f.label :vat_rate, 'USt.-Satz' %><br />
+      <%= f.text_field :vat_rate, :class => 'decimal' %>&thinsp;%</span>
+    </p>
+  <% end %>
+<% end %>
+
+<% javascript_on_load do %><script>
+  function init_units() { $$('.device_unit').invoke('update', $F('product_device_unit')); }
+  $('product_device_unit').observe('change', init_units);
+
+  $('product_device_rental_price').observe('change', function(event) {
+    $('product_device_gross_rental_price').value = $M($pM(event.element().value).cents * 1.19).to_val();
+  });
+
+  $('product_device_gross_rental_price').observe('change', function(event) {
+    $('product_device_rental_price').value = $M($pM(event.element().value).cents / 1.19).to_val();
+  });
+
+  $('product_device_selling_price').observe('change', function(event) {
+    $('product_device_gross_selling_price').value = $M($pM(event.element().value).cents * 1.19).to_val();
+  });
+
+  $('product_device_gross_selling_price').observe('change', function(event) {
+    $('product_device_selling_price').value = $M($pM(event.element().value).cents / 1.19).to_val();
+  });
+
+  $$('.money').each(function(element) {
+    monetize(element);
+    element.observe('change', function(event) {monetize(event.element())});
+  });
+<% end %>

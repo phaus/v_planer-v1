@@ -1,0 +1,41 @@
+--- 
+product_buying_prices_00001: 
+  created_at: 2010-03-15 19:09:14
+  article_no: 
+  product_id: "204"
+  updated_at: 2010-03-15 19:16:24
+  id: "1"
+  price_i: "1200"
+  distributor_id: "7"
+product_buying_prices_00002: 
+  created_at: 2010-04-14 21:07:30
+  article_no: 
+  product_id: "209"
+  updated_at: 2010-04-14 21:07:30
+  id: "2"
+  price_i: "0"
+  distributor_id: "7"
+product_buying_prices_00003: 
+  created_at: 2010-04-14 21:07:36
+  article_no: 
+  product_id: "210"
+  updated_at: 2010-04-14 21:07:36
+  id: "3"
+  price_i: "0"
+  distributor_id: "7"
+product_buying_prices_00004: 
+  created_at: 2010-04-14 21:07:49
+  article_no: 
+  product_id: "211"
+  updated_at: 2010-04-14 21:07:49
+  id: "4"
+  price_i: "0"
+  distributor_id: "7"
+product_buying_prices_00005: 
+  created_at: 2010-04-14 21:07:56
+  article_no: 
+  product_id: "212"
+  updated_at: 2010-04-14 21:07:56
+  id: "5"
+  price_i: "0"
+  distributor_id: "7"

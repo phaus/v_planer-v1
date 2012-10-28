@@ -1,0 +1,33 @@
+<h1>Benutzerdaten bearbeiten</h1>
+
+<% form_for(@user, :url => account_path) do |uf| -%>
+  <%= uf.error_messages -%>
+  <p>
+    <%= uf.label :forename, 'Vorname' %><br />
+    <%= uf.text_field :forename %>
+  </p>
+  <p>
+    <%= uf.label :surname, 'Nachname' %><br />
+    <%= uf.text_field :surname %>
+  </p>
+  <p>
+    <%= uf.label :email, 'E-Mailadresse' %><br />
+    <%= uf.text_field :email %>
+  </p>
+  <p>
+    <%= uf.label :password, 'Kennwort' %> (nur angeben zum Ändern)<br />
+    <%= uf.password_field :password %>
+  </p>
+  <p>
+    <%= uf.label :password_confirmation, 'Bitte nocheinmal' %><br />
+    <%= uf.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= uf.submit 'Speichern' %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to 'Zurück', account_path %>
+</p>
+

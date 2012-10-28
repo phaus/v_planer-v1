@@ -1,0 +1,54 @@
+<h1>New company</h1>
+
+<% form_for(@company) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :admin_id, 'Administrativer Benutzer' %><br />
+    <%= f.text_field :admin_id %>
+  </p>
+
+  <fieldset>
+    <legend>Anschrift</legend>
+    <p>
+      <%= f.label :name, 'Firmenname' %><br />
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :email, 'E-Mailadresse' %><br />
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :phone, 'Telefonnummer' %><br />
+      <%= f.text_field :phone %>
+    </p>
+    <p>
+      <%= f.label :fax, 'Fax-Nummer' %><br />
+      <%= f.text_field :fax %>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Kontodaten</legend>
+    <p>
+      <%= f.label :bank_name %><br />
+      <%= f.text_field :bank_name %>
+    </p>
+    <p>
+      <%= f.label :bank_account %><br />
+      <%= f.text_field :bank_account %>
+    </p>
+    <p>
+      <%= f.label :bank_blz %><br />
+      <%= f.text_field :bank_blz %>
+    </p>
+  </fieldset>
+
+  <p>
+    <%= f.submit 'Speichern' %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to 'Zurück zur Übersicht', admin_companies_path %>
+</p>

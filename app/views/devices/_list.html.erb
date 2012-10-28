@@ -1,0 +1,40 @@
+<%= category_tabs current_company.categories.all, :active => params[:category_id] || :all %>
+
+<% if @devices.any? %>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Hersteller</th>
+        <th>Name</th>
+        <th>Gewicht</th>
+        <th>verf. gesamt</th>
+        <th>verf. heute</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @devices.each do |device| %>
+        <tr class="<%= cycle 'odd', 'even' %>">
+          <td><%= link_to h(device.code), device %></td>
+          <td><%= h device.manufacturer %></td>
+          <td>
+            <%= link_to h(device.name), device %><br />
+            <span class="additional-information"><%= device.description.to_s.gsub(/\r\n|\n/, '<br />') %></span>
+          </td>
+          <td class="decimal"><%=h device.weight %>&thinsp;kg</td>
+          <td class="decimal"><%=h device.available_count %>&thinsp;<%= device.unit %></td>
+          <td class="decimal"><%=h device.available_count(Date.today) %>&thinsp;<%= device.unit %></td>
+          <td>
+            <ul class="toolchain">
+              <li><%= link_to image_tag('icons_16/contents.png'), device %></li>
+              <li><%= link_to image_tag('icons_16/edit.png'), edit_device_path(device) %></li>
+              <li><%= link_to image_tag('icons_16/editdelete.png'), device, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete %></li>
+            </ul>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>Noch keine Artikel angelegt.</p>
+<% end %>

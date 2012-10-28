@@ -1,0 +1,61 @@
+--- 
+sellings_00001: 
+  client_discount_i: "0"
+  created_at: 2010-03-10 18:17:12
+  updated_at: 2010-03-10 18:17:12
+  discount_i: "5193"
+  id: "1"
+  user_id: "7"
+  client_id: "38"
+  sender_id: "10"
+  process_no: 
+  workflow_state: new
+  price_i: 
+sellings_00002: 
+  client_discount_i: "0"
+  created_at: 2010-03-10 18:18:12
+  updated_at: 2010-03-10 18:18:12
+  discount_i: "5193"
+  id: "2"
+  user_id: "7"
+  client_id: "38"
+  sender_id: "10"
+  process_no: 
+  workflow_state: new
+  price_i: 
+sellings_00003: 
+  client_discount_i: "0"
+  created_at: 2010-03-11 18:42:21
+  updated_at: 2010-03-11 18:42:21
+  discount_i: "0"
+  id: "3"
+  user_id: "7"
+  client_id: "47"
+  sender_id: "10"
+  process_no: 
+  workflow_state: new
+  price_i: 
+sellings_00004: 
+  client_discount_i: "0"
+  created_at: 2010-03-18 18:37:11
+  updated_at: 2010-03-18 18:37:11
+  discount_i: "0"
+  id: "4"
+  user_id: "7"
+  client_id: "36"
+  sender_id: "10"
+  process_no: 
+  workflow_state: new
+  price_i: 
+sellings_00005: 
+  client_discount_i: "0"
+  created_at: 2010-04-06 19:28:19
+  updated_at: 2010-04-06 19:28:19
+  discount_i: "0"
+  id: "6"
+  user_id: "7"
+  client_id: "66"
+  sender_id: "10"
+  process_no: 
+  workflow_state: new
+  price_i: 

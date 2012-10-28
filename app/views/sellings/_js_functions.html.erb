@@ -1,0 +1,119 @@
+
+<script type="text/javascript">
+//<![CDATA[
+  // inject the needed objects directly into Product's object cache to prevent multiple AJAX requests on page load
+  <% if @selling.client %>
+    Client.arrayOfInstances([<%= @selling.client.to_json %>]);
+  <% end %>
+  <% if @selling.device_items.any? %>
+    Product.arrayOfInstances(<%= @selling.service_items.collect(&:product).to_json %>);
+  <% end %>
+  <% if @selling.device_items.any? %>
+    Product.arrayOfInstances(<%= @selling.device_items.collect(&:product).to_json %>);
+  <% end %>
+
+  // initialize the model and table
+  var selling = new Selling(<%= @selling.to_json %>);
+  var selling_representation = new SellingRepresentation(selling, $('available_products_table'));
+
+  // called when a selection from the autocomplete list is made
+  function insert_new_device_line(search_input, li) {
+    search_input.value = '';
+    var tr = li.down('.new_row_for_form table tr');
+    search_input.up('tr').insert({before: tr});
+    selling_representation.register_device_item(tr);
+    with (tr.down('.count input')) {
+      focus();
+      value = 1;
+    }
+    li.up('ul').remove();
+  }
+
+  // called when a selection from the autocomplete list is made
+  function insert_new_service_line(search_input, li) {
+    search_input.value = '';
+    var tr = li.down('.new_row_for_form table tr');
+    search_input.up('tr').insert({before: tr});
+    selling_representation.register_service_item(tr);
+    with (tr.down('.count input')) {
+      focus();
+//       value = 1;
+    }
+    li.up('ul').remove();
+  }
+
+  // called when a selection from the client autocomplete list is made
+  function insert_client(search_input, li) {
+    search_input.value = '';
+    $('selling_client_id').value = li.id;
+    $('client_info').update(li.down('.informal').innerHTML);
+    $('cq').hide();
+    $('change_client').show();
+  }
+  function hide_client_search_button(event) {
+    if (event) event.stop();
+    if (!$('client_info').innerHTML.blank()) {
+      $('cq').hide();
+      $('cq').value = '';
+      $('change_client').show();
+    }
+  }
+  $('change_client').observe('click', function(event) {
+    event.stop();
+    $('change_client').hide();
+    $('cq').show().focus();
+  });
+  $('cq').observe('blur', hide_client_search_button);
+  $('change_client').hide();
+  hide_client_search_button(null);
+
+  // autocomplete for clients
+  new Ajax.Autocompleter('cq', 'autocomplete_client_choices', Client.resource_url() + '/search', {
+    paramName:  'q',
+    minChars:    2,
+    indicator:  'indicator1',
+    method:     'get',
+    afterUpdateElement: insert_client
+  });
+
+  // autocomplete for devices
+  if ($('dq')) {
+    new Ajax.Autocompleter('dq', 'device_autocomplete_choices', Product.resource_url() + '/sellable/search', {
+      paramName:  'q',
+      minChars:    2,
+      indicator:  'indicator2',
+      method:     'get',
+      afterUpdateElement: insert_new_device_line
+    });
+  }
+
+  // autocomplete for services
+  if ($('sq')) {
+    new Ajax.Autocompleter('sq', 'service_autocomplete_choices', Product.resource_url() + '/service/search', {
+      paramName:  'q',
+      minChars:    2,
+      indicator:  'indicator3',
+      method:     'get',
+      afterUpdateElement: insert_new_service_line
+    });
+  }
+//]]>
+</script>
+
+<style>
+  #indicator1,
+  #indicator2,
+  #indicator3 {
+    float: right;
+  }
+
+  .product_comments,
+  .product_description,
+  .product_name {
+    width: 100%;
+  }
+  textarea.product_comments,
+  textarea.product_description {
+    height: 4em;
+  }
+</style>

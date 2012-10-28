@@ -1,0 +1,9 @@
+class AddCompanyToInvoice < ActiveRecord::Migration
+  def self.up
+    add_column :invoices, :company_id, :integer
+  end
+
+  def self.down
+    remove_column :invoices, :company_id
+  end
+end

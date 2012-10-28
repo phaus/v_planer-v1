@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>use_group_by_shortcut? (ThinkingSphinx)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/thinking_sphinx.rb, line 162</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">use_group_by_shortcut?</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-identifier">:thinking_sphinx_use_group_by_shortcut</span>].<span class="ruby-identifier">nil?</span>
+      <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-identifier">:thinking_sphinx_use_group_by_shortcut</span>] = <span class="ruby-operator">!</span><span class="ruby-operator">!</span>(
+        <span class="ruby-identifier">mysql?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">::</span><span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">select_all</span>(
+          <span class="ruby-value str">&quot;SELECT @@global.sql_mode, @@session.sql_mode;&quot;</span>
+        ).<span class="ruby-identifier">all?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">value</span>[<span class="ruby-regexp re">/ONLY_FULL_GROUP_BY/</span>].<span class="ruby-identifier">nil?</span> }
+      )
+    <span class="ruby-keyword kw">end</span>
+    
+    <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span>[<span class="ruby-identifier">:thinking_sphinx_use_group_by_shortcut</span>]
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

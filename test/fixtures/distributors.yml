@@ -1,0 +1,157 @@
+--- 
+distributors_00001: 
+  company: 
+  contact_person: Jakob Czapski
+  created_at: 2010-02-13 12:55:50
+  discount: "0.0"
+  client_no: "2650"
+  remarks: DE251723323
+  country: 
+  title: 
+  company_name: JC Hardware
+  updated_at: 2010-02-13 12:55:50
+  postalcode: D - 58452
+  street: Hauptstr. 18
+  id: "1"
+  mobile: ""
+  locality: Witten
+  homepage: 
+  fax: +49 (0) 251 / 8906525
+  phone: +49 (0) 2302 / 9816050
+  company_id: 
+  password: 
+  email: info@jc-hardware.de
+distributors_00002: 
+  company: 
+  contact_person: "Konstantin D\xC3\xBCmpe"
+  created_at: 2010-02-13 12:56:42
+  discount: "0.0"
+  client_no: ""
+  remarks: ""
+  country: 
+  title: 
+  company_name: Kameramann
+  updated_at: 2010-02-13 12:56:42
+  postalcode: D - 44793
+  street: Brandenburgstr. 5
+  id: "2"
+  mobile: +49 (0) 179 / 6878793
+  locality: Bochum
+  homepage: 
+  fax: ""
+  phone: +49 (0) 237 / 4143443
+  company_id: 
+  password: 
+  email: konstantin_duempe@web.de
+distributors_00003: 
+  company: 
+  contact_person: Karin Wolgemuth
+  created_at: 2010-02-13 12:57:48
+  discount: "0.0"
+  client_no: "0073"
+  remarks: http://www.film-kreativ.de
+  country: 
+  title: 
+  company_name: Film Kreativ
+  updated_at: 2010-02-13 12:57:48
+  postalcode: D- 58455
+  street: Pferdebachstr. 39a
+  id: "3"
+  mobile: ""
+  locality: Witten
+  homepage: 
+  fax: +49 (0) 2302 / 20332-45
+  phone: +49 (0) 2302 / 20332-43
+  company_id: 
+  password: 
+  email: info@film-kreativ.de
+distributors_00004: 
+  company: 
+  contact_person: Volker Amtmann
+  created_at: 2010-02-13 13:03:06
+  discount: "0.0"
+  client_no: K-179
+  remarks: http://artcase-shop.de/
+  country: 
+  title: 
+  company_name: Art Case Flightcasebau
+  updated_at: 2010-02-13 13:03:06
+  postalcode: D - 52351
+  street: Nikolaus Otto Str. 33
+  id: "4"
+  mobile: ""
+  locality: !binary |
+    RMO8cmVu
+
+  homepage: 
+  fax: +49 (0) 2421 / 491064
+  phone: +49 (0) 2421 / 496639
+  company_id: 
+  password: 
+  email: info@artcase-shop.de
+distributors_00005: 
+  company: 
+  contact_person: Jakop Czapski
+  created_at: 2010-02-20 18:51:14
+  discount: "0.0"
+  client_no: "2004"
+  remarks: ""
+  country: 
+  title: 
+  company_name: JC Hardware
+  updated_at: 2010-02-20 18:51:14
+  postalcode: "58452"
+  street: Hauptstr. 18
+  id: "5"
+  mobile: ""
+  locality: Witten
+  homepage: 
+  fax: ""
+  phone: ""
+  company_id: "8"
+  password: 
+  email: ""
+distributors_00006: 
+  company: 
+  contact_person: ZHUFZU
+  created_at: 2010-02-24 18:59:11
+  discount: "0.0"
+  client_no: "n mj "
+  remarks: ""
+  country: 
+  title: 
+  company_name: HGFCZG
+  updated_at: 2010-02-24 18:59:11
+  postalcode: zfzfdzu
+  street: HFZUf
+  id: "6"
+  mobile: trdz
+  locality: ztfdz
+  homepage: 
+  fax: zddzr
+  phone: trdt
+  company_id: "6"
+  password: 
+  email: ""
+distributors_00007: 
+  company: 
+  contact_person: "j2\xC3\xB6rlwjer \xC3\xB6lwk"
+  created_at: 2010-03-15 19:00:47
+  discount: "0.0"
+  client_no: sadflasfj0432r
+  remarks: ""
+  country: 
+  title: 
+  company_name: "skdjfsadl\xC3\xB6fkas jfasdlkf "
+  updated_at: 2010-03-15 19:00:47
+  postalcode: s239ruoq
+  street: "l\xC3\xB6kjd fsldkfaj "
+  id: "7"
+  mobile: ""
+  locality: oiweurq432 orwf
+  homepage: 
+  fax: ""
+  phone: ""
+  company_id: "6"
+  password: 
+  email: ""

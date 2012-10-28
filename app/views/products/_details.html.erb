@@ -1,0 +1,15 @@
+<p><b>Besitzer:</b>
+  <%=h @product.company_section.full_name %></p>
+
+<p><b>Code:</b>
+  <%=h @product.code %></p>
+
+<%= render :partial => partial_for(@product, 'details') rescue 'NO ARTICLE' %>
+
+<p>
+  <b>Einkaufspreis:</b>
+  <%= @product.buying_prices.collect{|bp| "#{m bp.price} bei #{link_to bp.distributor.company_name, bp.distributor}" }.join(', ') %>
+</p>
+
+<p><b>Kategorien:</b>
+  <%= @product.categories.collect(&:name).join(', ') %></p>

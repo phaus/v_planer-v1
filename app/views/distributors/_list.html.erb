@@ -1,0 +1,33 @@
+<% if @distributors.any? %>
+  <table class="data">
+    <thead>
+      <tr>
+        <th>Kd.-Nr.</th>
+        <th>Firma</th>
+        <th>Ansprechpartner</th>
+        <th>Telefon.</th>
+        <th>E-Mail</th>
+      </tr>
+    </thread>
+    <tbody>
+      <% @distributors.each do |distributor| %>
+        <tr class="<%= cycle 'odd', 'even' %>">
+          <td class="decimal"><%= link_to h(distributor.client_no), distributor %></td>
+          <td><%= link_to h(distributor.company_name), distributor %></td>
+          <td><%=h distributor.contact_person %></td>
+          <td><%=h distributor.address.phone if distributor.address %></td>
+          <td><%= mail_to h(distributor.email) unless distributor.email.blank? %></td>
+          <td>
+            <ul class="toolchain">
+              <li><%= link_to image_tag('icons_16/goto.png'), distributor %></li>
+              <li><%= link_to image_tag('icons_16/edit.png'), edit_distributor_path(distributor) %></li>
+              <li><%= link_to image_tag('icons_16/editdelete.png'), distributor, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete %></li>
+            </ul>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>Keine passenden Lieferanten gefunden.</p>
+<% end %>

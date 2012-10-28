@@ -1,0 +1,118 @@
+<h1>Vermiet-Vorgang <%= @rental.id %></h1>
+
+<h2>Angebot</h2>
+
+<p>
+  <b>Kunde:</b>
+  <%= link_to h(@rental.client.full_name), @rental.client %>
+</p>
+
+<p>
+  <b>Von:</b>
+  <%=h @rental.begin.to_date %>
+</p>
+
+<p>
+  <b>Bis:</b>
+  <%=h @rental.end.to_date %>
+</p>
+
+<p>
+  <b>Nutzungsdauer:</b>
+  <%=h @rental.duration %> Tage, davon abgerechnet: <%=h @rental.billed_duration %> Tage
+</p>
+
+<h2>Vermietete Artikel</h2>
+
+<table class="data" style="width: 100%">
+  <thead>
+    <tr>
+      <th>Anz.</th>
+      <th>Artikel/Anmerkungen</th>
+      <th>Einzelpreis</th>
+      <th>Tagespreis</th>
+      <th>Dauer</th>
+      <th>Gesamt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rental.items.each do |item| %>
+      <tr class="<%= cycle 'odd', 'even' %>">
+        <% fields_for 'rental[items][]', item do |pf| %>
+          <td class="decimal">
+            <%= item.count %> x
+          </td>
+          <td>
+            <%= link_to item.product.full_name, item.product %><br />
+            <em><%=h item.comments %></em>
+          </td>
+          <td class="money">
+            <%= m item.unit_price %>/<%= item.product.unit %>
+          </td>
+          <td class="money">
+            <%= m item.price %>/<%= item.product.unit %>
+          </td>
+          <td class="decimal">
+            <%= item.billed_duration %>&thinsp;<%= item.unit %>
+          </td>
+          <td class="money">
+            <%= m item.price %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <th colspan="4">Summe</th>
+      <td></td>
+      <td class="money"><%= m @rental.sum %></td>
+    </tr>
+    <% if @rental.client_discount.to_f != 0.0 %>
+      <tr>
+        <th colspan="4">Kundenrabatt</th>
+        <td class="decimal"><%= @rental.client_discount_percent %>&thinsp;% </td>
+        <td class="money"><%= m @rental.client_discount %></td>
+      </tr>
+    <% end %>
+    <% if @rental.discount.to_f != 0.0 %>
+      <tr>
+        <th colspan="4">Auftragsrabatt</th>
+        <td></td>
+        <td class="money"><%= m @rental.discount %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <th colspan="4">Total Netto</th>
+      <td></td>
+      <td class="money"><%= m @rental.net_total_price %></td>
+    </tr>
+    <tr>
+      <th colspan="4">zzgl. MwSt.</th>
+      <td class="decimal">19&thinsp;%</td>
+      <td class="money"><%= m @rental.vat %></td>
+    </tr>
+    <tr>
+      <th colspan="4">Total Brutto</th>
+      <td></td>
+      <td class="money"><%= m @rental.gross_total_price %></td>
+    </tr>
+  </tfoot>
+</table>
+
+<p>
+  <%= link_to 'Angebot (PDF)',    offer_rental_path(@rental, :format => 'pdf') %>) |
+  <%= link_to 'Leihschein (PDF)', rental_path(@rental, :format => 'pdf') %>) |
+  <%= link_to 'Packschein (PDF)', packing_note_rental_path(@rental, :format => 'pdf') %>) |
+  <%= link_to 'Bearbeiten', edit_rental_path(@rental) %> |
+  <%= link_to 'Löschen', rental_path(@rental), :method => :delete, :confirm => 'wirklich löschen?' %> |
+  <%= link_to 'Zurück zur Übersicht', rentals_path %>
+</p>
+
+<p class="alternative_formats">
+  Alternative Formate:
+  <%= link_to image_tag('icons_16/application-pdf.png') + ' PDF (Druckansicht)', :format => 'pdf' %>
+</p>
+
+

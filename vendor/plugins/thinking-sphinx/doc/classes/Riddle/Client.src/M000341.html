@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>excerpts (Riddle::Client)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File vendor/riddle/lib/riddle/client.rb, line 358</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">excerpts</span>(<span class="ruby-identifier">options</span> = {})
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:index</span>]           <span class="ruby-operator">||=</span> <span class="ruby-value str">'*'</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:before_match</span>]    <span class="ruby-operator">||=</span> <span class="ruby-value str">'&lt;span class=&quot;match&quot;&gt;'</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:after_match</span>]     <span class="ruby-operator">||=</span> <span class="ruby-value str">'&lt;/span&gt;'</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:chunk_separator</span>] <span class="ruby-operator">||=</span> <span class="ruby-value str">' &amp;#8230; '</span> <span class="ruby-comment cmt"># ellipsis</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:limit</span>]           <span class="ruby-operator">||=</span> <span class="ruby-value">256</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:around</span>]          <span class="ruby-operator">||=</span> <span class="ruby-value">5</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:exact_phrase</span>]    <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">false</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:single_passage</span>]  <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">false</span>
+      
+      <span class="ruby-identifier">response</span> = <span class="ruby-constant">Response</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">request</span>(<span class="ruby-identifier">:excerpt</span>, <span class="ruby-identifier">excerpts_message</span>(<span class="ruby-identifier">options</span>))
+      
+      <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:docs</span>].<span class="ruby-identifier">collect</span> { <span class="ruby-identifier">response</span>.<span class="ruby-identifier">next</span> }
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

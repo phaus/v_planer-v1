@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @product.name %>
+</p>
+
+<p>
+  <b>Leistungsbeschreibung:</b>
+  <%=h @product.description %>
+</p>
+
+<p>
+  <b>Preisformel:</b>
+  <% unless @product.factor1.to_f == 1.0 %>
+    <%=h @product.factor1 %> *
+  <% end %>
+  <%=h @product.factor1_name %> *
+  <% unless @product.factor2.to_f == 1.0 %>
+    <%=h @product.factor2 %> *
+  <% end %>
+  <%=h @product.factor2_name %> *
+  <%=m @product.factor3 %> / <%=h @product.unit1 %> <%=h @product.unit2 %>  + <%=m @product.const1 %>
+</p>
+

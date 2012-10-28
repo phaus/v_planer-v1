@@ -1,0 +1,18 @@
+<tr class="product">
+  <td class="item product_id">
+    <%= hidden_field_tag 'rental[items][][product_id]', product.id %>
+    <%= link_to h(product.full_name), product %>
+  </td>
+  <td class="decimal item available_count">
+    <%= product.availability(@from_date, @to_date).collect(&:last).min %>
+  </td>
+  <td class="decimal item count">
+    <%= text_field_tag 'rental[items][][count]', 0 %>
+  </td>
+  <td class="decimal item unit_price">
+    <%= text_field_tag 'rental[items][][unit_price]', product.unit_price %>&thinsp;&euro;
+  </td>
+  <td class="decimal item price">
+    <%= text_field_tag 'rental[items][][price]', 0 %>&thinsp;&euro;
+  </td>
+</tr>

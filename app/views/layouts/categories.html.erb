@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Kategorien</title>
+    <%= javascript_include_tag :all %>
+    <%= stylesheet_link_tag 'scaffold' %>
+  </head>
+
+  <body>
+    <%= navigation :active => 'Kategorien'%>
+
+    <div id="top_nav">
+      <%= link_to 'Übersicht', categories_path %>
+      <%= link_to 'Neue Kategorie', new_category_path %>
+      <%= link_to 'Ausloggen', user_session_path, :method => :delete %>
+    </div>
+
+    <div class="main_content">
+      <%= flash_message %>
+      <%= yield  %>
+    </div>
+
+    <%= footer %>
+  </body>
+</html>

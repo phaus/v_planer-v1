@@ -1,0 +1,23 @@
+<h1>Sektion bearbeiten</h1>
+
+<%= error_messages_for :company_section %>
+
+<% form_for([:admin, @company_section]) do |f| %>
+
+  <p>
+    <%= f.label :name, 'Name' %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <%= render :partial => 'form', :locals => {:f => f} %>
+
+  <p>
+    <%= f.submit 'Speichern' %>
+  </p>
+<% end %>
+
+
+<p class="bottom-actions">
+  <%= link_to 'Zurück zur Übersicht', admin_company_sections_path, :class => 'back' %>
+</p>
+

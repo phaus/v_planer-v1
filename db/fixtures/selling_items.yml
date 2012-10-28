@@ -1,0 +1,101 @@
+--- 
+selling_items_00005: 
+  created_at: 2010-03-11 18:42:21
+  process_id: "3"
+  product_id: "131"
+  comments: inkl. Bluewheels
+  updated_at: 2010-03-11 18:42:21
+  unit_price_i: "120"
+  id: "5"
+  count: "1"
+  price_i: "120"
+selling_items_00006: 
+  created_at: 2010-03-18 18:37:11
+  process_id: "4"
+  product_id: "131"
+  comments: inkl. Bluewheels
+  updated_at: 2010-03-18 18:37:11
+  unit_price_i: "120"
+  id: "6"
+  count: "1"
+  price_i: "120"
+selling_items_00007: 
+  created_at: 2010-04-06 08:47:00
+  process_id: "5"
+  product_id: "113"
+  comments: "asdjf \xC3\xB6asdlkf jsad\xC3\xB6flkajdsfasd f"
+  updated_at: 2010-04-06 08:47:00
+  unit_price_i: "12"
+  id: "7"
+  count: "1"
+  price_i: "12"
+selling_items_00008: 
+  created_at: 2010-04-06 08:47:00
+  process_id: "5"
+  product_id: "112"
+  comments: Im Case
+  updated_at: 2010-04-06 08:47:00
+  unit_price_i: "25"
+  id: "8"
+  count: "1"
+  price_i: "25"
+selling_items_00009: 
+  created_at: 2010-04-06 19:28:19
+  process_id: "6"
+  product_id: "85"
+  comments: inkl. Case und Patchfeld
+  updated_at: 2010-04-08 17:14:55
+  unit_price_i: "2000"
+  id: "9"
+  count: "1"
+  price_i: "0"
+selling_items_00010: 
+  created_at: 2010-04-06 19:28:19
+  process_id: "6"
+  product_id: "135"
+  comments: Hybridkonsole
+  updated_at: 2010-04-08 17:14:55
+  unit_price_i: "2700"
+  id: "10"
+  count: "1"
+  price_i: "0"
+selling_items_00001: 
+  created_at: 2010-03-10 18:17:12
+  process_id: "1"
+  product_id: "103"
+  comments: ""
+  updated_at: 2010-03-10 18:17:12
+  unit_price_i: "10000"
+  id: "1"
+  count: "1"
+  price_i: "10000"
+selling_items_00002: 
+  created_at: 2010-03-10 18:17:12
+  process_id: "1"
+  product_id: "131"
+  comments: ""
+  updated_at: 2010-03-10 18:17:12
+  unit_price_i: "12000"
+  id: "2"
+  count: "1"
+  price_i: "12000"
+selling_items_00003: 
+  created_at: 2010-03-10 18:18:12
+  process_id: "2"
+  product_id: "103"
+  comments: ""
+  updated_at: 2010-03-10 18:18:12
+  unit_price_i: "10000"
+  id: "3"
+  count: "1"
+  price_i: "10000"
+selling_items_00004: 
+  created_at: 2010-03-10 18:18:12
+  process_id: "2"
+  product_id: "131"
+  comments: ""
+  updated_at: 2010-03-10 18:18:12
+  unit_price_i: "12000"
+  id: "4"
+  count: "1"
+  price_i: "12000"

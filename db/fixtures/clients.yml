@@ -1,0 +1,1561 @@
+--- 
+clients_00050: 
+  company: VEGA e.V.
+  remarks: 
+  discount: 
+  client_no: "8509"
+  created_at: 2010-02-20 19:05:04
+  title: 
+  updated_at: 2010-02-20 19:05:04
+  postalcode: 
+  owner_id: 
+  payment_goal: "6"
+  street: 
+  id: "88"
+  address_id: 
+  contact_person_id: "7"
+  mobile: 
+  company_id: "8"
+  homepage: 
+  fax: 
+  locality: 
+  birthday: 
+  phone: 
+  password: 
+  surname: Hoffmann
+  forename: Susanne M.
+  email: "NULL"
+clients_00039: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10037
+  created_at: 2010-01-28 22:39:59
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 41812
+  owner_id: 
+  payment_goal: "0"
+  street: "Th.-K\xC3\xB6rner-Str.21"
+  id: "77"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Erkelenz
+  birthday: 
+  phone: 
+  password: 
+  surname: "M\xC3\xB6ller"
+  forename: Moritz
+  email: 
+clients_00028: 
+  company: "Amt f\xC3\xBCr Jugendarbeit"
+  remarks: 
+  discount: "0"
+  client_no: KD-10026
+  created_at: 2010-01-28 22:19:53
+  title: Frau
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58239
+  owner_id: 
+  payment_goal: "0"
+  street: Iserlohnerstr. 25
+  id: "66"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2304 / 755248
+  locality: Schwerte
+  birthday: 
+  phone: +49 (0) 2304 / 755181
+  password: 
+  surname: Lukas-Larsen
+  forename: Anja
+  email: info@aej-haus-villigst.de
+clients_00017: 
+  company: Stadtkirchenarbeit
+  remarks: 
+  discount: "0"
+  client_no: KD-10012
+  created_at: 2010-01-28 21:48:02
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58452
+  owner_id: 
+  payment_goal: "0"
+  street: Bonhoefferstr. 10
+  id: "55"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: Neuser
+  forename: Bernd
+  email: 
+clients_00006: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10016
+  created_at: 2010-01-03 17:45:44
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58454
+  owner_id: 
+  payment_goal: "0"
+  street: Heutestr. 19
+  id: "38"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: Fehrentz
+  forename: Georg
+  email: 
+clients_00051: 
+  company: "Ganzheitskosmetik Andrea Purf\xC3\xBCrst"
+  remarks: ""
+  discount: 
+  client_no: "8627"
+  created_at: 2010-02-20 19:05:04
+  title: ""
+  updated_at: 2010-02-20 19:13:31
+  postalcode: ""
+  owner_id: 
+  payment_goal: "12"
+  street: ""
+  id: "89"
+  address_id: 
+  contact_person_id: "10"
+  mobile: ""
+  company_id: "8"
+  homepage: 
+  fax: ""
+  locality: ""
+  birthday: 
+  phone: ""
+  password: 
+  surname: "Purf\xC3\xBCrst"
+  forename: Andrea
+  email: "NULL"
+clients_00040: 
+  company: "Praxis f\xC3\xBCr Logop\xC3\xA4die"
+  remarks: 
+  discount: "0"
+  client_no: KD-10038
+  created_at: 2010-01-28 22:40:53
+  title: Frau
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58642
+  owner_id: 
+  payment_goal: "0"
+  street: Hagener Str. 22
+  id: "78"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2374 / 506795
+  locality: Iserlohn-Letmathe
+  birthday: 
+  phone: +49 (0) 2374 / 503940
+  password: 
+  surname: Benfer
+  forename: Anne
+  email: 
+clients_00052: 
+  company: Sport Ehnert GmbH & Co. KG
+  remarks: ""
+  discount: 
+  client_no: "3736"
+  created_at: 2010-02-20 19:05:04
+  title: ""
+  updated_at: 2010-02-20 19:11:57
+  postalcode: ""
+  owner_id: 
+  payment_goal: "12"
+  street: ""
+  id: "90"
+  address_id: 
+  contact_person_id: "10"
+  mobile: ""
+  company_id: "8"
+  homepage: 
+  fax: ""
+  locality: ""
+  birthday: 
+  phone: ""
+  password: 
+  surname: Rother
+  forename: Andreas
+  email: "NULL"
+clients_00041: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10039
+  created_at: 2010-01-28 22:41:26
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 44225
+  owner_id: 
+  payment_goal: "0"
+  street: Hombrucherstr. 9
+  id: "79"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Dortmund
+  birthday: 
+  phone: 
+  password: 
+  surname: Heussner
+  forename: Heinz
+  email: 
+clients_00030: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10028
+  created_at: 2010-01-28 22:21:58
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58404
+  owner_id: 
+  payment_goal: "0"
+  street: Postfach 1442
+  id: "68"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 73593
+  password: 
+  surname: Josefus
+  forename: Stefan
+  email: s.josefus@gmx.de
+clients_00029: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10027
+  created_at: 2010-01-28 22:21:06
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 44577
+  owner_id: 
+  payment_goal: "0"
+  street: Weimarer Str. 14
+  id: "67"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Castrop-Rauxel
+  birthday: 
+  phone: 
+  password: 
+  surname: Meisel
+  forename: Hendrik
+  email: hendrik.meisel@web.de
+clients_00018: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10004
+  created_at: 2010-01-28 21:49:32
+  title: Frau
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58453
+  owner_id: 
+  payment_goal: "0"
+  street: Rosi- Wolfsteinstr. 14
+  id: "56"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 85087
+  password: 
+  surname: Engbers
+  forename: Astrid
+  email: a.engbers@freenet.de
+clients_00007: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10018
+  created_at: 2010-01-03 17:46:41
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58453
+  owner_id: 
+  payment_goal: "0"
+  street: "R\xC3\xB6hrchenstr. 67"
+  id: "39"
+  address_id: 
+  contact_person_id: "5"
+  mobile: + 49 (0) 160 / 97948987
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: Elsner
+  forename: Karsten
+  email: karstenelsner@ce-systems.de
+clients_00053: 
+  company: ""
+  remarks: ""
+  discount: 
+  client_no: "2323"
+  created_at: 2010-02-20 19:05:04
+  title: ""
+  updated_at: 2010-02-20 19:09:15
+  postalcode: ""
+  owner_id: "10"
+  payment_goal: "12"
+  street: ""
+  id: "91"
+  address_id: 
+  contact_person_id: "7"
+  mobile: ""
+  company_id: "8"
+  homepage: 
+  fax: ""
+  locality: ""
+  birthday: 
+  phone: ""
+  password: 
+  surname: Haussleiter
+  forename: Philipp
+  email: "NULL"
+clients_00042: 
+  company: ""
+  remarks: kleinere Verleihsachen
+  discount: "0"
+  client_no: KD-10042
+  created_at: 2010-02-04 21:34:01
+  title: Frau
+  updated_at: 2010-02-13 13:47:40
+  postalcode: "58452"
+  owner_id: "4"
+  payment_goal: "0"
+  street: ""
+  id: "80"
+  address_id: 
+  contact_person_id: "5"
+  mobile: +49 (0) 15122837336
+  company_id: "6"
+  homepage: 
+  fax: ""
+  locality: Witten
+  birthday: 
+  phone: ""
+  password: 
+  surname: Gerdts
+  forename: Jennifer
+  email: ""
+clients_00031: 
+  company: Jonglage und Feuer
+  remarks: ""
+  discount: "0"
+  client_no: KD-10029
+  created_at: 2010-01-28 22:22:54
+  title: Herr
+  updated_at: 2010-02-24 15:27:11
+  postalcode: D - 58455
+  owner_id: 
+  payment_goal: "0"
+  street: Kleff 4
+  id: "69"
+  address_id: 
+  contact_person_id: "4"
+  mobile: +49 (0) 163 / 9192846
+  company_id: "6"
+  homepage: 
+  fax: ""
+  locality: Witten
+  birthday: 
+  phone: ""
+  password: 
+  surname: Wiegold
+  forename: Yannic
+  email: info@jonglage-und-feuer.de
+clients_00020: 
+  company: Consolving Network Solutions
+  remarks: 
+  discount: "0"
+  client_no: KD-10003
+  created_at: 2010-01-28 21:55:03
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58455
+  owner_id: 
+  payment_goal: "0"
+  street: Marienstr. 12
+  id: "58"
+  address_id: 
+  contact_person_id: "5"
+  mobile: +49 (0) 176 / 76218042
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2302 / 1719952
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 1719951
+  password: 
+  surname: van Kerkhof
+  forename: Willem
+  email: wvk@consolving.de
+clients_00019: 
+  company: Offene Ganztagsschule - Harkortschule
+  remarks: 
+  discount: "0"
+  client_no: KD-10002
+  created_at: 2010-01-28 21:52:36
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58454
+  owner_id: 
+  payment_goal: "0"
+  street: "H\xC3\xB6rderstr. 304"
+  id: "57"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302/ 2825837
+  password: 
+  surname: Baloniak
+  forename: Michael
+  email: baloniak@kirche-hawi.de
+clients_00008: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10019
+  created_at: 2010-01-03 17:47:37
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58452
+  owner_id: 
+  payment_goal: "0"
+  street: "K\xC3\xB6nerstr. 23"
+  id: "40"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: Finke
+  forename: Henrik
+  email: Damnedslayer@web.de
+clients_00054: 
+  company: ""
+  remarks: ""
+  discount: 
+  client_no: "7714"
+  created_at: 2010-02-20 19:05:04
+  title: ""
+  updated_at: 2010-02-20 19:13:08
+  postalcode: ""
+  owner_id: 
+  payment_goal: "12"
+  street: ""
+  id: "92"
+  address_id: 
+  contact_person_id: "10"
+  mobile: ""
+  company_id: "8"
+  homepage: 
+  fax: ""
+  locality: ""
+  birthday: 
+  phone: ""
+  password: 
+  surname: Hinke
+  forename: Michael
+  email: "NULL"
+clients_00043: 
+  company: DMPW
+  remarks: "F\xC3\xBCr Interne Vorg\xC3\xA4nge"
+  discount: "100"
+  client_no: KD-99999
+  created_at: 2010-02-04 21:39:47
+  title: Herr
+  updated_at: 2010-02-13 13:47:04
+  postalcode: "58453"
+  owner_id: "1"
+  payment_goal: "0"
+  street: "Waldstra\xC3\x9Fe 52"
+  id: "81"
+  address_id: 
+  contact_person_id: "5"
+  mobile: +49 (0) 172 / 4717688
+  company_id: "6"
+  homepage: 
+  fax: ""
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 2848980
+  password: 
+  surname: Weber
+  forename: Tobias
+  email: info@dmpw.de
+clients_00032: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10030
+  created_at: 2010-01-28 22:23:43
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 44229
+  owner_id: 
+  payment_goal: "0"
+  street: Olpketalstrasse 158d
+  id: "70"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Dortmund
+  birthday: 
+  phone: 
+  password: 
+  surname: "Hau\xC3\x9Fleiter"
+  forename: Philipp
+  email: philipp@haussleiter.de
+clients_00021: 
+  company: Literaturkurs HGE
+  remarks: 
+  discount: "0"
+  client_no: KD-10007
+  created_at: 2010-01-28 21:56:37
+  title: 
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58453
+  owner_id: 
+  payment_goal: "0"
+  street: Willy-Brandt-Str. 2
+  id: "59"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: 
+  forename: 
+  email: 
+clients_00010: 
+  company: Martin-Luther Kirchengemeinde
+  remarks: 
+  discount: "0"
+  client_no: KD-10005
+  created_at: 2010-01-24 19:08:44
+  title: 
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58453
+  owner_id: 
+  payment_goal: "0"
+  street: Ardeystr. 138
+  id: "43"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2302 / 189869
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 189708
+  password: 
+  surname: 
+  forename: 
+  email: 
+clients_00009: 
+  company: Ev. Johanniskirchengemeinde Witten
+  remarks: 
+  discount: "0"
+  client_no: KD-10006
+  created_at: 2010-01-24 19:06:05
+  title: 
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58452
+  owner_id: 
+  payment_goal: "0"
+  street: Bonhoefferstr. 10
+  id: "42"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2302 / 9786233
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 9786230
+  password: 
+  surname: 
+  forename: 
+  email: 
+clients_00055: 
+  company: DMPW - Digital Media Productions Witten
+  remarks: 
+  discount: 
+  client_no: "7199"
+  created_at: 2010-02-20 19:05:04
+  title: 
+  updated_at: 2010-02-20 19:05:04
+  postalcode: 
+  owner_id: 
+  payment_goal: "12"
+  street: 
+  id: "93"
+  address_id: 
+  contact_person_id: "7"
+  mobile: 
+  company_id: "8"
+  homepage: 
+  fax: 
+  locality: 
+  birthday: 
+  phone: 
+  password: 
+  surname: Weber
+  forename: Tobias
+  email: "NULL"
+clients_00044: 
+  company: "NULL"
+  remarks: 
+  discount: 
+  client_no: "1313"
+  created_at: 2010-02-20 19:05:04
+  title: 
+  updated_at: 2010-02-20 19:05:04
+  postalcode: 
+  owner_id: 
+  payment_goal: "6"
+  street: 
+  id: "82"
+  address_id: 
+  contact_person_id: "7"
+  mobile: 
+  company_id: "8"
+  homepage: 
+  fax: 
+  locality: 
+  birthday: 
+  phone: 
+  password: 
+  surname: van Kerkhof
+  forename: Willem
+  email: "NULL"
+clients_00033: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10031
+  created_at: 2010-01-28 22:24:34
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58454
+  owner_id: 
+  payment_goal: "0"
+  street: Weizenkamp 32
+  id: "71"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: Heusener
+  forename: Bastian
+  email: bastian.heusener@evenco.org
+clients_00022: 
+  company: Ev. Jugend im Kirchenkreis Ha-Wi
+  remarks: 
+  discount: "0"
+  client_no: KD-10008
+  created_at: 2010-01-28 21:58:05
+  title: 
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58453
+  owner_id: 
+  payment_goal: "0"
+  street: Egge 65
+  id: "60"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2302 / 9142716
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 914270
+  password: 
+  surname: 
+  forename: 
+  email: 
+clients_00011: 
+  company: Ruhr-Gymnasium Witten
+  remarks: 
+  discount: "0"
+  client_no: KD-10010
+  created_at: 2010-01-24 19:11:42
+  title: 
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58452
+  owner_id: 
+  payment_goal: "0"
+  street: Synagogenstr. 1
+  id: "45"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: 
+  forename: 
+  email: 
+clients_00056: 
+  company: "M.Schlotter Anh\xC3\xA4ngervermietung"
+  remarks: 
+  discount: 
+  client_no: "960"
+  created_at: 2010-02-20 19:05:04
+  title: 
+  updated_at: 2010-02-20 19:05:04
+  postalcode: 
+  owner_id: 
+  payment_goal: "12"
+  street: 
+  id: "94"
+  address_id: 
+  contact_person_id: "7"
+  mobile: 
+  company_id: "8"
+  homepage: 
+  fax: 
+  locality: 
+  birthday: 
+  phone: 
+  password: 
+  surname: Schlotter
+  forename: Manfred
+  email: "NULL"
+clients_00045: 
+  company: "NULL"
+  remarks: 
+  discount: 
+  client_no: "7809"
+  created_at: 2010-02-20 19:05:04
+  title: 
+  updated_at: 2010-02-20 19:05:04
+  postalcode: 
+  owner_id: 
+  payment_goal: "6"
+  street: 
+  id: "83"
+  address_id: 
+  contact_person_id: "7"
+  mobile: 
+  company_id: "8"
+  homepage: 
+  fax: 
+  locality: 
+  birthday: 
+  phone: 
+  password: 
+  surname: Klee
+  forename: Ursula
+  email: "NULL"
+clients_00034: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10032
+  created_at: 2010-01-28 22:25:22
+  title: Her
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58300
+  owner_id: 
+  payment_goal: "0"
+  street: Gartenstr.19
+  id: "72"
+  address_id: 
+  contact_person_id: "5"
+  mobile: +49 (0) 151 / 20442663
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Wetter
+  birthday: 
+  phone: +49 (0) 2302 / 6849975
+  password: 
+  surname: Voswinkel
+  forename: Maik
+  email: ENY-surfmobil@gmx.de
+clients_00023: 
+  company: Band "Not of an assembly line"
+  remarks: 
+  discount: "0"
+  client_no: KD-10009
+  created_at: 2010-01-28 21:59:33
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58300
+  owner_id: 
+  payment_goal: "0"
+  street: "Gro\xC3\x9F Varney 5"
+  id: "61"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Wetter
+  birthday: 
+  phone: 
+  password: 
+  surname: Andrae
+  forename: Malte
+  email: ma.andrae1@web.de
+clients_00012: 
+  company: Band "No Escape"
+  remarks: 
+  discount: "0"
+  client_no: KD-10011
+  created_at: 2010-01-24 19:14:34
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 44627
+  owner_id: 
+  payment_goal: "0"
+  street: In der Esche 22
+  id: "47"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Herne
+  birthday: 
+  phone: 
+  password: 
+  surname: Becker
+  forename: Horst
+  email: 
+clients_00001: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10040
+  created_at: 2010-01-02 17:34:31
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58452
+  owner_id: 
+  payment_goal: "0"
+  street: "Sch\xC3\xBCtzenstr. 54"
+  id: "32"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: Klinke
+  forename: Timo
+  email: timo.klinke@freenet.de
+clients_00057: 
+  company: VdS-Fachgruppe Computer-Astronomie
+  remarks: 
+  discount: 
+  client_no: "8506"
+  created_at: 2010-02-20 19:05:04
+  title: 
+  updated_at: 2010-02-20 19:05:04
+  postalcode: 
+  owner_id: 
+  payment_goal: "12"
+  street: 
+  id: "96"
+  address_id: 
+  contact_person_id: "7"
+  mobile: 
+  company_id: "8"
+  homepage: 
+  fax: 
+  locality: 
+  birthday: 
+  phone: 
+  password: 
+  surname: Jahns
+  forename: Helmut
+  email: "NULL"
+clients_00046: 
+  company: ""
+  remarks: ""
+  discount: 
+  client_no: "10433"
+  created_at: 2010-02-20 19:05:04
+  title: ""
+  updated_at: 2010-02-20 19:14:12
+  postalcode: ""
+  owner_id: 
+  payment_goal: "12"
+  street: ""
+  id: "84"
+  address_id: 
+  contact_person_id: "10"
+  mobile: ""
+  company_id: "8"
+  homepage: 
+  fax: ""
+  locality: ""
+  birthday: 
+  phone: ""
+  password: 
+  surname: Ghadir
+  forename: Phillip
+  email: "NULL"
+clients_00035: 
+  company: "intersant\xC3\xA9 GmbH"
+  remarks: 
+  discount: "0"
+  client_no: KD-10033
+  created_at: 2010-01-28 22:26:24
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 64625
+  owner_id: 
+  payment_goal: "0"
+  street: Berliner Ring 163 B
+  id: "73"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Bensheim
+  birthday: 
+  phone: 
+  password: 
+  surname: Haspel
+  forename: Rolf-Dieter
+  email: 
+clients_00024: 
+  company: Curriculum Parodontologie - Uni W/H
+  remarks: 
+  discount: "0"
+  client_no: KD-10022
+  created_at: 2010-01-28 22:01:24
+  title: 
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58448
+  owner_id: 
+  payment_goal: "0"
+  street: A.-Herrhausen-Str. 45
+  id: "62"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: 
+  forename: 
+  email: wolfg@uni-wh.de
+clients_00013: 
+  company: Stadtkirchenarbeit
+  remarks: 
+  discount: "0"
+  client_no: KD-10012
+  created_at: 2010-01-24 19:16:22
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58452
+  owner_id: 
+  payment_goal: "0"
+  street: Bonhoefferstr. 10
+  id: "48"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2302 / 9786233
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 9786230
+  password: 
+  surname: Neuser
+  forename: Bernd
+  email: 
+clients_00002: 
+  company: JC Hardware
+  remarks: 
+  discount: "0"
+  client_no: KD-10001
+  created_at: 2010-01-03 15:55:21
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 5845
+  owner_id: 
+  payment_goal: "0"
+  street: Haupstr. 18
+  id: "34"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 251/ 89065 25
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 9816050
+  password: 
+  surname: Czapski
+  forename: Jakob
+  email: czapski@jc-hardware.de
+clients_00058: 
+  company: ""
+  remarks: ""
+  discount: 
+  client_no: "1690"
+  created_at: 2010-02-20 19:05:04
+  title: ""
+  updated_at: 2010-02-20 19:11:41
+  postalcode: ""
+  owner_id: "10"
+  payment_goal: "12"
+  street: ""
+  id: "98"
+  address_id: 
+  contact_person_id: "10"
+  mobile: ""
+  company_id: "8"
+  homepage: 
+  fax: ""
+  locality: ""
+  birthday: 
+  phone: ""
+  password: 
+  surname: Wolff
+  forename: Michael
+  email: "NULL"
+clients_00047: 
+  company: Astrowetteraktion
+  remarks: 
+  discount: 
+  client_no: "3352"
+  created_at: 2010-02-20 19:05:04
+  title: 
+  updated_at: 2010-02-20 19:05:04
+  postalcode: 
+  owner_id: 
+  payment_goal: "12"
+  street: 
+  id: "85"
+  address_id: 
+  contact_person_id: "7"
+  mobile: 
+  company_id: "8"
+  homepage: 
+  fax: 
+  locality: 
+  birthday: 
+  phone: 
+  password: 
+  surname: Bastian
+  forename: Yves
+  email: "NULL"
+clients_00036: 
+  company: PARService
+  remarks: 
+  discount: "0"
+  client_no: KD-10021
+  created_at: 2010-01-28 22:30:20
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58452
+  owner_id: 
+  payment_goal: "0"
+  street: Ruhrstr. 76
+  id: "74"
+  address_id: 
+  contact_person_id: "5"
+  mobile: + 49 (0) 0172 / 2123211
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: + 49 (0) 2302 / 52971
+  password: 
+  surname: Grimm
+  forename: Wolf- D.
+  email: wolfg@uni-wh.de
+clients_00025: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10023
+  created_at: 2010-01-28 22:04:46
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 44135
+  owner_id: 
+  payment_goal: "0"
+  street: "Hohenz\xC3\xB6llernstr. 33"
+  id: "63"
+  address_id: 
+  contact_person_id: "5"
+  mobile: +49 (0) 171 - 7561194
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Dortmund
+  birthday: 
+  phone: +49 (0) 231 - 2207008
+  password: 
+  surname: "Ga\xC3\x9Fmann"
+  forename: Georg
+  email: Georg.Gassmann@uni-wh.de
+clients_00014: 
+  company: Stockumer Theaterverein
+  remarks: 
+  discount: "0"
+  client_no: KD-10025
+  created_at: 2010-01-27 16:58:00
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: "58452"
+  owner_id: 
+  payment_goal: "0"
+  street: "Sch\xC3\xBCtzenstrasse 56"
+  id: "52"
+  address_id: 
+  contact_person_id: "5"
+  mobile: +49 (0) 173 / 5105985
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: 
+  password: 
+  surname: Grunwald
+  forename: Tobias
+  email: 
+clients_00003: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10013
+  created_at: 2010-01-03 17:42:27
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 44892
+  owner_id: 
+  payment_goal: "0"
+  street: In der Schornau 16
+  id: "35"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Bochum
+  birthday: 
+  phone: 
+  password: 
+  surname: Loghin
+  forename: Werner
+  email: 
+clients_00059: 
+  company: ""
+  remarks: ""
+  discount: 
+  client_no: "6348"
+  created_at: 2010-02-20 19:05:04
+  title: ""
+  updated_at: 2010-02-20 19:12:59
+  postalcode: ""
+  owner_id: 
+  payment_goal: "12"
+  street: ""
+  id: "99"
+  address_id: 
+  contact_person_id: "10"
+  mobile: ""
+  company_id: "8"
+  homepage: 
+  fax: ""
+  locality: ""
+  birthday: 
+  phone: ""
+  password: 
+  surname: Heinze
+  forename: Johannes
+  email: "NULL"
+clients_00048: 
+  company: 
+  remarks: 
+  discount: 
+  client_no: "1315"
+  created_at: 2010-02-20 19:05:04
+  title: 
+  updated_at: 2010-02-20 19:05:04
+  postalcode: 
+  owner_id: 
+  payment_goal: "12"
+  street: 
+  id: "86"
+  address_id: 
+  contact_person_id: "7"
+  mobile: 
+  company_id: "8"
+  homepage: 
+  fax: 
+  locality: 
+  birthday: 
+  phone: 
+  password: 
+  surname: Bastian
+  forename: Yves
+  email: "NULL"
+clients_00037: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10035
+  created_at: 2010-01-28 22:32:04
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 45525
+  owner_id: 
+  payment_goal: "0"
+  street: Heggerstr. 25
+  id: "75"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Hattingen
+  birthday: 
+  phone: 
+  password: 
+  surname: Pohlmann
+  forename: "J\xC3\xBCrgen"
+  email: 
+clients_00026: 
+  company: atlas Befestigungstechnik GmbH
+  remarks: 
+  discount: "0"
+  client_no: KD-10024
+  created_at: 2010-01-28 22:06:34
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58313
+  owner_id: 
+  payment_goal: "0"
+  street: "Almerfeldstra\xC3\x9Fe 8"
+  id: "64"
+  address_id: 
+  contact_person_id: "5"
+  mobile: +49 (0) 170 / 3402061
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2330 / 7820
+  locality: Herdecke
+  birthday: 
+  phone: +49 (0) 2330 / 7788
+  password: 
+  surname: Neuhaus
+  forename: Andreas
+  email: atlas-herdecke@t-online.de
+clients_00015: 
+  company: Film Kreativ
+  remarks: 
+  discount: "0"
+  client_no: KD-10017
+  created_at: 2010-01-28 21:44:17
+  title: Frau
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58455
+  owner_id: 
+  payment_goal: "0"
+  street: Pferdebachstr. 39a
+  id: "53"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2302 / 2033245
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 2033243
+  password: 
+  surname: Wolgemuth
+  forename: Karin
+  email: info@film-kreativ.de
+clients_00004: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10014
+  created_at: 2010-01-03 17:43:32
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58453
+  owner_id: 
+  payment_goal: "0"
+  street: Ardeystr. 188
+  id: "36"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 84689
+  password: 
+  surname: Drechsel
+  forename: Ulrich
+  email: 
+clients_00060: 
+  company: Sport Ehnert GmbH & Co. KG
+  remarks: ""
+  discount: 
+  client_no: "8958"
+  created_at: 2010-02-20 19:05:04
+  title: ""
+  updated_at: 2010-02-20 19:13:17
+  postalcode: ""
+  owner_id: 
+  payment_goal: "12"
+  street: ""
+  id: "100"
+  address_id: 
+  contact_person_id: "10"
+  mobile: ""
+  company_id: "8"
+  homepage: 
+  fax: ""
+  locality: ""
+  birthday: 
+  phone: ""
+  password: 
+  surname: Ehnert
+  forename: Ralf
+  email: "NULL"
+clients_00049: 
+  company: Physiosupport
+  remarks: ""
+  discount: 
+  client_no: "1314"
+  created_at: 2010-02-20 19:05:04
+  title: ""
+  updated_at: 2010-02-20 19:07:48
+  postalcode: ""
+  owner_id: "7"
+  payment_goal: "12"
+  street: ""
+  id: "87"
+  address_id: 
+  contact_person_id: "7"
+  mobile: ""
+  company_id: "8"
+  homepage: 
+  fax: ""
+  locality: ""
+  birthday: 
+  phone: ""
+  password: 
+  surname: van Kerkhof
+  forename: Pieter
+  email: "NULL"
+clients_00038: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10036
+  created_at: 2010-01-28 22:34:14
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 44225
+  owner_id: 
+  payment_goal: "0"
+  street: Hombrucher Str. 9
+  id: "76"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Dortmund
+  birthday: 
+  phone: 
+  password: 
+  surname: Heussner
+  forename: Michael
+  email: 
+clients_00027: 
+  company: Irish Pub "Finnegans"
+  remarks: ""
+  discount: "0"
+  client_no: KD-10042
+  created_at: 2010-01-28 22:17:31
+  title: ""
+  updated_at: 2010-02-13 15:01:44
+  postalcode: D - 58452
+  owner_id: "1"
+  payment_goal: "0"
+  street: Bellerslohstr. 12
+  id: "65"
+  address_id: 
+  contact_person_id: "5"
+  mobile: ""
+  company_id: "6"
+  homepage: 
+  fax: ""
+  locality: Witten
+  birthday: 
+  phone: ""
+  password: 
+  surname: ""
+  forename: ""
+  email: atelier-stoppel@web.de
+clients_00016: 
+  company: Schulverein AMG Witten
+  remarks: 
+  discount: "0"
+  client_no: KD-10020
+  created_at: 2010-01-28 21:45:19
+  title: 
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 58452
+  owner_id: 
+  payment_goal: "0"
+  street: Oberdrof +
+  id: "54"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: +49 (0) 2302 / 189059
+  locality: Witten
+  birthday: 
+  phone: +49 (0) 2302 / 189172
+  password: 
+  surname: 
+  forename: 
+  email: 
+clients_00005: 
+  company: 
+  remarks: 
+  discount: "0"
+  client_no: KD-10015
+  created_at: 2010-01-03 17:44:51
+  title: Herr
+  updated_at: 2010-02-13 10:07:07
+  postalcode: D - 44809
+  owner_id: 
+  payment_goal: "0"
+  street: Hordeler Str. 66
+  id: "37"
+  address_id: 
+  contact_person_id: "5"
+  mobile: 
+  company_id: "6"
+  homepage: 
+  fax: 
+  locality: Bochum
+  birthday: 
+  phone: +49 (0) 234 / 5770842
+  password: 
+  surname: Schmidt
+  forename: Jochen
+  email: 
