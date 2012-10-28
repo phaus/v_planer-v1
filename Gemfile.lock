@@ -11,6 +11,8 @@ GEM
     activeresource (2.3.14)
       activesupport (= 2.3.14)
     activesupport (2.3.14)
+    after_commit (1.0.10)
+      activerecord (>= 1.15.6, < 3.0.0)
     authlogic (2.1.6)
       activesupport
     fastercsv (1.5.4)
@@ -28,7 +30,11 @@ GEM
       rake (>= 0.8.3)
     rake (0.8.7)
     rdoc (2.4.2)
-    sass (3.1.12)
+    riddle (1.5.3)
+    thinking-sphinx (1.4.13)
+      activerecord (>= 1.15.6, < 3.0.0)
+      after_commit (>= 1.0.7)
+      riddle (>= 1.5.3)
     vpim (0.695)
     webrat (0.7.3)
       nokogiri (>= 1.2.0)
@@ -44,9 +50,9 @@ DEPENDENCIES
   fastercsv
   mysql
   rails (~> 2.3.5)
-  rake
+  rake (= 0.8.7)
   rdoc (= 2.4.2)
-  sass
+  thinking-sphinx
   vpim
   webrat
   workflow
