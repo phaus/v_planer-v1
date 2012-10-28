@@ -23,7 +23,7 @@
   <dd><%=h @rental.end.to_date %></dd>
 
   <dt>Nutzungsdauer:</dt>
-  <dd><%=h @rental.duration %> Tage, davon abgerechnet: <%=h @rental.billed_duration %> Tage</dd>
+  <dd><%=h('%.2f' % @rental.duration) %> Tage, davon abgerechnet: <%=h('%.2f' % @rental.billed_duration) %> Tage</dd>
 
   <dt>Status:</dt>
   <dd><%=h @rental.workflow_state %></dd>
