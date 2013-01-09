@@ -16,8 +16,8 @@ class Selling < CommercialProcess
       :reject_if     => proc { |attrs| attrs[:count].sub(',', '.').to_f == 0.0 },
       :allow_destroy => true
 
-  named_scope :for_company, lambda { |company|
-    { :conditions => ['sender_id IN (?)', company.section_ids]}
+  scope :for_company, lambda { |company|
+    where :sender_id => company.section_ids
   }
 
   monetary_value :discount, :client_discount

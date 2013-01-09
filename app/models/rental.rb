@@ -19,12 +19,12 @@ class Rental < CommercialProcess
       :begin,
       :end
 
-  named_scope :for_company, lambda { |company|
-    { :conditions => ['sender_id IN (?)', company.section_ids]}
+  scope :for_company, lambda { |company|
+    where :sender_id => company.section_ids
   }
 
-  named_scope :with_state, lambda { |*states|
-    { :conditions => ['workflow_state IN (?)', states.flatten]}
+  scope :with_state, lambda { |*states|
+    where :workflow_state => states.flatten
   }
 
   accepts_nested_attributes_for :device_items,
@@ -38,8 +38,7 @@ class Rental < CommercialProcess
   monetary_value :discount,
       :client_discount
 
-  named_scope :for_current_month,
-      :conitions => ['begin < ? AND end > ?', Date.today.at_end_of_month, Date.today.at_beginning_of_month]
+  scope :for_current_month, where(['begin < ? AND end > ?', Date.today.at_end_of_month, Date.today.at_beginning_of_month])
 
   collect_errors_from :device_items, :service_items
 

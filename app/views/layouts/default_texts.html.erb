@@ -24,13 +24,11 @@
       <% end %>
 
       <% if params[:action] == 'index' %>
-        <%= observe_field 'q', :frequency => 2,
-            :update   => 'default_texts',
-            :before   => "Element.show('spinner1')",
-            :success  => "Element.hide('spinner1')",
-            :url      => default_texts_path,
-            :method   => :get,
-            :with     => "Form.Element.serialize('q')" %>
+          <script type="text/javascript">
+          //<![CDATA[
+          new Form.Element.Observer('q', 2, function(element, value) {Element.show('spinner1'); new Ajax.Updater('clients', '<%= default_texts_path %>', {asynchronous:true, evalScripts:true, method:'get', onSuccess:function(request){Element.hide('spinner1')}, parameters:Form.Element.serialize('q')})})
+          //]]>
+        </script>
       <% end %>
     <% end %>
 

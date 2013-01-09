@@ -4,8 +4,8 @@ class DeviceAvailability < ActiveRecord::Base
 
   belongs_to :device
 
-  named_scope :between, lambda {|from_date, to_date|
-    {:conditions => ['value between ? and ?', from_date, to_date]}
+  scope :between, lambda {|from_date, to_date|
+    where ['value between ? and ?', from_date, to_date]
   }
 
   def date

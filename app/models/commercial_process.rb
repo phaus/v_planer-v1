@@ -18,12 +18,12 @@ class CommercialProcess < ActiveRecord::Base
 
   validate :no_invoice_yet
 
-  named_scope :for_company, lambda { |company|
-    { :conditions => ['sender_id IN (?)', company.section_ids]}
+  scope :for_company, lambda { |company|
+    where :sender_id => company.section_ids
   }
 
-  named_scope :with_state, lambda { |*states|
-    { :conditions => ['workflow_state IN (?)', states.flatten]}
+  scope :with_state, lambda { |*states|
+    where :workflow_state => states.flatten
   }
 
   workflow do

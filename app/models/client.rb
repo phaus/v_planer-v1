@@ -13,8 +13,8 @@ class Client < ActiveRecord::Base
       :company,
       :address
 
-  named_scope :matching, lambda {|q|
-    {:conditions => [%q(CONCAT(clients.forename, ' ', clients.surname) REGEXP ? OR clients.remarks REGEXP ? OR clients.company REGEXP ? OR clients.client_no REGEXP ?), *[q]*4] }
+  scope :matching, lambda {|q|
+    where([%q(CONCAT(clients.forename, ' ', clients.surname) REGEXP ? OR clients.remarks REGEXP ? OR clients.company REGEXP ? OR clients.client_no REGEXP ?), *[q]*4])
   }
 
   accepts_nested_attributes_for :address
