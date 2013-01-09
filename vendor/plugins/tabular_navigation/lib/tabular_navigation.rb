@@ -38,7 +38,7 @@ module ApplicationHelper
       end
       str << navtab(link_to(name, send(path)), :active => name == opts[:active]) if ok
     end
-    str
+    str.html_safe
   end
   alias navigation main_navigation
 
@@ -48,12 +48,12 @@ module ApplicationHelper
       link_path = path.is_a?(String) ? path : send(path)
       str << navtab(link_to(name, link_path), :active => name == opts[:active])
     end
-    str
+    str.html_safe
   end
 
   def navtab(text, options={})
     active = options[:active] ? 'active' : ''
-    <<-EOS
+    str = <<-EOS
     <div class="tab-outer #{active}">
       <div class="tab-inner">
         <div class="tab">
@@ -62,17 +62,16 @@ module ApplicationHelper
       </div>
     </div>
     EOS
+    str.html_safe
   end
 
   def aux_navigation(&block)
-    returning <<-EOS do |str|
-      <div id="top_nav">
-        #{capture(&block) if block_given?}
-        #{link_to 'Ausloggen', user_session_path, :method => :delete}
-      </div>
-      EOS
-      concat str if block_given?
-    end
+    <<-EOS
+    <div id="top_nav">
+      #{capture(&block) if block_given?}
+      #{link_to 'Ausloggen', user_session_path, :method => :delete}
+    </div>
+    EOS
   end
 end
 
