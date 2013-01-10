@@ -5,8 +5,7 @@ class Product < ActiveRecord::Base
       :polymorphic => true,
       :dependent   => :destroy
 
-  has_many :rental_periods,
-      :dependent => :protect
+  has_many :rental_periods
 
   has_many :buying_prices,
       :class_name => 'ProductBuyingPrice',
@@ -69,12 +68,12 @@ class Product < ActiveRecord::Base
     {:with => {:category_ids => []}}
   end
 
-  named_scope :available_between, lambda {|from_date, to_date|
-    {:conditions => [%q(products.article_id NOT IN (SELECT product_stock_entries.device_id FROM product_stock_entries
+  scope :available_between, lambda {|from_date, to_date|
+    where [%q(products.article_id NOT IN (SELECT product_stock_entries.device_id FROM product_stock_entries
                         JOIN unavailabilities ON unavailabilities.product_stock_entry_id = product_stock_entries.id
                         JOIN rental_periods   ON rental_periods.id = unavailabilities.rental_period_id
                         JOIN rentals          ON rentals.id = rental_periods.rental_id
-                        WHERE (rentals.end NOT BETWEEN ? AND ?) AND (rentals.begin  NOT BETWEEN ? AND ?))), from_date, to_date, from_date, to_date] }
+                        WHERE (rentals.end NOT BETWEEN ? AND ?) AND (rentals.begin  NOT BETWEEN ? AND ?))), from_date, to_date, from_date, to_date]
   }
 
   # FIXME: somehow, the article ID gets interpreted as the product ID
@@ -86,11 +85,9 @@ class Product < ActiveRecord::Base
 #       :joins => %q{JOIN (SELECT devices.id AS id, 'Device' AS type FROM devices WHERE devices.selling_price_i IS NOT NULL) AS articles
 #                     ON articles.id=products.article_id AND articles.type=products.article_type}
 
-  named_scope :service,
-    :conditions => {:article_type => 'Service'}
+  scope :service, where(:article_type => 'Service')
 
-  named_scope :device,
-    :conditions => {:article_type => 'Device'}
+  scope :device, where(:article_type => 'Device')
 
   is_company_specific
 

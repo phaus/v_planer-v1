@@ -1,12 +1,15 @@
-source :gemcutter
+source 'http://rubygems.org'
 
-gem 'rails', "~> 2.3.5"
-gem 'mysql'
-gem 'rake', '0.8.7'
+gem 'rails', '3.0.9'
+gem 'mysql2', '~> 0.2.6'
+gem 'rails-erd'
 gem 'vpim'
 gem 'fastercsv'
-gem 'webrat'
 gem 'authlogic'
-gem 'workflow'
-gem 'rdoc', '2.4.2' 
+gem 'validating-workflow', :require => 'workflow', :git => 'git://github.com/wvk/workflow.git'
+gem 'rdoc'
 gem 'thinking-sphinx'
+
+group :test do
+  gem 'webrat'
+end

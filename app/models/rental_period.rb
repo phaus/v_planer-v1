@@ -9,10 +9,8 @@ class RentalPeriod < ActiveRecord::Base
   has_many :product_stock_entries,
       :through => :unavailabilities
 
-  named_scope :between, lambda {|from, to|
-    { :joins      => 'JOIN rentals ON rental_id=rentals.id',
-      :conditions => ['rentals.begin < ? AND rentals.end > ?', to, from],
-      :order      => 'rentals.id ASC' }
+  scope :between, lambda {|from, to|
+    joins('rentals ON rental_id=rentals.id').where(['rentals.begin < ? AND rentals.end > ?', to, from]).order('rentals.id').asc
   }
 
   after_save :persist_calculated_fields

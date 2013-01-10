@@ -3,7 +3,7 @@
 <h2>Im Monat <%= @from_date.strftime '%m-%Y' %></h2>
 
 <p>
-  <%= link_to '<<< Vormonat',   :from_date => @from_date.last_month %>
+  <%= link_to '<<< Vormonat',   :from_date => @from_date.prev_month %>
   <%= link_to 'Folgemonat >>>', :from_date => @from_date.next_month %>
 </p>
 

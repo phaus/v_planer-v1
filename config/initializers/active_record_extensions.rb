@@ -5,11 +5,9 @@ module CompanySectionSpecifics
 
   module ClassMethods
     def is_company_specific
-      self.named_scope :for_company, lambda {|company|
-        { :joins      => "JOIN company_sections ON company_sections.id = #{table_name}.company_section_id
-                          JOIN companies ON companies.id = company_sections.company_id",
-          :conditions => ['companies.id = ?', company.id]
-        }
+      scope :for_company, lambda {|company|
+        joins("company_sections ON company_sections.id = #{table_name}.company_section_id JOIN companies ON companies.id = company_sections.company_id").
+        where(['companies.id = ?', company.id])
       }
     end
   end
