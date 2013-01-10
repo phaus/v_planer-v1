@@ -1,5 +1,6 @@
 class Product < ActiveRecord::Base
-  belongs_to :company_section
+  include CompanySectionSpecifics
+
   has_and_belongs_to_many :categories
   belongs_to :article,
       :polymorphic => true,
@@ -27,7 +28,9 @@ class Product < ActiveRecord::Base
       :to => :article
 
   define_index do
-    indexes code, company_section_id, article_type
+    indexes :code
+#     indexes :company_section_id
+    indexes :article_type
     indexes article(:name),         :as => :name, :sortable => true
     indexes article(:manufacturer), :as => :manufacturer
     indexes article(:description),  :as => :description
@@ -70,10 +73,10 @@ class Product < ActiveRecord::Base
 
   scope :available_between, lambda {|from_date, to_date|
     where [%q(products.article_id NOT IN (SELECT product_stock_entries.device_id FROM product_stock_entries
-                        JOIN unavailabilities ON unavailabilities.product_stock_entry_id = product_stock_entries.id
-                        JOIN rental_periods   ON rental_periods.id = unavailabilities.rental_period_id
-                        JOIN rentals          ON rentals.id = rental_periods.rental_id
-                        WHERE (rentals.end NOT BETWEEN ? AND ?) AND (rentals.begin  NOT BETWEEN ? AND ?))), from_date, to_date, from_date, to_date]
+              JOIN unavailabilities ON unavailabilities.product_stock_entry_id = product_stock_entries.id
+              JOIN rental_periods   ON rental_periods.id = unavailabilities.rental_period_id
+              JOIN rentals          ON rentals.id = rental_periods.rental_id
+              WHERE (rentals.end NOT BETWEEN ? AND ?) AND (rentals.begin  NOT BETWEEN ? AND ?))), from_date, to_date, from_date, to_date]
   }
 
   # FIXME: somehow, the article ID gets interpreted as the product ID
@@ -88,8 +91,6 @@ class Product < ActiveRecord::Base
   scope :service, where(:article_type => 'Service')
 
   scope :device, where(:article_type => 'Device')
-
-  is_company_specific
 
   validates_presence_of :article,
       :company_section

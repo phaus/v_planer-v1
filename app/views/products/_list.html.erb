@@ -1,5 +1,5 @@
 <div class="widget_container left narrow">
-  <%= category_tabs current_company.categories.not_empty(params[:action]).all, :active => params[:category_id] || :all %>
+  <%= category_tabs current_company.categories.not_empty(params[:action]), :active => params[:category_id] || :all %>
 </div>
 
 

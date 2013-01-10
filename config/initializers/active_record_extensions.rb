@@ -1,14 +1,15 @@
 module CompanySectionSpecifics
-  def self.included(base)
-    base.extend ClassMethods
+  extend ActiveSupport::Concern
+
+  included do
+    belongs_to :company_section
+    has_one :company, :through => :company_section
+    scope :for_company, lambda {|company| joins(:company_section).where(['company_sections.company_id = ?', company.id]) }
   end
 
   module ClassMethods
     def is_company_specific
-      scope :for_company, lambda {|company|
-        joins("company_sections ON company_sections.id = #{table_name}.company_section_id JOIN companies ON companies.id = company_sections.company_id").
-        where(['companies.id = ?', company.id])
-      }
+      # noop
     end
   end
 end
@@ -27,7 +28,7 @@ module MoneyHandling
         end
 
         define_method :"#{name}=" do |new_price|
-          self.write_attribute :"#{name}_i", new_price.blank? ? nil : (new_price.to_s.gsub(',', '.').to_f * 100)
+          self.send :write_attribute, :"#{name}_i", new_price.blank? ? nil : (new_price.to_s.gsub(',', '.').to_f * 100)
         end
       end
     end
@@ -69,7 +70,6 @@ module ErrorCollection
 
 end
 
-ActiveRecord::Base.send :include, CompanySectionSpecifics
 ActiveRecord::Base.send :include, MoneyHandling
 ActiveRecord::Base.send :include, ErrorCollection
 

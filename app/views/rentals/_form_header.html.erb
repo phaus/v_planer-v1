@@ -27,7 +27,7 @@
     <th><%= f.label :begin, 'Von' %></th>
     <td>
       <%= f.calendar_date_select :begin,
-          :year_range => 2009..2015,
+          :year_range => 2009..2016,
           :size       => 12,
           :time       => false,
           :ochange    => 'date_changed()' %>
@@ -37,7 +37,7 @@
     <th><%= f.label :end, 'Bis' %></th>
     <td>
       <%= f.calendar_date_select :end,
-          :year_range => 2009..2015,
+          :year_range => 2009..2016,
           :size       => 12,
           :time       => false,
           :onchange   => 'date_changed()' %>
