@@ -2,7 +2,7 @@ class CategoriesController < UserSpecificController
   # GET /categories
   # GET /categories.xml
   def index
-    @categories = current_company.categories.all :order => 'name ASC'
+    @categories = current_company.categories.order(:name)
 
     respond_to do |format|
       format.html # index.html.erb

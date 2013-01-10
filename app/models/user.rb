@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
+  include CompanySectionSpecifics
   include Random
 
   belongs_to :address
   belongs_to :bank_account
-  belongs_to :company_section
   has_many :clients,
       :foreign_key => :contact_person_id
   has_many :rentals
@@ -11,8 +11,6 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :address
   accepts_nested_attributes_for :bank_account
-
-  is_company_specific
 
   acts_as_authentic
 
