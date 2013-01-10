@@ -1,6 +1,6 @@
 <h1>Vermietvorgang bearbeiten</h1>
 
-<% form_for(@rental) do |f| %>
+<%= form_for(@rental) do |f| %>
   <%= f.error_messages %>
 
   <%= render :partial => 'form_header', :locals => {:f => f} %>
@@ -8,7 +8,7 @@
   <div id="available_products" style="width: 100%">
     <p class="full_width_input">
       <%= f.label :offer_top_text, 'Text für Angebot' %><br />
-      <%= f.text_area :offer_top_text, :class => 'full_width_input', :rows => 5 %>
+      <%= f.text_area :offer_top_text, :class => 'full_width_input', :rows => f.object.offer_top_text.lines.inject(1){|m,l|m += 1} %>
     </p>
 
     <table id="available_products_table" class="data" style="width: 100%">
@@ -70,7 +70,7 @@
     <p class="full_width_input">
       <%= f.label :offer_bottom_text, 'Text für Angebot' %><br />
       (verfügbare Variablen: %sender_name)
-      <%= f.text_area :offer_bottom_text, :class => 'full_width_input', :rows => 5 %>
+      <%= f.text_area :offer_bottom_text, :class => 'full_width_input', :rows => f.object.offer_bottom_text.lines.inject(1){|m,l|m + 1} %>
     </p>
 
     <%= f.submit 'Speichern' %>

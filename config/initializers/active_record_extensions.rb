@@ -28,7 +28,7 @@ module MoneyHandling
         end
 
         define_method :"#{name}=" do |new_price|
-          self.write_attribute :"#{name}_i", new_price.blank? ? nil : (new_price.to_s.gsub(',', '.').to_f * 100)
+          self.send :write_attribute, :"#{name}_i", new_price.blank? ? nil : (new_price.to_s.gsub(',', '.').to_f * 100)
         end
       end
     end
