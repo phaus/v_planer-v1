@@ -24,14 +24,16 @@ VPlaner::Application.routes.draw do
   get '/products/:t/search/:q' => 'products#search'
   get '/products/:t/search'    => 'products#search'
 
-  resources :products,
-      :collection => {
-          :rentable => :get,
-          :sellable => :get,
-          :service  => :get,
-          :device   => :get,
-          :expense  => :get,
-          :search   => :get }
+  resources :products do
+    collection do
+      get :rentable
+      get :sellable
+      get :service
+      get :device
+      get :expense
+      get :search
+    end
+  end
 
   resources :services
 
