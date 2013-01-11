@@ -3,7 +3,7 @@ class Service < ActiveRecord::Base
       :dependent => :destroy
 
   validates_presence_of :name,
-      :unit_price_i
+      :unit_price
 
   monetary_value :unit_price
 

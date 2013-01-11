@@ -1,15 +1,16 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of Active Record to incrementally modify your database, and
-# then regenerate this schema definition.
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your database schema. If you need
-# to create the application database on another system, you should be using db:schema:load, not running
-# all the migrations from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120515134024) do
+ActiveRecord::Schema.define(:version => 20130110180546) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -48,6 +49,8 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.integer  "company_section_id"
   end
 
+  add_index "categories", ["company_section_id"], :name => "company_section_id"
+
   create_table "categories_products", :id => false, :force => true do |t|
     t.integer "category_id"
     t.integer "product_id"
@@ -64,14 +67,11 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.date     "birthday"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "street"
-    t.string   "postalcode"
-    t.string   "locality"
     t.string   "client_no"
     t.string   "fax"
     t.string   "mobile"
     t.string   "homepage"
-    t.integer  "payment_goal",      :limit => 8
+    t.integer  "payment_goal",      :limit => 8,    :default => 7
     t.integer  "discount",          :limit => 8
     t.integer  "contact_person_id", :limit => 8
     t.integer  "company_id"
@@ -80,6 +80,10 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.integer  "address_id"
     t.integer  "bank_account_id"
   end
+
+  add_index "clients", ["company_id"], :name => "company_id"
+  add_index "clients", ["contact_person_id"], :name => "contact_person_id"
+  add_index "clients", ["owner_id"], :name => "owner_id"
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -112,11 +116,11 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.string   "fax",                   :limit => 30
     t.string   "mobile",                :limit => 30
     t.string   "homepage"
-    t.string   "vat_id",                :limit => 50,                   :null => false
-    t.string   "street",                :limit => 100,                  :null => false
-    t.string   "postalcode",            :limit => 100,                  :null => false
-    t.string   "locality",              :limit => 100,                  :null => false
-    t.string   "country",               :limit => 100,                  :null => false
+    t.string   "vat_id"
+    t.string   "street"
+    t.string   "postalcode"
+    t.string   "locality"
+    t.string   "country"
     t.integer  "address_id"
     t.integer  "bank_account_id"
     t.string   "remarks",               :limit => 2048
@@ -139,25 +143,34 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.integer "count",     :limit => 8, :default => 0, :null => false
   end
 
+  create_table "device_availabilities_table", :id => false, :force => true do |t|
+    t.date    "value"
+    t.integer "device_id",                             :null => false
+    t.integer "count",     :limit => 8, :default => 0, :null => false
+  end
+
   create_table "devices", :force => true do |t|
     t.string   "name"
     t.string   "description",     :limit => 2048
-    t.integer  "width"
-    t.integer  "height"
-    t.integer  "length"
-    t.integer  "weight"
+    t.integer  "width",           :limit => 8
+    t.integer  "height",          :limit => 8
+    t.integer  "length",          :limit => 8
+    t.integer  "weight",          :limit => 8
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "available_count"
+    t.integer  "available_count", :limit => 8
     t.string   "manufacturer"
-    t.integer  "buying_price_i"
-    t.integer  "selling_price_i"
-    t.float    "vat_rate"
+    t.integer  "buying_price_i",  :limit => 8
+    t.integer  "selling_price_i", :limit => 8
+    t.float    "vat_rate",        :limit => 255
     t.string   "unit"
-    t.integer  "rental_price_i"
-    t.boolean  "is_rentable",                     :default => false
-    t.boolean  "is_sellable",                     :default => false
+    t.integer  "rental_price_i",  :limit => 8
+    t.boolean  "is_rentable",                                                    :default => false
+    t.boolean  "is_sellable",                                                    :default => false
+    t.decimal  "buying_price",                    :precision => 10, :scale => 2
+    t.decimal  "selling_price",                   :precision => 10, :scale => 2
+    t.decimal  "rental_price",                    :precision => 10, :scale => 2
   end
 
   create_table "distributors", :force => true do |t|
@@ -185,6 +198,8 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.integer  "bank_account_id"
   end
 
+  add_index "distributors", ["company_id"], :name => "company_id"
+
   create_table "expense_items", :force => true do |t|
     t.integer  "process_id"
     t.string   "process_type"
@@ -200,6 +215,7 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.integer  "price_i"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "price",        :precision => 10, :scale => 2
   end
 
   create_table "expenses", :force => true do |t|
@@ -228,6 +244,7 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.string   "remarks",           :limit => 500
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "price",                            :precision => 10, :scale => 2
   end
 
   create_table "invoices", :force => true do |t|
@@ -243,6 +260,7 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.datetime "updated_at"
     t.integer  "company_id"
     t.string   "invoice_no"
+    t.decimal  "price",                        :precision => 10, :scale => 2
   end
 
   create_table "product_buying_prices", :force => true do |t|
@@ -252,6 +270,7 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.string   "article_no"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "price",          :precision => 10, :scale => 2
   end
 
   create_table "product_stock_entries", :force => true do |t|
@@ -274,17 +293,24 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.integer  "delta",              :null => false
   end
 
-  add_index "products", ["article_type"], :name => "article_type"
+  add_index "products", ["article_type", "article_id"], :name => "article_type"
+  add_index "products", ["article_type", "article_id"], :name => "article_type_2"
+  add_index "products", ["company_section_id"], :name => "company_section_id"
+  add_index "products", ["company_section_id"], :name => "company_section_id_2"
 
   create_table "rental_periods", :force => true do |t|
+    t.datetime "from_date"
+    t.datetime "to_date"
     t.string   "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "rental_id"
+    t.integer  "rental_id",    :limit => 8
     t.float    "count"
     t.integer  "product_id"
     t.integer  "unit_price_i"
     t.integer  "price_i"
+    t.decimal  "unit_price",                :precision => 10, :scale => 2
+    t.decimal  "price",                     :precision => 10, :scale => 2
   end
 
   add_index "rental_periods", ["product_id"], :name => "product_id"
@@ -307,12 +333,15 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.string   "offer_top_text",                 :limit => 2048
     t.string   "offer_bottom_text",              :limit => 2048
     t.string   "remarks",                        :limit => 2048
-    t.string   "title",                                          :default => ""
+    t.string   "title",                                                                         :default => ""
     t.string   "offer_confirmation_top_text",    :limit => 1000
     t.string   "offer_confirmation_bottom_text", :limit => 1000
+    t.decimal  "discount",                                       :precision => 10, :scale => 2
+    t.decimal  "client_discount",                                :precision => 10, :scale => 2
   end
 
   add_index "rentals", ["begin"], :name => "begin"
+  add_index "rentals", ["client_id"], :name => "client_id"
   add_index "rentals", ["end"], :name => "end"
   add_index "rentals", ["sender_id"], :name => "sender_id"
   add_index "rentals", ["user_id"], :name => "user_id"
@@ -323,28 +352,33 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.integer  "product_id"
     t.integer  "process_id"
     t.integer  "price_i"
+    t.integer  "unit_price_i"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "unit_price_i", :null => false
+    t.decimal  "price",        :precision => 10, :scale => 2
+    t.decimal  "unit_price",   :precision => 10, :scale => 2
   end
 
   create_table "sellings", :force => true do |t|
     t.integer  "client_id"
     t.integer  "user_id"
-    t.integer  "discount_i",                                     :default => 0
+    t.integer  "discount_i",                                                                    :default => 0
     t.integer  "price_i"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "workflow_state"
-    t.integer  "client_discount_i",                              :default => 0
+    t.integer  "client_discount_i",                                                             :default => 0
     t.integer  "sender_id"
+    t.string   "workflow_state"
     t.string   "process_no"
     t.string   "offer_top_text",                 :limit => 2048
     t.string   "offer_bottom_text",              :limit => 2048
     t.string   "remarks",                        :limit => 2048
-    t.string   "title",                                          :default => ""
+    t.string   "title"
     t.string   "offer_confirmation_top_text",    :limit => 1000
     t.string   "offer_confirmation_bottom_text", :limit => 1000
+    t.decimal  "discount",                                       :precision => 10, :scale => 2
+    t.decimal  "price",                                          :precision => 10, :scale => 2
+    t.decimal  "client_discount",                                :precision => 10, :scale => 2
   end
 
   create_table "service_items", :force => true do |t|
@@ -359,15 +393,18 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.integer  "price_i"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "unit_price",   :precision => 10, :scale => 2
+    t.decimal  "price",        :precision => 10, :scale => 2
   end
 
   create_table "services", :force => true do |t|
     t.string   "name"
     t.string   "description",  :limit => 2048
-    t.integer  "unit_price_i",                 :default => 0
-    t.string   "unit",                         :default => "Std."
+    t.integer  "unit_price_i",                                                :default => 0
+    t.string   "unit",                                                        :default => "Std."
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "unit_price",                   :precision => 10, :scale => 2
   end
 
   create_table "stock_entry_availabilities", :id => false, :force => true do |t|
@@ -385,7 +422,7 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.datetime "updated_at"
   end
 
-  add_index "unavailabilities", ["product_stock_entry_id"], :name => "device_stock_entry_id"
+  add_index "unavailabilities", ["product_stock_entry_id"], :name => "product_stock_entry_id"
   add_index "unavailabilities", ["rental_period_id"], :name => "rental_period_id"
 
   create_table "users", :force => true do |t|
@@ -413,5 +450,7 @@ ActiveRecord::Schema.define(:version => 20120515134024) do
     t.integer  "address_id"
     t.string   "remarks",             :limit => 2048
   end
+
+  add_index "users", ["company_section_id"], :name => "company_section_id"
 
 end

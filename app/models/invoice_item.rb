@@ -7,17 +7,9 @@ class InvoiceItem < ActiveRecord::Base
 
   validates_presence_of :price
 
-  def price
-    self.read_attribute(:price_i).to_f / 100
-  end
-
-  def price=(value)
-    self.write_attribute(:price_i, value * 100)
-  end
-
   def item=(pi)
     self.process_item = pi
-    self.price_i = pi.price_i
+    self.price = pi.price
   end
 
 end

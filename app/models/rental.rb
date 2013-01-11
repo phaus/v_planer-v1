@@ -11,8 +11,8 @@ class Rental < CommercialProcess
 
   validates_presence_of :client,
       :sender,
-      :discount_i,
-      :client_discount_i,
+      :discount,
+      :client_discount,
       :usage_duration,
       :billed_duration,
       :user,
@@ -110,12 +110,11 @@ class Rental < CommercialProcess
   end
 
   def gross_total_price
-    val = self.read_attribute(:price_i)
-    val ? val / 100.0 : self.net_total_price + self.vat
+    self.net_total_price + self.vat
   end
 
   def vat
-    self.net_total_price.to_f * 19.0 / 100.0
+    self.net_total_price * 19.0 / 100.0
   end
 
   def billed_duration

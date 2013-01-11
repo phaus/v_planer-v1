@@ -17,8 +17,8 @@ class RentalPeriod < ActiveRecord::Base
 
   collect_errors_from :product, :unavailabilities
 
-  validates_presence_of :unit_price_i,
-      :price_i,
+  validates_presence_of :unit_price,
+      :price,
       :product,
       :process
 
@@ -52,14 +52,11 @@ class RentalPeriod < ActiveRecord::Base
   end
 
   def unit_price
-    up = self.read_attribute(:unit_price_i)
-    up ? up / 100.0 : self.product.unit_price
+    super || self.product.unit_price
   end
 
   def price
-    pi = self.read_attribute(:price_i)
-    factor = self.billed_duration
-    pi ? (pi / 100.0) : (self.unit_price * self.count * factor)
+    super || self.unit_price * self.count * self.billed_duration
   end
 
   def count=(new_count)

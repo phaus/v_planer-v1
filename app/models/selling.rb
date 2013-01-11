@@ -48,8 +48,7 @@ class Selling < CommercialProcess
   end
 
   def gross_total_price
-    val = self.read_attribute(:price_i)
-    val ? val / 100.0 : self.net_total_price + self.vat
+    self.price ||= self.net_total_price + self.vat
   end
 
   def vat
