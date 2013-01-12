@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/paneq/calendar_date_select.git
+  revision: 977048211b94599fe0f08eb37a481f3d69df48f6
+  specs:
+    calendar_date_select (1.16.2)
+
+GIT
   remote: git://github.com/wvk/workflow.git
   revision: 96dff8d3a7239dd416954e774cfa1c5a492c9e4c
   specs:
@@ -105,6 +111,7 @@ PLATFORMS
 DEPENDENCIES
   authlogic
   blankslate (= 2.1.2.4)
+  calendar_date_select!
   fastercsv
   mysql2 (~> 0.2.6)
   rails (= 3.0.9)
