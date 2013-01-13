@@ -5,7 +5,7 @@ de:
   activerecord:
     attributes:
       client:
-        contact_person_id: Ansprechpartner
+        contact_person: Ansprechpartner
         client_no: Kundennummer
         title: Anrede
         forename: Vorname
@@ -31,3 +31,10 @@ de:
         phone: 'Telefon'
         fax: 'Fax'
         mobile: 'Mobil'
+
+      distributor:
+        client_no: Kundennummer beim Lieferanten
+        company_name: Firma
+        contact_person: Ansprechpartner
+        email: E-Mailadresse
+        
