@@ -1,0 +1,127 @@
+.field {
+  display: block;
+  float: left;
+  overflow: hidden;
+  width: 320px;
+  border: none;
+  clear: both;
+}
+.field label {
+  display: block;
+  float: left;
+  border: none;
+  width: 100px;
+  text-align: right;
+  font-size: 11px;
+  margin: 5px 10px 4px 0px;
+}
+.field label + input,
+.field label + .input-value {
+  width: 200px;
+  float: left;
+  margin: 5px 0;
+}
+.field.unit-h label:after {
+  content: ' [h]';
+  color: #888;
+}
+.field.unit-h .input-value,
+.field.unit-h input {
+  text-align: right;
+}
+.field.unit-chf label:after {
+  content: ' [CHF]';
+  color: #888;
+}
+.field.unit-chf .input-value,
+.field.unit-chf input {
+  text-align: right;
+}
+.field.unit-km label:after {
+  content: ' [km]';
+  color: #888;
+}
+.field.unit-km .input-value,
+.field.unit-km input {
+  text-align: right;
+}
+.field.unit-kg label:after {
+  content: ' [kg]';
+  color: #888;
+}
+.field.unit-kg .input-value,
+.field.unit-kg input {
+  text-align: right;
+}
+.field.unit-nmm2 label:after {
+  content: ' [N/mm\00B2]';
+  color: #888;
+}
+.field.unit-nmm2 .input-value,
+.field.unit-nmm2 input {
+  text-align: right;
+}
+.field.unit-mm2 label:after {
+  content: ' [mm\00B2]';
+  color: #888;
+}
+.field.unit-mm2 .input-value,
+.field.unit-mm2 input {
+  text-align: right;
+}
+.field.unit-mm label:after {
+  content: ' [mm]';
+  color: #888;
+}
+.field.unit-mm .input-value,
+.field.unit-mm input {
+  text-align: right;
+}
+.field.unit-kn label:after {
+  content: ' [kN]';
+  color: #888;
+}
+.field.unit-kn .input-value,
+.field.unit-kn input {
+  text-align: right;
+}
+.field.unit-knm label:after {
+  content: ' [kNm]';
+  color: #888;
+}
+.field.unit-knm .input-value,
+.field.unit-knm input {
+  text-align: right;
+}
+.field.unit-m label:after {
+  content: ' [m]';
+  color: #888;
+}
+.field.unit-m .input-value,
+.field.unit-m input {
+  text-align: right;
+}
+.field.unit-l label:after {
+  content: ' [l]';
+  color: #888;
+}
+.field.unit-l .input-value,
+.field.unit-l input {
+  text-align: right;
+}
+.field.unit-deg label:after {
+  content: ' [°]';
+  color: #888;
+}
+.field.unit-deg .input-value,
+.field.unit-deg input {
+  text-align: right;
+}
+.field.unit-percent label:after {
+  content: ' [%]';
+  color: #888;
+}
+.field.unit-percent .input-value,
+.field.unit-percent input {
+  text-align: right;
+}

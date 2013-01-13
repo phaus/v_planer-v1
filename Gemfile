@@ -23,4 +23,5 @@ gem 'calendar_date_select',
     :git => 'git://github.com/paneq/calendar_date_select.git'
 
 gem 'conforming',
-    :git => 'git://github.com/consolving/conforming.git'
+#     :git => 'git://github.com/consolving/conforming.git'
+  :path => '/home/wvk/programs/rails/conforming'

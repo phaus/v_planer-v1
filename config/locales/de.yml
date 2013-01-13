@@ -1,0 +1,17 @@
+de:
+  field:
+    value differs from calculation: Eingabewert weicht vom berechneten Wert (%{calculated_value}) ab.
+
+  activerecord:
+    attributes:
+      client:
+        contact_person_id: Ansprechpartner
+        client_no: Kundennummer
+        title: Anrede
+        forename: Vorname
+        surname: Nachname
+        company_name: Firma
+        email: E-Mailadresse
+        discount: Rabatt
+        payment_goal: Zahlungsziel
+        
