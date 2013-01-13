@@ -5,8 +5,8 @@ class ServiceItem < ActiveRecord::Base
 
   collect_errors_from :product
 
-  validates_presence_of :unit_price_i,
-      :price_i,
+  validates_presence_of :unit_price,
+      :price,
       :product
 
   accepts_nested_attributes_for :product
@@ -15,13 +15,11 @@ class ServiceItem < ActiveRecord::Base
       :unit_price
 
   def unit_price
-    up = self.read_attribute(:unit_price_i)
-    up ? up / 100.0 : self.product.unit_price
+    super || self.product.unit_price
   end
 
   def price
-    pi = self.read_attribute(:price_i)
-    pi ? (pi / 100.0) : (self.unit_price * self.count * self.duration)
+    super || self.unit_price * self.count * self.duration
   end
 
 end

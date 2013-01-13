@@ -18,3 +18,9 @@ gem 'thinking-sphinx', '2.0.10',
 group :test do
   gem 'webrat'
 end
+
+gem 'calendar_date_select',
+    :git => 'git://github.com/paneq/calendar_date_select.git'
+
+gem 'conforming',
+    :git => 'git://github.com/consolving/conforming.git'

@@ -181,10 +181,11 @@ ActiveResource.Class = {
 
   prepareFetchedResult: function(result) {
     debug(this.className + '.prepareFetchedResult('+result+')');
-    if (Object.isArray(result))
+    if (Object.isArray(result)){
       return this.arrayOfInstances(result);
-    else
+    } else {
       return this.newInstance(result);
+    }
   },
 
   getCache: function(class_name) {

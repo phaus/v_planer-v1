@@ -3,9 +3,7 @@ class Service < ActiveRecord::Base
       :dependent => :destroy
 
   validates_presence_of :name,
-      :unit_price_i
-
-  monetary_value :unit_price
+      :unit_price
 
   def unit
     u = read_attribute(:unit)
@@ -30,7 +28,7 @@ class Service < ActiveRecord::Base
     availabilities
   end
 
-  def available_count(on=nil)
+  def available_count(on = nil)
     1
   end
 

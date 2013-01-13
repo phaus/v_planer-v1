@@ -1,18 +1,3 @@
-module CompanySectionSpecifics
-  extend ActiveSupport::Concern
-
-  included do
-    belongs_to :company_section
-    has_one :company, :through => :company_section
-    scope :for_company, lambda {|company| joins(:company_section).where(['company_sections.company_id = ?', company.id]) }
-  end
-
-  module ClassMethods
-    def is_company_specific
-      # noop
-    end
-  end
-end
 
 module MoneyHandling
   def self.included(base)
@@ -22,14 +7,16 @@ module MoneyHandling
   module ClassMethods
     def monetary_value(*names)
       names.flatten.each do |name|
-        define_method :"#{name}" do
-          val = self.read_attribute(:"#{name}_i")
-          val ? (val.to_f / 100) : nil
-        end
-
-        define_method :"#{name}=" do |new_price|
-          self.send :write_attribute, :"#{name}_i", new_price.blank? ? nil : (new_price.to_s.gsub(',', '.').to_f * 100)
-        end
+#         define_method :"#{name}" do
+#           super
+#           val = self.read_attribute(:"#{name}_i")
+#           val ? (val.to_f / 100) : nil
+#         end
+# 
+#         define_method :"#{name}=" do |new_price|
+#           super
+#           self.send :write_attribute, :"#{name}_i", new_price.blank? ? nil : (new_price.to_s.gsub(',', '.').to_f * 100)
+#         end
       end
     end
   end

@@ -12,10 +12,6 @@ class Device < ActiveRecord::Base
 
   validates_presence_of :name
 
-  monetary_value :buying_price,
-      :rental_price,
-      :selling_price
-
   after_save :synchronize_stock_entries
 
   collect_errors_from :unavailabilities, :stock_entries
@@ -52,9 +48,8 @@ class Device < ActiveRecord::Base
     availabilities
   end
 
-  def unit
-    u = read_attribute(:unit)
-    u.blank? ? 'Stk' : u
+  default_value_for :unit, :type => String do
+    'Stk'
   end
 
   def unit_price
@@ -85,8 +80,8 @@ class Device < ActiveRecord::Base
     self.selling_price ? self.selling_price * (1.0 + self.vat_rate / 100.0) : nil
   end
 
-  def vat_rate
-    self.read_attribute(:vat_rate) || 19.0
+  default_value_for :vat_rate do
+    19.0
   end
 
   def gross_selling_price=(new_price)

@@ -1,4 +1,6 @@
 class RentalPeriod < ActiveRecord::Base
+  include Conforming::ModelExtensions
+
   belongs_to :process,
       :class_name  => 'Rental',
       :foreign_key => 'rental_id'
@@ -17,8 +19,8 @@ class RentalPeriod < ActiveRecord::Base
 
   collect_errors_from :product, :unavailabilities
 
-  validates_presence_of :unit_price_i,
-      :price_i,
+  validates_presence_of :unit_price,
+      :price,
       :product,
       :process
 
@@ -51,15 +53,12 @@ class RentalPeriod < ActiveRecord::Base
     'd'
   end
 
-  def unit_price
-    up = self.read_attribute(:unit_price_i)
-    up ? up / 100.0 : self.product.unit_price
+  default_value_for :unit_price do
+    self.product.unit_price
   end
 
-  def price
-    pi = self.read_attribute(:price_i)
-    factor = self.billed_duration
-    pi ? (pi / 100.0) : (self.unit_price * self.count * factor)
+  default_value_for :price do
+    self.unit_price * self.count * self.billed_duration
   end
 
   def count=(new_count)

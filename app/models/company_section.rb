@@ -48,7 +48,7 @@ class CompanySection < ActiveRecord::Base
     end
 
     def [](key)
-      @proxy_owner.default_texts.find_by_name(key.to_s).to_s
+      @proxy_owner.default_texts.where(:name => key.to_s).first.to_s
     end
   end
 

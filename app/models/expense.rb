@@ -4,7 +4,6 @@ class Expense < ActiveRecord::Base
 
   validates_presence_of :name
 
-#   monetary_value :unit_price
   def full_name
     self.name
   end
