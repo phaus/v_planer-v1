@@ -87,7 +87,7 @@ module ApplicationHelper
           collection.each do |object|
             str << content_tag('div', :class => 'select-option') do
               check_boxes.check_box(object.send(name_method), :checked => form_builder.object.send(name).include?(object.id)) +
-              check_boxes.label(object.send(name_method), object.send(value_method))
+                check_boxes.label(object.send(name_method), object.send(value_method))
             end
           end
         end
@@ -103,28 +103,28 @@ module ApplicationHelper
         <legend>
     EOS
     if form_builder and field_name
-      concat <<-EOS
+    concat <<-EOS
           #{form_builder.check_box field_name}
           #{form_builder.label field_name, legend}
-      EOS
-    else
-      concat <<-EOS
+    EOS
+  else
+    concat <<-EOS
           #{check_box_tag("optional_fieldset_#{@@fieldset_counter}", 1, show_or_builder)}
           <label for="optional_fieldset_#{@@fieldset_counter}">#{legend}</label>
-      EOS
-    end
-    concat <<-EOS
+    EOS
+  end
+  concat <<-EOS
         </legend>
         <div class="optional-fieldset-content">
           #{capture(&block)}
         </div>
       </fieldset>
-    EOS
-    @@fieldset_counter += 1
-  end
+  EOS
+  @@fieldset_counter += 1
+end
 
-  def public_footer
-    <<-EOS
+def public_footer
+  <<-EOS
       <div class="footer">
         <ul>
           <li></li>
@@ -135,48 +135,55 @@ module ApplicationHelper
         <p>%{name} uses Ruby on Rails</p>
         <p>Copyright &copy; 2010 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{name} as a developer, please contact developer@consolving.de</p>
       </div>
-    EOS
-  end
+  EOS
+end
 
-  def footer
-    <<-EOS
-      <div class="footer">
-        <ul>
-          <li>
-            <dl>
-              <dt>Mein Konto</dt>
-              <dd>Eingelogt als <strong>#{current_user.login}</strong></dd>
-              <dd>#{ link_to 'Benutzerdaten bearbeiten', edit_account_path }</dd>
-              <dd>#{ link_to 'Kennwort ändern', edit_account_path }</dd>
-              <dd>#{ link_to 'Firmendaten bearbeiten', edit_company_path }</dd>
-              <dd>#{ link_to 'Mitarbeiter verwalten', users_path }</dd>
-            </dl>
-          </li>
-          <li>
-            <dl>
-              <dt>Vorgänge und Kunden</dt>
-              <dd>#{ link_to 'Neuer Verkaufsvorgang', new_selling_path }</dd>
-              <dd>#{ link_to 'Neuer Vermietvorgang', new_rental_path }</dd>
-              <dd>#{ link_to 'Neuer Kunde', new_client_path }</dd>
-              <dd>#{ link_to 'Neuer Artikel', new_device_path }</dd>
-              <dd>#{ link_to 'Neue Dienstleistung', new_service_path }</dd>
-            </dl>
-          </li>
-        </ul>
-        <hr />
-        <p>powered by %{name}, the online commercial platform solution by <a href="http://consolving.de">Consolving Network Solutions</a></p>
-        <p>%{name} uses Ruby on Rails</p>
-        <p>Copyright &copy; 2010 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{name} as a developer, please contact developer@consolving.de</p>
-      </div>
-    EOS
-  end
+def footer
+  <<-EOS
+<footer class="footer">
+<div class="container">
+          <p>powered by %{app_name}, the online commercial platform solution by <a target="_new" href="http://consolving.de">Consolving Network Solutions</a></p>
+          <p>%{app_name} uses Ruby on Rails</p>
+          <p>Copyright &copy; 2010-2013 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{app_name} as a developer, please contact developer@consolving.de</p>
+</div>
+</footer>
+  EOS
+  #        <ul>
+  #          <li>
+  #            <dl>
+  #              <dt>Mein Konto</dt>
+  #              <dd>Eingelogt als <strong>#{current_user.login}</strong></dd>
+  #              <dd>#{ link_to 'Benutzerdaten bearbeiten', edit_account_path }</dd>
+  #              <dd>#{ link_to 'Kennwort ändern', edit_account_path }</dd>
+  #              <dd>#{ link_to 'Firmendaten bearbeiten', edit_company_path }</dd>
+  #              <dd>#{ link_to 'Mitarbeiter verwalten', users_path }</dd>
+  #            </dl>
+  #          </li>
+  #          <li>
+  #            <dl>
+  #              <dt>Vorgänge und Kunden</dt>
+  #              <dd>#{ link_to 'Neuer Verkaufsvorgang', new_selling_path }</dd>
+  #              <dd>#{ link_to 'Neuer Vermietvorgang', new_rental_path }</dd>
+  #              <dd>#{ link_to 'Neuer Kunde', new_client_path }</dd>
+  #              <dd>#{ link_to 'Neuer Artikel', new_device_path }</dd>
+  #              <dd>#{ link_to 'Neue Dienstleistung', new_service_path }</dd>
+  #            </dl>
+  #          </li>
+  #        </ul>
+  #        <hr />
+  #        <p>powered by %{name}, the online commercial platform solution by <a href="http://consolving.de">Consolving Network Solutions</a></p>
+  #        <p>%{name} uses Ruby on Rails</p>
+  #        <p>Copyright &copy; 2010 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{name} as a developer, please contact developer@consolving.de</p>
+  #      </div>
 
-  def last_changed_info(obj)
-    str = ''
-    if obj.updated_at == obj.created_at
-      str << "<p>Erstellt am #{obj.created_at.to_date}</p>"
-    end
-    str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
-    return str
+end
+
+def last_changed_info(obj)
+  str = ''
+  if obj.updated_at == obj.created_at
+    str << "<p>Erstellt am #{obj.created_at.to_date}</p>"
   end
+  str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
+  return str
+end
 end

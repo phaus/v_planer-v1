@@ -1,23 +1,14 @@
 <p>Sie sind mit folgenden Daten bei uns registriert. Sollten Sie diese Daten ändern wollen, setzen Sie sich bitte mit unserem Support-Team in Verbindung.</p>
-
-<dl>
-  <td>Firmenname</td>
-  <dd><%=h @user.company.name %></dd>
-  <td>Ansprechperson</td>
-  <dd><%= link_to h(@user.company.admin.full_name), @user.company.admin %></dd>
-  <td>Anschrift</td>
-  <dd><pre><%=h @user.company.sender_address_block %></pre></dd>
-  <td>E-Mail</td>
-  <dd><%=h @user.company.email || 'Nicht angegeben' %></dd>
-  <td>Telefon</td>
-  <dd><%=h @user.company.phone || 'Nicht angegeben' %></dd>
-  <td>Telefax</td>
-  <dd><%=h @user.company.fax || 'Nicht angegeben' %></dd>
-  <td>Steuernummer</td>
-  <dd><%=h @user.company.tax_id || 'Nicht angegeben' %></dd>
-  <td>USt-ID</td>
-  <dd><%=h @user.company.vat_id || 'Nicht angegeben' %></dd>
-</dl>
+<address>
+<strong><%=h @user.company.name %></strong><br />
+<%= link_to h(@user.company.admin.full_name), @user.company.admin %><br />
+<%=h @user.company.sender_address_block %><br />
+<abbr title="E-Mail">M:</abbr> <%=h @user.company.email || 'Nicht angegeben' %><br />
+<abbr title="Telefon">P:</abbr> <%=h @user.company.phone || 'Nicht angegeben' %><br />
+<abbr title="Telefax">F:</abbr> <%=h @user.company.fax || 'Nicht angegeben' %><br />
+Steuernummer: <strong><%=h @user.company.tax_id || 'Nicht angegeben' %></strong><br />
+USt-ID: <strong><%=h @user.company.vat_id || 'Nicht angegeben' %></strong><br />
+</address>
 
 <% if is_company_admin? %>
   <p><%= link_to_remote 'Firmendaten bearbeiten',

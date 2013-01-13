@@ -54,13 +54,9 @@ module ApplicationHelper
   def navtab(text, options={})
     active = options[:active] ? 'active' : ''
     str = <<-EOS
-    <div class="tab-outer #{active}">
-      <div class="tab-inner">
-        <div class="tab">
-          #{text}
-        </div>
-      </div>
-    </div>
+    <li class="#{active}">
+    #{text}
+    </li>
     EOS
     str.html_safe
   end
