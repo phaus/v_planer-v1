@@ -23,29 +23,29 @@ var Product = ActiveResource.inherit({
 
   unit_price: function() {
     if (this.is_rentable())
-      return $M(this.get('article').rental_price_i);
+      return $M(this.get('article').rental_price);
     else if (this.is_sellable())
-      return $M(this.get('article').selling_price_i);
+      return $M(this.get('article').selling_price);
     else if (this.is_service())
-      return $M(this.get('article').unit_price_i);
+      return $M(this.get('article').unit_price);
     else
       return $M(0);
   },
 
   rental_price: function() {
-    return $M(this.get('article').rental_price_i || 0);
+    return $M(this.get('article').rental_price || 0);
   },
 
   selling_price: function() {
-    return $M(this.get('article').selling_price_i || 0);
+    return $M(this.get('article').selling_price || 0);
   },
 
   is_rentable: function() {
-    return !!this.get('article').rental_price_i;
+    return !!this.get('article').rental_price;
   },
 
   is_sellable: function() {
-    return !!this.get('article').selling_price_i;
+    return !!this.get('article').selling_price;
   },
 
   is_service: function() {

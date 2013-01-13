@@ -5,8 +5,6 @@ class Service < ActiveRecord::Base
   validates_presence_of :name,
       :unit_price
 
-  monetary_value :unit_price
-
   def unit
     u = read_attribute(:unit)
     u.blank? ? 'Std' : u

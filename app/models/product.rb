@@ -1,7 +1,8 @@
 class Product < ActiveRecord::Base
-  include CompanySectionSpecifics
+  include Concerns::CompanyAsset
 
   has_and_belongs_to_many :categories
+
   belongs_to :article,
       :polymorphic => true,
       :dependent   => :destroy

@@ -27,25 +27,33 @@ class CommercialProcess < ActiveRecord::Base
   }
 
   workflow do
+    state :uninitialized do
+      event :initialize, :transitions_to => :new
+    end
+
     state :new do
       event :accept, :transitions_to => :accepted
       event :reject, :transitions_to => :rejected
       event :close,  :transitions_to => :closed
     end
+
     state :accepted do
       event :create_invoice, :transitions_to => :billed
       event :reject, :transitions_to => :rejected
       event :close,  :transitions_to => :closed
     end
+
     state :rejected do
       event :accept, :transitions_to => :accepted
       event :close,  :transitions_to => :closed
     end
+
     state :billed do
       event :receive_payment, :transitions_to => :payed
       event :remove_invoice, :transitions_to => :accepted
       event :close,  :transitions_to => :closed
     end
+
     state :payed
     state :closed
   end

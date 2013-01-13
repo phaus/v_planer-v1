@@ -1,28 +1,18 @@
 class User < ActiveRecord::Base
-  include CompanySectionSpecifics
+  include Concerns::CompanyAsset
+  include Concerns::Addressable
   include Random
 
-  belongs_to :address
-  belongs_to :bank_account
   has_many :clients,
       :foreign_key => :contact_person_id
   has_many :rentals
   has_many :sellings
 
-  accepts_nested_attributes_for :address
-  accepts_nested_attributes_for :bank_account
-
   acts_as_authentic
-
-  attr_protected :company_section_id, :company_section
 
   validates_presence_of :login,
       :forename,
       :surname
-
-  def full_name
-    "#{self.forename} #{self.surname}"
-  end
 
   def full_name_with_section
     "#{self.full_name} (#{self.company_section.name})"

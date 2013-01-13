@@ -1,18 +1,3 @@
-module CompanySectionSpecifics
-  extend ActiveSupport::Concern
-
-  included do
-    belongs_to :company_section
-    has_one :company, :through => :company_section
-    scope :for_company, lambda {|company| joins(:company_section).where(['company_sections.company_id = ?', company.id]) }
-  end
-
-  module ClassMethods
-    def is_company_specific
-      # noop
-    end
-  end
-end
 
 module MoneyHandling
   def self.included(base)
