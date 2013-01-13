@@ -1,4 +1,5 @@
 class Selling < CommercialProcess
+  include Conforming::ModelExtensions
 
   has_many :device_items,
       :class_name => 'SellingItem',
@@ -20,8 +21,6 @@ class Selling < CommercialProcess
     where :sender_id => company.section_ids
   }
 
-  monetary_value :discount, :client_discount
-
   def items
     self.device_items + self.service_items
   end
@@ -36,23 +35,6 @@ class Selling < CommercialProcess
 
   def service_sum
     self.service_items.collect(&:price).sum
-  end
-
-  def client_discount_percent
-    return 0.0 if sum.to_f == 0.0
-    ((self.client_discount / self.sum.to_f) * 100000.0).round / 1000.0
-  end
-
-  def net_total_price
-    self.sum - self.client_discount - self.discount
-  end
-
-  def gross_total_price
-    self.price ||= self.net_total_price + self.vat
-  end
-
-  def vat
-    self.net_total_price * 0.19
   end
 
   def new_device_items_attributes=(attrs)

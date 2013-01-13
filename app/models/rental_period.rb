@@ -1,4 +1,6 @@
 class RentalPeriod < ActiveRecord::Base
+  include Conforming::ModelExtensions
+
   belongs_to :process,
       :class_name  => 'Rental',
       :foreign_key => 'rental_id'
@@ -51,12 +53,12 @@ class RentalPeriod < ActiveRecord::Base
     'd'
   end
 
-  def unit_price
-    super || self.product.unit_price
+  default_value_for :unit_price do
+    self.product.unit_price
   end
 
-  def price
-    super || self.unit_price * self.count * self.billed_duration
+  default_value_for :price do
+    self.unit_price * self.count * self.billed_duration
   end
 
   def count=(new_count)

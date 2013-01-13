@@ -2,6 +2,7 @@ require 'workflow'
 
 class CommercialProcess < ActiveRecord::Base
   include Workflow
+  include Conforming::ModelExtensions
 
   self.abstract_class = true
 
@@ -18,11 +19,11 @@ class CommercialProcess < ActiveRecord::Base
 
   validate :no_invoice_yet
 
-  scope :for_company, lambda { |company|
+  scope :for_company, lambda {|company|
     where :sender_id => company.section_ids
   }
 
-  scope :with_state, lambda { |*states|
+  scope :with_state, lambda {|*states|
     where :workflow_state => states.flatten
   }
 
@@ -89,6 +90,31 @@ class CommercialProcess < ActiveRecord::Base
     end
   rescue
     self.id.to_s
+  end
+
+  default_value_for :client_discount do
+    self.client.try(:discount) || 0.0
+  end
+
+  default_value_for :discount do
+    0.0
+  end
+
+  default_value_for :gross_total_price do
+    self.net_total_price + self.vat
+  end
+
+  default_value_for :vat do
+    self.net_total_price * 19.0 / 100.0
+  end
+
+  def client_discount_percent
+    return 0.0 if sum.to_f == 0.0
+    ((self.client_discount / self.sum.to_f) * 100000.0).round / 1000.0
+  end
+
+  def net_total_price
+    self.sum - self.client_discount - self.discount
   end
 
   protected

@@ -1,4 +1,6 @@
 class Rental < CommercialProcess
+  include Conforming::ModelExtensions
+
   has_many :device_items,
       :class_name => 'RentalPeriod',
       :dependent  => :destroy,
@@ -80,15 +82,15 @@ class Rental < CommercialProcess
     PdfPackingNote.new(self).to_s
   end
 
-  def service_sum
+  default_value_for :service_sum do
     self.service_items.collect(&:price).sum
   end
 
-  def device_sum
+  default_value_for :device_sum do
     self.device_items.collect(&:price).sum
   end
 
-  def sum
+  default_value_for :sum do
     self.service_sum + self.device_sum
   end
 
@@ -105,31 +107,19 @@ class Rental < CommercialProcess
     ((client_discount / sum.to_f) * 100000.0).round / 1000.0
   end
 
-  def net_total_price
-    self.sum - (self.client_discount || 0) - (self.discount || 0)
+  default_value_for :net_total_price do
+    self.sum - self.client_discount - self.discount
   end
 
-  def gross_total_price
-    self.net_total_price + self.vat
+  default_value_for :billed_duration do
+    DISCOUNT_RATES[self.usage_duration.floor]
   end
 
-  def vat
-    self.net_total_price * 19.0 / 100.0
+  default_value_for :usage_duration do
+    self.duration
   end
 
-  def billed_duration
-    self.read_attribute(:billed_duration) || DISCOUNT_RATES[self.usage_duration.floor]
-  end
-
-  def usage_duration
-    self.read_attribute(:usage_duration) || self.duration
-  end
-
-  def usage_duration
-    self.read_attribute(:usage_duration) || self.duration
-  end
-
-  def duration
+  default_value_for :duration do
     if self.from_date == self.to_date
       1.0
     else
@@ -137,8 +127,8 @@ class Rental < CommercialProcess
     end
   end
 
-  def offer_top_text
-    self.read_attribute(:offer_top_text) || self.sender.text[:rental_offer_top_text]
+  default_value_for :offer_top_text, :type => String do
+    self.sender.text[:rental_offer_top_text]
   end
 
   def evaluated_offer_top_text
@@ -152,8 +142,8 @@ class Rental < CommercialProcess
     end
   end
 
-  def offer_bottom_text
-    self.read_attribute(:offer_bottom_text) || self.sender.text[:rental_offer_bottom_text]
+  default_value_for :offer_bottom_text, :type => String do
+    self.sender.text[:rental_offer_bottom_text]
   end
 
   def evaluated_offer_bottom_text
@@ -162,8 +152,8 @@ class Rental < CommercialProcess
     end
   end
 
-  def offer_confirmation_top_text
-    self.read_attribute(:offer_confirmation_top_text) || self.sender.text[:rental_offer_confirmation_top_text]
+  default_value_for :offer_confirmation_top_text, :type => String do
+    self.sender.text[:rental_offer_confirmation_top_text]
   end
 
   def evaluated_offer_confirmation_top_text
@@ -177,8 +167,8 @@ class Rental < CommercialProcess
     end
   end
 
-  def offer_confirmation_bottom_text
-    self.read_attribute(:offer_confirmation_bottom_text) || self.sender.text[:rental_offer_confirmation_bottom_text]
+  default_value_for :offer_confirmation_bottom_text, :type => String do
+    self.sender.text[:rental_offer_confirmation_bottom_text]
   end
 
   def evaluated_offer_confirmation_bottom_text
@@ -187,6 +177,7 @@ class Rental < CommercialProcess
     end
   end
 
+  # workflow method
   def reject
     self[:count] = self.count
     self.device_items.each do |item|
@@ -194,6 +185,7 @@ class Rental < CommercialProcess
     end
   end
 
+  # workflow method
   def accept
     if current_state == :rejected
       self.device_items.each do |item|

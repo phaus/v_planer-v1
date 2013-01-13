@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/consolving/conforming.git
+  revision: 7f24e3874e03fd4b267e628a84e121c5f5c035fb
+  specs:
+    conforming (0.1.0)
+      actionpack
+      activemodel
+      activesupport
+
+GIT
   remote: git://github.com/paneq/calendar_date_select.git
   revision: 977048211b94599fe0f08eb37a481f3d69df48f6
   specs:
@@ -112,6 +121,7 @@ DEPENDENCIES
   authlogic
   blankslate (= 2.1.2.4)
   calendar_date_select!
+  conforming!
   fastercsv
   mysql2 (~> 0.2.6)
   rails (= 3.0.9)

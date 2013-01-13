@@ -1,4 +1,5 @@
 class Client < ActiveRecord::Base
+  include Conforming::ModelExtensions
   include Concerns::Addressable
 
   has_many :rentals
@@ -29,8 +30,8 @@ class Client < ActiveRecord::Base
     read_attribute :company
   end
 
-  def discount
-     super || 0.0
+  default_value_for :discount do
+    0.0
   end
 
   def self.next_client_no

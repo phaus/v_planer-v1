@@ -197,7 +197,7 @@ class SellingsController < UserSpecificController
     if params[:format] == 'html'
       return require_user
     else
-      @current_user = User.find_by_single_access_token(params[:t]) || current_user
+      @current_user = User.where(:single_access_token => params[:t]).first || current_user
       if @current_user.nil?
         return require_user
       end

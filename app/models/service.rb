@@ -28,7 +28,7 @@ class Service < ActiveRecord::Base
     availabilities
   end
 
-  def available_count(on=nil)
+  def available_count(on = nil)
     1
   end
 
