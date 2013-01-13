@@ -18,11 +18,7 @@ module Concerns
 
     module InstanceMethods
       def full_name
-        "#{self.forename} #{self.surname}"
-      end
-
-      def full_name
-        str = "#{self.title} #{self.forename} #{self.surname}"
+        str = "#{self.forename} #{self.surname}"
         str.blank? ? "Fa. #{self.company_name}" : str
       end
 
