@@ -14,7 +14,7 @@ class Client < ActiveRecord::Base
       :address
 
   scope :matching, lambda {|q|
-    where([%q(CONCAT(clients.forename, ' ', clients.surname, ' ', clients.remarks, ' ', clients.company, ' ', clients.client_no) REGEXP ?), q)
+    where [%q(CONCAT(clients.forename, ' ', clients.surname, ' ', clients.remarks, ' ', clients.company, ' ', clients.client_no) REGEXP ?), q]
   }
 
   def processes
