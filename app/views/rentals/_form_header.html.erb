@@ -1,67 +1,23 @@
-<table class="data" id="base_data">
-  <tr>
-    <th><%= f.label :title, 'Titel (optional)' %></th>
-    <td><%= f.text_field :title %></td>
-  </tr>
-  <tr>
-    <th><%= f.label :client_id, 'Kunde' %></th>
-    <td style="width: 15em">
-      <span id="indicator1" style="display: none">
-        <%= image_tag 'loading.gif' %>
-      </span>
-      <div id="client_info">
-        <% if @rental.client %>
-          <%= @rental.client.full_name %><br />
-          <%= @rental.client.address.try :street %><br />
-          <%= @rental.client.address.try :postalcode %> <%= @rental.client.address.try :locality %><br />
-          <%= mail_to @rental.client.email unless @rental.client.email.blank? %>
-        <% end %>
-      </div>
-      <%= f.hidden_field :client_id %>
-      <%= text_field_tag :cq, '', :class => 'search_field' %>
-      <div id="autocomplete_client_choices" class="autocomplete"></div>
-      <button id="change_client">ändern</button>
-    </td>
-  </tr>
-  <tr>
-    <th><%= f.label :begin, 'Von' %></th>
-    <td>
-      <%= f.calendar_date_select :begin,
-          :year_range => 2009..2016,
-          :size       => 12,
-          :time       => false,
-          :ochange    => 'date_changed()' %>
-    </td>
-  </tr>
-  <tr>
-    <th><%= f.label :end, 'Bis' %></th>
-    <td>
-      <%= f.calendar_date_select :end,
-          :year_range => 2009..2016,
-          :size       => 12,
-          :time       => false,
-          :onchange   => 'date_changed()' %>
-    </td>
-  </tr>
-  <tr>
-    <th><%= f.label :usage_duration, 'Gebrauchsdauer' %></th>
-    <td class="decimal" id="usage_duration">
-      <%= f.text_field :usage_duration %>&thinsp;Tage
-    </td>
-  </tr>
-  <tr>
-    <th>Abrechnungsdauer</th>
-    <td class="decimal" id="billed_duration">
-      <%= f.text_field :billed_duration %>&thinsp;Tage
-    </td>
-  </tr>
-  <tr>
-    <th><%= f.label :process_no, 'VG-Nr.' %></th>
-    <td class="decimal" id="process_no">
-      <%= f.text_field :process_no %>
-    </td>
-  </tr>
-</table>
+<%= f.wrapped_text_field :title %>
+<%= f.wrapped_date_selector_field :begin %>
+<%= f.wrapped_date_selector_field :end %>
+<%= f.wrapped_text_field :usage_duration, :unit => 'd' %></th>
+<%= f.wrapped_text_field :billed_duration, :unit => 'd' %>
+<%= f.wrapped_text_field :process_no %>
+
+<div id="client_info">
+  <% if @rental.client %>
+    <%= @rental.client.full_name %><br />
+    <%= @rental.client.address.try :street %><br />
+    <%= @rental.client.address.try :postalcode %> <%= @rental.client.address.try :locality %><br />
+    <%= mail_to @rental.client.email unless @rental.client.email.blank? %>
+  <% end %>
+</div>
+<%= f.hidden_field :client_id %>
+<%= text_field_tag :cq, '', :class => 'search_field' %>
+<div id="autocomplete_client_choices" class="autocomplete"></div>
+<button id="change_client">ändern</button>
+
 
 <div id="spinner" style="display: none;">
   <%= image_tag 'loading.gif' %>

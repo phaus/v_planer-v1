@@ -37,4 +37,13 @@ de:
         company_name: Firma
         contact_person: Ansprechpartner
         email: E-Mailadresse
+
+      commeercial_process:
+        title: Titel
+        client: Kunde
+        begin: Von
+        end: Bis
+        usage_duration: Gebrauchsdauer
+        billed_duration: Abrechnungsdauer
+        process_no: VG-Nr.
         

@@ -6,6 +6,12 @@
   border: none;
   clear: both;
 }
+.field.date-select label + input {
+  width: 175px;
+}
+.field.date-select img {
+  margin: 8px 5px;
+}
 .field label {
   display: block;
   float: left;
