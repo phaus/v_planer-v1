@@ -1,4 +1,6 @@
 class Device < ActiveRecord::Base
+  include Conforming::ModelExtensions
+
   has_one :product,
       :as        => 'article',
       :dependent => :destroy
