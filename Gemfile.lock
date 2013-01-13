@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/consolving/conforming.git
+  revision: 334fc86cfec42cc8d2860ee83d07f1800cd8d192
+  specs:
+    conforming (0.1.0)
+      actionpack
+      activemodel
+      activesupport
+
+GIT
   remote: git://github.com/paneq/calendar_date_select.git
   revision: 977048211b94599fe0f08eb37a481f3d69df48f6
   specs:
@@ -9,14 +18,6 @@ GIT
   revision: 96dff8d3a7239dd416954e774cfa1c5a492c9e4c
   specs:
     validating-workflow (0.7.4)
-
-PATH
-  remote: /home/wvk/programs/rails/conforming
-  specs:
-    conforming (0.1.0)
-      actionpack
-      activemodel
-      activesupport
 
 GEM
   remote: http://rubygems.org/
