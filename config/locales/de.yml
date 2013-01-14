@@ -1,0 +1,40 @@
+de:
+  field:
+    value differs from calculation: Eingabewert weicht vom berechneten Wert (%{calculated_value}) ab.
+
+  activerecord:
+    attributes:
+      client:
+        contact_person: Ansprechpartner
+        client_no: Kundennummer
+        title: Anrede
+        forename: Vorname
+        surname: Nachname
+        company_name: Firma
+        email: E-Mailadresse
+        discount: Rabatt
+        payment_goal: Zahlungsziel
+
+      bank_account:
+        bank_name: 'Name der Bank'
+        registrar_name: 'Kontobesitzer'
+        number: 'Kontonummer'
+        blz: 'Bankleitzahl (BLZ)'
+        iban: 'IBAN (Für Zahlungen aus dem Ausland)'
+        bic: 'BIC (Für Zahlungen aus dem Ausland)'
+
+      address:
+        street: 'Straße'
+        postalcode: 'PLZ'
+        locality: 'Ort'
+        country: 'Land'
+        phone: 'Telefon'
+        fax: 'Fax'
+        mobile: 'Mobil'
+
+      distributor:
+        client_no: Kundennummer beim Lieferanten
+        company_name: Firma
+        contact_person: Ansprechpartner
+        email: E-Mailadresse
+        

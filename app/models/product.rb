@@ -99,7 +99,7 @@ class Product < ActiveRecord::Base
   collects_errors_from :article, :distributors, :buying_prices
 
   def method_missing(method_name, *attrs)
-    if self.article.respond_to? method_name
+    if self.article and self.article.respond_to? method_name
       self.article.send method_name, *attrs
     else
       super

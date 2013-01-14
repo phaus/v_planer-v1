@@ -1,26 +1,8 @@
 <%=  hidden_field_tag :come_from, 'bank_details'  %>
 
-<p>
-  <%= f.label :bank_name, 'Name der Bank' %><br />
-  <%= f.text_field :bank_name %>
-</p>
-<p>
-  <%= f.label :registrar_name, 'Kontobesitzer' %><br />
-  <%= f.text_field :registrar_name %>
-</p>
-<p>
-  <%= f.label :number, 'Kontonummer' %><br />
-  <%= f.text_field :number %>
-</p>
-<p>
-  <%= f.label :blz, 'Bankleitzahl (BLZ)' %><br />
-  <%= f.text_field :blz %>
-</p>
-<p>
-  <%= f.label :iban, 'IBAN' %> (Für Zahlungen aus dem Ausland)<br />
-  <%= f.text_field :iban %>
-</p>
-<p>
-  <%= f.label :bic, 'BIC' %> (Für Zahlungen aus dem Ausland)<br />
-  <%= f.text_field :bic %>
-</p>
+<%= f.wrapped_text_field :bank_name %>
+<%= f.wrapped_text_field :registrar_name %>
+<%= f.wrapped_text_field :number %>
+<%= f.wrapped_text_field :blz %>
+<%= f.wrapped_text_field :iban %>
+<%= f.wrapped_text_field :bic %>

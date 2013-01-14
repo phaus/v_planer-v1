@@ -2,72 +2,33 @@
 
 <%= error_messages_for :client %>
 
-<% form_for(@client) do |f| %>
-  <% if is_company_admin? or APP_SETTINGS[:allow_non_admin_users_to_edit_client_contact_person] %>
-    <p>
-      <%= f.label :contact_person_id, 'Ansprechpartner' %><br />
-      <%= f.collection_select :contact_person_id, current_company.users.all, :id, :full_name %>
-    </p>
-  <% end %>
+<%= form_for(@client) do |f| %>
+  <fieldset>
+    <legend>Kontaktdaten</legend>
 
-  <p>
-    <%= f.label :client_no, 'Kundennummer' %><br />
-    <%= f.text_field :client_no %>
-  </p>
+    <%= f.wrapped_readonly_value :client_no %>
 
-  <p>
-    <%= f.label :title, 'Anrede/Titel' %><br />
-    <%= f.text_field :title %>
-  </p>
+    <%= render 'basic_fields', :f => f %>
 
-  <p>
-    <%= f.label :forename, 'Vorname' %><br />
-    <%= f.text_field :forename %>
-  </p>
+    <%= f.fields_for :address do |af| %>
+      <%= render :partial => 'addresses/form', :locals => {:f => af} %>
+    <% end %>
+  </fieldset>
 
-  <p>
-    <%= f.label :surname, 'Nachname' %><br />
-    <%= f.text_field :surname %>
-  </p>
-
-  <p>
-    <%= f.label :company_name, 'Firma' %><br />
-    <%= f.text_field :company_name %>
-  </p>
-
-  <p>
-    <%= f.label :email, 'E-Mail' %><br />
-    <%= f.text_field :email %>
-  </p>
-
-  <p>
-    <%= f.label :discount, 'Kundenrabatt' %><br />
-    <%= f.text_field :discount, :class => 'decimal' %>&thinsp;%
-  </p>
-
-  <p>
-    <%= f.label :payment_goal, 'Zahlungsziel' %><br />
-    <%= f.text_field :payment_goal %>
-  </p>
-
-  <% f.fields_for :address do |af| %>
-    <%= render :partial => 'addresses/form', :locals => {:f => af} %>
-  <% end %>
-
-  <% optional_fieldset 'Kontodaten', !@client.bank_account.new_record? do %>
+  <%= optional_fieldset 'Kontodaten', !@client.bank_account.new_record? do %>
     <% f.fields_for :bank_account do |af| %>
       <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
     <% end %>
   <% end %>
 
-  <p>
+  <div class="field">
     <%= f.label :remarks, 'Anmerkungen' %><br />
     <%= f.text_area :remarks, :size => '76x4' %>
-  </p>
+  </div>
 
-  <p>
+  <div class="field">
     <%= f.submit 'Speichern' %>
-  </p>
+  </div>
 <% end %>
 
 <p class="bottom-actions">
