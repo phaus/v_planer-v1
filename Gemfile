@@ -24,3 +24,4 @@ gem 'calendar_date_select',
 
 gem 'conforming',
     :git => 'git://github.com/consolving/conforming.git'
+#   :path => '/home/wvk/programs/rails/conforming'

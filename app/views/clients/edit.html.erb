@@ -2,65 +2,24 @@
 
 <%= error_messages_for :client %>
 
-<% form_for(@client) do |f| %>
-  <% if is_company_admin? or APP_SETTINGS[:allow_non_admin_users_to_edit_client_contact_person]%>
-    <p>
-      <%= f.label :contact_person_id, 'Ansprechpartner' %><br />
-      <%= f.collection_select :contact_person_id, current_company.users.all, :id, :full_name %>
-    </p>
-  <% end %>
+<%= form_for(@client) do |f| %>
+  <fieldset>
+    <legend>Kontaktdaten</legend>
 
-  <% if is_company_admin? or APP_SETTINGS[:allow_non_admin_users_to_edit_client_no] %>
-    <p>
-      <b>Kundennummer</b><br />
-      <%= f.text_field :client_no %>
-    </p>
-  <% else %>
-    <p>
-      <b>Kundennummer</b>: <%= @client.client_no %>
-    </p>
-  <% end %>
+    <% if is_company_admin? or APP_SETTINGS[:allow_non_admin_users_to_edit_client_no] %>
+      <%= f.wrapped_text_field :client_no %>
+    <% else %>
+      <%= f.wrapped_readonly_value :client_no %>
+    <% end %>
 
-  <p>
-    <b>Anrede</b><br />
-    <%= f.text_field :title %>
-  </p>
+    <%= render 'basic_fields', :f => f %>
 
-  <p>
-    <b>Vorname</b><br />
-    <%= f.text_field :forename %>
-  </p>
+    <%= f.fields_for :address do |af| %>
+      <%= render :partial => 'addresses/form', :locals => {:f => af} %>
+    <% end %>
+  </fieldset>
 
-  <p>
-    <b>Nachname</b><br />
-    <%= f.text_field :surname %>
-  </p>
-
-  <p>
-    <b>Firma</b><br />
-    <%= f.text_field :company_name %>
-  </p>
-
-  <p>
-    <b>E-Mail</b><br />
-    <%= f.text_field :email %>
-  </p>
-
-  <p>
-    <b>Rabatt</b><br />
-    <%= f.text_field :discount, :class => 'decimal' %>&thinsp;%
-  </p>
-
-  <p>
-    <b>Zahlungsziel</b><br />
-    <%= f.text_field :payment_goal %>
-  </p>
-
-  <% f.fields_for :address do |af| %>
-    <%= render :partial => 'addresses/form', :locals => {:f => af} %>
-  <% end %>
-
-  <% optional_fieldset 'Kontodaten', !@client.bank_account.new_record? do %>
+  <%= optional_fieldset 'Kontodaten', !@client.bank_account.new_record? do %>
     <% f.fields_for :bank_account do |af| %>
       <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
     <% end %>

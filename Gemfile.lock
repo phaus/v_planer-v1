@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/consolving/conforming.git
-  revision: 7f24e3874e03fd4b267e628a84e121c5f5c035fb
+  revision: 73ee04ce7d4c1f4226721205d396a0a4883b9e80
   specs:
     conforming (0.1.0)
       actionpack

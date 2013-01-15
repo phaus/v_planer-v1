@@ -1,54 +1,6 @@
 <h1>Lieferant bearbeiten</h1>
 
-<%= error_messages_for :distributor %>
-
-<% form_for(@distributor) do |f| %>
-  <p>
-    <b>Kundennummer beim Lieferanten</b><br />
-    <%= f.text_field :client_no %>
-  </p>
-
-  <p>
-    <b>Firma</b><br />
-    <%= f.text_field :company_name %>
-  </p>
-
-  <p>
-    <b>Ansprechpartner</b><br />
-    <%= f.text_field :contact_person %>
-  </p>
-
-  <p>
-    <%= f.label :email, 'E-Mail' %><br />
-    <%= f.text_field :email %>
-  </p>
-
-  <% optional_fieldset 'Adressdaten', !@distributor.address.new_record? do %>
-    <% f.fields_for :address do |af| %>
-      <%= render :partial => 'addresses/form', :locals => {:f => af} %>
-    <% end %>
-  <% end %>
-
-  <% optional_fieldset 'Kontodaten', !@distributor.bank_account.new_record? do %>
-    <% f.fields_for :bank_account do |af| %>
-      <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
-    <% end %>
-  <% end %>
-
-  <p>
-    <b>Rabatt</b><br />
-    <%= f.text_field :discount, :class => 'decimal' %>&thinsp;%
-  </p>
-
-  <p>
-    <%= f.label :remarks, 'Anmerkungen' %><br />
-    <%= f.text_area :remarks, :size => '76x4' %>
-  </p>
-
-  <p>
-    <%= f.submit 'Speichern' %>
-  </p>
-<% end %>
+<%= render 'form' %>
 
 <p class="bottom-actions">
   <%= link_to 'Zurück zur Ansicht', @distributor, :class => 'back' %> |

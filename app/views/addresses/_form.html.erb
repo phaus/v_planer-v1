@@ -1,31 +1,7 @@
-<p>
-  <%= f.label :street, 'Straße' %><br />
-  <%= f.text_field :street %>
-</p>
-
-<p>
-  <%= f.label :postalcode, 'PLZ' %>/<%= f.label :locality, 'Ort' %><br />
-  <%= f.text_field :postalcode, :size => 6 %>
-  <%= f.text_field :locality %>
-</p>
-
-<p>
-  <%= f.label :country, 'Land' %> (sofern dieses bei Korrespondenz im Absender erscheinen soll)<br />
-  <%= f.text_field :country %>
-</p>
-
-<p>
-  <%= f.label :phone, 'Telefon' %><br />
-  <%= f.text_field :phone %>
-</p>
-
-<p>
-  <%= f.label :fax, 'Fax' %><br />
-  <%= f.text_field :fax %>
-</p>
-
-<p>
-  <%= f.label :mobile, 'Mobil' %><br />
-  <%= f.text_field :mobile %>
-</p>
-
+<%= f.wrapped_text_field :street %>
+<%= f.wrapped_text_field :postalcode %>
+<%= f.wrapped_text_field :locality %>
+<%= f.wrapped_text_field :country %>
+<%= f.wrapped_text_field :phone %>
+<%= f.wrapped_text_field :fax %>
+<%= f.wrapped_text_field :mobile %>
