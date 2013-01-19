@@ -1,4 +1,15 @@
 <div class="container">
   <h1>Lieferanten <small><%= @distributors.size %> gefunden</small></h1>
-  <%= render :partial => 'list' %>
+  <div class="row">
+    <%= render :partial => 'list' %>
+  </div>
+  <div class="row">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Alternative Formate</li>
+        <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+        <!-- TODO add JSON <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li> -->
+      </ul>
+    </div>
+  </div>
 </div>

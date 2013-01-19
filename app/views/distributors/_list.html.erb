@@ -16,8 +16,10 @@
           <td><%= mail_to h(distributor.email) unless distributor.email.blank? %><br /><%=h distributor.address.phone if distributor.address %></td>
           <td><%=h distributor.contact_person %></td>
           <td>
-              <%= link_to image_tag('icons_16/edit.png'), edit_distributor_path(distributor), :class => "btn pull-right"  %>
-              <%= link_to image_tag('icons_16/editdelete.png'), distributor, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete, :class => "btn pull-right"  %>
+            <div class="btn-group">
+              <%= link_to image_tag('icons_16/edit.png'), edit_distributor_path(distributor), :class => "btn" %>
+              <%= link_to image_tag('icons_16/editdelete.png'), distributor, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete, :class => "btn" %>
+            </div>
           </td>
         </tr>
       <% end %>

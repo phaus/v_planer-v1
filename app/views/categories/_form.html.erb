@@ -1,14 +1,26 @@
-<%= form_for(@category) do |f| %>
-  <%= f.wrapped_text_field :name %>
-
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description, :size => '75x5' %>
-  </div>
-
-  <%= f.wrapped_collection_select :product_ids, current_company.products, :id, :full_name, {}, :multiple => true  %>
-
-  <div class="field">
-    <%= f.submit 'Speichern' %>
+<%= form_for @category, :html => {:class => 'form-horizontal'} do |f| %>
+  <fieldset>
+    <legend>Daten</legend>
+    <div class="control-group">
+      <%= f.label :name, 'Name', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class => 'input-xlarge' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :description, 'Beschreibung', :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :description, :size => '200x10', :class => 'span10' %>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <%= f.wrapped_collection_select :product_ids, current_company.products, :id, :full_name, {}, :multiple => true  %>
+      </div>
+    </div>
+  </fieldset>
+  <div class="form-actions">
+    <%= link_to 'Abbrechen', @category, :class => 'btn' %>
+    <%= f.submit 'Speichern', :class => "btn btn-primary" %>
   </div>
 <% end %>

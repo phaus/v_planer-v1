@@ -1,80 +1,80 @@
-<h1>Kategorie <%= @category.name %></h1>
-
-<div class="widget_container left narrow">
-  <%= category_tabs current_company.categories.not_empty.all(:order => 'categories.name ASC'), :active => params[:id] %>
-</div>
-
-<div class="widget_container right broad">
-  <% unless @category.description.blank? %>
-    <div class="widget">
-      <h2>Kategoriedetails</h2>
-
-      <p>
-        <%=h @category.description %>
-      </p>
+<div class="container-fluid">
+  <div class="offset1 row">
+    <h1>Kategorie <%= @category.name %></h1>
+    <p></p>
+  </div>
+  <div class="offset1 row">
+    <ul class="pager">
+      <li class="previous"><%= link_to '<<< Vormonat',   :from_date => @from_date - 1.month %></li>
+      <li class="next"> <%= link_to 'Folgemonat >>>', :from_date => @from_date + 1.month %></li>
+    </ul>
+    <div class="span3">
+      <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+          <li class="nav-header">Kategorie</li>
+          <li><%= link_to '<i class="icon-edit"></i> Bearbeiten', edit_category_path(@category), :class => 'edit' %></li>
+          <li><%= link_to '<i class="icon-trash"></i> Löschen', category_path(@category), :method => :delete, :confirm => 'Sind wir uns da GANZ sicher?!', :class => 'delete' %></li>
+          <li class="nav-header">weitere Kategorien</li>
+          <%= category_tabs current_company.categories.not_empty.all(:order => 'categories.name ASC'), :active => params[:id] %>
+        </ul>
+      </div>
     </div>
-  <% end %>
-
-  <div class="widget">
-    <h2>Artikelverfügbarkeit für diese Kategorie</h2>
-    <p>
-      <%= link_to '<<< Vormonat',   :from_date => @from_date - 1.month %>
-      <%= link_to 'Folgemonat >>>', :from_date => @from_date + 1.month %>
-    </p>
-
-    <div class="category" id="category_<%= @category.id %>">
-      <% if @category.products.device.any? %>
-        <table class="planner">
-          <thead>
-            <tr>
-              <th>Artikel</th>
-              <th>M</th>
-              <th>K</th>
-              <% @from_date.upto(@to_date) do |date| %>
-                <th class="date <%= date == Date.today ? 'today' : '' %>" title="<%= date.strftime('%d.%m.%Y') %>"><%= date.strftime('%d.') %></th>
-              <% end %>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @category.products.device.each do |product| %>
+    <div class="offset1 span8">
+      <% unless @category.description.blank? %>
+        <div class="row">
+          <h2>Kategoriedetails<small><%=h @category.description %></small></h2>
+        </div>
+      <% end %>
+      <div class="row">
+        <h2>Verfügbarkeit <small>ab <%= @from_date %></small></h2>
+        <p>
+          <% if @category.products.device.any? %>
+          <table class="table table-bordered">
+            <thead>
               <tr>
-                <th class="subheader"><%= link_to product.full_name, product %></th>
-                <th class="subheader" style="width: 1em; background: url(/stylesheets/images/<%= product.is_rentable? ?  'ok.png' : 'nyok.png' %>) no-repeat"></th>
-                <th class="subheader" style="width: 1em; background: url(/stylesheets/images/<%= product.is_sellable? ?  'ok.png' : 'nyok.png' %>) no-repeat"></th>
-                <% product.availability(@from_date, @to_date).each do |availability| %>
-                  <td style="background: <%= colour_for_availability(availability[1], product.available_count) %>"><%= availability[1] %></td>
+                <th>Artikel</th>
+                <th>M</th>
+                <th>K</th>
+                <% @from_date.upto(@to_date) do |date| %>
+                  <th class="date <%= date == Date.today ? 'today' : '' %>" title="<%= date.strftime('%d.%m.%Y') %>"><%= date.strftime('%d.') %></th>
                 <% end %>
               </tr>
+            </thead>
+            <tbody>
+              <% @category.products.device.each do |product| %>
+                <tr>
+                  <th class="subheader"><%= link_to product.full_name, product %></th>
+                  <th class="subheader" style="width: 1em; background: url(/stylesheets/images/<%= product.is_rentable? ?  'ok.png' : 'nyok.png' %>) no-repeat"></th>
+                  <th class="subheader" style="width: 1em; background: url(/stylesheets/images/<%= product.is_sellable? ?  'ok.png' : 'nyok.png' %>) no-repeat"></th>
+                  <% product.availability(@from_date, @to_date).each do |availability| %>
+                    <td style="background: <%= colour_for_availability(availability[1], product.available_count) %>"><%= availability[1] %></td>
+                  <% end %>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
+        </p>
+      </div>
+      <% if @category.products.service.any? %>
+        <div class="row">
+          <h2>Dienstleistungen</h2>
+          <ul>
+            <% @category.products.service.each do |product| %>
+              <li><%= link_to product.full_name, product %></li>
             <% end %>
-          </tbody>
-        </table>
+          </ul>
+        </div>
       <% end %>
     </div>
   </div>
-  <% if @category.products.service.any? %>
-    <div class="widget">
-      <h2>Dienstleistungen</h2>
-      <ul>
-        <% @category.products.service.each do |product| %>
-          <li><%= link_to product.full_name, product %></li>
-        <% end %>
+  <div class="offset1 row">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Alternative Formate</li>
+        <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+        <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
       </ul>
     </div>
-  <% end %>
+  </div>
 </div>
-
-<hr />
-
-<p class="bottom-actions">
-  <%= link_to 'Bearbeiten', edit_category_path(@category), :class => 'edit' %>
-  <%= link_to 'Löschen', category_path(@category), :method => :delete, :confirm => 'Sind wir uns da GANZ sicher?!', :class => 'delete' %>
-  <%= link_to 'Zurück zur Übersicht', categories_path, :class => 'back' %>
-</p>
-
-<p class="alternative_formats">
-  Alternative Formate:
-  <%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %> |
-  <%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %> |
-</p>
-

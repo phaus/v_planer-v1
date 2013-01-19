@@ -55,12 +55,16 @@
                 <ul class="dropdown-menu">
                   <li><%= link_to 'Verkaufsvorgang', new_selling_path %></li>
                   <li><%= link_to 'Vermietvorgang', new_rental_path %></li>
-                  <li><%= link_to 'Kunde', new_client_path %></li>
+                  <li class="divider"></li>
                   <li><%= link_to 'Artikel', new_device_path %></li>
+                  <li><%= link_to 'Kategorie', new_category_path %></li>
                   <li><%= link_to 'Dienstleistung', new_service_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Kunde', new_client_path %></li>
                   <li><%= link_to 'Lieferant', new_distributor_path %></li>
                 </ul>
               </li>
+              <li class="divider-vertical"></li>
               <%= main_navigation :active => 'Benutzerkonto' %>
               <li class="divider-vertical"></li>
             </ul>

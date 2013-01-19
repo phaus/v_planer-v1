@@ -14,14 +14,13 @@ module ApplicationHelper
   end
 
   def category_tabs(categories, opts={})
-    str = '<ul class="sidenav">' #navtab(link_to 'Alle', devices_path, :active => opts[:active] == :all)
+    str = ''
     categories.each do |category|
-      str << category_navtab(link_to("#{category.name} (#{category.products.size})", url_for(:category_id => category)), :active => category.id == opts[:active].to_i)
+      str << category_navtab(link_to("#{category.name} (#{category.products.size})", url_for(:id => category)), :active => category.id == opts[:active].to_i)
     end
     unless params[:q].blank?
       str << category_navtab(link_to('Suchergebnis', devices_path(:q => params[:q])), :active => true)
     end
-    str << '</ul>'
     str
   end
 
@@ -29,9 +28,7 @@ module ApplicationHelper
     active = options[:active] ? 'active' : ''
     <<-EOS
       <li class="#{active}">
-        <div>
           #{text}
-        </div>
       </li>
     EOS
   end

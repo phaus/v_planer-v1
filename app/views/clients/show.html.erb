@@ -4,6 +4,19 @@
     <p><%= last_changed_info @client %></p>
   </div>
   <div class="row">
+    <div class="span3">
+      <div class="well sidebar-nav">
+        <ul class="nav nav-list">
+          <li class="nav-header">Kunde</li>
+          <% if may_edit_client?(@client) %>
+            <li><%= link_to '<i class="icon-edit"></i> Bearbeiten', edit_client_path(@client), :class => 'edit' %></li>
+            <li><%= link_to '<i class="icon-trash"></i> Löschen', category_path(@client), :method => :delete, :confirm => 'Sind wir uns da GANZ sicher?!', :class => 'delete' %></li>
+          <% end %>
+          <li><%= link_to '<i class="icon-plus"></i> Vermietvorgang',  new_rental_path(:rental => {:client_id => @client.id}) %></li>
+          <li><%= link_to '<i class="icon-plus"></i> Verkaufsvorgang', new_selling_path(:selling => {:client_id => @client.id}) %></li>
+        </ul>
+      </div>
+    </div>
     <div class="span7 hero-unit">
       <div class="span3">
         <div class="row">
@@ -71,21 +84,6 @@
         </div>
       </div>
     </div>
-    <div class="span3">
-      <div class="well sidebar-nav">
-        <ul class="nav nav-list">
-          <li class="nav-header">Kunde</li>
-          <% if may_edit_client?(@client) %>
-            <li><%= link_to '<i class="icon-edit"></i>Bearbeiten', edit_client_path(@client), :class => 'edit' %></li>
-          <% end %>
-          <li><%= link_to '<i class="icon-plus"></i>Vermietvorgang',  new_rental_path(:rental => {:client_id => @client.id}) %></li>
-          <li><%= link_to '<i class="icon-plus"></i>Verkaufsvorgang', new_selling_path(:selling => {:client_id => @client.id}) %></li>
-          <li class="nav-header">Alternative Formate</li>
-          <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
-          <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
-        </ul>
-      </div>
-    </div>
   </div>
   <div class="row">
     <% if @client.processes.any? %>
@@ -110,6 +108,15 @@
         </tbody>
       </table>
     <% end %>
+  </div>
+  <div class="row">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Alternative Formate</li>
+        <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+        <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
+      </ul>
+    </div>
   </div>
 </div>
 
