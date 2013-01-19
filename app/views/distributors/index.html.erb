@@ -1,9 +1,4 @@
-<h1>Lieferanten</h1>
-
-<div id="clients">
+<div class="container">
+  <h1>Lieferanten <small><%= @distributors.size %> gefunden</small></h1>
   <%= render :partial => 'list' %>
 </div>
-
-<p class="bottom-actions">
-  <%= link_to 'Neuer Lieferant', new_distributor_path, :class => 'new' %>
-</p>

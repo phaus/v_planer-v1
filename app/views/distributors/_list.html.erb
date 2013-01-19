@@ -1,28 +1,23 @@
 <% if @distributors.any? %>
-  <table class="data">
+  <table class="table table table-condensed">
     <thead>
       <tr>
-        <th>Kd.-Nr.</th>
+        <th></th>
         <th>Firma</th>
+        <th>Kontakt</th>
         <th>Ansprechpartner</th>
-        <th>Telefon.</th>
-        <th>E-Mail</th>
       </tr>
-    </thread>
+    </thead>
     <tbody>
       <% @distributors.each do |distributor| %>
         <tr class="<%= cycle 'odd', 'even' %>">
-          <td class="decimal"><%= link_to h(distributor.client_no), distributor %></td>
+          <td class="decimal"><%= distributor.client_no %></td>
           <td><%= link_to h(distributor.company_name), distributor %></td>
+          <td><%= mail_to h(distributor.email) unless distributor.email.blank? %><br /><%=h distributor.address.phone if distributor.address %></td>
           <td><%=h distributor.contact_person %></td>
-          <td><%=h distributor.address.phone if distributor.address %></td>
-          <td><%= mail_to h(distributor.email) unless distributor.email.blank? %></td>
           <td>
-            <ul class="toolchain">
-              <li><%= link_to image_tag('icons_16/goto.png'), distributor %></li>
-              <li><%= link_to image_tag('icons_16/edit.png'), edit_distributor_path(distributor) %></li>
-              <li><%= link_to image_tag('icons_16/editdelete.png'), distributor, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete %></li>
-            </ul>
+              <%= link_to image_tag('icons_16/edit.png'), edit_distributor_path(distributor), :class => "btn pull-right"  %>
+              <%= link_to image_tag('icons_16/editdelete.png'), distributor, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete, :class => "btn pull-right"  %>
           </td>
         </tr>
       <% end %>
