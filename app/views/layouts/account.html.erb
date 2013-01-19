@@ -26,7 +26,7 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
-          <a class="brand" href="#">vPlaner by Consolving</a>
+          <a class="brand" href="/">vPlaner by Consolving</a>
           <div class="nav-collapse collapse">
             <ul class="nav pull-right">
               <li id="user-menu" class="dropdown">
@@ -59,8 +59,9 @@
                   <li><%= link_to 'Neue Dienstleistung', new_service_path %></li>
                 </ul>
               </li>
-
+              <li class="divider-vertical"></li>
               <%= main_navigation :active => 'Benutzerkonto' %>
+              <li class="divider-vertical"></li>
             </ul>
           </div>
           <!--/.nav-collapse -->

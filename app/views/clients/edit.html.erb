@@ -1,41 +1,77 @@
-<h1>Kunde bearbeiten</h1>
+<div class="container">
+  <div class="row">
+    <h1>Kunde <%= @client.client_no %> bearbeiten</h1>
+    <p><%= last_changed_info @client %></p>
+  </div>
+  <div class="row">
+    <%= error_messages_for :client %>
 
-<%= error_messages_for :client %>
-
-<%= form_for(@client) do |f| %>
-  <fieldset>
-    <legend>Kontaktdaten</legend>
-
-    <% if is_company_admin? or APP_SETTINGS[:allow_non_admin_users_to_edit_client_no] %>
-      <%= f.wrapped_text_field :client_no %>
-    <% else %>
-      <%= f.wrapped_readonly_value :client_no %>
+    <%= form_for @client, :html => {:class => 'form-horizontal'} do |f| %>
+      <ul id="userTab" class="nav nav-tabs">
+        <li class="active">
+          <a data-toggle="tab" href="#customer">Kunde</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#contact">Kontakt</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#account">Konto</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#comment">Anmerkungen</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div id="customer" class="tab-pane active">
+          <fieldset>
+            <legend>Kunde</legend>
+            <div class="control-group">
+              <%= f.label :client_no, :class => 'control-label' %>
+              <div class="controls">
+                <% if is_company_admin? or APP_SETTINGS[:allow_non_admin_users_to_edit_client_no] %>
+                  <%= f.text_field :client_no, :class => 'input-xlarge' %>
+                <% else %>
+                  <%= f.text_field :client_no, :readonly => true, :class => 'input-xlarge' %>
+                <% end %>
+              </div>
+            </div>
+            <%= render 'basic_fields', :f => f %>
+          </fieldset>
+        </div>
+        <div id="contact" class="tab-pane">
+          <fieldset>
+            <legend>Kontakt</legend>
+            <%= f.fields_for :address do |af| %>
+              <%= render :partial => 'addresses/form', :locals => {:f => af} %>
+            <% end %>
+          </fieldset>
+        </div>
+        <div id="account" class="tab-pane">
+          <fieldset>
+            <legend>Kontodaten</legend>
+            <%= optional_fieldset 'Kontodaten', !@client.bank_account.new_record? do %>
+              <% f.fields_for :bank_account do |af| %>
+                <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
+              <% end %>
+            <% end %>
+          </fieldset>
+        </div>
+        <div id="comment" class="tab-pane">
+          <fieldset>
+            <legend>Anmerkungen</legend>
+            <div class="control-group">
+              <%= f.label :remarks, 'Anmerkungen', :class => 'control-label' %>
+              <div class="controls">
+                <%= f.text_area :remarks, :size => '200x10', :class => 'span10' %>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="form-actions">
+        <%= link_to 'Abbrechen', @client, :class => 'btn' %>
+        <%= f.submit 'Speichern', :class => "btn btn-primary" %>
+      </div>
     <% end %>
-
-    <%= render 'basic_fields', :f => f %>
-
-    <%= f.fields_for :address do |af| %>
-      <%= render :partial => 'addresses/form', :locals => {:f => af} %>
-    <% end %>
-  </fieldset>
-
-  <%= optional_fieldset 'Kontodaten', !@client.bank_account.new_record? do %>
-    <% f.fields_for :bank_account do |af| %>
-      <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
-    <% end %>
-  <% end %>
-
-  <p>
-    <%= f.label :remarks, 'Anmerkungen' %><br />
-    <%= f.text_area :remarks, :size => '76x4' %>
-  </p>
-
-  <p>
-    <%= f.submit 'Speichern' %>
-  </p>
-<% end %>
-
-<p class="bottom-actions">
-  <%= link_to 'Zurück zur Ansicht', @client, :class => 'back' %>
-  <%= link_to 'Zurück zur Übersicht', clients_path, :class => 'back' %>
-</p>
+  </div>
+</div>

@@ -78,8 +78,11 @@
           <% if may_edit_client?(@client) %>
             <li><%= link_to '<i class="icon-edit"></i>Bearbeiten', edit_client_path(@client), :class => 'edit' %></li>
           <% end %>
-          <li><%= link_to '<i class="icon-plus"></i>neuer Vermietvorgang für Kunden',  new_rental_path(:rental => {:client_id => @client.id}), :class => 'new' %></li>
-          <li><%= link_to '<i class="icon-plus"></i>neuer Verkaufsvorgang für Kunden', new_selling_path(:selling => {:client_id => @client.id}), :class => 'new' %></li>
+          <li><%= link_to '<i class="icon-plus"></i>Vermietvorgang',  new_rental_path(:rental => {:client_id => @client.id}) %></li>
+          <li><%= link_to '<i class="icon-plus"></i>Verkaufsvorgang', new_selling_path(:selling => {:client_id => @client.id}) %></li>
+          <li class="nav-header">Alternative Formate</li>
+          <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+          <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
         </ul>
       </div>
     </div>
@@ -101,17 +104,12 @@
               <td class="decimal"><%=h process.process_no %></td>
               <td class="workflow <%= process.workflow_state %>"><%= process.workflow_state %></td>
               <td class="money"><%=m process.gross_total_price %></td>
-              <td><%= link_to image_tag('icons_16/goto.png'), process %></td>
+              <td><%= link_to image_tag('icons_16/goto.png'), process, :class => 'pull-right btn' %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
     <% end %>
-  </div>
-  <div class="row">
-    Alternative Formate:
-    <%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %> |
-    <%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %> |
   </div>
 </div>
 

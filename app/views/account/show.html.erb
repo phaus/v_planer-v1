@@ -52,15 +52,15 @@
               <td><%= link_to h(rental.client.full_name), rental.client %></td>
               <td class="workflow <%= rental.workflow_state %>"><%= rental.workflow_state %></td>
               <td class="money"><%= m rental.gross_total_price %></td>
-              <td><%= link_to image_tag('icons_16/goto.png'), rental, :class => 'btn' %></td>
+              <td><%= link_to image_tag('icons_16/goto.png'), rental, :class => 'pull-right btn' %></td>
             </tr>
           <% end %>
         </tbody>
         <% if rental_count > APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i %>
           <tfoot>
             <tr>
-              <td colspan="4" style="text-align: right">
-                <%= link_to "#{rental_count - APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i} mehr >>", rentals_path %>
+              <td colspan="5">
+                <%= link_to "#{rental_count - APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i} mehr >>", rentals_path, :class => "pull-right" %>
               </td>
             </tr>
           </tfoot>
@@ -86,15 +86,15 @@
               <td><%= link_to h(selling.client.full_name), selling.client rescue 'OOPS' %></td>
               <td class="workflow <%= selling.workflow_state %>"><%= selling.workflow_state %></td>
               <td class="money"><%= m selling.gross_total_price %></td>
-              <td><%= link_to image_tag('icons_16/goto.png'), selling %></td>
+              <td><%= link_to image_tag('icons_16/goto.png'), selling, :class => 'pull-right btn' %></td>
             </tr>
           <% end %>
         </tbody>
         <% if selling_count > APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i %>
           <tfoot>
             <tr>
-              <td colspan="4" style="text-align: right">
-                <%= link_to "#{selling_count - APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i} mehr >>", sellings_path %>
+              <td colspan="5">
+                <%= link_to "#{selling_count - APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i} mehr >>", sellings_path, :class => "pull-right" %>
               </td>
             </tr>
           </tfoot>

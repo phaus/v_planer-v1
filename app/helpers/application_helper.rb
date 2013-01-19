@@ -99,42 +99,40 @@ module ApplicationHelper
     form_builder = show_or_builder.is_a?(ActionView::Helpers::FormBuilder) ? show_or_builder : nil
     @@fieldset_counter ||= 0
     concat <<-EOS
-      <fieldset class="optional-fieldset">
-        <legend>
+            <div class="control-group">
     EOS
     if form_builder and field_name
     concat <<-EOS
-          #{form_builder.check_box field_name}
-          #{form_builder.label field_name, legend}
+          #{form_builder.label field_name, legend, :class => 'control-label'}
+          <div class="controls">
+            #{form_builder.check_box field_name}
+          </div>
+          </div>
     EOS
-  else
+    else
     concat <<-EOS
-          #{check_box_tag("optional_fieldset_#{@@fieldset_counter}", 1, show_or_builder)}
-          <label for="optional_fieldset_#{@@fieldset_counter}">#{legend}</label>
+          <label class="control-label" for="optional_fieldset_#{@@fieldset_counter}">#{legend}</label>
+          <div class="controls">
+            #{check_box_tag("optional_fieldset_#{@@fieldset_counter}", 1, show_or_builder)}
+          </div>
+          </div>
     EOS
-  end
+    end
   concat <<-EOS
-        </legend>
-        <div class="optional-fieldset-content">
           #{capture(&block)}
-        </div>
-      </fieldset>
   EOS
   @@fieldset_counter += 1
 end
 
 def public_footer
   <<-EOS
-      <div class="footer">
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-        <hr />
-        <p>powered by %{name}, the online commercial platform solution by <a href="http://consolving.de">Consolving Network Solutions</a></p>
-        <p>%{name} uses Ruby on Rails</p>
-        <p>Copyright &copy; 2010 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{name} as a developer, please contact developer@consolving.de</p>
-      </div>
+<footer class="footer">
+<div class="container">
+          <p>powered by %{app_name}, the online commercial platform solution by <a target="_new" href="http://consolving.de">Consolving Network Solutions</a></p>
+          <p>%{app_name} uses Ruby on Rails</p>
+          <p>Copyright &copy; 2010-2013 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{app_name} as a developer, please contact developer@consolving.de</p>
+</div>
+</footer>
   EOS
 end
 
