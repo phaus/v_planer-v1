@@ -153,6 +153,8 @@
     <%= link_to 'Rechnung (PDF)', rental_invoice_path(@rental, :format => 'pdf'), :class => 'pdf' %>
   <% elsif @rental.rejected? %>
     <%= link_to 'Annehmen', rental_path(@rental, 'rental[action]' => 'accept'), :class => 'accept', :method => :put %>
+  <% else %>
+    CURRENT STATE: <%= @rental.current_state %>
   <% end %>
 
   <% unless @rental.closed? %>

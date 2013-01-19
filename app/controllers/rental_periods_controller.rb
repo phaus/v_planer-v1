@@ -3,11 +3,13 @@ require 'vpim/icalendar'
 class RentalPeriodsController < UserSpecificController
   before_filter :setup_class_context
 
+  layout 'rentals'
+
   # GET /rental_periods
   # GET /rental_periods.xml
   def index
     if params[:start] and params[:end]
-      @rental_periods = @class_context.all :conditions => ['from_date > ? OR to_date < ?', params[:begin], params[:end] ]
+      @rental_periods = @class_context.where(['from_date > ? OR to_date < ?', params[:begin], params[:end]]).all
     else
       @rental_periods = @class_context.all
     end
@@ -58,14 +60,10 @@ class RentalPeriodsController < UserSpecificController
   end
 
   protected
+
   def setup_class_context
-    if params[:device_id]
-      @class_context = Device.find(params[:device_id]).rental_periods
-    elsif params[:rental_id]
-      @class_context = Rental.find(params[:rental_id]).device_items
-    else
-      @class_context = RentalPeriod
-    end
+    @process = @rental = Rental.for_company(current_company).find(params[:rental_id])
+    @class_context = @process.device_items
   end
 
 end

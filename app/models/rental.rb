@@ -13,8 +13,8 @@ class Rental < CommercialProcess
 
   validates_presence_of :client,
       :sender,
-      :discount,
-      :client_discount,
+#       :discount,
+#       :client_discount,
       :usage_duration,
       :billed_duration,
       :user,
@@ -46,24 +46,6 @@ class Rental < CommercialProcess
 
   def items
     self.device_items + self.service_items
-  end
-
-  def new_service_items_attributes=(attrs)
-    attrs = attrs.is_a?(Hash) ? attrs.values : attrs
-    self.service_items_attributes = attrs.reject{|a| a[:count].to_i == 0 || a[:duration].to_f == 0.0}
-  end
-
-  def new_device_items_attributes=(attrs)
-    attrs = attrs.is_a?(Hash) ? attrs.values : attrs
-    self.device_items_attributes = attrs.reject{|a| a[:count].to_i == 0}
-  end
-
-  def new_device_items
-    self.device_items
-  end
-
-  def new_service_items
-    self.service_items
   end
 
   def to_pdf

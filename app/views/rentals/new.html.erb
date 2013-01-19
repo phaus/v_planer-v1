@@ -1,15 +1,12 @@
 <h1>Neuer Vermietvorgang</h1>
 
-<% form_for(@rental) do |f| %>
+<%= form_for(@rental) do |f| %>
   <%= f.error_messages %>
 
   <%= render 'form_header', :f => f %>
-
-  <%= f.submit 'Vorgang anlegen' %>
 <% end %>
 
 <p class="bottom-actions">
   <%= link_to 'Zurück zur Übersicht', rentals_path, :class => 'back' %>
 </p>
 
-<%= render :partial => 'js_functions' %>

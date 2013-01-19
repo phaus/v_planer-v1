@@ -29,7 +29,7 @@ class CommercialProcess < ActiveRecord::Base
 
   workflow do
     state :uninitialized do
-      event :initialize, :transitions_to => :new
+      event :select_client, :transitions_to => :new
     end
 
     state :new do
@@ -117,6 +117,18 @@ class CommercialProcess < ActiveRecord::Base
     self.sum - self.client_discount - self.discount
   end
 
+  def select_client(options)
+    as_user = options.delete(:as)
+    if as_user.blank?
+      halt :missing_acting_user
+    else
+      self.user   = as_user
+      self.sender = as_user.company_section
+      self.attributes = options
+      halt :missing_client if self.client.nil?
+    end
+  end
+
   protected
 
   def no_invoice_yet
@@ -126,6 +138,19 @@ class CommercialProcess < ActiveRecord::Base
     else
       return true
     end
+  end
+
+  def load_workflow_state
+    if self.client.nil? or self.process_no.blank?
+      'uninitialized'
+#     elsif self.invoice.nil?
+    else
+      self[:workflow_state]
+    end
+  end
+
+  def persist_workflow_state(state)
+    self[:workflow_state] = state
   end
 
 end

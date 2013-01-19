@@ -53,6 +53,7 @@ VPlaner::Application.routes.draw do
       put :remarks
       get :offer_confirmation
     end
+
     resources :rental_periods
     resources :rental_periods, :as => :items
     resources :device_items, :controller => :rental_periods

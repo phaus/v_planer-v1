@@ -38,7 +38,7 @@ de:
         contact_person: Ansprechpartner
         email: E-Mailadresse
 
-      commeercial_process:
+      rental:
         title: Titel
         client: Kunde
         begin: Von
@@ -46,4 +46,35 @@ de:
         usage_duration: Gebrauchsdauer
         billed_duration: Abrechnungsdauer
         process_no: VG-Nr.
-        
+
+    errors:
+      models:
+        rental:
+          attributes:
+            client:
+              blank: Kein Kunde angegeben
+            begin:
+              blank: Kein Anfangsdatum angegeben
+            end:
+              blank: Kein Enddatum angegeben
+
+  errors:
+    format: %{message}
+    template:
+      header: Fehler beim Speichern
+      body: Beheben Sie bitte folgende Probleme, bevor Sie fortfahren.
+
+  workflow:
+    halted_because:
+      validation_failed: Validierung fehlgeschlagen
+
+      rental:
+        missing_acting_user: Benutzer fehlt [INTERNER FEHLER]
+        validation_failed: Die Angaben sind unvollständig
+
+  controller:
+    rentals:
+      created: Der Vermitvorgang wurde erstellt, sie können mit dem Hinzufügen von positionen fortfahren.
+      updated: Der Vorgang wurde aktualisiert.
+      deleted: Der Vorgang wurde gelöscht.
+      no clients found: Keine Kunden entsprachen Ihren Suchkriterien.
