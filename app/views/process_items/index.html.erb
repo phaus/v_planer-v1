@@ -1,0 +1,37 @@
+<h1>Listing process_items</h1>
+
+<table>
+  <tr>
+    <th>Process</th>
+    <th>Product</th>
+    <th>Name</th>
+    <th>Remarks</th>
+    <th>Quantity</th>
+    <th>Unit</th>
+    <th>Cost calculation</th>
+    <th>Cost calculation type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @process_items.each do |process_item| %>
+  <tr>
+    <td><%= process_item.process_id %></td>
+    <td><%= process_item.product_id %></td>
+    <td><%= process_item.name %></td>
+    <td><%= process_item.remarks %></td>
+    <td><%= process_item.quantity %></td>
+    <td><%= process_item.unit %></td>
+    <td><%= process_item.cost_calculation_id %></td>
+    <td><%= process_item.cost_calculation_type %></td>
+    <td><%= link_to 'Show', process_item %></td>
+    <td><%= link_to 'Edit', edit_process_item_path(process_item) %></td>
+    <td><%= link_to 'Destroy', process_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Process item', new_process_item_path %>

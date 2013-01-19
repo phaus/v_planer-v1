@@ -1,4 +1,4 @@
-class Selling < CommercialProcess
+class Selling < ActiveRecord::Base
   include Conforming::ModelExtensions
 
   has_many :device_items,
@@ -107,6 +107,10 @@ class Selling < CommercialProcess
     offer_confirmation_bottom_text.gsub(/(%[a-z_]+)/) do |match|
       {'%sender_name' => self.user.full_name}[match]
     end
+  end
+
+  def process_no
+    self.sender.company.selling_process_no_format.gsub(/%id/, self.id.to_s)
   end
 
 end

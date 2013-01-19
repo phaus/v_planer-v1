@@ -1,0 +1,37 @@
+<h2>Neue Position</h2>
+
+<%= form_for @process_item, :url => new_commercial_process_process_item_path(@commercial_process), :html => {:method => :get} do |f| %>
+  <h3>Bestehendes Produkt suchen</h3>
+  <div class="field">
+    <%= label_tag :pq, 'Produkt suchen' %>
+    <%= text_field_tag :pq, params[:pq], :class => 'search_field' %>
+    <button name="commit" value="search-product">suchen</button>
+  </div>
+
+  <div id="autocomplete_product_choices">
+    <% if @products and @products.any? %>
+      <ul>
+        <% @products.each do |product| %>
+          <li>
+            <button name="process_item[product_id]" value="<%= product.id %>">
+              Produkt Nr. <%= highlight product.code, params[:pq] %><br>
+              <%= highlight product.name, params[:pq] %>
+            </button>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <div id="product_info">
+      <% if f.object.product %>
+        <fieldset>
+          <legend>Gewähltes Produkt</legend>
+          <%= f.object.product.name %><br>
+          <pre><%= f.object.product.description %></pre>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<%= render 'form' %>

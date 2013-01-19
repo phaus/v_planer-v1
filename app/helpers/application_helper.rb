@@ -179,4 +179,10 @@ module ApplicationHelper
     str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
     return str
   end
+
+  def np(number, precision = 0, unit = '')
+    str = number_with_precision(number, :precision => precision)
+    unit.blank? ? str : "#{str} #{unit}"
+  end
+
 end

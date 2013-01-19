@@ -8,6 +8,8 @@ class CompanySection < ActiveRecord::Base
       :foreign_key => :sender_id
   has_many :sellings,
       :foreign_key => :sender_id
+  has_many :commercial_processes,
+      :foreign_key => :sender_id
   has_many :default_texts
 
   validates_presence_of :name

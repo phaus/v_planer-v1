@@ -68,6 +68,10 @@ class Company < ActiveRecord::Base
     User.for_company(self)
   end
 
+  def commercial_processes
+    CommercialProcess.for_company(self)
+  end
+
   def non_main_sections
     self.sections - [self.main_section]
   end

@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  process_id: 1
+  product_id: 1
+  name: MyString
+  remarks: MyString
+  quantity: 9.99
+  unit: MyString
+  cost_calculation_id: 1
+  cost_calculation_type: MyString
+
+two:
+  process_id: 1
+  product_id: 1
+  name: MyString
+  remarks: MyString
+  quantity: 9.99
+  unit: MyString
+  cost_calculation_id: 1
+  cost_calculation_type: MyString

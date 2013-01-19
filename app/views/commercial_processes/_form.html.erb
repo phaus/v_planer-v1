@@ -1,0 +1,37 @@
+<%= f.wrapped_date_selector_field :created_at %>
+<%= f.wrapped_text_field :title %>
+<%= f.wrapped_text_field :process_no, :mandatory => true %>
+
+<div id="client_info">
+  <% if f.object.client %>
+    <fieldset>
+      <legend>Gewählter Kunde</legend>
+      <%= f.hidden_field :client_id %>
+      <%= f.object.client.full_name %><br />
+      <%= f.object.client.address.try :street %><br />
+      <%= f.object.client.address.try :postalcode %> <%= f.object.client.address.try :locality %><br />
+      <%= mail_to f.object.client.email unless f.object.client.email.blank? %>
+    </fieldset>
+  <% end %>
+</div>
+
+<div class="field">
+  <%= label_tag :cq, 'Kunde suchen' %>
+  <%= text_field_tag :cq, params[:cq], :class => 'search_field' %>
+  <button name="commit" value="search-client">suchen</button>
+  <div id="autocomplete_client_choices">
+    <% if @clients and @clients.any? %>
+      <ul>
+        <% @clients.each do |client| %>
+          <li>
+            <button name="commercial_process[client_id]" value="<%= client.id %>">
+              Kunde Nr. <%= highlight client.client_no, params[:cq] %><br>
+              <%= highlight client.full_name, params[:cq] %><br>
+              <%= highlight client.company_name, params[:cq] %>
+            </button>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>

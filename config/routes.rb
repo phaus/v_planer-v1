@@ -35,6 +35,10 @@ VPlaner::Application.routes.draw do
     end
   end
 
+  resources :commercial_processes do
+    resources :process_items
+  end
+
   resources :services
 
   resources :expenses

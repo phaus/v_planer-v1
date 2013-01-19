@@ -1,4 +1,9 @@
 de:
+  number:
+    format:
+      separator: ","
+      delimiter: "'"
+
   field:
     value differs from calculation: Eingabewert weicht vom berechneten Wert (%{calculated_value}) ab.
 
@@ -39,24 +44,42 @@ de:
         email: E-Mailadresse
 
       rental:
-        title: Titel
-        client: Kunde
         begin: Von
         end: Bis
         usage_duration: Gebrauchsdauer
         billed_duration: Abrechnungsdauer
+
+      commercial_process:
+        title: Titel
+        client: Kunde
         process_no: VG-Nr.
+        created_at: Datum
+        updated_at: zuletzt aktualisiert
+        created_by: erstellt von
+        updated_by: aktualisiert von
+        client_discount: Kundenrabatt
+        discount: Auftragsrabatt
 
     errors:
       models:
-        rental:
+        commercial_process:
           attributes:
             client:
               blank: Kein Kunde angegeben
+            process_no:
+              blank: Keine Vorgangsnummer angegeben
+
+        rental:
+          attributes:
             begin:
               blank: Kein Anfangsdatum angegeben
             end:
               blank: Kein Enddatum angegeben
+
+        process_item:
+          attributes:
+            vat_percentage:
+              blank: Kein MWSt.-Satz angegeben
 
   errors:
     format: %{message}
@@ -71,6 +94,11 @@ de:
       rental:
         missing_acting_user: Benutzer fehlt [INTERNER FEHLER]
         validation_failed: Die Angaben sind unvollständig
+
+      commercial_process:
+        missing_acting_user: Benutzer fehlt [INTERNER FEHLER]
+        validation_failed: Die Angaben sind unvollständig
+        user_does_not_belong_to_same_company_section_as_process: Sie gehören nicht zur gleichen Firmensektion wie der Vorgang.
 
   controller:
     rentals:

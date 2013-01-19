@@ -1,0 +1,31 @@
+<h2>Vorgänge</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prozessnr.</th>
+      <th>Bearbeiter</th>
+      <th>Letztes Update</th>
+      <th>Gesamtpreis (netto)</th>
+      <th>Gesamtpreis (brutto)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @commercial_processes.each do |commercial_process| %>
+      <tr>
+        <td><%= link_to commercial_process.process_no, commercial_process_path(commercial_process) %></td>
+        <td><%= commercial_process.updated_by_full_name %></td>
+        <td><%= commercial_process.updated_at %></td>
+        <td><%= commercial_process.total_net_price %></td>
+        <td><%= commercial_process.total_gross_price %></td>
+        <td><%= link_to 'bearbeiten', edit_commercial_process_path(commercial_process) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+    </tr>
+  </tfoot>
+</table>
+
+<p><%= link_to 'Neuer Vorgang', new_commercial_process_path %></p>

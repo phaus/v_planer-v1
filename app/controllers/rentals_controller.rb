@@ -104,7 +104,7 @@ class RentalsController < UserSpecificController
   # GET /rentals/new
   # GET /rentals/new.xml
   def new
-    @rental = Rental.new params[:rental]
+    @rental = CommercialProcess.new_rental(params[:rental])
     @rental.sender = current_user.company_section
 
     respond_to do |format|
