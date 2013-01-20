@@ -40,13 +40,13 @@
     <%= flash_message %>
     <%= yield  %>
     <%= public_footer %>
-    <script src="http://static.consolving.de/js/jquery.js" charset="utf-8" type="text/javascript"></script>
-    <%= yield :javascript %>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/jquery.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/google-code-prettify/prettify.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-dropdown.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-tab.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-typeahead.js"></script>
+    <%= yield :javascript %>
     <%= javascript_include_tag 'vplaner' %>
   </body>
 </html>

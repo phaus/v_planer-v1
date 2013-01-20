@@ -1,26 +1,28 @@
-<h1>Verkäufe</h1>
-
-<h2>Im Monat <%= @from_date.strftime '%m-%Y' %></h2>
-
-<p>
-  <%= link_to '<<< Vormonat',   :from_date => @from_date.prev_month %>
-  <%= link_to 'Folgemonat >>>', :from_date => @from_date.next_month %>
-</p>
-
-<% if @sellings.any? %>
-  <%= render :partial => 'list', :locals => {:processes => @sellings} %>
-<% else %>
-  <p>Noch keine Verkaufsvorgänge für diesen Monat angelegt.</p>
-<% end %>
-
-<p class="bottom-actions">
-  <%= link_to 'Neuer Vermietvorgang', new_rental_path, :class => 'new' %>
-  <%= link_to 'Neuer Verkaufsvorgang', new_selling_path, :class => 'new' %>
-</p>
-
-<p class="alternative_formats">
-  Alternative Formate:
-  <%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %> |
-  <%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %> |
-  <%= link_to image_tag('icons_16/text-calendar.png') + ' ICS', :format => 'ics', :t => current_user.single_access_token %>
-</p>
+<div class="container-fluid">
+  <div class="offset2 page-header">
+    <h1>Verkäufe <small>Im Monat <%= @from_date.strftime '%m-%Y' %></small></h1>
+  </div>
+  <div class="offset2 row">
+    <ul class="pager">
+      <li class="previous"><%= link_to '<<< Vormonat',   :from_date => @from_date.prev_month %></li>
+      <li class="next"><%= link_to 'Folgemonat >>>', :from_date => @from_date.next_month %></li>
+    </ul>
+  </div>
+  <div class="offset2 row">
+    <% if @sellings.any? %>
+      <%= render :partial => 'list', :locals => {:processes => @sellings} %>
+    <% else %>
+      <p>Noch keine Verkaufsvorgänge für diesen Monat angelegt.</p>
+    <% end %>
+  </div>
+  <div class="offset2 row">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Alternative Formate</li>
+        <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+        <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
+        <li><%= link_to image_tag('icons_16/text-calendar.png') + ' ICS', :format => 'ics', :t => current_user.single_access_token %></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,7 @@
 <div class="container">
-  <h1>Lieferanten <small><%= @distributors.size %> gefunden</small></h1>
+  <div class="page-header">
+    <h1>Lieferanten <small><%= @distributors.size %> gefunden</small></h1>
+  </div>
   <div class="row">
     <%= render :partial => 'list' %>
   </div>

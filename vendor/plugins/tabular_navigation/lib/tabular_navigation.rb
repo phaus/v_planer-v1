@@ -6,23 +6,21 @@ NAVIGATION_ENTRIES = [
   ['Vorgänge',           :rentals_path],
   ['Rechnungen',         :invoices_path],
   ['Mitarbeiter',        [:users_path, :is_company_admin?]],
-  ['Benutzerkonto',      :account_path],
   ['Administration',     [:admin_path, :is_admin?]]
 ]
 
 ADMIN_NAVIGATION_ENTRIES = [
+  ['Start',          :admin_path],
   ['Firmen',         :admin_companies_path],
   ['Sektionen',      :admin_company_sections_path],
-  ['Benutzer',       :admin_users_path],
-  ['Administration', :admin_path],
-  ['Benutzerkonto',  :account_path]
+  ['Benutzer',       :admin_users_path]
 ]
 
 PUBLIC_NAVIGATION_ENTRIES = [
   ['Startseite', '/'],
   ['Login',      :new_user_session_path],
   ['Demo',       'http://planer.rails-apps.de'],
-  ['Redmine',    'https://concordia.consolving.de/redmine/projects/show/v-planer']
+  ['Redmine',    'https://consolving.de/redmine/projects/show/v-planer']
 ]
 
 
@@ -63,10 +61,7 @@ module ApplicationHelper
 
   def aux_navigation(&block)
     <<-EOS
-    <div id="top_nav">
       #{capture(&block) if block_given?}
-      #{link_to 'Ausloggen', user_session_path, :method => :delete}
-    </div>
     EOS
   end
 end

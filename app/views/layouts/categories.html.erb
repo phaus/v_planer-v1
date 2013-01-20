@@ -31,24 +31,6 @@
             <ul class="nav pull-right">
               <li id="user-menu" class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                  Hello <strong><%=  current_user.login %></strong>
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><%= link_to 'Benutzerdaten bearbeiten', edit_account_path %></li>
-                  <li><%= link_to 'Kennwort ändern', edit_account_path %></li>
-                  <li class="divider"></li>
-                  <li><%= link_to 'Firmendaten bearbeiten', edit_company_path %></li>
-                  <li><%= link_to 'Mitarbeiter verwalten', users_path %></li>
-                  <li class="divider"></li>
-                  <li><%= link_to 'Ausloggen', user_session_path, :method => :delete %></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav pull-right">
-              <li class="divider-vertical"></li>
-              <li id="user-menu" class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                   Erstelle
                   <b class="caret"></b>
                 </a>
@@ -67,6 +49,21 @@
               <li class="divider-vertical"></li>
               <%= main_navigation :active => 'Kategorien' %>
               <li class="divider-vertical"></li>
+              <li id="user-menu" class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                  Hello <strong><%=  current_user.login %></strong>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to 'Benutzerdaten', account_path %></li>
+                  <li><%= link_to 'Kennwort ändern', edit_account_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Firmendaten bearbeiten', edit_company_path %></li>
+                  <li><%= link_to 'Mitarbeiter verwalten', users_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Ausloggen', user_session_path, :method => :delete %></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <!--/.nav-collapse -->
@@ -76,13 +73,13 @@
     <%= flash_message %>
     <%= yield  %>
     <%= footer %>
-    <script src="http://static.consolving.de/js/jquery.js" charset="utf-8" type="text/javascript"></script>
-    <%= yield :javascript %>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/jquery.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/google-code-prettify/prettify.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-dropdown.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-tab.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-typeahead.js"></script>
+    <%= yield :javascript %>
     <%= javascript_include_tag 'vplaner' %>
   </body>
 </html>

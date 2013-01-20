@@ -1,9 +1,9 @@
 <div class="container-fluid">
-  <div class="offset1 row">
+  <div class="offset2 page-header">
     <h1>Kategorie <%= @category.name %></h1>
     <p></p>
   </div>
-  <div class="offset1 row">
+  <div class="offset2 row">
     <ul class="pager">
       <li class="previous"><%= link_to '<<< Vormonat',   :from_date => @from_date - 1.month %></li>
       <li class="next"> <%= link_to 'Folgemonat >>>', :from_date => @from_date + 1.month %></li>
@@ -68,7 +68,7 @@
       <% end %>
     </div>
   </div>
-  <div class="offset1 row">
+  <div class="offset2 row">
     <div class="well sidebar-nav">
       <ul class="nav nav-list">
         <li class="nav-header">Alternative Formate</li>

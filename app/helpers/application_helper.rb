@@ -106,7 +106,7 @@ module ApplicationHelper
           </div>
           </div>
     EOS
-    else
+  else
     concat <<-EOS
           <label class="control-label" for="optional_fieldset_#{@@fieldset_counter}">#{legend}</label>
           <div class="controls">
@@ -114,7 +114,7 @@ module ApplicationHelper
           </div>
           </div>
     EOS
-    end
+  end
   concat <<-EOS
           #{capture(&block)}
   EOS
@@ -124,11 +124,23 @@ end
 def public_footer
   <<-EOS
 <footer class="footer">
-<div class="container">
-          <p>powered by %{app_name}, the online commercial platform solution by <a target="_new" href="http://consolving.de">Consolving Network Solutions</a></p>
-          <p>%{app_name} uses Ruby on Rails</p>
-          <p>Copyright &copy; 2010-2013 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{app_name} as a developer, please contact developer@consolving.de</p>
-</div>
+  <div class="container">
+            <p>powered by %{app_name}, the online commercial platform solution by <a target="_new" href="http://consolving.de">Consolving Network Solutions</a></p>
+            <p>%{app_name} uses Ruby on Rails</p>
+            <p>Copyright &copy; 2010-2013 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{app_name} as a developer, please contact developer@consolving.de</p>
+  </div>
+  <div class="pull-right">
+    <a href="http://jigsaw.w3.org/css-validator/">
+      <img style="border:0;width:88px;height:31px"
+           src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+           alt="Valid CSS!" />
+    </a>
+    <a href="http://validator.w3.org/check?uri=referer">
+      <img style="border:0;width:88px;height:31px"
+           src="http://www.w3.org/Icons/valid-xhtml10-blue"
+           alt="Valid XHTML 1.0 Transitional" />
+    </a>
+  </div>
 </footer>
   EOS
 end
@@ -136,11 +148,23 @@ end
 def footer
   <<-EOS
 <footer class="footer">
-<div class="container">
-          <p>powered by %{app_name}, the online commercial platform solution by <a target="_new" href="http://consolving.de">Consolving Network Solutions</a></p>
-          <p>%{app_name} uses Ruby on Rails</p>
-          <p>Copyright &copy; 2010-2013 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{app_name} as a developer, please contact developer@consolving.de</p>
-</div>
+  <div class="container">
+    <p>powered by %{app_name}, the online commercial platform solution by <a target="_new" href="http://consolving.de">Consolving Network Solutions</a></p>
+    <p>%{app_name} uses Ruby on Rails</p>
+    <p>Copyright &copy; 2010-2013 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{app_name} as a developer, please contact developer@consolving.de</p>
+  </div>
+  <div class="pull-right">
+    <a href="http://jigsaw.w3.org/css-validator/">
+      <img style="border:0;width:88px;height:31px"
+           src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+           alt="Valid CSS!" />
+    </a>
+    <a href="http://validator.w3.org/check?uri=referer">
+      <img style="border:0;width:88px;height:31px"
+           src="http://www.w3.org/Icons/valid-xhtml10-blue"
+           alt="Valid XHTML 1.0 Transitional" />
+    </a>
+  </div>
 </footer>
   EOS
   #        <ul>
