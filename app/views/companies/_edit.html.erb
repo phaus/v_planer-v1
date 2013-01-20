@@ -1,4 +1,4 @@
-<% remote_form_for(@company, :url => company_path(:format => :html), :update => 'company_details') do |f| %>
+<%= remote_form_for(@company, :url => company_path(:format => :html), :update => 'company_details') do |f| %>
   <%= f.error_messages %>
 
   <%= hidden_field_tag 'come_from', 'company_details' %>

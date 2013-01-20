@@ -1,142 +1,145 @@
-<h1>Neuer Verkaufsvorgang</h1>
-
-<% form_for(@selling) do |f| %>
-  <%= f.error_messages %>
-
-  <table class="data" id="base_data">
-    <tr>
-      <th><%= f.label :title, 'Titel (optional)' %></th>
-      <td><%= f.text_field :title %></td>
-    </tr>
-    <tr>
-      <th><%= f.label :client_id, 'Kunde' %></th>
-      <td style="width: 15em">
-        <span id="indicator1" style="display: none">
-          <%= image_tag 'loading.gif' %>
-        </span>
-        <div id="client_info">
-          <% if @selling.client %>
-            <%= @selling.client.full_name %><br />
-            <%= @selling.client.address.street %><br />
-            <%= @selling.client.address.postalcode %> <%= @selling.client.address.locality %><br />
-            <%= mail_to @selling.client.email unless @selling.client.email.blank? %>
-          <% end %>
-        </div>
-        <%= f.hidden_field :client_id %>
-        <%= text_field_tag :cq, '', :class => 'search_field' %>
-        <div id="autocomplete_client_choices" class="autocomplete"></div>
-        <button id="change_client">ändern</button>
-      </td>
-    </tr>
-  </table>
-
-  <div id="spinner" style="display: none;">
-    <%= image_tag 'loading.gif' %>
+<div class="container">
+  <div class="page-header">
+    <h1>Neuer Verkaufsvorgang</h1>
   </div>
+  <%= form_for(@selling) do |f| %>
+    <%= f.error_messages %>
 
-  <div id="available_products" style="width: 100%">
-    <table id="available_products_table" class="data" style="width: 100%">
-      <tbody>
-        <tr>
-          <th style="width: auto">Bezeichnung</th>
-          <th style="width: 7em">Verfügbar</th>
-          <th style="width: 7em">Menge</th>
-          <th style="width: 7em">Einzelpreis</th>
-          <th style="width: 7em">Gesamtpreis</th>
-        </tr>
-
-        <% f.fields_for :device_items do |pf| %>
-          <tr class="product device_item device">
-            <%= render :partial => 'selling_items/form', :locals =>  {:pf => pf} %>
-          </tr>
-        <% end %>
-
-        <tr class="<%= cycle 'odd', 'even' %> add_row">
-          <td>
-            Artikel suchen: <%= text_field_tag :dq, '', :class => 'search_field' %>
-            <span id="indicator2" style="display: none">
-              <%= image_tag 'loading.gif' %>
-            </span>
-            <div id="device_autocomplete_choices" class="autocomplete"></div>
-          </td>
-        </tr>
-
-        <tr>
-          <th>Dienstleistung</th>
-          <th>Dauer</th>
-          <th>Anzahl</th>
-          <th>Stundensatz</th>
-          <th>Gesamtpreis</th>
-        </tr>
-        <tr class="<%= cycle 'odd', 'even' %> add_row">
-          <td>
-            Dienstleistung suchen: <%= text_field_tag :sq, '', :class => 'search_field' %>
-            <span id="indicator3" style="display: none">
-              <%= image_tag 'loading.gif' %>
-            </span>
-            <div id="service_autocomplete_choices" class="autocomplete"></div>
-          </td>
-        </tr>
-      </tbody>
-
-      <tfoot>
-        <tr>
-          <td class="empty"></td>
-          <th colspan="2">Summe</th>
-          <td></th>
-          <td class="decimal selling sum"><%= f.object.sum.to_s %></td>
-        </tr>
-        <tr>
-          <td class="empty"></td>
-          <th colspan="2">Kundenrabatt</th>
-          <td class="decimal selling client_discount_percent" id="selling_client_discount_percent">
-            <%= f.object.client_discount_percent %>&thinsp;%
-          </td>
-          <td class="decimal selling client_discount">
-            &ndash;&nbsp;<%= f.text_field :client_discount, :class => 'decimal' %>&thinsp;&euro;
-          </td>
-        </tr>
-        <tr>
-          <td class="empty"></td>
-          <th colspan="2">Auftragsrabatt</th>
-          <td></td>
-          <td class="decimal selling discount">
-            &ndash;&nbsp;<%= f.text_field :discount, :class => 'decimal' %>&thinsp;&euro;
-          </td>
-        </tr>
-        <tr>
-          <td class="empty"></td>
-          <th colspan="2">Total (Netto)</th>
-          <td></td>
-          <td class="decimal selling net_total_price">0&thinsp;&euro;</td>
-        </tr>
-        <tr>
-          <td class="empty"></td>
-          <th colspan="2">MwSt</th>
-          <td class="decimal">19,00&thinsp;%</td>
-          <td class="decimal selling vat">0&thinsp;&euro;</td>
-        </tr>
-        <tr>
-          <td class="empty"></td>
-          <th colspan="2">Total (Brutto)</th>
-          <td></td>
-          <td class="decimal selling gross_total_price">
-            <%= text_field_tag :selling_gross_total_price, @selling.gross_total_price %>&thinsp;&euro;
-          </td>
-        </tr>
-      </tfoot>
+    <table class="data" id="base_data">
+      <tr>
+        <th><%= f.label :title, 'Titel (optional)' %></th>
+        <td><%= f.text_field :title %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :client_id, 'Kunde' %></th>
+        <td style="width: 15em">
+          <span id="indicator1" style="display: none">
+            <%= image_tag 'loading.gif' %>
+          </span>
+          <div id="client_info">
+            <% if @selling.client %>
+              <%= @selling.client.full_name %><br />
+              <%= @selling.client.address.street %><br />
+              <%= @selling.client.address.postalcode %> <%= @selling.client.address.locality %><br />
+              <%= mail_to @selling.client.email unless @selling.client.email.blank? %>
+            <% end %>
+          </div>
+          <%= f.hidden_field :client_id %>
+          <%= text_field_tag :cq, '', :class => 'search_field' %>
+          <div id="autocomplete_client_choices" class="autocomplete"></div>
+          <button id="change_client">ändern</button>
+        </td>
+      </tr>
     </table>
-  </div>
 
-  <p>
-    <%= f.submit 'Speichern' %>
+    <div id="spinner" style="display: none;">
+      <%= image_tag 'loading.gif' %>
+    </div>
+
+    <div id="available_products" style="width: 100%">
+      <table id="available_products_table" class="data" style="width: 100%">
+        <tbody>
+          <tr>
+            <th style="width: auto">Bezeichnung</th>
+            <th style="width: 7em">Verfügbar</th>
+            <th style="width: 7em">Menge</th>
+            <th style="width: 7em">Einzelpreis</th>
+            <th style="width: 7em">Gesamtpreis</th>
+          </tr>
+
+          <% f.fields_for :device_items do |pf| %>
+            <tr class="product device_item device">
+              <%= render :partial => 'selling_items/form', :locals =>  {:pf => pf} %>
+            </tr>
+          <% end %>
+
+          <tr class="<%= cycle 'odd', 'even' %> add_row">
+            <td>
+              Artikel suchen: <%= text_field_tag :dq, '', :class => 'search_field' %>
+              <span id="indicator2" style="display: none">
+                <%= image_tag 'loading.gif' %>
+              </span>
+              <div id="device_autocomplete_choices" class="autocomplete"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Dienstleistung</th>
+            <th>Dauer</th>
+            <th>Anzahl</th>
+            <th>Stundensatz</th>
+            <th>Gesamtpreis</th>
+          </tr>
+          <tr class="<%= cycle 'odd', 'even' %> add_row">
+            <td>
+              Dienstleistung suchen: <%= text_field_tag :sq, '', :class => 'search_field' %>
+              <span id="indicator3" style="display: none">
+                <%= image_tag 'loading.gif' %>
+              </span>
+              <div id="service_autocomplete_choices" class="autocomplete"></div>
+            </td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td class="empty"></td>
+            <th colspan="2">Summe</th>
+            <td></th>
+            <td class="decimal selling sum"><%= f.object.sum.to_s %></td>
+          </tr>
+          <tr>
+            <td class="empty"></td>
+            <th colspan="2">Kundenrabatt</th>
+            <td class="decimal selling client_discount_percent" id="selling_client_discount_percent">
+              <%= f.object.client_discount_percent %>&thinsp;%
+            </td>
+            <td class="decimal selling client_discount">
+              &ndash;&nbsp;<%= f.text_field :client_discount, :class => 'decimal' %>&thinsp;&euro;
+            </td>
+          </tr>
+          <tr>
+            <td class="empty"></td>
+            <th colspan="2">Auftragsrabatt</th>
+            <td></td>
+            <td class="decimal selling discount">
+              &ndash;&nbsp;<%= f.text_field :discount, :class => 'decimal' %>&thinsp;&euro;
+            </td>
+          </tr>
+          <tr>
+            <td class="empty"></td>
+            <th colspan="2">Total (Netto)</th>
+            <td></td>
+            <td class="decimal selling net_total_price">0&thinsp;&euro;</td>
+          </tr>
+          <tr>
+            <td class="empty"></td>
+            <th colspan="2">MwSt</th>
+            <td class="decimal">19,00&thinsp;%</td>
+            <td class="decimal selling vat">0&thinsp;&euro;</td>
+          </tr>
+          <tr>
+            <td class="empty"></td>
+            <th colspan="2">Total (Brutto)</th>
+            <td></td>
+            <td class="decimal selling gross_total_price">
+              <%= text_field_tag :selling_gross_total_price, @selling.gross_total_price %>&thinsp;&euro;
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <p>
+      <%= f.submit 'Speichern' %>
+    </p>
+  <% end %>
+
+  <div id="product_infos"></div>
+
+  <p class="bottom-actions">
+    <%= link_to 'Zurück zur Übersicht', sellings_path, :class => 'back' %>
   </p>
-<% end %>
 
-<div id="product_infos"></div>
-
-<p class="bottom-actions">
-  <%= link_to 'Zurück zur Übersicht', sellings_path, :class => 'back' %>
-</p>
-
-<%= render :partial => 'js_functions' %>
+  <%= render :partial => 'js_functions' %>
+</div>

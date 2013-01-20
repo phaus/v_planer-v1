@@ -1,28 +1,31 @@
-<h1>Mitarbeiterkonto bearbeiten</h1>
+<div class="container">
+  <div class="page-header">
+    <h1>Mitarbeiterkonto bearbeiten</h1>
+  </div>
+  <%= form_for(@user) do |f| %>
+    <%= f.error_messages %>
 
-<% form_for(@user) do |f| %>
-  <%= f.error_messages %>
+    <%= render :partial => 'form', :locals => {:f => f} %>
 
-  <%= render :partial => 'form', :locals => {:f => f} %>
-
-  <% optional_fieldset 'Adresse', @user.address.used? do %>
-    <% f.fields_for :address do |af| %>
-      <%= render :partial => 'addresses/form', :locals => {:f => af} %>
+    <% optional_fieldset 'Adresse', @user.address.used? do %>
+      <% f.fields_for :address do |af| %>
+        <%= render :partial => 'addresses/form', :locals => {:f => af} %>
+      <% end %>
     <% end %>
+
+    <% optional_fieldset 'Kontodaten', @user.bank_account.used? do %>
+      <% f.fields_for :bank_account do |af| %>
+        <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
+      <% end %>
+    <% end %>
+
+    <p>
+      <%= f.submit 'speichern' %>
+    </p>
   <% end %>
 
-  <% optional_fieldset 'Kontodaten', @user.bank_account.used? do %>
-    <% f.fields_for :bank_account do |af| %>
-      <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
-    <% end %>
-  <% end %>
-
-  <p>
-    <%= f.submit 'speichern' %>
+  <p class="bottom-actions">
+    <%= link_to 'Zurück zur Ansicht', @user, :class => 'back' %>
+    <%= link_to 'Zurück zur Übersicht', users_path, :class => 'back' %>
   </p>
-<% end %>
-
-<p class="bottom-actions">
-  <%= link_to 'Zurück zur Ansicht', @user, :class => 'back' %>
-  <%= link_to 'Zurück zur Übersicht', users_path, :class => 'back' %>
-</p>
+</div>

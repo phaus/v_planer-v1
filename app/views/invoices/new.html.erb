@@ -1,96 +1,99 @@
-<h1>Rechnung für VG-Nr. <%= @invoice.process.id %></h1>
+<div class="container">
+  <div class="page-header">
+    <h1>Rechnung für VG-Nr. <%= @invoice.process.id %></h1>
+  </div>
+  <%= form_for(@invoice, :url => rental_invoice_path(@process)) do |f| %>
+    <%= f.error_messages %>
+    <%= f.hidden_field :process_id %>
+    <%= f.hidden_field :process_type %>
 
-<% form_for(@invoice, :url => rental_invoice_path(@process)) do |f| %>
-  <%= f.error_messages %>
-  <%= f.hidden_field :process_id %>
-  <%= f.hidden_field :process_type %>
-
-  <table class="data" id="base_data">
-    <tr>
-      <th><%= f.label :client_id, 'Kunde' %></th>
-      <td style="white-space: nowrap">
-        <%= @process.client.full_name %>
-      </td>
-    </tr>
-    <% if @process.is_a? Rental %>
+    <table class="data" id="base_data">
       <tr>
-        <th><%= f.label :begin, 'Von' %></th>
-        <td>
-          <%= f.object.process.begin.to_date %>
+        <th><%= f.label :client_id, 'Kunde' %></th>
+        <td style="white-space: nowrap">
+          <%= @process.client.full_name %>
         </td>
       </tr>
+      <% if @process.is_a? Rental %>
+        <tr>
+          <th><%= f.label :begin, 'Von' %></th>
+          <td>
+            <%= f.object.process.begin.to_date %>
+          </td>
+        </tr>
+        <tr>
+          <th><%= f.label :end, 'Bis' %></th>
+          <td>
+            <%= f.object.process.end.to_date %>
+          </td>
+        </tr>
+      <% end %>
       <tr>
-        <th><%= f.label :end, 'Bis' %></th>
-        <td>
-          <%= f.object.process.end.to_date %>
-        </td>
-      </tr>
-    <% end %>
-    <tr>
-      <th><%= f.label :date, 'Rechnungsdatum' %></th>
-      <td class="date" id="date">
-        <%= f.calendar_date_select :date,
+        <th><%= f.label :date, 'Rechnungsdatum' %></th>
+        <td class="date" id="date">
+          <%= f.calendar_date_select :date,
             :year_range => 2009..2015,
             :size      => 12,
             :time      => false,
             :ochange   => 'date_changed()'%>
-      </td>
-    </tr>
-    <tr>
-      <th><%= f.label :invoice_no, 'Rechnungs-Nr' %></th>
-      <td class="invoice_no">
-        <%= f.text_field :invoice_no %>
-      </td>
-    </tr>
-  </table>
-
-  <table class="data" style="width: 100%">
-    <thead>
-      <tr>
-        <th>Menge</th>
-        <th>Artikel/Leistung</th>
-        <th>Preis</th>
+        </td>
       </tr>
-    </thead>
+      <tr>
+        <th><%= f.label :invoice_no, 'Rechnungs-Nr' %></th>
+        <td class="invoice_no">
+          <%= f.text_field :invoice_no %>
+        </td>
+      </tr>
+    </table>
 
-    <tbody>
-      <% f.fields_for :items do |iif| %>
+    <table class="data" style="width: 100%">
+      <thead>
         <tr>
-          <td class="decimal">
-            <%= h iif.object.process_item.count %>
-          </td>
-          <td>
-            <%= h iif.object.process_item.product.full_name %><br />
-            <span class="additional-information"><%= h iif.object.process_item.comments %></span>
-          </td>
-          <td class="money">
-            <%= m iif.object.price %>
-          </td>
+          <th>Menge</th>
+          <th>Artikel/Leistung</th>
+          <th>Preis</th>
         </tr>
-      <% end %>
-    </tbody>
+      </thead>
 
-    <tfoot>
-      <tr>
-        <th colspan="2">Total Netto</th>
-        <td class="money invoice total"><%= m f.object.price %></td>
-      </tr>
-    </tfoot>
-  </table>
+      <tbody>
+        <% f.fields_for :items do |iif| %>
+          <tr>
+            <td class="decimal">
+              <%= h iif.object.process_item.count %>
+            </td>
+            <td>
+              <%= h iif.object.process_item.product.full_name %><br />
+              <span class="additional-information"><%= h iif.object.process_item.comments %></span>
+            </td>
+            <td class="money">
+              <%= m iif.object.price %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
 
-  <p class="full_width_input">
-    (verfügbare Variablen: %payment_goal, %sender_name)
-    <%= f.text_area :remarks, :size => '75x10', :value => f.object.remarks %>
+      <tfoot>
+        <tr>
+          <th colspan="2">Total Netto</th>
+          <td class="money invoice total"><%= m f.object.price %></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <p class="full_width_input">
+      (verfügbare Variablen: %payment_goal, %sender_name)
+      <%= f.text_area :remarks, :size => '75x10', :value => f.object.remarks %>
+    </p>
+
+    <p class="warning">Nach dem Erstellen dieser Rechnung kann der Vorgang Nr. <%= f.object.process_id %> nicht länger verändert werden!</p>
+
+    <p>
+      <%= f.submit 'Rechnung erstellen' %>
+    </p>
+  <% end %>
+
+  <p class="bottom-actions">
+    <%= link_to 'Vorgang anzeigen', @invoice.process, :class => 'back' %>
+    <%= link_to 'Rechnungs-Übersicht', invoices_path, :class => 'back' %>
   </p>
-
-  <p class="warning">Nach dem Erstellen dieser Rechnung kann der Vorgang Nr. <%= f.object.process_id %> nicht länger verändert werden!</p>
-
-  <p>
-    <%= f.submit 'Rechnung erstellen' %>
-  </p>
-<% end %>
-
-<p class="bottom-actions">
-  <%= link_to 'Vorgang anzeigen', @invoice.process, :class => 'back' %>
-  <%= link_to 'Rechnungs-Übersicht', invoices_path, :class => 'back' %>
-</p>
+</div>

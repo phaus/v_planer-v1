@@ -4,7 +4,7 @@
   </div>
   <%= error_messages_for :company_section %>
 
-  <% form_for([:admin, @company_section]) do |f| %>
+  <%= form_for([:admin, @company_section]) do |f| %>
     <p>
       <%= f.label :name, 'Name' %><br />
       <%= f.text_field :name %>

@@ -1,8 +1,11 @@
-<h1>Produkt bearbeiten</h1>
+<div class="container">
+  <div class="page-header">
+    <h1>Produkt bearbeiten</h1>
+  </div>
+  <%= render :partial => 'form' %>
 
-<%= render :partial => 'form' %>
-
-<p class="bottom-actions">
-  <%= link_to 'Zurück zur Ansicht', @product, :class => 'back' %>
-  <%= link_to 'Zurück zur Übersicht', products_path, :class => 'back' %>
-</p>
+  <p class="bottom-actions">
+    <%= link_to 'Zurück zur Ansicht', @product, :class => 'back' %>
+    <%= link_to 'Zurück zur Übersicht', products_path, :class => 'back' %>
+  </p>
+</div>

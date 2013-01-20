@@ -1,4 +1,4 @@
-<% form_for(@selling_item.selling) do |f| %>
+<%= form_for(@selling_item.selling) do |f| %>
   <% f.fields_for :items do |pf| %>
     <% if pf.object == @selling_item %>
       <%= render :partial => 'form', :locals => {:pf => pf} %>

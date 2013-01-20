@@ -53,7 +53,7 @@
 <div class="widget_container right">
   <div class="widget">
     <div class="full_width_input">
-      <% form_for @user do |f| %>
+      <%= form_for @user do |f| %>
         <h2><%= f.label :remarks, 'Anmerkungen' %></h2>
         <%= f.text_area :remarks, :size => '50x10', :class => 'initial' %>
       <% end %>
@@ -96,16 +96,16 @@
   <%= link_to 'Zurück zur Übersicht', users_path, :class => 'back' %>
 </p>
 
-<% javascript_on_load do %><script>
-$('user_remarks').observe('focus', function(event) {
+<%= javascript_on_load do %>
+  $('user_remarks').observe('focus', function(event) {
   event.element().removeClassName('saved');
-});
-
-$('user_remarks').observe('change', function(event) {
-  event.element().up('form').request({
-    onSuccess: function(response) {
-      $('user_remarks').addClassName('saved');
-    }
   });
-});
+
+  $('user_remarks').observe('change', function(event) {
+  event.element().up('form').request({
+  onSuccess: function(response) {
+  $('user_remarks').addClassName('saved');
+  }
+  });
+  });
 <% end %>
