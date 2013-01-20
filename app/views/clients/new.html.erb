@@ -1,36 +1,8 @@
-<h1>Neuer Kunde</h1>
-
-<%= error_messages_for :client %>
-
-<%= form_for(@client) do |f| %>
-  <fieldset>
-    <legend>Kontaktdaten</legend>
-
-    <%= f.wrapped_readonly_value :client_no %>
-
-    <%= render 'basic_fields', :f => f %>
-
-    <%= f.fields_for :address do |af| %>
-      <%= render :partial => 'addresses/form', :locals => {:f => af} %>
-    <% end %>
-  </fieldset>
-
-  <%= optional_fieldset 'Kontodaten', !@client.bank_account.new_record? do %>
-    <% f.fields_for :bank_account do |af| %>
-      <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
-    <% end %>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :remarks, 'Anmerkungen' %><br />
-    <%= f.text_area :remarks, :size => '76x4' %>
+<div class="container">
+  <div class="row">
+    <h1>Neuer Kunde</h1>
   </div>
-
-  <div class="field">
-    <%= f.submit 'Speichern' %>
+  <div class="row">
+    <%= render 'form' %>
   </div>
-<% end %>
-
-<p class="bottom-actions">
-  <%= link_to 'Zurück zur Übersicht', clients_path, :class => 'back' %>
-</p>
+</div>

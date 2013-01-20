@@ -1,8 +1,9 @@
-<h1>Lieferant bearbeiten</h1>
-
-<%= render 'form' %>
-
-<p class="bottom-actions">
-  <%= link_to 'Zurück zur Ansicht', @distributor, :class => 'back' %> |
-  <%= link_to 'Zurück zur Übersicht', distributors_path, :class => 'back' %>
-</p>
+<div class="container">
+  <div class="row">
+    <h1>Lieferant <%= @distributor.company_name %> bearbeiten</h1>
+    <p><%= last_changed_info @distributor %></p>
+  </div>
+  <div class="row">
+    <%= render 'form' %>
+  </div>
+</div>

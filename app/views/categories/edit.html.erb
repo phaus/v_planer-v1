@@ -1,8 +1,9 @@
-<h1>Kategorie bearbeiten</h1>
-
-<%= render 'form' %>
-
-<p class="bottom-actions">
-  <%= link_to 'Zurück zur Ansicht', @category, :class => 'back' %>
-  <%= link_to 'Zurück zur Übersicht', categories_path, :class => 'back' %>
-</p>
+<div class="container">
+  <div class="row">
+    <h1>Kategorie <%= @category.name%>  bearbeiten</h1>
+    <p><%= last_changed_info @category %></p>
+  </div>
+  <div class="row">
+    <%= render 'form' %>
+  </div>
+</div>

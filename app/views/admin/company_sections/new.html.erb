@@ -1,26 +1,25 @@
-<h1>Neue Sektion</h1>
+<div class="container">
+  <div class="page-header">
+    <h1>Neue Sektion</h1>
+  </div>
+  <%= error_messages_for :company_section %>
 
-<%= error_messages_for :company_section %>
+  <% form_for([:admin, @company_section]) do |f| %>
+    <p>
+      <%= f.label :name, 'Name' %><br />
+      <%= f.text_field :name %>
+    </p>
 
-<% form_for([:admin, @company_section]) do |f| %>
-  <p>
-    <%= f.label :name, 'Name' %><br />
-    <%= f.text_field :name %>
-  </p>
+    <p>
+      <%= f.label :company_id, 'Firma' %><br />
+      <%= f.collection_select :company_id, Company.all, :id, :name %>
+    </p>
 
-  <p>
-    <%= f.label :company_id, 'Firma' %><br />
-    <%= f.collection_select :company_id, Company.all, :id, :name %>
-  </p>
+    <%= render :partial => 'form', :locals => {:f => f} %>
 
-  <%= render :partial => 'form', :locals => {:f => f} %>
-
-  <p>
-    <%= f.submit 'Speicherm' %>
-  </p>
-<% end %>
-
-<p class="bottom-actions">
-  <%= link_to 'Zurück zur Übersicht', admin_company_sections_path, :class => 'back' %>
-</p>
-
+    <p>
+      <%= f.submit 'Speicherm', :class => 'btn btn-primary' %>
+      <%= link_to 'Abbrechen', admin_company_sections_path, :class => 'back', :class => 'btn' %>
+    </p>
+  <% end %>
+</div>

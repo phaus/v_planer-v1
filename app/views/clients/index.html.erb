@@ -1,9 +1,17 @@
-<h1>Kunden</h1>
-
-<div id="clients">
-  <%= render :partial => 'list' %>
+<div class="container">
+  <div class="page-header">
+    <h1>Kunden <small><%= @clients.size %> gefunden</small></h1>
+  </div>
+  <div class="row">
+    <%= render :partial => 'list' %>
+  </div>
+  <div class="row">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Alternative Formate</li>
+        <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+        <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
+      </ul>
+    </div>
+  </div>
 </div>
-
-<p class="bottom-actions">
-  <%= link_to 'Neuer Kunde', new_client_path, :class => 'new' %>
-</p>

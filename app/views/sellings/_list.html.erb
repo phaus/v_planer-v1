@@ -1,4 +1,4 @@
-<table class="data" style="width: 100%">
+<table class="table" style="width: 100%">
   <colgroup width="8%" />
   <colgroup width="8%" />
   <colgroup width="22%" />
@@ -16,6 +16,7 @@
       <th>Kunde</th>
       <th>Brutto-Total</th>
       <th>Status</th>
+      <th></th>
     </tr>
   </thead>
 
@@ -30,10 +31,10 @@
         <td class="decimal price"><%= m process.gross_total_price %></td>
         <td class="workflow <%= process.workflow_state %>"><%= process.workflow_state %></td>
         <td>
-          <ul class="toolchain">
-            <li><%= link_to image_tag('icons_16/editdelete.png'), process, :method => :delete, :confirm => 'Wirklich löschen?' %></li>
-            <li><%= link_to image_tag('icons_16/goto.png'), process %></li>
-          </ul>
+          <div class="btn-group">
+            <%= link_to image_tag('icons_16/editdelete.png'), process, :method => :delete, :confirm => 'Wirklich löschen?', :class => 'btn'  %>
+            <%= link_to image_tag('icons_16/goto.png'), process, :class => 'btn'  %>
+          </div>
         </td>
       </tr>
     <% end %>
@@ -41,7 +42,8 @@
   <tfoot>
     <tr>
       <th colspan="5">Summe</th>
-      <td class="decimal"><%= m processes.collect(&:gross_total_price).sum %></td>
+      <td class="decimal"><strong><%= m processes.collect(&:gross_total_price).sum %></strong></td>
+      <th colspan="2"></th>
     </tr>
   </tfoot>
 </table>

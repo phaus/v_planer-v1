@@ -14,14 +14,13 @@ module ApplicationHelper
   end
 
   def category_tabs(categories, opts={})
-    str = '<ul class="sidenav">' #navtab(link_to 'Alle', devices_path, :active => opts[:active] == :all)
+    str = ''
     categories.each do |category|
-      str << category_navtab(link_to("#{category.name} (#{category.products.size})", url_for(:category_id => category)), :active => category.id == opts[:active].to_i)
+      str << category_navtab(link_to("#{category.name} (#{category.products.size})", url_for(:id => category)), :active => category.id == opts[:active].to_i)
     end
     unless params[:q].blank?
       str << category_navtab(link_to('Suchergebnis', devices_path(:q => params[:q])), :active => true)
     end
-    str << '</ul>'
     str
   end
 
@@ -29,9 +28,7 @@ module ApplicationHelper
     active = options[:active] ? 'active' : ''
     <<-EOS
       <li class="#{active}">
-        <div>
           #{text}
-        </div>
       </li>
     EOS
   end
@@ -87,7 +84,7 @@ module ApplicationHelper
           collection.each do |object|
             str << content_tag('div', :class => 'select-option') do
               check_boxes.check_box(object.send(name_method), :checked => form_builder.object.send(name).include?(object.id)) +
-              check_boxes.label(object.send(name_method), object.send(value_method))
+                check_boxes.label(object.send(name_method), object.send(value_method))
             end
           end
         end
@@ -99,84 +96,113 @@ module ApplicationHelper
     form_builder = show_or_builder.is_a?(ActionView::Helpers::FormBuilder) ? show_or_builder : nil
     @@fieldset_counter ||= 0
     concat <<-EOS
-      <fieldset class="optional-fieldset">
-        <legend>
+            <div class="control-group">
     EOS
     if form_builder and field_name
-      concat <<-EOS
-          #{form_builder.check_box field_name}
-          #{form_builder.label field_name, legend}
-      EOS
-    else
-      concat <<-EOS
-          #{check_box_tag("optional_fieldset_#{@@fieldset_counter}", 1, show_or_builder)}
-          <label for="optional_fieldset_#{@@fieldset_counter}">#{legend}</label>
-      EOS
-    end
     concat <<-EOS
-        </legend>
-        <div class="optional-fieldset-content">
+          #{form_builder.label field_name, legend, :class => 'control-label'}
+          <div class="controls">
+            #{form_builder.check_box field_name}
+          </div>
+          </div>
+    EOS
+  else
+    concat <<-EOS
+          <label class="control-label" for="optional_fieldset_#{@@fieldset_counter}">#{legend}</label>
+          <div class="controls">
+            #{check_box_tag("optional_fieldset_#{@@fieldset_counter}", 1, show_or_builder)}
+          </div>
+          </div>
+    EOS
+  end
+  concat <<-EOS
           #{capture(&block)}
-        </div>
-      </fieldset>
-    EOS
-    @@fieldset_counter += 1
-  end
+  EOS
+  @@fieldset_counter += 1
+end
 
-  def public_footer
-    <<-EOS
-      <div class="footer">
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-        <hr />
-        <p>powered by %{name}, the online commercial platform solution by <a href="http://consolving.de">Consolving Network Solutions</a></p>
-        <p>%{name} uses Ruby on Rails</p>
-        <p>Copyright &copy; 2010 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{name} as a developer, please contact developer@consolving.de</p>
-      </div>
-    EOS
-  end
+def public_footer
+  <<-EOS
+<footer class="footer">
+  <div class="container">
+            <p>powered by %{app_name}, the online commercial platform solution by <a target="_new" href="http://consolving.de">Consolving Network Solutions</a></p>
+            <p>%{app_name} uses Ruby on Rails</p>
+            <p>Copyright &copy; 2010-2013 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{app_name} as a developer, please contact developer@consolving.de</p>
+  </div>
+  <div class="pull-right">
+    <a href="http://jigsaw.w3.org/css-validator/">
+      <img style="border:0;width:88px;height:31px"
+           src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+           alt="Valid CSS!" />
+    </a>
+    <a href="http://validator.w3.org/check?uri=referer">
+      <img style="border:0;width:88px;height:31px"
+           src="http://www.w3.org/Icons/valid-xhtml10-blue"
+           alt="Valid XHTML 1.0 Transitional" />
+    </a>
+  </div>
+</footer>
+  EOS
+end
 
-  def footer
-    <<-EOS
-      <div class="footer">
-        <ul>
-          <li>
-            <dl>
-              <dt>Mein Konto</dt>
-              <dd>Eingelogt als <strong>#{current_user.login}</strong></dd>
-              <dd>#{ link_to 'Benutzerdaten bearbeiten', edit_account_path }</dd>
-              <dd>#{ link_to 'Kennwort ändern', edit_account_path }</dd>
-              <dd>#{ link_to 'Firmendaten bearbeiten', edit_company_path }</dd>
-              <dd>#{ link_to 'Mitarbeiter verwalten', users_path }</dd>
-            </dl>
-          </li>
-          <li>
-            <dl>
-              <dt>Vorgänge und Kunden</dt>
-              <dd>#{ link_to 'Neuer Verkaufsvorgang', new_selling_path }</dd>
-              <dd>#{ link_to 'Neuer Vermietvorgang', new_rental_path }</dd>
-              <dd>#{ link_to 'Neuer Kunde', new_client_path }</dd>
-              <dd>#{ link_to 'Neuer Artikel', new_device_path }</dd>
-              <dd>#{ link_to 'Neue Dienstleistung', new_service_path }</dd>
-            </dl>
-          </li>
-        </ul>
-        <hr />
-        <p>powered by %{name}, the online commercial platform solution by <a href="http://consolving.de">Consolving Network Solutions</a></p>
-        <p>%{name} uses Ruby on Rails</p>
-        <p>Copyright &copy; 2010 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{name} as a developer, please contact developer@consolving.de</p>
-      </div>
-    EOS
-  end
+def footer
+  <<-EOS
+<footer class="footer">
+  <div class="container">
+    <p>powered by %{app_name}, the online commercial platform solution by <a target="_new" href="http://consolving.de">Consolving Network Solutions</a></p>
+    <p>%{app_name} uses Ruby on Rails</p>
+    <p>Copyright &copy; 2010-2013 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{app_name} as a developer, please contact developer@consolving.de</p>
+  </div>
+  <div class="pull-right">
+    <a href="http://jigsaw.w3.org/css-validator/">
+      <img style="border:0;width:88px;height:31px"
+           src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+           alt="Valid CSS!" />
+    </a>
+    <a href="http://validator.w3.org/check?uri=referer">
+      <img style="border:0;width:88px;height:31px"
+           src="http://www.w3.org/Icons/valid-xhtml10-blue"
+           alt="Valid XHTML 1.0 Transitional" />
+    </a>
+  </div>
+</footer>
+  EOS
+  #        <ul>
+  #          <li>
+  #            <dl>
+  #              <dt>Mein Konto</dt>
+  #              <dd>Eingelogt als <strong>#{current_user.login}</strong></dd>
+  #              <dd>#{ link_to 'Benutzerdaten bearbeiten', edit_account_path }</dd>
+  #              <dd>#{ link_to 'Kennwort ändern', edit_account_path }</dd>
+  #              <dd>#{ link_to 'Firmendaten bearbeiten', edit_company_path }</dd>
+  #              <dd>#{ link_to 'Mitarbeiter verwalten', users_path }</dd>
+  #            </dl>
+  #          </li>
+  #          <li>
+  #            <dl>
+  #              <dt>Vorgänge und Kunden</dt>
+  #              <dd>#{ link_to 'Neuer Verkaufsvorgang', new_selling_path }</dd>
+  #              <dd>#{ link_to 'Neuer Vermietvorgang', new_rental_path }</dd>
+  #              <dd>#{ link_to 'Neuer Kunde', new_client_path }</dd>
+  #              <dd>#{ link_to 'Neuer Artikel', new_device_path }</dd>
+  #              <dd>#{ link_to 'Neue Dienstleistung', new_service_path }</dd>
+  #            </dl>
+  #          </li>
+  #        </ul>
+  #        <hr />
+  #        <p>powered by %{name}, the online commercial platform solution by <a href="http://consolving.de">Consolving Network Solutions</a></p>
+  #        <p>%{name} uses Ruby on Rails</p>
+  #        <p>Copyright &copy; 2010 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{name} as a developer, please contact developer@consolving.de</p>
+  #      </div>
 
-  def last_changed_info(obj)
-    str = ''
-    if obj.updated_at == obj.created_at
-      str << "<p>Erstellt am #{obj.created_at.to_date}</p>"
-    end
-    str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
-    return str
+end
+
+def last_changed_info(obj)
+  str = ''
+  if obj.updated_at == obj.created_at
+    str << "<p>Erstellt am #{obj.created_at.to_date}</p>"
   end
+  str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
+  return str
+end
 end

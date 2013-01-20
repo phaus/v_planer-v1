@@ -1,34 +1,75 @@
-<%= form_for(@distributor) do |f| %>
-  <%= f.error_messages %>
-
-  <fieldset>
-    <legend>Kontaktdaten</legend>
-    <%= f.wrapped_text_field :client_no %>
-    <%= f.wrapped_text_field :company_name %>
-    <%= f.wrapped_text_field :contact_person %>
-    <%= f.wrapped_text_field :email %>
-  </fieldset>
-
-  <% optional_fieldset 'Adressdaten', !@distributor.address.new_record? do %>
-    <% f.fields_for :address do |af| %>
-      <%= render :partial => 'addresses/form', :locals => {:f => af} %>
-    <% end %>
-  <% end %>
-
-  <% optional_fieldset 'Kontodaten', !@distributor.bank_account.new_record? do %>
-    <% f.fields_for :bank_account do |af| %>
-      <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
-    <% end %>
-  <% end %>
-
-  <%= f.wrapped_text_field :discount, :unit => 'percent' %>
-
-  <div class="field">
-    <%= f.label :remarks, 'Anmerkungen' %>
-    <%= f.text_area :remarks, :size => '76x4' %>
+<%= form_for @distributor, :html => {:class => 'form-horizontal'}  do |f| %>
+  <ul id="userTab" class="nav nav-tabs">
+    <li class="active">
+      <a data-toggle="tab" href="#contact">Kontaktdaten</a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#address">Adressdaten</a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#account">Kontodaten</a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#comment">Anmerkungen</a>
+    </li>
+  </ul>
+  <p>
+    <%= f.error_messages %>
+  </p>
+  <div class="tab-content">
+    <div id="contact" class="tab-pane active">
+      <fieldset>
+        <legend>Kontaktdaten</legend>
+        <% [:client_no, :company_name, :contact_person, :email].each do |name| %>
+          <div class="control-group">
+            <%= f.label name, :class => 'control-label'  %>
+            <div class="controls">
+              <%= f.text_field name, :class => 'input-xlarge' %>
+            </div>
+          </div>
+        <% end %>
+      </fieldset>
+    </div>
+    <div id="address" class="tab-pane">
+      <fieldset>
+        <legend>Adressdaten</legend>
+        <% optional_fieldset 'Adressdaten', !@distributor.address.new_record? do %>
+          <% f.fields_for :address do |af| %>
+            <%= render :partial => 'addresses/form', :locals => {:f => af} %>
+          <% end %>
+        <% end %>
+      </fieldset>
+    </div>
+    <div id="account" class="tab-pane">
+      <fieldset>
+        <legend>Kontodaten</legend>
+        <% optional_fieldset 'Kontodaten', !@distributor.bank_account.new_record? do %>
+          <% f.fields_for :bank_account do |af| %>
+            <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
+          <% end %>
+        <% end %>
+        <div class="control-group">
+          <%= f.label :discount, :class => 'control-label'  %>
+          <div class="controls">
+            <%= f.wrapped_text_field :discount, :unit => 'percent' %>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div id="comment" class="tab-pane">
+      <fieldset>
+        <legend>Anmerkungen</legend>
+        <div class="control-group">
+          <%= f.label :remarks, 'Anmerkungen', :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_area :remarks, :size => '200x10', :class => 'span10' %>
+          </div>
+        </div>
+      </fieldset>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.submit 'Speichern' %>
+  <div class="form-actions">
+    <%= link_to 'Abbrechen', @distributor, :class => 'btn' %>
+    <%= f.submit 'Speichern', :class => "btn btn-primary" %>
   </div>
 <% end %>

@@ -1,11 +1,25 @@
 <% if is_company_admin? or APP_SETTINGS[:allow_non_admin_users_to_edit_client_contact_person] %>
   <%= f.wrapped_collection_select :contact_person_id, current_company.users.all, :id, :full_name %>
 <% end %>
+<% [:title, :forename, :surname, :company_name, :email].each do |name| %>
+  <div class="control-group">
+    <%= f.label name, :class => 'control-label'  %>
+    <div class="controls">
+      <%= f.text_field name, :class => 'input-xlarge' %>
+    </div>
+  </div>
+<% end %>
+<div class="control-group">
+  <%= f.label :discount, :class => 'control-label'  %>
+  <div class="controls">
+    <%= f.wrapped_text_field :discount, :unit => 'percent' %>
+  </div>
+</div>
+<div class="control-group">
+  <%= f.label :payment_goal, :class => 'control-label'  %>
+  <div class="controls">
+    <%= f.wrapped_text_field :payment_goal, :unit => 'd' %>
+  </div>
+</div>
 
-<%= f.wrapped_text_field :title %>
-<%= f.wrapped_text_field :forename %>
-<%= f.wrapped_text_field :surname %>
-<%= f.wrapped_text_field :company_name %>
-<%= f.wrapped_text_field :email %>
-<%= f.wrapped_text_field :discount, :unit => 'percent' %>
-<%= f.wrapped_text_field :payment_goal, :unit => 'd' %>
+

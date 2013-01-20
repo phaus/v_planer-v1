@@ -1,22 +1,24 @@
-<h1><%=h @company_section.full_name %></h1>
+<div class="container">
+  <div class="page-header">
+    <h1><%=h @company_section.full_name %></h1>
+  </div>
+  <p>
+    <b>E-Mail</b><br />
+    <%=h @company_section.email %>
+  </p>
 
-<p>
-  <b>E-Mail</b><br />
-  <%=h @company_section.email %>
-</p>
+  <p>
+    <b>Telefon</b><br />
+    <%=h @company_section.phone %>
+  </p>
 
-<p>
-  <b>Telefon</b><br />
-  <%=h @company_section.phone %>
-</p>
+  <p>
+    <b>Fax</b><br />
+    <%=h @company_section.fax %>
+  </p>
 
-<p>
-  <b>Fax</b><br />
-  <%=h @company_section.fax %>
-</p>
-
-<p>
-  <b>Absender-Block für Briefe</b><br />
+  <p>
+    <b>Absender-Block für Briefe</b><br />
   <pre><%=h @company_section.sender_address_block %></pre>
 </p>
 
@@ -33,3 +35,4 @@
   <%= link_to 'Zurück zur Übersicht', admin_company_sections_path, :class => 'back' %>
 </p>
 
+</div>

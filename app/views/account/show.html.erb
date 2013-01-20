@@ -1,115 +1,112 @@
-<h1>Benutzerkonto</h1>
-
-<div class="widget_container left">
-  <div class="widget" id="user_info">
-    <p>Ihr letzter Login war am <%= @user.last_login_at %></p>
-
-    <p>Sie betreuen <%= @user.clients.count == 0 ? 'keine' : @user.clients.count %> <%= link_to 'Kunden', clients_path %></p>
-    <p>Sie verwalten <%= @user.company_section.products.count == 0 ? 'keine' : @user.company_section.products.count %> <%= link_to 'Produkte', products_path %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="pull-right">
+      <%= link_to 'bearbeiten', edit_account_path, :class => 'btn' %>
+    </div>
   </div>
+  <div class="offset1 row">
+    <div class="span6">
+      <div class="hero-unit">
+        <h1>Benutzerkonto</h1>
+        <p>Ihr letzter Login war am <%= @user.last_login_at %></p>
 
-  <div class="widget">
-    <h2>Ihre Firma</h2>
-    <div id="company_details">
-      <%= render :partial => 'companies/details' %>
-      <p><%= link_to 'Standardtexte verwalten', default_texts_path %></p>
+        <p>Sie betreuen <%= @user.clients.count == 0 ? 'keine' : @user.clients.count %> <%= link_to 'Kunden', clients_path %></p>
+        <p>Sie verwalten <%= @user.company_section.products.count == 0 ? 'keine' : @user.company_section.products.count %> <%= link_to 'Produkte', products_path %></p>
+      </div>
+      <div class="hero-unit">
+        <h2>Ihre Firma</h2>
+        <p><%= render :partial => 'companies/details' %></p>
+        <p><%= link_to 'Standardtexte verwalten', default_texts_path %></p>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="container">
+        <h2>Bankverbindung</h2>
+        <div id="bank_details">
+          <!--      <% if @user.company.bank_details_valid? %>
+            <%= render :partial => 'bank_accounts/details' %>
+          <% else %>
+                                    <p>Sie haben keine Bankverbindungsdaten angegeben und können deswegen noch keine Rechnungen erstellen.</p>
+          <% end %> -->
+          <% if is_company_admin? %>
+            <p><%= link_to_remote 'Bankkontodaten bearbeiten',
+                :update => 'bank_details',
+                :url    => edit_bank_account_path,
+                :method => :get,
+                :after  => "new Effect.BlindDown('bank_details', {duration: 0.5})",
+                :html   => {:href => edit_bank_account_path} %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="container">
+        <% rental_count = @user.company_section.rentals.count %>
+        <h2>Aktuelle Vermietvorgänge (<%= rental_count %>)</h2>
+        <table class="table table-striped" style="width: 100%">
+          <thead>
+            <tr>
+              <th>VG-Nr.</th>
+              <th>Kunde</th>
+              <th>Status</th>
+              <th>Brutto-Preis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @user.company_section.rentals.all(:order => 'begin DESC', :conditions => %q(workflow_state NOT IN ('closed', 'billed')), :limit => "0,#{APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i}").each do |rental| %>
+              <tr class="<%= cycle 'even', 'odd' %>">
+                <td class="decimal"><%= link_to h(rental.id), rental %></td>
+                <td><%= link_to h(rental.client.full_name), rental.client %></td>
+                <td class="workflow <%= rental.workflow_state %>"><%= rental.workflow_state %></td>
+                <td class="money"><%= m rental.gross_total_price %></td>
+                <td><%= link_to image_tag('icons_16/goto.png'), rental, :class => 'pull-right btn' %></td>
+              </tr>
+            <% end %>
+          </tbody>
+          <% if rental_count > APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i %>
+            <tfoot>
+              <tr>
+                <td colspan="5">
+                  <%= link_to "#{rental_count - APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i} mehr >>", rentals_path, :class => "pull-right" %>
+                </td>
+              </tr>
+            </tfoot>
+          <% end %>
+        </table>
+      </div>
+      <div class="container">
+        <% selling_count = @user.company_section.sellings.count %>
+        <h2>Aktuelle Verkäufe (<%= selling_count %>)</h2>
+        <table class="table table-striped" style="width: 100%">
+          <thead>
+            <tr>
+              <th>VG-Nr.</th>
+              <th>Kunde</th>
+              <th>Status</th>
+              <th>Brutto-Preis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @user.company_section.sellings.all(:order => 'created_at ASC', :conditions => %q(workflow_state NOT IN ('closed', 'billed')), :limit => "0,#{APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i}").each do |selling| %>
+              <tr class="<%= cycle 'even', 'odd' %>">
+                <td class="decimal"><%= link_to h(selling.id), selling %></td>
+                <td><%= link_to h(selling.client.full_name), selling.client rescue 'OOPS' %></td>
+                <td class="workflow <%= selling.workflow_state %>"><%= selling.workflow_state %></td>
+                <td class="money"><%= m selling.gross_total_price %></td>
+                <td><%= link_to image_tag('icons_16/goto.png'), selling, :class => 'pull-right btn' %></td>
+              </tr>
+            <% end %>
+          </tbody>
+          <% if selling_count > APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i %>
+            <tfoot>
+              <tr>
+                <td colspan="5">
+                  <%= link_to "#{selling_count - APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i} mehr >>", sellings_path, :class => "pull-right" %>
+                </td>
+              </tr>
+            </tfoot>
+          <% end %>
+        </table>
+      </div>
     </div>
   </div>
 </div>
-
-<div class="widget_container right">
-  <div class="widget">
-    <h2>Bankverbindung</h2>
-    <div id="bank_details">
-<!--      <% if @user.company.bank_details_valid? %>
-        <%= render :partial => 'bank_accounts/details' %>
-      <% else %>
-        <p>Sie haben keine Bankverbindungsdaten angegeben und können deswegen noch keine Rechnungen erstellen.</p>
-      <% end %> -->
-      <% if is_company_admin? %>
-        <p><%= link_to_remote 'Bankkontodaten bearbeiten',
-          :update => 'bank_details',
-          :url    => edit_bank_account_path,
-          :method => :get,
-          :after  => "new Effect.BlindDown('bank_details', {duration: 0.5})",
-          :html   => {:href => edit_bank_account_path} %>
-        </p>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="widget">
-    <% rental_count = @user.company_section.rentals.count %>
-    <h2>Aktuelle Vermietvorgänge (<%= rental_count %>)</h2>
-    <div id="rental_details">
-      <table class="data" style="width: 100%">
-        <thead>
-          <tr>
-            <th>VG-Nr.</th>
-            <th>Kunde</th>
-            <th>Status</th>
-            <th>Brutto-Preis</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @user.company_section.rentals.all(:order => 'begin DESC', :conditions => %q(workflow_state NOT IN ('closed', 'billed')), :limit => "0,#{APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i}").each do |rental| %>
-            <tr class="<%= cycle 'even', 'odd' %>">
-              <td class="decimal"><%= link_to h(rental.id), rental %></td>
-              <td><%= link_to h(rental.client.full_name), rental.client %></td>
-              <td class="workflow <%= rental.workflow_state %>"><%= rental.workflow_state %></td>
-              <td class="money"><%= m rental.gross_total_price %></td>
-              <td><%= link_to image_tag('icons_16/goto.png'), rental %></td>
-            </tr>
-          <% end %>
-        </tbody>
-        <% if rental_count > APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i %>
-          <tfoot>
-            <tr>
-              <td colspan="4" style="text-align: right">
-                <%= link_to "#{rental_count - APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i} mehr >>", rentals_path %>
-              </td>
-            </tr>
-          </tfoot>
-        <% end %>
-      </table>
-    </div>
-  </div>
-
-  <div class="widget">
-    <% selling_count = @user.company_section.sellings.count %>
-    <h2>Aktuelle Verkäufe (<%= selling_count %>)</h2>
-    <div id="selling_details">
-      <table class="data" style="width: 100%">
-        <thead>
-          <tr>
-            <th>VG-Nr.</th>
-            <th>Kunde</th>
-            <th>Status</th>
-            <th>Brutto-Preis</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @user.company_section.sellings.all(:order => 'created_at ASC', :conditions => %q(workflow_state NOT IN ('closed', 'billed')), :limit => "0,#{APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i}").each do |selling| %>
-            <tr class="<%= cycle 'even', 'odd' %>">
-              <td class="decimal"><%= link_to h(selling.id), selling %></td>
-              <td><%= link_to h(selling.client.full_name), selling.client rescue 'OOPS' %></td>
-              <td class="workflow <%= selling.workflow_state %>"><%= selling.workflow_state %></td>
-              <td class="money"><%= m selling.gross_total_price %></td>
-              <td><%= link_to image_tag('icons_16/goto.png'), selling %></td>
-            </tr>
-          <% end %>
-        </tbody>
-        <% if selling_count > APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i %>
-          <tfoot>
-            <tr>
-              <td colspan="4" style="text-align: right">
-                <%= link_to "#{selling_count - APP_SETTINGS[:number_of_displayed_processes_in_account_view].to_i} mehr >>", sellings_path %>
-              </td>
-            </tr>
-          </tfoot>
-        <% end %>
-      </table>
-    </div>
-  </div>
-</div>
-

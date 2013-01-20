@@ -1,78 +1,82 @@
-<div class="widget_container left narrow">
-  <%= category_tabs current_company.categories.not_empty(params[:action]), :active => params[:category_id] || :all %>
+
+<div class="span3">
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">Kategorien</li>
+      <%= category_tabs current_company.categories.not_empty(params[:action]), :active => params[:category_id] || :all %>
+    </ul>
+  </div>
 </div>
 
 
-<div class="widget_container right broad">
-  <div class="widget">
-    <% if params[:q] %>
-      <h2>Suchergebnisse für '<%= params[:q] %>' (<%= @products.size %>)</h2>
-    <% else %>
-      <h2>Artikel in dieser Kategorie</h2>
-    <% end %>
-    <% if @products.any? %>
-      <table class="data" style="width: 100%">
-        <thead>
-          <tr>
-            <th>Code</th>
-            <th>Bezeichnung</th>
+<div class="span7">
+  <% if params[:q] %>
+    <h2>Suchergebnisse für '<%= params[:q] %>' (<%= @products.size %>)</h2>
+  <% else %>
+    <h2>Artikel in dieser Kategorie</h2>
+  <% end %>
+  <% if @products.any? %>
+    <table class="data" style="width: 100%">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Bezeichnung</th>
+          <% unless params[:action] == 'service' %>
+            <th>heute verfgb.</th>
+          <% end %>
+          <% if ['index', 'rentable'].include? params[:action] %>
+            <th>Vermietpreis</th>
+          <% end %>
+          <% if ['index', 'sellable'].include? params[:action] %>
+            <th>Verkaufspreis</th>
+          <% end %>
+          <th style="width: 120px;">Aktion</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @products.each do |product| %>
+          <% next unless product.article %>
+          <tr class="<%= cycle 'odd', 'even' %>">
+            <td><%= link_to h(product.code), product %></td>
+            <td>
+              <%= link_to h(product.full_name), product, :class => 'product_link' %><br />
+              <span class="additional-information"><%= product.description.to_s.gsub(/\r\n|\n/, '<br />') %></span>
+            </td>
             <% unless params[:action] == 'service' %>
-              <th>heute verfgb.</th>
+              <td class="decimal">
+                <%=h product.available_count(Date.today) %>&thinsp;<%= product.unit %>
+              </td>
             <% end %>
             <% if ['index', 'rentable'].include? params[:action] %>
-              <th>Vermietpreis</th>
+              <td class="decimal">
+                <% if product.is_rentable? %>
+                  <%= m product.rental_price %>&thinsp;&euro;/<%= product.unit %>
+                <% end %>
+              </td>
             <% end %>
             <% if ['index', 'sellable'].include? params[:action] %>
-              <th>Verkaufspreis</th>
+              <td class="decimal">
+                <% if product.is_sellable? %>
+                  <%=m product.selling_price %>&thinsp;&euro;/<%= product.unit %>
+                <% end %>
+              </td>
             <% end %>
-            <th style="width: 120px;">Aktion</th>
+            <td>
+              <ul class="toolchain">
+                <li><%= link_to image_tag('icons_16/goto.png'), product %></li>
+                <% if may_edit_products? %>
+                  <li><%= link_to image_tag('icons_16/edit.png'), edit_product_path(product) %></li>
+                  <li><%= link_to image_tag('icons_16/editdelete.png'), product, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete %></li>
+                <% end %>
+              </ul>
+            </td>
           </tr>
-        </thead>
-
-        <tbody>
-          <% @products.each do |product| %>
-            <% next unless product.article %>
-            <tr class="<%= cycle 'odd', 'even' %>">
-              <td><%= link_to h(product.code), product %></td>
-              <td>
-                <%= link_to h(product.full_name), product, :class => 'product_link' %><br />
-                <span class="additional-information"><%= product.description.to_s.gsub(/\r\n|\n/, '<br />') %></span>
-              </td>
-              <% unless params[:action] == 'service' %>
-                <td class="decimal">
-                  <%=h product.available_count(Date.today) %>&thinsp;<%= product.unit %>
-                </td>
-              <% end %>
-              <% if ['index', 'rentable'].include? params[:action] %>
-                <td class="decimal">
-                  <% if product.is_rentable? %>
-                    <%= m product.rental_price %>&thinsp;&euro;/<%= product.unit %>
-                  <% end %>
-                </td>
-              <% end %>
-              <% if ['index', 'sellable'].include? params[:action] %>
-                <td class="decimal">
-                  <% if product.is_sellable? %>
-                    <%=m product.selling_price %>&thinsp;&euro;/<%= product.unit %>
-                  <% end %>
-                </td>
-              <% end %>
-              <td>
-                <ul class="toolchain">
-                  <li><%= link_to image_tag('icons_16/goto.png'), product %></li>
-                  <% if may_edit_products? %>
-                    <li><%= link_to image_tag('icons_16/edit.png'), edit_product_path(product) %></li>
-                    <li><%= link_to image_tag('icons_16/editdelete.png'), product, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete %></li>
-                  <% end %>
-                </ul>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    <% else %>
-      <p>Noch keine Artikel angelegt. <%= link_to 'Dienstleistung anlegen', new_service_path %>/<%= link_to 'Artikel anlegen', new_device_path %></p>
-    <% end %>
-  </div>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>Noch keine Artikel angelegt. <%= link_to 'Dienstleistung anlegen', new_service_path %>/<%= link_to 'Artikel anlegen', new_device_path %></p>
+  <% end %>
 </div>
 
