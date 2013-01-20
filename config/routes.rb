@@ -1,5 +1,6 @@
 VPlaner::Application.routes.draw do
-  mount VPlanerRentals::Engine => '/rental', :as => 'rental'
+  mount VPlanerRental::Engine => '/rental', :as => 'rental'
+  mount VPlanerAdmin::Engine  => '/admin',  :as => 'admin'
 
   resources :default_texts
 
@@ -91,14 +92,6 @@ VPlaner::Application.routes.draw do
         get :search
       end
     end
-  end
-
-  resource :admin, :controller => 'admin'
-
-  namespace :admin do
-    resources :companies
-    resources :company_sections
-    resources :users
   end
 
   root :to => 'account#show'

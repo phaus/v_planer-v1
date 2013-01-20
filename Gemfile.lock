@@ -1,4 +1,20 @@
 GIT
+  remote: git://github.com/consolving/conforming.git
+  revision: d7ec47017574f6fd813d25e08cc037154b1fe15c
+  specs:
+    conforming (0.1.0)
+      actionpack
+      activemodel
+      activesupport
+
+GIT
+  remote: git://github.com/consolving/v_planer_admin.git
+  revision: 40c1717e1d32f5594e9fba52e5e5922aacba1933
+  specs:
+    v_planer_admin (0.0.1)
+      rails (~> 3.1.7)
+
+GIT
   remote: git://github.com/paneq/calendar_date_select.git
   revision: 977048211b94599fe0f08eb37a481f3d69df48f6
   specs:
@@ -11,18 +27,10 @@ GIT
     validating-workflow (0.7.4)
 
 PATH
-  remote: ../v_planer_rentals
+  remote: ../v_planer_rental
   specs:
-    v_planer_rentals (0.0.1)
-      rails (~> 3.1)
-
-PATH
-  remote: /home/wvk/programs/rails/conforming
-  specs:
-    conforming (0.1.0)
-      actionpack
-      activemodel
-      activesupport
+    v_planer_rental (0.0.1)
+      rails (~> 3.1.7)
 
 GEM
   remote: http://rubygems.org/
@@ -145,7 +153,8 @@ DEPENDENCIES
   rake (= 10.0.3)
   rdoc
   thinking-sphinx (= 2.0.10)
-  v_planer_rentals!
+  v_planer_admin!
+  v_planer_rental!
   validating-workflow!
   vpim
   webrat
