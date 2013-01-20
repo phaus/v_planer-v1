@@ -94,7 +94,7 @@
   </div>
 </div>
 
-<%= javascript_on_load do %>
+<% javascript_on_load do %><script>
   $('distributor_remarks').observe('focus', function(event) {
   event.element().removeClassName('saved');
   });

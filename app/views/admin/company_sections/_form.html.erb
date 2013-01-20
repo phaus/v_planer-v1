@@ -1,7 +1,7 @@
 <fieldset>
   <legend>Kontaktdaten</legend>
 
-  <% f.fields_for :address do |af| %>
+  <%= f.fields_for :address do |af| %>
     <%= render :partial => 'addresses/form', :locals => {:f => af} %>
   <% end %>
 
@@ -31,8 +31,8 @@
   </p>
 </fieldset>
 
-<% optional_fieldset 'Kontodaten', false do %>
-  <% f.fields_for :bank_account do |af| %>
+<%= optional_fieldset 'Kontodaten', false do %>
+  <%= f.fields_for :bank_account do |af| %>
     <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
   <% end %>
 <% end %>

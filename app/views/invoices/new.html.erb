@@ -56,7 +56,7 @@
       </thead>
 
       <tbody>
-        <% f.fields_for :items do |iif| %>
+        <%= f.fields_for :items do |iif| %>
           <tr>
             <td class="decimal">
               <%= h iif.object.process_item.count %>

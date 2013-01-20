@@ -96,7 +96,7 @@
   <%= link_to 'Zurück zur Übersicht', users_path, :class => 'back' %>
 </p>
 
-<%= javascript_on_load do %>
+<% javascript_on_load do %><script>
   $('user_remarks').observe('focus', function(event) {
   event.element().removeClassName('saved');
   });

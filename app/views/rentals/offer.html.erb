@@ -38,7 +38,7 @@
   <tbody>
     <% @rental.items.each do |item| %>
       <tr class="<%= cycle 'odd', 'even' %>">
-        <% fields_for 'rental[items][]', item do |pf| %>
+        <%= fields_for 'rental[items][]', item do |pf| %>
           <td class="decimal">
             <%= item.count %> x
           </td>

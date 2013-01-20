@@ -4,7 +4,7 @@
 </p>
 
 <%= f.hidden_field :main_section_id %>
-<% f.fields_for :main_section do |af| -%>
+<%= f.fields_for :main_section do |af| -%>
   <p>
     <%= af.label :street, 'Anschrift' %><br />
     <%= af.text_field :street %>

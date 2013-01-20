@@ -51,7 +51,7 @@
             <th>Stundensatz</th>
             <th>Gesamtpreis</th>
           </tr>
-          <% f.fields_for :service_items do |pf| %>
+          <%= f.fields_for :service_items do |pf| %>
             <%= render :partial => 'service_items/form', :locals =>  {:pf => pf} %>
           <% end %>
 

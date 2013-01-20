@@ -15,7 +15,7 @@
     <% if @product.buying_prices.any? %>
       <fieldset>
         <legend>Lieferanten</legend>
-        <% f.fields_for :buying_prices do |bpf| %>
+        <%= f.fields_for :buying_prices do |bpf| %>
           <%= bpf.label :price, 'Lieferant' %>/<%= bpf.label :price, 'Einkaufspreis' %><br />
           <%= bpf.collection_select :distributor_id, current_company.distributors, :id, :company_name, :include_blank => true %>
           <%= bpf.text_field :price, :class => 'money' %>&thinsp;&euro;/<span class="product_unit"><%= @product.unit %></span>

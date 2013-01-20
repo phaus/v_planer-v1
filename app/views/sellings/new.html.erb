@@ -47,7 +47,7 @@
             <th style="width: 7em">Gesamtpreis</th>
           </tr>
 
-          <% f.fields_for :device_items do |pf| %>
+          <%= f.fields_for :device_items do |pf| %>
             <tr class="product device_item device">
               <%= render :partial => 'selling_items/form', :locals =>  {:pf => pf} %>
             </tr>

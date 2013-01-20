@@ -25,7 +25,7 @@
         </thead>
 
         <tbody>
-          <% f.fields_for :new_device_items do |pf| %>
+          <%= f.fields_for :new_device_items do |pf| %>
             <tr class="product device_item">
               <%= render :partial => 'rental_periods/form', :locals =>  {:pf => pf, :f => f} %>
             </tr>
@@ -51,7 +51,7 @@
             <th>Stundensatz</th>
             <th>Gesamtpreis</th>
           </tr>
-          <% f.fields_for :new_service_items do |pf| %>
+          <%= f.fields_for :new_service_items do |pf| %>
             <tr class="product service_item">
               <%= render :partial => 'service_items/form', :locals =>  {:pf => pf} %>
             </tr>

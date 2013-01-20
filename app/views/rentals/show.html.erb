@@ -167,7 +167,7 @@
   <%= link_to image_tag('icons_16/application-pdf.png') + ' PDF (Druckansicht)', :format => 'pdf' %>
 </p>
 
-<%= javascript_on_load do %>
+<% javascript_on_load do %><script>
   $('rental_remarks').observe('focus', function(event) {
   event.element().removeClassName('saved');
   });

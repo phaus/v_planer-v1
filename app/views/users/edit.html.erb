@@ -7,14 +7,14 @@
 
     <%= render :partial => 'form', :locals => {:f => f} %>
 
-    <% optional_fieldset 'Adresse', @user.address.used? do %>
-      <% f.fields_for :address do |af| %>
+    <%= optional_fieldset 'Adresse', @user.address.used? do %>
+      <%= f.fields_for :address do |af| %>
         <%= render :partial => 'addresses/form', :locals => {:f => af} %>
       <% end %>
     <% end %>
 
-    <% optional_fieldset 'Kontodaten', @user.bank_account.used? do %>
-      <% f.fields_for :bank_account do |af| %>
+    <%= optional_fieldset 'Kontodaten', @user.bank_account.used? do %>
+      <%= f.fields_for :bank_account do |af| %>
         <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
       <% end %>
     <% end %>
