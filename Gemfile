@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
-gem 'mysql2', '~> 0.2.6'
+gem 'rails', '3.1.7'
+gem 'mysql2'
 gem 'rails-erd'
 gem 'vpim'
 gem 'fastercsv'
@@ -23,5 +23,11 @@ gem 'calendar_date_select',
     :git => 'git://github.com/paneq/calendar_date_select.git'
 
 gem 'conforming',
-    :git => 'git://github.com/consolving/conforming.git'
-#   :path => '/home/wvk/programs/rails/conforming'
+#     :git => 'git://github.com/consolving/conforming.git'
+  :path => '/home/wvk/programs/rails/conforming'
+
+gem 'v_planer_rentals',
+    :path => '../v_planer_rentals'
+
+gem 'rake', '10.0.3'
+

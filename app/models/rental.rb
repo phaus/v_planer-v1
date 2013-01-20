@@ -1,16 +1,6 @@
 class Rental < ActiveRecord::Base
   include Conforming::ModelExtensions
 
-  has_many :device_items,
-      :class_name => 'RentalPeriod',
-      :dependent  => :destroy,
-      :after_add  => :create_reverse_association_in_item
-
-  has_many :service_items,
-      :as         => :process,
-      :dependent  => :destroy,
-      :after_add  => :create_reverse_association_in_item
-
   validates_presence_of :usage_duration,
       :billed_duration,
       :user,

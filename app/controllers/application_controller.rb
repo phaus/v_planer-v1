@@ -6,8 +6,6 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_session, :current_user, :current_company, :is_company_admin?, :is_admin?
 
-  filter_parameter_logging :password, :password_confirmation
-
   protected
 
   def self.requires_login_for(*args)
@@ -89,7 +87,7 @@ class ApplicationController < ActionController::Base
   end
 
   def store_location
-    session[:return_to] = request.request_uri
+    session[:return_to] = request.url
   end
 
   def redirect_back_or_default(default)
