@@ -3,7 +3,7 @@
 <h2>Angebot</h2>
 
 <div style="float: right; width: 50%" class="full_width_input">
-  <% form_for [:remarks, @rental] do |f| %>
+  <%= form_for [:remarks, @rental] do |f| %>
     <%= f.label :remarks, 'Anmerkungen:' %><br />
     <%= f.text_area :remarks, :size => '50x10', :class => 'initial' %>
   <% end %>
@@ -168,15 +168,15 @@
 </p>
 
 <% javascript_on_load do %><script>
-$('rental_remarks').observe('focus', function(event) {
+  $('rental_remarks').observe('focus', function(event) {
   event.element().removeClassName('saved');
-});
-
-$('rental_remarks').observe('change', function(event) {
-  event.element().up('form').request({
-    onSuccess: function(response) {
-      $('rental_remarks').addClassName('saved');
-    }
   });
-});
+
+  $('rental_remarks').observe('change', function(event) {
+  event.element().up('form').request({
+  onSuccess: function(response) {
+  $('rental_remarks').addClassName('saved');
+  }
+  });
+  });
 <% end %>

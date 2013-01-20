@@ -2,7 +2,7 @@
   <div class="page-header">
     <h1>Neue Firma</h1>
   </div>
-  <% form_for([:admin, @company]) do |f| %>
+  <%= form_for([:admin, @company]) do |f| %>
     <%= f.error_messages %>
 
     <p>
@@ -10,7 +10,7 @@
       <%= f.text_field :name %>
     </p>
 
-    <% f.fields_for :main_section do |msf| %>
+    <%= f.fields_for :main_section do |msf| %>
       <%= render :partial => 'admin/company_sections/form', :locals => {:f => msf} %>
     <% end %>
 
@@ -18,7 +18,7 @@
       <legend>Administrativer Benutzer</legend>
       <p>Der administrative Benutzer ist derjenige Benutzer, der die Angaben zur Firma bearbeiten kann und gegenüber dem
         Betreiber der Plattform als Firmenkontakt und Verantwortlicher auftritt.</p>
-      <% f.fields_for :admin do |af| %>
+      <%= f.fields_for :admin do |af| %>
         <%= render :partial => 'admin/users/form', :locals => {:f => af} %>
       <% end %>
     </fieldset>

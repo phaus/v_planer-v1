@@ -1,64 +1,65 @@
-<h1>Vermiet-Vorgang <%= @rental.id %></h1>
+<div class="container">
+  <div class="page-header">
+    <h1>Vermiet-Vorgang <%= @rental.id %> <small>Packschein</small></h1>
+  </div>
 
-<h2>Packschein</h2>
+  <p>
+    <b>Kunde:</b>
+    <%= link_to h(@rental.client.full_name), @rental.client %>
+  </p>
 
-<p>
-  <b>Kunde:</b>
-  <%= link_to h(@rental.client.full_name), @rental.client %>
-</p>
+  <p>
+    <b>Von:</b>
+    <%=h @rental.begin.to_date %>
+  </p>
 
-<p>
-  <b>Von:</b>
-  <%=h @rental.begin.to_date %>
-</p>
+  <p>
+    <b>Bis:</b>
+    <%=h @rental.end.to_date %>
+  </p>
 
-<p>
-  <b>Bis:</b>
-  <%=h @rental.end.to_date %>
-</p>
+  <h2>Vermietete Artikel</h2>
 
-<h2>Vermietete Artikel</h2>
-
-<table class="data" style="width: 100%">
-  <thead>
-    <tr>
-      <th>Anz.</th>
-      <th>Artikel/Anmerkungen</th>
-      <th>Gepackt</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @rental.items.each do |item| %>
-      <tr class="<%= cycle 'odd', 'even' %>">
-        <% fields_for 'rental[items][]', item do |pf| %>
-          <td class="decimal">
-            <%= item.count %> x
-          </td>
-          <td>
-            <%= link_to item.product.full_name, item.product %><br />
-            <em><%=h item.product.article.description %></em>
-          </td>
-          <td>
-            <div style="float: right; width: 15px; height: 15px; border: 1px solid black; display; block;"></div>
-          </td>
-        <% end %>
+  <table class="data" style="width: 100%">
+    <thead>
+      <tr>
+        <th>Anz.</th>
+        <th>Artikel/Anmerkungen</th>
+        <th>Gepackt</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @rental.items.each do |item| %>
+        <tr class="<%= cycle 'odd', 'even' %>">
+          <%= fields_for 'rental[items][]', item do |pf| %>
+            <td class="decimal">
+              <%= item.count %> x
+            </td>
+            <td>
+              <%= link_to item.product.full_name, item.product %><br />
+              <em><%=h item.product.article.description %></em>
+            </td>
+            <td>
+              <div style="float: right; width: 15px; height: 15px; border: 1px solid black; display; block;"></div>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<p class="bottom-actions">
-  <%= link_to 'Angebot anzeigen', offer_rental_path(@rental:format => 'pdf'), :class => 'pdf' %>
-  <%= link_to 'Leihschein anzeigen', rental_path(@rental:format => 'pdf', :class => 'pdf') %>
-  <%= link_to 'Bearbeiten', edit_rental_path(@rental), :class => 'edit' %>
-  <%= link_to 'Löschen', rental_path(@rental), :method => :delete, :confirm => 'wirklich löschen?', :class => 'delete' %>
-  <%= link_to 'Zurück zur Übersicht', rentals_path, :class => 'back' %>
-</p>
+  <p class="bottom-actions">
+    <%= link_to 'Angebot anzeigen', offer_rental_path(@rental:format => 'pdf'), :class => 'pdf' %>
+    <%= link_to 'Leihschein anzeigen', rental_path(@rental:format => 'pdf', :class => 'pdf') %>
+    <%= link_to 'Bearbeiten', edit_rental_path(@rental), :class => 'edit' %>
+    <%= link_to 'Löschen', rental_path(@rental), :method => :delete, :confirm => 'wirklich löschen?', :class => 'delete' %>
+    <%= link_to 'Zurück zur Übersicht', rentals_path, :class => 'back' %>
+  </p>
 
-<p class="alternative_formats">
-  Alternative Formate:
-  <%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %> |
-  <%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %> |
-  <%= link_to image_tag('icons_16/application-pdf.png') + ' PDF (Druckansicht)', :format => 'pdf' %>
-</p>
-
+  <p class="alternative_formats">
+    Alternative Formate:
+    <%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %> |
+    <%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %> |
+    <%= link_to image_tag('icons_16/application-pdf.png') + ' PDF (Druckansicht)', :format => 'pdf' %>
+  </p>
+</div>

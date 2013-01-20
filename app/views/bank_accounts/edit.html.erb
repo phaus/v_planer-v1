@@ -1,6 +1,6 @@
-<% form_for @company, :url => company_path do |cf| %>
-  <% cf.fields_for :main_section do |msf| %>
-    <% msf.fields_for :bank_account do |af| %>
+<%= form_for @company, :url => company_path do |cf| %>
+  <%= cf.fields_for :main_section do |msf| %>
+    <%= msf.fields_for :bank_account do |af| %>
       <%= render :partial => 'form', :locals => {:f => af} %>
     <% end %>
   <% end %>

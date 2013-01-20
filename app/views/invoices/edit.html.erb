@@ -1,36 +1,39 @@
-<h1>Editing invoice</h1>
+<div class="container">
+  <div class="page-header">
+    <h1>Editing invoice</h1>
+  </div>
+  <%= form_for(@invoice) do |f| %>
+    <%= f.error_messages %>
 
-<% form_for(@invoice) do |f| %>
-  <%= f.error_messages %>
+    <p>
+      <%= f.label :date %><br />
+      <%= f.date_select :date %>
+    </p>
+    <p>
+      <%= f.label :client_id %><br />
+      <%= f.text_field :client_id %>
+    </p>
+    <p>
+      <%= f.label :sender_id %><br />
+      <%= f.text_field :sender_id %>
+    </p>
+    <p>
+      <%= f.label :process_id %><br />
+      <%= f.text_field :process_id %>
+    </p>
+    <p>
+      <%= f.label :price_i %><br />
+      <%= f.text_field :price_i %>
+    </p>
+    <p>
+      <%= f.label :remarks %><br />
+      <%= f.text_field :remarks %>
+    </p>
+    <p>
+      <%= f.submit 'Update' %>
+    </p>
+  <% end %>
 
-  <p>
-    <%= f.label :date %><br />
-    <%= f.date_select :date %>
-  </p>
-  <p>
-    <%= f.label :client_id %><br />
-    <%= f.text_field :client_id %>
-  </p>
-  <p>
-    <%= f.label :sender_id %><br />
-    <%= f.text_field :sender_id %>
-  </p>
-  <p>
-    <%= f.label :process_id %><br />
-    <%= f.text_field :process_id %>
-  </p>
-  <p>
-    <%= f.label :price_i %><br />
-    <%= f.text_field :price_i %>
-  </p>
-  <p>
-    <%= f.label :remarks %><br />
-    <%= f.text_field :remarks %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @invoice %> |
-<%= link_to 'Back', invoices_path %>
+  <%= link_to 'Show', @invoice %> |
+  <%= link_to 'Back', invoices_path %>
+</div>

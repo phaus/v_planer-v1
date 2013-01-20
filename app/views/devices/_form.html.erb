@@ -1,5 +1,4 @@
-<% fields_for 'product[device]', @device do |f|%>
-
+<%= fields_for 'product[device]', @device do |f|%>
   <p>
     <%= f.label :manufacturer, 'Hersteller' %><br />
     <%= f.text_field :manufacturer %>
@@ -26,7 +25,7 @@
   </p>
 
   <%= f.hidden_field :rental_price, :value => '', :id => 'product_device_rental_price_h' %>
-  <% optional_fieldset 'Artikel kann vermietet werden', f, :is_rentable? do %>
+  <%= optional_fieldset 'Artikel kann vermietet werden', f, :is_rentable? do %>
     <div class="input">
       <%= f.label :rental_price, 'Tagesmietpreis' %> (netto/brutto)<br />
       <%= f.text_field :rental_price, :class => 'money' %>&thinsp;&euro;/<span class="device_unit"><%= @device.unit %></span>
@@ -35,7 +34,7 @@
   <% end %>
 
   <%= f.hidden_field :selling_price, :value => '', :id => 'product_device_selling_price_h' %>
-  <% optional_fieldset 'Artikel kann verkauft werden', f, :is_sellable? do %>
+  <%= optional_fieldset 'Artikel kann verkauft werden', f, :is_sellable? do %>
     <div class="input">
       <%= f.label :selling_price, 'Verkaufspreis' %> (netto/brutto)<br />
       <%= f.text_field :selling_price, :class => 'money' %>&thinsp;&euro;/<span class="device_unit"><%= @device.unit %></span>

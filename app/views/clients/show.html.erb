@@ -78,7 +78,7 @@
       <div class="span3">
         <div class="row">
           <h2>Anmerkungen</h2>
-          <% form_for @client do |f| %>
+          <%= form_for @client do |f| %>
             <%= f.text_area :remarks, :size => '50x10', :class => 'initial span6', :readonly => true %>
           <% end %>
         </div>

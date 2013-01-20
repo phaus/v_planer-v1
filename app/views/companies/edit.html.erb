@@ -1,6 +1,6 @@
 <h1>Firmendaten bearbeiten</h1>
 
-<% form_for(@company) do |f| %>
+<%= form_for(@company) do |f| %>
   <%= f.error_messages %>
 
   <%= render :partial => 'form', :locals => {:f => f} %>
