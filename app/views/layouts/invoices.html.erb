@@ -1,29 +1,101 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
     <title>Rechnung: <%= controller.action_name %></title>
-    <%= javascript_include_tag :all %>
-    <%= stylesheet_link_tag 'scaffold' %>
-    <%= calendar_date_select_includes %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Le styles -->
+    <link href="http://static.consolving.de/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 120px;
+      }
+    </style>
+    <%= stylesheet_link_tag 'vplaner' %>
+    <link href="http://static.consolving.de/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <!-- Le fav and touch icons -->
   </head>
   <body>
-    <%= main_navigation :active => 'Rechnungen' %>
-
-    <% aux_navigation do %>
-      <%= link_to 'Übersicht', invoices_path %>
-      <%= link_to 'Offene Rechnungen', open_invoices_path %>
-<!--       <%= link_to 'Neuer Verkaufsvorgang', new_selling_path %> -->
-<!--       <%= link_to 'Neuer Vermietvorgang', new_rental_path %> -->
-    <% end %>
-
-    <div id="main_content" class="main_content">
-      <%= flash_message %>
-      <%= yield  %>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
+          <a class="brand" href="/">vPlaner by Consolving</a>
+          <div class="nav-collapse collapse">
+            <% if params[:action] == 'index' %>
+              <% form_tag products_path, :method => :get, :class=>"navbar-search pull-left" do %>
+                <%= text_field_tag 'q', params['q'], :class => 'search-query', :placeholder => 'Search' %>
+                <%= image_tag('loading.gif', :id => 'spinner1', :style => 'display: none;', :class => 'small_spinner') %>
+              <% end %>
+            <% end %>
+            <ul class="nav pull-right">
+              <li id="user-menu" class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                  Erstelle
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to 'Verkaufsvorgang', new_selling_path %></li>
+                  <li><%= link_to 'Vermietvorgang', rental.new_rental_process_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Artikel', new_device_path %></li>
+                  <li><%= link_to 'Kategorie', new_category_path %></li>
+                  <li><%= link_to 'Dienstleistung', new_service_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Kunde', new_client_path %></li>
+                  <li><%= link_to 'Lieferant', new_distributor_path %></li>
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <%= main_navigation :active => 'Rechnungen' %>
+              <li class="divider-vertical"></li>
+              <li id="user-menu" class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                  Hello <strong><%=  current_user.login %></strong>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to 'Benutzerdaten', account_path %></li>
+                  <li><%= link_to 'Kennwort ändern', edit_account_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Firmendaten bearbeiten', edit_company_path %></li>
+                  <li><%= link_to 'Mitarbeiter verwalten', users_path %></li>
+                  <li class="divider"></li>
+                  <li><%= link_to 'Ausloggen', user_session_path, :method => :delete %></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+      </div>
+      <div class="navbar-inner">
+        <ul class="nav pull-right">
+          <% aux_navigation do %>
+            <li class="<%=(params[:action] == 'index' ? 'active' : '') %>"><%= link_to 'Rechnungen: alle', invoices_path %></li>
+            <!-- FIXME der Link geht nicht 
+            <li class="<%=(params[:action] == 'open' ? 'active' : '') %>"><%= link_to 'Rechnungen: offen', open_invoices_path %></li>
+            -->
+          <% end %>
+        </ul>
+      </div>
     </div>
-
+    <%= flash_message %>
+    <%= yield  %>
     <%= footer %>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/jquery.js"></script>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap.js"></script>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/google-code-prettify/prettify.js"></script>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-dropdown.js"></script>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-tab.js"></script>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-typeahead.js"></script>
+    <%= javascript_include_tag :all %>
+    <%= calendar_date_select_includes %>
   </body>
 </html>

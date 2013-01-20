@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-VPlaner::Application.config.secret_token = '883be225d113sdfpoil34jrsgggggfdaa aakkajdffw4a0n3flyebcifuhgk3n4b2oc734mabdoid8u642454q10ßak3fo7970o8lkan-ödväw3r8a7sakq34jwkeif'
+VPlaner::Application.config.secret_token = '0c2e5e8b1d82da3a39df5db59eb63d85de025ac8a5e890c62decb8e2085373bdacdb341b49eb4d66640143fa6cb1488a3e22ef672953c245ade4b0e351515f1a'

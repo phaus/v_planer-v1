@@ -202,13 +202,16 @@ def last_changed_info(obj)
   if obj.updated_at == obj.created_at
     str << "<p>Erstellt am #{obj.created_at.to_date}</p>"
   end
-  str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
-  return str
-end
+<<<<<<< HEAD
 
   def np(number, precision = 0, unit = '')
     str = number_with_precision(number, :precision => precision)
     unit.blank? ? str : "#{str} #{unit}"
   end
 
+=======
+  str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
+  return str
+end
+>>>>>>> master
 end

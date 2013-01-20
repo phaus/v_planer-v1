@@ -117,5 +117,5 @@ class ApplicationController < ActionController::Base
     # FIXME: replace with some real logic
     current_user and current_user.login == 'wvk'
   end
-
+  
 end

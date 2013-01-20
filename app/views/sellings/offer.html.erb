@@ -82,7 +82,7 @@
   <%= link_to 'Packschein anzeigen', packing_note_rental_path(@selling) %> |
   <%= link_to 'Bearbeiten', edit_rental_path(@selling) %> |
   <%= link_to 'Löschen', rental_path(@selling), :method => :delete, :confirm => 'wirklich löschen?' %> |
-  <%= link_to 'Zurück zur Übersicht', rentals_path %>
+  <%= link_to 'Zurück zur Übersicht', rental.rental_processes_path %>
 </p>
 
 <p class="alternative_formats">

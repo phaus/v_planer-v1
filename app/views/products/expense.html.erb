@@ -1,20 +1,18 @@
-<h1>Spesen</h1>
-
-<div id="products">
-  <%= render :partial => 'list' %>
+<div class="container">
+  <div class="page-header">
+    <h1>Spesen</h1>
+  </div>
+  <div class="row">
+    <%= render :partial => 'list' %>
+  </div>
+  <div class="row">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Alternative Formate</li>
+        <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+        <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
+        <!--   <li><%= link_to image_tag('icons_16/text-csv.png') + ' CSV', :format => 'csv' %></li> -->
+      </ul>
+    </div>
+  </div>
 </div>
-
-<hr>
-
-<p class="bottom-actions">
-  <%= link_to 'Neuee Spesenartikel', new_expense_path, :class => 'new' %>
-  <%= link_to 'Neue Dienstleistung', new_service_path, :class => 'new' %>
-  <%= link_to 'Neuer Artikel', new_device_path, :class => 'new' %>
-</p>
-
-<p class="alternative_formats">
-  Alternative Formate:
-  <%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %> |
-  <%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %>
-</p>
-

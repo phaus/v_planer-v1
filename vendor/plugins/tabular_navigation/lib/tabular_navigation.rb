@@ -3,26 +3,24 @@ NAVIGATION_ENTRIES = [
   ['Lieferanten',        :distributors_path],
   ['Kategorien',         :categories_path],
   ['Artikel',            :products_path],
-  ['Vorgänge',           :rentals_path],
+  ['Vorgänge',           :commercial_processes_path],
   ['Rechnungen',         :invoices_path],
   ['Mitarbeiter',        [:users_path, :is_company_admin?]],
-  ['Benutzerkonto',      :account_path],
   ['Administration',     [:admin_path, :is_admin?]]
 ]
 
 ADMIN_NAVIGATION_ENTRIES = [
+  ['Start',          :admin_path],
   ['Firmen',         :admin_companies_path],
   ['Sektionen',      :admin_company_sections_path],
-  ['Benutzer',       :admin_users_path],
-  ['Administration', :admin_path],
-  ['Benutzerkonto',  :account_path]
+  ['Benutzer',       :admin_users_path]
 ]
 
 PUBLIC_NAVIGATION_ENTRIES = [
   ['Startseite', '/'],
   ['Login',      :new_user_session_path],
   ['Demo',       'http://planer.rails-apps.de'],
-  ['Redmine',    'https://concordia.consolving.de/redmine/projects/show/v-planer']
+  ['Redmine',    'https://consolving.de/redmine/projects/show/v-planer']
 ]
 
 
@@ -54,23 +52,16 @@ module ApplicationHelper
   def navtab(text, options={})
     active = options[:active] ? 'active' : ''
     str = <<-EOS
-    <div class="tab-outer #{active}">
-      <div class="tab-inner">
-        <div class="tab">
-          #{text}
-        </div>
-      </div>
-    </div>
+    <li class="#{active}">
+    #{text}
+    </li>
     EOS
     str.html_safe
   end
 
   def aux_navigation(&block)
     <<-EOS
-    <div id="top_nav">
       #{capture(&block) if block_given?}
-      #{link_to 'Ausloggen', user_session_path, :method => :delete}
-    </div>
     EOS
   end
 end

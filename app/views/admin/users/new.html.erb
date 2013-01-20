@@ -1,21 +1,20 @@
-<h1>Benutzerkonto anlegen</h1>
+<div class="container">
+  <div class="page-header">
+    <h1>Benutzerkonto anlegen</h1>
+  </div>
+  <% form_for([:admin, @user]) do |f| %>
+    <%= f.error_messages %>
 
-<% form_for([:admin, @user]) do |f| %>
-  <%= f.error_messages %>
+    <p>
+      <%= f.label :company_section_id, 'Firmen-Sektion' %><br />
+      <%= f.collection_select :company_section_id, CompanySection.all, :id, :full_name %>
+    </p>
 
-  <p>
-    <%= f.label :company_section_id, 'Firmen-Sektion' %><br />
-    <%= f.collection_select :company_section_id, CompanySection.all, :id, :full_name %>
-  </p>
+    <%= render :partial => 'form', :locals => {:f => f} %>
 
-  <%= render :partial => 'form', :locals => {:f => f} %>
-
-  <p>
-    <%= f.submit 'Speichern' %>
-  </p>
-<% end %>
-
-
-<p>
-  <%= link_to 'Zurück', admin_users_path %>
-</p>
+    <p>
+      <%= f.submit 'Speichern', :class => 'btn btn-primary' %>
+      <%= link_to 'Abbrechen', admin_users_path, :class => 'btn' %>
+    </p>
+  <% end %>
+</div>

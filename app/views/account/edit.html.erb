@@ -1,33 +1,47 @@
-<h1>Benutzerdaten bearbeiten</h1>
+<div class="container-fluid">
+  <% form_for(@user, :url => account_path) do |uf| -%>
+    <div class="row">
+      <div class="pull-right">
+        <%= uf.submit 'Speichern', :class => 'btn btn-primary' %>
+        <%= link_to 'Abbrechen', account_path, :class => 'btn' %>
+      </div>
+    </div>
+    <div class="page-header offset2">
+      <h1>Benutzerdaten bearbeiten</h1>
+    </div>
+    <div class="row offset2">
+      <%= uf.error_messages -%>
+    </div>
+    <div class="row offset2">
+      <div class="span4">
+        <h2>Basisdaten</h2>
+        <p>
+          <%= uf.label :forename, 'Vorname' %><br />
+          <%= uf.text_field :forename %>
+        </p>
+        <p>
+          <%= uf.label :surname, 'Nachname' %><br />
+          <%= uf.text_field :surname %>
+        </p>
+        <p>
+          <%= uf.label :email, 'E-Mailadresse' %><br />
+          <%= uf.text_field :email %>
+        </p>
+      </div>
 
-<% form_for(@user, :url => account_path) do |uf| -%>
-  <%= uf.error_messages -%>
-  <p>
-    <%= uf.label :forename, 'Vorname' %><br />
-    <%= uf.text_field :forename %>
-  </p>
-  <p>
-    <%= uf.label :surname, 'Nachname' %><br />
-    <%= uf.text_field :surname %>
-  </p>
-  <p>
-    <%= uf.label :email, 'E-Mailadresse' %><br />
-    <%= uf.text_field :email %>
-  </p>
-  <p>
-    <%= uf.label :password, 'Kennwort' %> (nur angeben zum Ändern)<br />
-    <%= uf.password_field :password %>
-  </p>
-  <p>
-    <%= uf.label :password_confirmation, 'Bitte nocheinmal' %><br />
-    <%= uf.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= uf.submit 'Speichern' %>
-  </p>
-<% end %>
+      <div class="span4">
+        <h2>Kennwort</h2>
+        <p>
+          <span class="help-block">(nur angeben zum Ändern)</span>
+          <%= uf.label :password, 'Kennwort' %><br />
+          <%= uf.password_field :password %>
+        </p>
+        <p>
+          <%= uf.label :password_confirmation, 'Bitte nocheinmal' %><br />
+          <%= uf.password_field :password_confirmation %>
+        </p>
+      </div>
 
-<p>
-  <%= link_to 'Zurück', account_path %>
-</p>
-
+    </div>
+  <% end %>
+</div>

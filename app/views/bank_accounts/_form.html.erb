@@ -1,8 +1,9 @@
-<%=  hidden_field_tag :come_from, 'bank_details'  %>
-
-<%= f.wrapped_text_field :bank_name %>
-<%= f.wrapped_text_field :registrar_name %>
-<%= f.wrapped_text_field :number %>
-<%= f.wrapped_text_field :blz %>
-<%= f.wrapped_text_field :iban %>
-<%= f.wrapped_text_field :bic %>
+<%= hidden_field_tag :come_from, 'bank_details'  %>
+<% [:bank_name, :registrar_name, :number, :blz, :iban, :bic].each do |name| %>
+  <div class="control-group">
+    <%= f.label name, :class => 'control-label'  %>
+    <div class="controls">
+      <%= f.text_field name, :class => 'input-xlarge' %>
+    </div>
+  </div>
+<% end %>

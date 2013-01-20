@@ -28,6 +28,8 @@ class Product < ActiveRecord::Base
       :selling_price,
       :to => :article
 
+  scope :matching, lambda {|str| where([%q(CONCAT(products.name, '-', products.code, '-', products.description) REGEXP ?), str])}
+
   define_index do
     indexes :code
 #     indexes :company_section_id

@@ -1,5 +1,5 @@
 VPlaner::Application.routes.draw do
-  mount VPlanerRentals::Engine => '/rental'
+  mount VPlanerRentals::Engine => '/rental', :as => 'rental'
 
   resources :default_texts
 
@@ -47,26 +47,6 @@ VPlaner::Application.routes.draw do
 
   resource :export, :controller => 'export'
 
-#   resources :rentals do
-#     collection do
-#       get :open
-#     end
-# 
-#     member do
-#       get :offer
-#       get :packing_note
-#       get :remarks
-#       put :remarks
-#       get :offer_confirmation
-#     end
-# 
-#     resources :rental_periods
-#     resources :rental_periods, :as => :items
-#     resources :device_items, :controller => :rental_periods
-#     resources :service_items
-#     resource :invoice
-#   end
-
   resources :sellings do
     collection do
       get :open
@@ -85,12 +65,6 @@ VPlaner::Application.routes.draw do
     resource :invoice
   end
 
-  resources :rental_periods do
-    collection do
-      get :calendar
-    end
-  end
-
   resources :devices do
     member  do
       get :availability
@@ -102,7 +76,6 @@ VPlaner::Application.routes.draw do
     collection do
       get :search
     end
-    resources :rental_periods
   end
 
   resources :categories do

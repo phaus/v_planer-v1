@@ -107,7 +107,7 @@
   <%= link_to 'Packschein (PDF)', packing_note_rental_path(@rental, :format => 'pdf') %>) |
   <%= link_to 'Bearbeiten', edit_rental_path(@rental) %> |
   <%= link_to 'Löschen', rental_path(@rental), :method => :delete, :confirm => 'wirklich löschen?' %> |
-  <%= link_to 'Zurück zur Übersicht', rentals_path %>
+  <%= link_to 'Zurück zur Übersicht', rental.rental_processes_path %>
 </p>
 
 <p class="alternative_formats">

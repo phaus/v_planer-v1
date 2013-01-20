@@ -1,34 +1,31 @@
 <% if @clients.any? %>
-  <table class="data">
+  <table class="table table table-condensed">
     <thead>
       <tr>
-        <th>Kd.-Nr.</th>
-        <th>Ansprechpartner</th>
-        <th>Firma</th>
+        <th></th>
         <th>Name</th>
-        <th>Telefon.</th>
-        <th>E-Mail</th>
+        <th>Firma</th>
+        <th>Kontakt</th>
+        <th>Ansprechpartner</th>
         <th>Rabatt</th>
       </tr>
-    </thread>
+      </thread>
     <tbody>
       <% @clients.each do |client| %>
         <tr class="<%= cycle 'odd', 'even' %>">
-          <td class="decimal"><%= link_to h(client.client_no), client %></td>
-          <td><%=h client.contact_person.login %></td>
-          <td><%= link_to h(client.company_name), client %></td>
+          <td><%= client.client_no %></td>
           <td><%= link_to h(client.full_name), client %></td>
-          <td><%=h client.phone %></td>
-          <td><%= mail_to h(client.email) %></td>
+          <td><%= link_to h(client.company_name), client %></td>
+          <td><%= mail_to h(client.email) %><br /><%=h client.phone %></td>
+          <td><%=h client.contact_person.login %></td>
           <td class="decimal"><%= sprintf('%.1f&nbsp;%', client.discount) %></td>
           <td>
-            <ul class="toolchain">
-              <li><%= link_to image_tag('icons_16/goto.png'), client %></li>
-              <% if may_edit_client?(client) %>
-                <li><%= link_to image_tag('icons_16/edit.png'), edit_client_path(client) %></li>
-                <li><%= link_to image_tag('icons_16/editdelete.png'), client, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete %></li>
-              <% end %>
-            </ul>
+            <% if may_edit_client?(client) %>
+              <div class="btn-group">
+                <%= link_to image_tag('icons_16/edit.png'), edit_client_path(client), :class => "btn" %>
+                <%= link_to image_tag('icons_16/editdelete.png'), client, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete, :class => "btn" %>
+              </div>
+            <% end %>
           </td>
         </tr>
       <% end %>

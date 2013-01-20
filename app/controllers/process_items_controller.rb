@@ -1,5 +1,5 @@
 class ProcessItemsController < ApplicationController
-  layout'rentals' # FIXME: remove when switching to new UI
+  layout 'commercial_processes'
 
   before_filter :handle_product_search, :only => [:new, :edit]
   before_filter :load_process
@@ -40,6 +40,7 @@ class ProcessItemsController < ApplicationController
   # GET /process_items/1/edit
   def edit
     @process_item = @commercial_process.items.find(params[:id])
+    @process_item.attributes = params[:process_item]
   end
 
   # POST /process_items
@@ -91,7 +92,7 @@ class ProcessItemsController < ApplicationController
 
   def handle_product_search
     if params[:pq].present? and params[:commit] == 'search-product'
-      @products = current_company.products.search(params[:cq])
+      @products = current_company.products.matching(params[:pq])
     end
   end
 

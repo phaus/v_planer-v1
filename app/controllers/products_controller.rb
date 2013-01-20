@@ -10,10 +10,10 @@ class ProductsController < UserSpecificController
       if @category
         @products = @class_context
       else
-        @products = @class_context.s_uncategorized
+        @products = @class_context #.s_uncategorized
       end
     else
-      @products = @class_context.search(params[:q], :star => true)
+      @products = @class_context.matching(params[:q], :star => true)
     end
 
     respond_to do |format|
@@ -40,22 +40,21 @@ class ProductsController < UserSpecificController
     end
     case params[:t]
     when 'rentable'
-      scope = Product.s_rentable
+      scope = Product #.s_rentable
     when 'sellable'
-      scope = Product.s_sellable
+      scope = Product #.s_sellable
     when 'service'
-      scope = Product.s_service
+      scope = Product #.s_service
     when 'device'
-      scope = Product.s_device
+      scope = Product #.s_device
     when 'expense'
-      scope = Product.s_expense
+      scope = Product #.s_expense
     else
       scope = Product
     end
 
-    @products = scope.s_for_company(current_company).search params[:q],
-        :star    => true,
-        :include => :article
+    @products = scope.for_company(current_company).matching params[:q]
+
     respond_to do |format|
       format.html { render :layout => !request.xhr? }
       format.xml  { render :xml  => @products }

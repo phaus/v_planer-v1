@@ -1,6 +1,6 @@
 class CommercialProcessesController < ApplicationController
 
-  layout 'rentals' # FIXME: remove when switching to new UI implementation
+  layout 'commercial_processes'
 
   before_filter :handle_client_search
 
@@ -74,7 +74,7 @@ class CommercialProcessesController < ApplicationController
     end
 
     respond_to do |format|
-      if @commercial_process.halted?
+      if not @clients.nil? or @commercial_process.halted?
         format.html { render :action => 'edit' }
         format.xml  { render :xml  => @commercial_process.errors, :status => :unprocessable_entity }
         format.json { render :json => @commercial_process.errors, :status => :unprocessable_entity }

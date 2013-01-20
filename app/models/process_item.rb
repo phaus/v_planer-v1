@@ -35,8 +35,7 @@ class ProcessItem < ActiveRecord::Base
   end
 
   default_value_for :vat_percentage do
-#     self.product.try :vat_percentage
-    19.0
+    self.product.try(:vat_percentage) || 19.0
   end
 
   def cost_calculation_with_reverse_assiciation_assignment
@@ -44,6 +43,14 @@ class ProcessItem < ActiveRecord::Base
     cc ? cc.tap {|a| a.item = self } : nil
   end
   alias_method_chain :cost_calculation, :reverse_assiciation_assignment
+
+  def preview=(val)
+    if val
+      CALCULATED_ATTRIBUTES.each do |key, val|
+        self.send "#{key}=", 'reset'
+      end
+    end
+  end
 
   protected
 
