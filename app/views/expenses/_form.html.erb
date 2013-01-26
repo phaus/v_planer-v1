@@ -1,4 +1,4 @@
-<% fields_for 'product[expense]', @expense do |f|%>
+<%= fields_for 'product[expense]', @expense do |f|%>
   <p>
     <%= f.label :name, 'Bezeichnung' %><br />
     <%= f.text_field :name %>
@@ -43,10 +43,10 @@
   </fieldset>
   <fieldset style="width: 28%; float: left; margin-left: 1%;">
     <legend>Einheitspreis</legend>
-<!--    <p>
-      <%= f.label :factor3_name, 'Name' %><br />
-      <%= f.text_field :factor3_name %>
-    </p>-->
+    <!--    <p>
+    <%= f.label :factor3_name, 'Name' %><br />
+    <%= f.text_field :factor3_name %>
+        </p>-->
     <p>
       <%= f.label :factor3, 'Wert' %><br />
       <%= f.text_field :factor3, :class => 'money' %>&thinsp;&euro;
@@ -68,12 +68,12 @@
 
 <% javascript_on_load do %><script>
   function init_units() {
-    $$('.device_unit').invoke('update', $F('product_service_unit'));
+  $$('.device_unit').invoke('update', $F('product_service_unit'));
   }
   $('product_service_unit').observe('change', init_units);
 
   $$('.money').each(function(element) {
-    monetize(element);
-    element.observe('change', function(event) {monetize(event.element())});
+  monetize(element);
+  element.observe('change', function(event) {monetize(event.element())});
   });
 <% end %>

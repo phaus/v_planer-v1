@@ -2,7 +2,7 @@
   <div class="page-header">
     <h1>Firma bearbeiten</h1>
   </div>
-  <% form_for([:admin, @company]) do |f| %>
+  <%= form_for([:admin, @company]) do |f| %>
     <%= f.error_messages %>
 
     <p>
@@ -16,7 +16,7 @@
     </p>
 
     <%= f.hidden_field :main_section_id %>
-    <% f.fields_for :main_section do |af| %>
+    <%= f.fields_for :main_section do |af| %>
       <%= render :partial => 'admin/company_sections/form', :locals => {:f => af} %>
     <% end %>
 

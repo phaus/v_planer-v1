@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <% form_for(@user, :url => account_path) do |uf| -%>
+  <%= form_for(@user, :url => account_path) do |uf| -%>
     <div class="row">
       <div class="pull-right">
         <%= uf.submit 'Speichern', :class => 'btn btn-primary' %>
@@ -41,7 +41,6 @@
           <%= uf.password_field :password_confirmation %>
         </p>
       </div>
-
     </div>
   <% end %>
 </div>

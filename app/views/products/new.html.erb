@@ -1,33 +1,36 @@
-<h1>Neues Produkt</h1>
+<div class="container">
+  <div class="page-header">
+    <h1>Neues Produkt</h1>
+  </div>
+  <%= form_for(@product) do |f| %>
+    <%= f.error_messages %>
 
-<% form_for(@product) do |f| %>
-  <%= f.error_messages %>
+    <p>
+      <%= f.label :code, 'Artikel-Code' %><br />
+      <%= f.text_field :code %>
+    </p>
 
-  <p>
-    <%= f.label :code, 'Artikel-Code' %><br />
-    <%= f.text_field :code %>
-  </p>
+    <%= render :partial => partial_for(@product, 'form') %>
 
-  <%= render :partial => partial_for(@product, 'form') %>
+    <% if @product.buying_prices.any? %>
+      <fieldset>
+        <legend>Lieferanten</legend>
+        <%= f.fields_for :buying_prices do |bpf| %>
+          <%= bpf.label :price, 'Lieferant' %>/<%= bpf.label :price, 'Einkaufspreis' %><br />
+          <%= bpf.collection_select :distributor_id, current_company.distributors, :id, :company_name, :include_blank => true %>
+          <%= bpf.text_field :price, :class => 'money' %>&thinsp;&euro;/<span class="product_unit"><%= @product.unit %></span>
+        <% end %>
+      </fieldset>
+    <% end %>
 
-  <% if @product.buying_prices.any? %>
-    <fieldset>
-      <legend>Lieferanten</legend>
-      <% f.fields_for :buying_prices do |bpf| %>
-        <%= bpf.label :price, 'Lieferant' %>/<%= bpf.label :price, 'Einkaufspreis' %><br />
-        <%= bpf.collection_select :distributor_id, current_company.distributors, :id, :company_name, :include_blank => true %>
-        <%= bpf.text_field :price, :class => 'money' %>&thinsp;&euro;/<span class="product_unit"><%= @product.unit %></span>
-      <% end %>
-    </fieldset>
+    <%= collection_checkboxes_for f, :category_ids, current_company.categories.all, :id, :name, {:legend => 'Kategorien'}, :multiple => true  %>
+
+    <p>
+      <%= f.submit 'Speichern' %>
+    </p>
   <% end %>
 
-  <%= collection_checkboxes_for f, :category_ids, current_company.categories.all, :id, :name, {:legend => 'Kategorien'}, :multiple => true  %>
-
-  <p>
-    <%= f.submit 'Speichern' %>
+  <p class="bottom-actions">
+    <%= link_to 'Zurück zur Übersicht', products_path, :class => 'back' %>
   </p>
-<% end %>
-
-<p class="bottom-actions">
-  <%= link_to 'Zurück zur Übersicht', products_path, :class => 'back' %>
-</p>
+</div>

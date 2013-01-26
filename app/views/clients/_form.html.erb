@@ -45,7 +45,7 @@
       <fieldset>
         <legend>Kontodaten</legend>
         <%= optional_fieldset 'Kontodaten', !@client.bank_account.new_record? do %>
-          <% f.fields_for :bank_account do |af| %>
+          <%= f.fields_for :bank_account do |af| %>
             <%= render :partial => 'bank_accounts/form', :locals => {:f => af} %>
           <% end %>
         <% end %>

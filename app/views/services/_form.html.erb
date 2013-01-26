@@ -1,4 +1,4 @@
-<% fields_for 'product[service]', @service do |f|%>
+<%= fields_for 'product[service]', @service do |f|%>
   <p>
     <%= f.label :name, 'Bezeichnung' %><br />
     <%= f.text_field :name %>
