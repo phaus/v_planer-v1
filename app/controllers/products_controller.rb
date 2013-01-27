@@ -63,27 +63,27 @@ class ProductsController < UserSpecificController
   end
 
   def rentable
-    @class_context = @class_context.s_rentable
+    @class_context = @class_context #.s_rentable
     index
   end
 
   def sellable
-    @class_context = @class_context.s_sellable
+    @class_context = @class_context #.s_sellable
     index
   end
 
   def service
-    @class_context = @class_context.s_service
+    @class_context = @class_context #.s_service
     index
   end
 
   def device
-    @class_context = @class_context.s_device
+    @class_context = @class_context #.s_device
     index
   end
 
   def expense
-    @class_context = @class_context.s_expense
+    @class_context = @class_context #.s_expense
     index
   end
 
@@ -218,7 +218,7 @@ class ProductsController < UserSpecificController
   protected
   def load_class_context
     if params[:category_id].blank?
-      @class_context = Product.s_for_company(current_company)
+      @class_context = current_company.products
     else
       @category      = current_company.categories.find(params[:category_id])
       @class_context = @category.products

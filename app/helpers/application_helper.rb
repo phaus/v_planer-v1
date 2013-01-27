@@ -78,7 +78,7 @@ module ApplicationHelper
 
   def collection_checkboxes_for(form_builder, name, collection, name_method, value_method, options={}, html_options={})
     content_tag('fieldset', :class => 'multiple-select') do
-      returning '' do |str|
+      ''.tap do |str|
         str << content_tag('legend', options[:legend]) if options[:legend]
         form_builder.fields_for(name) do |check_boxes|
           collection.each do |object|
