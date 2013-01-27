@@ -169,12 +169,20 @@ class CommercialProcess < ActiveRecord::Base
     end
   end
 
+  def discount
+    if self.sum.to_f == 0.0
+      0.0
+    else
+      self.sum * self.discount_percentage / 100.0
+    end
+  end
+
   def total_net_price
     self.sum - self.client_discount - self.discount
   end
 
   def sum
-    self.process_items.map(&:total_net_price).sum
+    self.process_items.map(&:total_net_price).sum || 0.0
   end
 
   def init(options)

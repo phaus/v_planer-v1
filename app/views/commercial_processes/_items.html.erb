@@ -37,13 +37,13 @@
       <th colspan="2"></th>
       <th colspan="2">Rabatt</th>
       <td class="decimal"><%= np commercial_process.discount, 2, '€' %></td>
-      <td><%= np commercial_process.discount_percentage, 2, '%' %></td>
+      <td>(<%= np commercial_process.discount_percentage, 2, '%' %>)</td>
     </tr>
     <tr>
       <th colspan="2"></th>
       <th colspan="2">Kunden-Rabatt</th>
       <td class="decimal"><%= np commercial_process.client_discount, 2, '€' %></td>
-      <td><%= np commercial_process.client_discount_percentage, 2, '%' %></td>
+      <td>(<%= np commercial_process.client_discount_percentage, 2, '%' %>)</td>
     </tr>
     <tr>
       <th colspan="2"></th>
@@ -53,15 +53,14 @@
     </tr>
     <tr>
       <th colspan="2"></th>
-      <th colspan="2">MWSt</th>
+      <th colspan="2">MwSt</th>
       <td class="decimal"><%= np commercial_process.vat, 2, '€' %></td>
       <td>(<%= np commercial_process.vat_percentage, 2, '%' %>)</td>
     </tr>
-    <tr>
+    <tr class="total">
       <th colspan="2"></th>
       <th colspan="2">Brutto-Gesamt</th>
       <td class="decimal"><%= np commercial_process.total_gross_price, 2, '€' %></td>
-      <td></td>
     </tr>
   </tfoot>
 </table>

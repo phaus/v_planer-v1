@@ -18,6 +18,7 @@ de:
         company_name: Firma
         email: E-Mailadresse
         discount: Rabatt
+        discount_percentage: Rabatt (%)
         payment_goal: Zahlungsziel
 
       bank_account:
@@ -58,7 +59,15 @@ de:
         created_by: erstellt von
         updated_by: aktualisiert von
         client_discount: Kundenrabatt
+        client_discount_percentage: Kundenrabatt
         discount: Auftragsrabatt
+        discount_percentage: Auftragsrabatt
+        start_date: Anfangsdatum
+        end_date: Enddatum
+        delivery_date: Lieferdatum
+        return_date: Rückgabedatum
+        billed_duration: Abrechnungsdauer
+        total_net_price: Gesamt-Netto
 
     errors:
       models:
@@ -106,3 +115,24 @@ de:
       updated: Der Vorgang wurde aktualisiert.
       deleted: Der Vorgang wurde gelöscht.
       no clients found: Keine Kunden entsprachen Ihren Suchkriterien.
+
+  txt:
+    rental:
+      commercial_process:
+        title:
+          main: Vermietvorgänge
+          small: %d gefunden
+        link:
+          new: Neuer Vermietvorgang
+        explain:
+          please select a client first: Bitte wählen Sie einen Kunden, bevor Sie weitere Angaben machen können.
+
+    generic:
+      link:
+        new: Neuer Vorgang
+        delete: löschen
+        edit: bearbeiten
+        show: ansehen
+        back: zurück
+        next: weiter
+        cancel: abbrechen

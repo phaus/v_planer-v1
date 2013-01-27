@@ -76,6 +76,10 @@ class Company < ActiveRecord::Base
     self.sections - [self.main_section]
   end
 
+  def date_format
+    :de
+  end
+
   protected
 
   def autoset_company_section

@@ -2,6 +2,10 @@
 body {
   padding-top: 120px;
 }
+.actions {
+  display: block;
+  clear: both;
+}
 .field {
   display: block;
   /*   float: left; */
@@ -195,4 +199,7 @@ td.money,
 }
 table.table th {
   white-space: pre;
+}
+tr.total td {
+  border-bottom: 3px double #333;
 }
