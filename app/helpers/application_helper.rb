@@ -78,7 +78,7 @@ module ApplicationHelper
 
   def collection_checkboxes_for(form_builder, name, collection, name_method, value_method, options={}, html_options={})
     content_tag('fieldset', :class => 'multiple-select') do
-      returning '' do |str|
+      ''.tap do |str|
         str << content_tag('legend', options[:legend]) if options[:legend]
         form_builder.fields_for(name) do |check_boxes|
           collection.each do |object|
@@ -146,63 +146,20 @@ def public_footer
 end
 
 def footer
-  <<-EOS
-<footer class="footer">
-  <div class="container">
-    <p>powered by %{app_name}, the online commercial platform solution by <a target="_new" href="http://consolving.de">Consolving Network Solutions</a></p>
-    <p>%{app_name} uses Ruby on Rails</p>
-    <p>Copyright &copy; 2010-2013 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{app_name} as a developer, please contact developer@consolving.de</p>
-  </div>
-  <div class="pull-right">
-    <a href="http://jigsaw.w3.org/css-validator/">
-      <img style="border:0;width:88px;height:31px"
-           src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-           alt="Valid CSS!" />
-    </a>
-    <a href="http://validator.w3.org/check?uri=referer">
-      <img style="border:0;width:88px;height:31px"
-           src="http://www.w3.org/Icons/valid-xhtml10-blue"
-           alt="Valid XHTML 1.0 Transitional" />
-    </a>
-  </div>
-</footer>
-  EOS
-  #        <ul>
-  #          <li>
-  #            <dl>
-  #              <dt>Mein Konto</dt>
-  #              <dd>Eingelogt als <strong>#{current_user.login}</strong></dd>
-  #              <dd>#{ link_to 'Benutzerdaten bearbeiten', edit_account_path }</dd>
-  #              <dd>#{ link_to 'Kennwort ändern', edit_account_path }</dd>
-  #              <dd>#{ link_to 'Firmendaten bearbeiten', edit_company_path }</dd>
-  #              <dd>#{ link_to 'Mitarbeiter verwalten', users_path }</dd>
-  #            </dl>
-  #          </li>
-  #          <li>
-  #            <dl>
-  #              <dt>Vorgänge und Kunden</dt>
-  #              <dd>#{ link_to 'Neuer Verkaufsvorgang', new_selling_path }</dd>
-  #              <dd>#{ link_to 'Neuer Vermietvorgang', new_rental_path }</dd>
-  #              <dd>#{ link_to 'Neuer Kunde', new_client_path }</dd>
-  #              <dd>#{ link_to 'Neuer Artikel', new_device_path }</dd>
-  #              <dd>#{ link_to 'Neue Dienstleistung', new_service_path }</dd>
-  #            </dl>
-  #          </li>
-  #        </ul>
-  #        <hr />
-  #        <p>powered by %{name}, the online commercial platform solution by <a href="http://consolving.de">Consolving Network Solutions</a></p>
-  #        <p>%{name} uses Ruby on Rails</p>
-  #        <p>Copyright &copy; 2010 Consolving Network Solutions GbR. All rights reserved. If you are interested in contributing to %{name} as a developer, please contact developer@consolving.de</p>
-  #      </div>
-
+  render :partial => 'layouts/footer'
 end
 
-def last_changed_info(obj)
-  str = ''
-  if obj.updated_at == obj.created_at
-    str << "<p>Erstellt am #{obj.created_at.to_date}</p>"
+  def last_changed_info(obj)
+    str = ''
+    if obj.updated_at == obj.created_at
+      str << "<p>Erstellt am #{obj.created_at.to_date}</p>"
+    end
+    str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
+    return str
   end
-  str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
-  return str
-end
+
+  def np(number, precision = 0, unit = '')
+    str = number_with_precision(number, :precision => precision)
+    unit.blank? ? str : "#{str} #{unit}"
+  end
 end

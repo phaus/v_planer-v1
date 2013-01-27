@@ -4,11 +4,25 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
 
-  helper_method :current_user_session, :current_user, :current_company, :is_company_admin?, :is_admin?
+  helper_method :current_user_session, :current_user, :current_company, :is_company_admin?, :is_admin?, :searchable_resource?, :resource_search_path
 
-  filter_parameter_logging :password, :password_confirmation
+  layout 'application'
+
+  class_attribute :search_action
 
   protected
+
+  def self.is_searchable(action = nil)
+    self.search_action = action || :index
+  end
+
+  def resource_search_path
+    url_for :action => self.search_action
+  end
+
+  def searchable_resource?
+    not self.search_action.blank?
+  end
 
   def self.requires_login_for(*args)
     opts = args.last.is_a?(Hash) ? args.pop : {}
@@ -89,7 +103,7 @@ class ApplicationController < ActionController::Base
   end
 
   def store_location
-    session[:return_to] = request.request_uri
+    session[:return_to] = request.url
   end
 
   def redirect_back_or_default(default)
@@ -119,5 +133,5 @@ class ApplicationController < ActionController::Base
     # FIXME: replace with some real logic
     current_user and current_user.login == 'wvk'
   end
-  
+
 end

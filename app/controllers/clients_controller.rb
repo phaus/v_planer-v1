@@ -1,5 +1,7 @@
 class ClientsController < UserSpecificController
 
+  is_searchable
+
   # GET /clients
   # GET /clients.xml
   def index

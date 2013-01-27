@@ -27,6 +27,10 @@ module Concerns
           errors.add 'Firmenname und Personenname dürfen nicht beide leer sein.'
         end
       end
+
+      def to_html
+
+      end
     end
 
   end

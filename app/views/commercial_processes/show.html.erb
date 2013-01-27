@@ -1,0 +1,10 @@
+<h2>Vorgang <%= @commercial_process.process_no %></h2>
+
+<hr>
+
+<h3>Positionen</h3>
+
+<%= render 'items', :commercial_process => @commercial_process %>
+
+<p><%= link_to 'Bearbeiten', edit_commercial_process_path(@commercial_process) %></p>
+<p><%= link_to 'Position hinzufügen', new_commercial_process_process_item_path(@commercial_process) %></p>

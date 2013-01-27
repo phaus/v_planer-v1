@@ -1,4 +1,7 @@
 class DistributorsController < ApplicationController
+
+  is_searchable
+
   # GET /distributors
   # GET /distributors.xml
   def index

@@ -1,0 +1,7 @@
+<%= client.client_no %>
+<span class="informal">
+  <%= client.full_name %><br>
+  <%= client.address.street %><br>
+  <%= client.address.postalcode %> <%= client.address.locality %><br>
+  <%= mail_to client.email unless client.email.blank? %>
+</span>

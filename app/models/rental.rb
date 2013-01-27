@@ -1,21 +1,7 @@
-class Rental < CommercialProcess
+class Rental < ActiveRecord::Base
   include Conforming::ModelExtensions
 
-  has_many :device_items,
-      :class_name => 'RentalPeriod',
-      :dependent  => :destroy,
-      :after_add  => :create_reverse_association_in_item
-
-  has_many :service_items,
-      :as         => :process,
-      :dependent  => :destroy,
-      :after_add  => :create_reverse_association_in_item
-
-  validates_presence_of :client,
-      :sender,
-      :discount,
-      :client_discount,
-      :usage_duration,
+  validates_presence_of :usage_duration,
       :billed_duration,
       :user,
       :begin,
@@ -46,24 +32,6 @@ class Rental < CommercialProcess
 
   def items
     self.device_items + self.service_items
-  end
-
-  def new_service_items_attributes=(attrs)
-    attrs = attrs.is_a?(Hash) ? attrs.values : attrs
-    self.service_items_attributes = attrs.reject{|a| a[:count].to_i == 0 || a[:duration].to_f == 0.0}
-  end
-
-  def new_device_items_attributes=(attrs)
-    attrs = attrs.is_a?(Hash) ? attrs.values : attrs
-    self.device_items_attributes = attrs.reject{|a| a[:count].to_i == 0}
-  end
-
-  def new_device_items
-    self.device_items
-  end
-
-  def new_service_items
-    self.service_items
   end
 
   def to_pdf
@@ -192,6 +160,10 @@ class Rental < CommercialProcess
         item.count = item.count # this forces the unavailabilities to be updated
       end
     end
+  end
+
+  def process_no
+    self.sender.company.rental_process_no_format.gsub(/%id/, self.id.to_s)
   end
 
   protected

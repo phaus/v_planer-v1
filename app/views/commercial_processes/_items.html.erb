@@ -1,0 +1,66 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Bezeichnung</th>
+      <th>Anzahl</th>
+      <th>Einzelpreis</th>
+      <th>Netto-Gesamt</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% commercial_process.process_items.each_with_index do |item, index| %>
+      <tr>
+        <td class="decimal"><%= index + 1 %> </td>
+        <td><%= item.name %></td>
+        <td class="decimal"><%= np item.quantity, 2, item.unit %></td>
+        <td class="decimal"><%= np item.cost_calculation.unit_price, 2, '€' %></td>
+        <td class="decimal"><%= np item.cost_calculation.total_net_price, 2, '€' %></td>
+        <td><%= link_to 'bearbeiten', edit_commercial_process_process_item_path(@commercial_process, item), :class => 'btn btn-mini' %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td colspan="5"></td>
+      <td><%= link_to 'Position hinzufügen', new_commercial_process_process_item_path(@commercial_process), :class => 'btn btn-mini btn-success' %></td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="2">Summe</th>
+      <td class="decimal"><%= np commercial_process.sum, 2, '€' %></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="2">Rabatt</th>
+      <td class="decimal"><%= np commercial_process.discount, 2, '€' %></td>
+      <td>(<%= np commercial_process.discount_percentage, 2, '%' %>)</td>
+    </tr>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="2">Kunden-Rabatt</th>
+      <td class="decimal"><%= np commercial_process.client_discount, 2, '€' %></td>
+      <td>(<%= np commercial_process.client_discount_percentage, 2, '%' %>)</td>
+    </tr>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="2">Netto-Gesamt</th>
+      <td class="decimal"><%= np commercial_process.total_net_price, 2, '€' %></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th colspan="2"></th>
+      <th colspan="2">MwSt</th>
+      <td class="decimal"><%= np commercial_process.vat, 2, '€' %></td>
+      <td>(<%= np commercial_process.vat_percentage, 2, '%' %>)</td>
+    </tr>
+    <tr class="total">
+      <th colspan="2"></th>
+      <th colspan="2">Brutto-Gesamt</th>
+      <td class="decimal"><%= np commercial_process.total_gross_price, 2, '€' %></td>
+    </tr>
+  </tfoot>
+</table>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="http://static.consolving.de/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <%= stylesheet_link_tag 'vplaner' %>
+    <link href="http://static.consolving.de/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="public">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
+          <a class="brand" href="/">vPlaner by Consolving</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <%= public_navigation :active => 'Login'%>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <%= flash_message %>
+    <%= yield  %>
+    <%= public_footer %>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/jquery.js"></script>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap.js"></script>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/google-code-prettify/prettify.js"></script>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-dropdown.js"></script>
+    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-tab.js"></script>
+    <%= yield :javascript %>
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

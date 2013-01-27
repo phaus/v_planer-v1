@@ -153,13 +153,15 @@
     <%= link_to 'Rechnung (PDF)', rental_invoice_path(@rental, :format => 'pdf'), :class => 'pdf' %>
   <% elsif @rental.rejected? %>
     <%= link_to 'Annehmen', rental_path(@rental, 'rental[action]' => 'accept'), :class => 'accept', :method => :put %>
+  <% else %>
+    CURRENT STATE: <%= @rental.current_state %>
   <% end %>
 
   <% unless @rental.closed? %>
     <%= link_to 'Schließen', rental_path(@rental, 'rental[action]' => 'close'), :method => :put, :confirm => 'Nach dem Schließen kann ein Vorgang nicht mehr verändert werden. Vorgang wirklich schließen?', :class => 'close' %>
   <% end %>
   <%= link_to 'Löschen', rental_path(@rental), :method => :delete, :confirm => 'wirklich löschen?', :class => 'delete' %>
-  <%= link_to 'Zurück zur Übersicht', rentals_path, :class => 'back' %>
+  <%= link_to 'Zurück zur Übersicht', rental.rental_processes_path, :class => 'back' %>
 </p>
 
 <p class="alternative_formats">

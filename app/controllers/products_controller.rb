@@ -10,10 +10,10 @@ class ProductsController < UserSpecificController
       if @category
         @products = @class_context
       else
-        @products = @class_context.s_uncategorized
+        @products = @class_context #.s_uncategorized
       end
     else
-      @products = @class_context.search(params[:q], :star => true)
+      @products = @class_context.matching(params[:q], :star => true)
     end
 
     respond_to do |format|
@@ -40,22 +40,21 @@ class ProductsController < UserSpecificController
     end
     case params[:t]
     when 'rentable'
-      scope = Product.s_rentable
+      scope = Product #.s_rentable
     when 'sellable'
-      scope = Product.s_sellable
+      scope = Product #.s_sellable
     when 'service'
-      scope = Product.s_service
+      scope = Product #.s_service
     when 'device'
-      scope = Product.s_device
+      scope = Product #.s_device
     when 'expense'
-      scope = Product.s_expense
+      scope = Product #.s_expense
     else
       scope = Product
     end
 
-    @products = scope.s_for_company(current_company).search params[:q],
-        :star    => true,
-        :include => :article
+    @products = scope.for_company(current_company).matching params[:q]
+
     respond_to do |format|
       format.html { render :layout => !request.xhr? }
       format.xml  { render :xml  => @products }
@@ -64,27 +63,27 @@ class ProductsController < UserSpecificController
   end
 
   def rentable
-    @class_context = @class_context.s_rentable
+    @class_context = @class_context #.s_rentable
     index
   end
 
   def sellable
-    @class_context = @class_context.s_sellable
+    @class_context = @class_context #.s_sellable
     index
   end
 
   def service
-    @class_context = @class_context.s_service
+    @class_context = @class_context #.s_service
     index
   end
 
   def device
-    @class_context = @class_context.s_device
+    @class_context = @class_context #.s_device
     index
   end
 
   def expense
-    @class_context = @class_context.s_expense
+    @class_context = @class_context #.s_expense
     index
   end
 
@@ -219,7 +218,7 @@ class ProductsController < UserSpecificController
   protected
   def load_class_context
     if params[:category_id].blank?
-      @class_context = Product.s_for_company(current_company)
+      @class_context = current_company.products
     else
       @category      = current_company.categories.find(params[:category_id])
       @class_context = @category.products

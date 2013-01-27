@@ -28,49 +28,51 @@ class Product < ActiveRecord::Base
       :selling_price,
       :to => :article
 
-  define_index do
-    indexes :code
-#     indexes :company_section_id
-    indexes :article_type
-    indexes article(:name),         :as => :name, :sortable => true
-    indexes article(:manufacturer), :as => :manufacturer
-    indexes article(:description),  :as => :description
+  scope :matching, lambda {|str| where([%q(CONCAT(products.name, '-', products.code, '-', products.description) REGEXP ?), str])}
 
-    has company_section_id,                                  :type => :integer
-    has article(:is_rentable),  :as => :article_is_rentable, :type => :boolean
-    has article(:is_sellable),  :as => :article_is_sellable, :type => :boolean
-    has categories(:id),        :as => :category_ids,        :type => :multi
-
-    set_property :delta => true
-  end
-
-  sphinx_scope :s_service do
-    {:conditions => {:article_type => 'Service'}}
-  end
-
-  sphinx_scope :s_device do
-    {:conditions => {:article_type => 'Device'}}
-  end
-
-  sphinx_scope :s_rentable do
-    {:conditions => {:article_type => 'Device'}, :with => {:article_is_rentable => true}}
-  end
-
-  sphinx_scope :s_sellable do
-    {:conditions => {:article_type => 'Device'}, :with => {:article_is_sellable => true}}
-  end
-
-  sphinx_scope :s_expense do
-    {:conditions => {:article_type => 'Expense'}}
-  end
-
-  sphinx_scope :s_for_company do |company|
-    {:with => {:company_section_id => company.section_ids }}
-  end
-
-  sphinx_scope :s_uncategorized do |company|
-    {:with => {:category_ids => []}}
-  end
+#   define_index do
+#     indexes :code
+# #     indexes :company_section_id
+#     indexes :article_type
+#     indexes article(:name),         :as => :name, :sortable => true
+#     indexes article(:manufacturer), :as => :manufacturer
+#     indexes article(:description),  :as => :description
+# 
+#     has company_section_id,                                  :type => :integer
+#     has article(:is_rentable),  :as => :article_is_rentable, :type => :boolean
+#     has article(:is_sellable),  :as => :article_is_sellable, :type => :boolean
+#     has categories(:id),        :as => :category_ids,        :type => :multi
+# 
+#     set_property :delta => true
+#   end
+# 
+#   sphinx_scope :s_service do
+#     {:conditions => {:article_type => 'Service'}}
+#   end
+# 
+#   sphinx_scope :s_device do
+#     {:conditions => {:article_type => 'Device'}}
+#   end
+# 
+#   sphinx_scope :s_rentable do
+#     {:conditions => {:article_type => 'Device'}, :with => {:article_is_rentable => true}}
+#   end
+# 
+#   sphinx_scope :s_sellable do
+#     {:conditions => {:article_type => 'Device'}, :with => {:article_is_sellable => true}}
+#   end
+# 
+#   sphinx_scope :s_expense do
+#     {:conditions => {:article_type => 'Expense'}}
+#   end
+# 
+#   sphinx_scope :s_for_company do |company|
+#     {:with => {:company_section_id => company.section_ids }}
+#   end
+# 
+#   sphinx_scope :s_uncategorized do |company|
+#     {:with => {:category_ids => []}}
+#   end
 
   scope :available_between, lambda {|from_date, to_date|
     where [%q(products.article_id NOT IN (SELECT product_stock_entries.device_id FROM product_stock_entries

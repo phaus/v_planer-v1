@@ -1,4 +1,9 @@
 de:
+  number:
+    format:
+      separator: ","
+      delimiter: "'"
+
   field:
     value differs from calculation: Eingabewert weicht vom berechneten Wert (%{calculated_value}) ab.
 
@@ -13,6 +18,7 @@ de:
         company_name: Firma
         email: E-Mailadresse
         discount: Rabatt
+        discount_percentage: Rabatt (%)
         payment_goal: Zahlungsziel
 
       bank_account:
@@ -37,4 +43,99 @@ de:
         company_name: Firma
         contact_person: Ansprechpartner
         email: E-Mailadresse
-        
+
+      rental:
+        begin: Von
+        end: Bis
+        usage_duration: Gebrauchsdauer
+        billed_duration: Abrechnungsdauer
+
+      commercial_process:
+        title: Titel
+        client: Kunde
+        process_no: VG-Nr.
+        created_at: Datum
+        updated_at: zuletzt aktualisiert
+        created_by: erstellt von
+        updated_by: aktualisiert von
+        client_discount: Kundenrabatt
+        client_discount_percentage: Kundenrabatt
+        discount: Auftragsrabatt
+        discount_percentage: Auftragsrabatt
+        start_date: Anfangsdatum
+        end_date: Enddatum
+        delivery_date: Lieferdatum
+        return_date: Rückgabedatum
+        billed_duration: Abrechnungsdauer
+        total_net_price: Gesamt-Netto
+
+    errors:
+      models:
+        commercial_process:
+          attributes:
+            client:
+              blank: Kein Kunde angegeben
+            process_no:
+              blank: Keine Vorgangsnummer angegeben
+
+        rental:
+          attributes:
+            begin:
+              blank: Kein Anfangsdatum angegeben
+            end:
+              blank: Kein Enddatum angegeben
+
+        process_item:
+          attributes:
+            vat_percentage:
+              blank: Kein MWSt.-Satz angegeben
+
+  errors:
+    format: %{message}
+    template:
+      header: Fehler beim Speichern
+      body: Beheben Sie bitte folgende Probleme, bevor Sie fortfahren.
+
+  workflow:
+    halted_because:
+      validation_failed: Validierung fehlgeschlagen
+
+      rental:
+        missing_acting_user: Benutzer fehlt [INTERNER FEHLER]
+        validation_failed: Die Angaben sind unvollständig
+
+      commercial_process:
+        missing_acting_user: Benutzer fehlt [INTERNER FEHLER]
+        validation_failed: Die Angaben sind unvollständig
+        user_does_not_belong_to_same_company_section_as_process: Sie gehören nicht zur gleichen Firmensektion wie der Vorgang.
+
+  controller:
+    rentals:
+      created: Der Vermitvorgang wurde erstellt, sie können mit dem Hinzufügen von positionen fortfahren.
+      updated: Der Vorgang wurde aktualisiert.
+      deleted: Der Vorgang wurde gelöscht.
+      no clients found: Keine Kunden entsprachen Ihren Suchkriterien.
+
+  txt:
+    rental:
+      commercial_process:
+        title:
+          main: Vermietvorgänge
+          small: %d gefunden
+        link:
+          new: Neuer Vermietvorgang
+        explain:
+          please select a client first: Bitte wählen Sie einen Kunden, bevor Sie weitere Angaben machen können.
+
+    generic:
+      link:
+        new: Neuer Vorgang
+        delete: löschen
+        edit: bearbeiten
+        show: ansehen
+        back: zurück
+        next: weiter
+        cancel: abbrechen
+
+      placeholder:
+        search: Suche

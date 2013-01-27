@@ -44,6 +44,10 @@ class Company < ActiveRecord::Base
       :tax_id,
       :to => :main_section
 
+  after_save :autoset_company_section
+
+  after_create :update_company
+
   def rentals
     Rental.for_company(self)
   end
@@ -64,17 +68,27 @@ class Company < ActiveRecord::Base
     User.for_company(self)
   end
 
-  def after_save
-    unless self.main_section.company_id == self.id
-      self.main_section.update_attribute :company_id, self.id
-    end
+  def commercial_processes
+    CommercialProcess.for_company(self)
   end
 
   def non_main_sections
     self.sections - [self.main_section]
   end
 
-  def after_create
+  def date_format
+    :de
+  end
+
+  protected
+
+  def autoset_company_section
+    unless self.main_section.company_id == self.id
+      self.main_section.update_attribute :company_id, self.id
+    end
+  end
+
+  def update_company
     self.main_section.update_attribute :company, self
   end
 end

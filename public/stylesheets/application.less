@@ -1,3 +1,13 @@
+@charset "UTF-8";
+
+body {
+  padding-top: 120px;
+
+  &.public {
+    padding-top: 60px;
+  }
+}
+
 .unit(@str) {
   label:after {
     content: @str;
@@ -10,15 +20,30 @@
   }
 }
 
+.actions {
+  display: block;
+  clear: both;
+}
+
 .field {
   display: block;
-  float: left;
+/*   float: left; */
   overflow: hidden;
-  width: 320px;
+/*   width: 320px; */
   border: none;
   clear: both;
 
-  label {
+/*  &.date-select {
+    label + input {
+      width: 175px;
+    }
+
+    img {
+      margin: 8px 5px;
+    }
+  }*/
+
+/*  label {
     display: block;
     float: left;
     border: none;
@@ -33,6 +58,11 @@
     width: 200px;
     float: left;
     margin: 5px 0;
+  }*/
+
+  .calendar-date-select {
+    color: #666;
+    background: #eee url('images/icons_16/cal_select.png') 98% 50% no-repeat;
   }
 
   &.unit-h    { .unit(' [h]') }
@@ -48,4 +78,65 @@
   &.unit-l    { .unit(' [l]') }
   &.unit-deg  { .unit(' [°]') }
   &.unit-percent { .unit(' [%]') }
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.footer {
+  background-color: #F5F5F5;
+  border-top: 1px solid #E5E5E5;
+  margin-top: 70px;
+  padding: 30px 0;
+  text-align: center;
+
+  p {
+    color: #777777;
+    margin-bottom: 0;
+  }
+}
+
+.small_spinner {
+  height: 24px;
+}
+
+.form-signin {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin: 66px auto;
+  max-width: 300px;
+  padding: 19px 29px 29px;
+}
+
+td.decimal,
+td.money,
+.decimal input,
+.money input {
+  white-space: nowrap;
+  text-align: right;
+  width: 5em;
+}
+
+.money,
+.decimal {
+  width: 6em;
+  text-align: right;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+table.table th {
+ white-space: pre;
+}
+
+tr.total td {
+  border-bottom: 3px double #333;
 }

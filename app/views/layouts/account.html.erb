@@ -2,32 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Mein Konto</title>
+    <title>v_planer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <!-- Le styles -->
     <link href="http://static.consolving.de/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-      }
-    </style>
-    <%= stylesheet_link_tag 'vplaner' %>
+    <%= stylesheet_link_tag 'application' %>
     <link href="http://static.consolving.de/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-    <!-- Le fav and touch icons -->
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-  <body>
+  <body class="public">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
           <a class="brand" href="/">vPlaner by Consolving</a>
           <div class="nav-collapse collapse">
+            <% if params[:action] == 'index' %>
+              <% form_tag main_app.products_path, :method => :get, :class=>"navbar-search pull-left" do %>
+                <%= text_field_tag 'q', params['q'], :class => 'search-query', :placeholder => 'Search' %>
+                <%= image_tag('loading.gif', :id => 'spinner1', :style => 'display: none;', :class => 'small_spinner') %>
+              <% end %>
+            <% end %>
             <ul class="nav pull-right">
               <li id="user-menu" class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
@@ -35,19 +33,25 @@
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to 'Verkaufsvorgang', new_selling_path %></li>
-                  <li><%= link_to 'Vermietvorgang', new_rental_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Artikel', new_device_path %></li>
-                  <li><%= link_to 'Kategorie', new_category_path %></li>
-                  <li><%= link_to 'Dienstleistung', new_service_path %></li>
+                  <li><%= link_to 'Artikel', main_app.new_device_path %></li>
+                  <li><%= link_to 'Kategorie', main_app.new_category_path %></li>
+                  <li><%= link_to 'Dienstleistung', main_app.new_service_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Kunde', new_client_path %></li>
-                  <li><%= link_to 'Lieferant', new_distributor_path %></li>
+                  <li><%= link_to 'Kunde', main_app.new_client_path %></li>
+                  <li><%= link_to 'Lieferant', main_app.new_distributor_path %></li>
                 </ul>
               </li>
               <li class="divider-vertical"></li>
-              <%= main_navigation :active => 'Benutzerkonto' %>
+              <li><%= link_to 'Kunden',        main_app.clients_path %></li>
+              <li><%= link_to 'Lieferanten',   main_app.distributors_path %></li>
+              <li><%= link_to 'Kategorien',    main_app.categories_path %></li>
+              <li><%= link_to 'Artikel',       main_app.products_path %></li>
+              <li><%= link_to 'Vorgänge',      main_app.commercial_processes_path %></li>
+              <li><%= link_to 'Vermietung',    rental.root_path %></li>
+              <li><%= link_to 'Rechnungen',    main_app.invoices_path %></li>
+              <li><%= link_to 'Mitarbeiter',   main_app.users_path if is_company_admin? %></li>
+              <li><%= link_to 'Administration',main_app.admin_path if is_admin? %></li>
               <li class="divider-vertical"></li>
               <li id="user-menu" class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
@@ -55,13 +59,13 @@
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to 'Benutzerdaten', account_path %></li>
-                  <li><%= link_to 'Kennwort ändern', edit_account_path %></li>
+                  <li><%= link_to 'Benutzerdaten', main_app.account_path %></li>
+                  <li><%= link_to 'Kennwort ändern', main_app.edit_account_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Firmendaten bearbeiten', edit_company_path %></li>
-                  <li><%= link_to 'Mitarbeiter verwalten', users_path %></li>
+                  <li><%= link_to 'Firmendaten bearbeiten', main_app.edit_company_path %></li>
+                  <li><%= link_to 'Mitarbeiter verwalten', main_app.users_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Ausloggen', user_session_path, :method => :delete %></li>
+                  <li><%= link_to 'Ausloggen', main_app.user_session_path, :method => :delete %></li>
                 </ul>
               </li>
             </ul>
@@ -70,16 +74,25 @@
         </div>
       </div>
     </div>
-    <%= flash_message %>
-    <%= yield  %>
+
+    <div class="container-fluid">
+      <%= flash_message %>
+      <%= yield  %>
+    </div>
+
     <%= footer %>
+
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/jquery.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/google-code-prettify/prettify.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-dropdown.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-tab.js"></script>
-    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-typeahead.js"></script>
+<!--     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-typeahead.js"></script> -->
+
+    <%= javascript_include_tag 'prototype' %>
+    <%= calendar_date_select_includes %>
     <%= yield :javascript %>
+    <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'vplaner' %>
   </body>
 </html>

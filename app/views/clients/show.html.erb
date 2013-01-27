@@ -12,7 +12,7 @@
             <li><%= link_to '<i class="icon-edit"></i> Bearbeiten', edit_client_path(@client), :class => 'edit' %></li>
             <li><%= link_to '<i class="icon-trash"></i> Löschen', category_path(@client), :method => :delete, :confirm => 'Sind wir uns da GANZ sicher?!', :class => 'delete' %></li>
           <% end %>
-          <li><%= link_to '<i class="icon-plus"></i> Vermietvorgang',  new_rental_path(:rental => {:client_id => @client.id}) %></li>
+          <li><%= link_to '<i class="icon-plus"></i> Vermietvorgang',  rental.new_rental_process_path(:rental => {:client_id => @client.id}) %></li>
           <li><%= link_to '<i class="icon-plus"></i> Verkaufsvorgang', new_selling_path(:selling => {:client_id => @client.id}) %></li>
         </ul>
       </div>
