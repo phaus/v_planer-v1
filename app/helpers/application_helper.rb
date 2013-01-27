@@ -16,7 +16,7 @@ module ApplicationHelper
   def category_tabs(categories, opts={})
     str = ''
     categories.each do |category|
-      str << category_navtab(link_to("#{category.name} (#{category.products.size})", url_for(:id => category)), :active => category.id == opts[:active].to_i)
+      str << category_navtab(link_to("#{category.name} (#{category.products.size})", url_for(:category_id => category)), :active => category.id == opts[:active].to_i)
     end
     unless params[:q].blank?
       str << category_navtab(link_to('Suchergebnis', devices_path(:q => params[:q])), :active => true)

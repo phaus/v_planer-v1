@@ -1,5 +1,11 @@
 <div class="page-header">
-  <h1>Artikel</h1>
+  <% if params[:q] %>
+    <h1>Artikel <small>Suchergebnisse für '<%= params[:q] %>' (<%= @products.size %>)</small></h1>
+  <% elsif @category %>
+    <h1>Artikel <small>in Kategorie <em><%= @category.name %></em></small></h1>
+  <% else %>
+    <h1>Artikel</h1>
+  <% end %>
 </div>
 
 <div class="row">

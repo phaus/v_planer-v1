@@ -1,5 +1,6 @@
 class ProductsController < UserSpecificController
-#   requires_company_admin_for :edit, :update, :destroy
+
+  is_searchable
 
   before_filter :load_class_context
 
@@ -10,10 +11,10 @@ class ProductsController < UserSpecificController
       if @category
         @products = @class_context
       else
-        @products = @class_context #.s_uncategorized
+        @products = []
       end
     else
-      @products = @class_context.matching(params[:q], :star => true)
+      @products = @class_context.matching(params[:q])
     end
 
     respond_to do |format|

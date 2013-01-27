@@ -58,12 +58,12 @@ body.public {
 .field.unit-h input {
   text-align: right;
 }
-.field.unit-chf label:after {
-  content: ' [CHF]';
+.field.unit-eur label:after {
+  content: ' [€]';
   color: #888;
 }
-.field.unit-chf .input-value,
-.field.unit-chf input {
+.field.unit-eur .input-value,
+.field.unit-eur input {
   text-align: right;
 }
 .field.unit-km label:after {
