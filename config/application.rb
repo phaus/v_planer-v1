@@ -41,3 +41,5 @@ module VPlaner
     config.filter_parameters += [:password, :password_confirmation]
   end
 end
+
+APP_NAME = 'v_Planer'

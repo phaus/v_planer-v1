@@ -1,6 +1,7 @@
 VPlaner::Application.routes.draw do
   mount VPlanerRental::Engine => '/rental', :as => 'rental'
   mount VPlanerAdmin::Engine  => '/admin',  :as => 'admin'
+  mount VPlanerAudition::Engine  => '/audition'
 
   resources :default_texts
 

@@ -88,20 +88,19 @@ CalendarDateSelect.prototype = {
       minute_interval: 5,
       popup_by: this.target_element,
       month_year: "dropdowns",
-      onchange: function(target_element)
-      { return function()
-        { if(target_element.dispatchEvent)
-          { var event=document.createEvent('HTMLEvents');
-            event.initEvent('change', true, true);
-            target_element.dispatchEvent(event);
-          }
-          else
-          { var event=document.createEventObject();
-            event.type='onChange';
-            target_element.fireEvent('onChange', event);
-          }
-        }; 
-      }(this.target_element),
+//       onchange: function(target_element){
+//         return function() {
+//           if(target_element.dispatchEvent) {
+//             var event = document.createEvent('HTMLEvents');
+//             event.initEvent('change', true, true);
+//             target_element.dispatchEvent(event);
+//           } else {
+//             var event = document.createEventObject();
+//             event.type='onChange';
+//             target_element.fireEvent('onChange', event);
+//           }
+//         };
+//       }(this.target_element),
       valid_date_check: nil
     }).merge(options || {});
     this.use_time = this.options.get("time");
@@ -211,7 +210,7 @@ CalendarDateSelect.prototype = {
       this.hour_select = new SelectBox(buttons_div,
         blank_time.concat($R(0,23).map(function(x) {t.setHours(x); return $A([t.getAMPMHour()+ " " + t.getAMPM(),x])} )),
         { 
-          calendar_date_select: this, 
+          calendar_date_select: this,
           onchange: function() { this.calendar_date_select.updateSelectedDate( { hour: this.value });},
           className: "hour" 
         }
@@ -455,5 +454,12 @@ CalendarDateSelect.prototype = {
   keyPress: function(e) {
     if (e.keyCode==Event.KEY_ESC) this.close();
   },
-  callback: function(name, param) { if (this.options.get(name)) { this.options.get(name).bind(this.target_element)(param); } }
+//   callback: function(name, param) { if (this.options.get(name)) { this.options.get(name).bind(this.target_element)(param); } }
+  callback: function(name, param) {
+    if (this.options.get(name)) {
+      this.options.get(name).bind(this.target_element)(param);
+    } else {
+      this.target_element.fire('cds:' + name, param);
+    }
+  }
 }

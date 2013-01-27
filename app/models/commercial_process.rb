@@ -4,7 +4,7 @@ class CommercialProcess < ActiveRecord::Base
   include Workflow
   include Conforming::ModelExtensions
 
-  attr_accessor :acting_user
+  attr_accessor :acting_user, :process_extension
 
   has_one :invoice,
       :as        => 'process',
@@ -23,6 +23,11 @@ class CommercialProcess < ActiveRecord::Base
 
   belongs_to :updated_by,
       :class_name => 'User'
+
+#   belongs_to :implementation,
+#       :polymorphic => true
+
+#   accepts_nested_attributes_for :implementation
 
   before_create :set_created_by
   before_update :set_updated_by
@@ -49,6 +54,10 @@ class CommercialProcess < ActiveRecord::Base
 
   delegate :full_name,
       :to     => :updated_by,
+      :prefix => true
+
+  delegate :full_name,
+      :to     => :client,
       :prefix => true
 
   workflow do
@@ -115,7 +124,7 @@ class CommercialProcess < ActiveRecord::Base
           :price      => self.total_gross_price,
           :invoice_no => (Invoice.maximum(:invoice_no)||0).succ
       invoice.attributes = attrs
-      self.items.each do |period|
+      self.process_items.each do |period|
         invoice.items.build(:item => period)
       end
       invoice
@@ -128,17 +137,15 @@ class CommercialProcess < ActiveRecord::Base
     invoice
   end
 
-  def process_no
-    self.implementation.process_no
-  rescue
-    self.new_record? ? (self.class.maximum(:id) || 0).succ : self.id
+  default_value_for :process_no, :type => String do
+    self.class.maximum(:id)
   end
 
-  default_value_for :client_discount do
+  default_value_for :client_discount_percentage do
     self.client.try(:discount) || 0.0
   end
 
-  default_value_for :discount do
+  default_value_for :discount_percentage do
     0.0
   end
 
@@ -147,12 +154,19 @@ class CommercialProcess < ActiveRecord::Base
   end
 
   default_value_for :vat do
-    self.total_net_price * 0.19
+    self.total_net_price * self.vat_percentage / 100.0
   end
 
-  def client_discount_percent
-    return 0.0 if sum.to_f == 0.0
-    (self.client_discount / self.total_net_price).round(2)
+  def vat_percentage
+    19.0
+  end
+
+  def client_discount
+    if self.sum.to_f == 0.0
+      0.0
+    else
+      self.sum * self.client_discount_percentage / 100.0
+    end
   end
 
   def total_net_price
@@ -160,7 +174,7 @@ class CommercialProcess < ActiveRecord::Base
   end
 
   def sum
-    self.items.map(&:total_net_price).sum
+    self.process_items.map(&:total_net_price).sum
   end
 
   def init(options)
@@ -191,6 +205,35 @@ class CommercialProcess < ActiveRecord::Base
       @acting_user = user
       yield user
     end
+  end
+
+  def client_search
+    ''
+  end
+
+  def client_search=(str)
+    unless str.blank?
+      @possible_clients = Client.matching(str)
+    end
+  end
+  attr_reader :possible_clients
+
+  validate :client_search_result,
+      :if => :possible_clients
+
+  def client_search_result
+    case self.possible_clients.size
+    when 0
+      self.errors.add :client_search, :no_results
+    when 1
+      self.client = self.possible_clients.first
+    else
+      self.errors.add :client_search, :multiple_results
+    end
+  end
+
+  def process_items
+    @process_items = self.items.map{|s| s.commercial_process = self; s}
   end
 
   protected

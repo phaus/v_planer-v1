@@ -7,12 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <link href="http://static.consolving.de/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-      body {
-        padding-top: 120px;
-      }
-    </style>
-    <%= stylesheet_link_tag 'vplaner' %>
+    <%= stylesheet_link_tag 'application' %>
     <link href="http://static.consolving.de/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -91,6 +86,7 @@
       <%= flash_message %>
       <%= yield  %>
     </div>
+
     <%= footer %>
 
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/jquery.js"></script>
@@ -98,11 +94,12 @@
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/google-code-prettify/prettify.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-dropdown.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-tab.js"></script>
-    <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-typeahead.js"></script>
+<!--     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap-typeahead.js"></script> -->
 
-    <%= javascript_include_tag :all %>
+    <%= javascript_include_tag 'prototype' %>
     <%= calendar_date_select_includes %>
     <%= yield :javascript %>
+    <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'vplaner' %>
   </body>
 </html>

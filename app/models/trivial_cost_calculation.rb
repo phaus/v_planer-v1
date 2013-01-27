@@ -1,7 +1,7 @@
 class TrivialCostCalculation < ActiveRecord::Base
   include Conforming::ModelExtensions
 
-  attr_accessor :item
+  attr_accessor :item, :process
 
   default_value_for :unit_price do
     0.0

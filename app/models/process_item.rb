@@ -1,7 +1,7 @@
 class ProcessItem < ActiveRecord::Base
   include Conforming::ModelExtensions
 
-  belongs_to :commercial_process
+  attr_accessor :commercial_process
 
   belongs_to :product
 
@@ -13,7 +13,7 @@ class ProcessItem < ActiveRecord::Base
 
   validates_presence_of :unit, :quantity, :name, :vat_percentage, :cost_calculation
 
-  after_initialize :set_default_cost_calculation
+  after_initialize :initialize_cost_calculation
 
   accepts_nested_attributes_for :cost_calculation,
       :update_only => true
@@ -35,12 +35,12 @@ class ProcessItem < ActiveRecord::Base
   end
 
   default_value_for :vat_percentage do
-    self.product.try(:vat_percentage) || 19.0
+    self.product.try(:vat_percentage) || self.commercial_process.vat_percentage
   end
 
   def cost_calculation_with_reverse_assiciation_assignment
     cc = cost_calculation_without_reverse_assiciation_assignment
-    cc ? cc.tap {|a| a.item = self } : nil
+    cc ? cc.tap {|a| a.item, a.process = self, self.commercial_process } : nil
   end
   alias_method_chain :cost_calculation, :reverse_assiciation_assignment
 
@@ -54,7 +54,7 @@ class ProcessItem < ActiveRecord::Base
 
   protected
 
-  def set_default_cost_calculation
+  def initialize_cost_calculation
     self.cost_calculation ||= TrivialCostCalculation.new(:item => self)
   end
 
