@@ -1,5 +1,4 @@
 class ProcessItemsController < ApplicationController
-  layout 'commercial_processes'
 
   before_filter :handle_product_search, :only => [:new, :edit]
   before_filter :load_process

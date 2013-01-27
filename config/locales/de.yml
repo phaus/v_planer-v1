@@ -136,3 +136,6 @@ de:
         back: zurück
         next: weiter
         cancel: abbrechen
+
+      placeholder:
+        search: Suche

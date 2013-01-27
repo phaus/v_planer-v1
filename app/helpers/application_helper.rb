@@ -149,18 +149,17 @@ def footer
   render :partial => 'layouts/footer'
 end
 
-def last_changed_info(obj)
-  str = ''
-  if obj.updated_at == obj.created_at
-    str << "<p>Erstellt am #{obj.created_at.to_date}</p>"
+  def last_changed_info(obj)
+    str = ''
+    if obj.updated_at == obj.created_at
+      str << "<p>Erstellt am #{obj.created_at.to_date}</p>"
+    end
+    str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
+    return str
   end
-  str << "<p>Zuletzt geändert am #{obj.updated_at.to_date}</p>"
-  return str
-end
 
   def np(number, precision = 0, unit = '')
     str = number_with_precision(number, :precision => precision)
     unit.blank? ? str : "#{str} #{unit}"
   end
-
 end

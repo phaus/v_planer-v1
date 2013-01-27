@@ -1,7 +1,5 @@
 class CommercialProcessesController < ApplicationController
 
-  layout 'commercial_processes'
-
   before_filter :handle_client_search
 
   # GET /commercial_processes

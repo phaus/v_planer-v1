@@ -1,17 +1,24 @@
-<div class="container">
-  <div class="page-header">
-    <h1>Kunden <small><%= @clients.size %> gefunden</small></h1>
+<div class="page-header">
+  <h1>Kunden <small><%= @clients.size %> gefunden</small></h1>
+</div>
+
+<div class="row">
+  <%= render :partial => 'list' %>
+</div>
+
+<div class="row-fluid">
+  <div class="well sidebar-nav span5">
+    <ul class="nav nav-list">
+      <li class="nav-header">Alternative Formate</li>
+      <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+      <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
+    </ul>
   </div>
-  <div class="row">
-    <%= render :partial => 'list' %>
-  </div>
-  <div class="row">
-    <div class="well sidebar-nav">
-      <ul class="nav nav-list">
-        <li class="nav-header">Alternative Formate</li>
-        <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
-        <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
-      </ul>
-    </div>
+
+  <div class="well sidebar-nav span7">
+    <ul class="nav nav-list">
+      <li class="nav-header">Aktionen</li>
+      <li><%= link_to t('txt.client.link.new'), new_client_path %></li>
+    </ul>
   </div>
 </div>

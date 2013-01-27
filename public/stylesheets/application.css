@@ -2,6 +2,9 @@
 body {
   padding-top: 120px;
 }
+body.public {
+  padding-top: 60px;
+}
 .actions {
   display: block;
   clear: both;

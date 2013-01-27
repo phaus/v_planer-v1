@@ -20,12 +20,13 @@
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></a>
           <a class="brand" href="/">vPlaner by Consolving</a>
           <div class="nav-collapse collapse">
-            <% if params[:action] == 'index' %>
-              <% form_tag main_app.products_path, :method => :get, :class=>"navbar-search pull-left" do %>
-                <%= text_field_tag 'q', params['q'], :class => 'search-query', :placeholder => 'Search' %>
+            <% if searchable_resource? %>
+              <%= form_tag resource_search_path, :method => :get, :class => 'navbar-search pull-left' do %>
+                <%= text_field_tag 'q', params['q'], :class => 'search-query', :placeholder => t('txt.generic.placeholder.search') %>
                 <%= image_tag('loading.gif', :id => 'spinner1', :style => 'display: none;', :class => 'small_spinner') %>
               <% end %>
             <% end %>
+
             <ul class="nav pull-right">
               <li id="user-menu" class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">

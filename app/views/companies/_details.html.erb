@@ -1,21 +1,10 @@
-<p>Sie sind mit folgenden Daten bei uns registriert. Sollten Sie diese Daten ändern wollen, setzen Sie sich bitte mit unserem Support-Team in Verbindung.</p>
 <address>
-<strong><%=h @user.company.name %></strong><br />
-<%= link_to h(@user.company.admin.full_name), @user.company.admin %><br />
-<%=h @user.company.sender_address_block %><br />
-<abbr title="E-Mail">M:</abbr> <%=h @user.company.email || 'Nicht angegeben' %><br />
-<abbr title="Telefon">P:</abbr> <%=h @user.company.phone || 'Nicht angegeben' %><br />
-<abbr title="Telefax">F:</abbr> <%=h @user.company.fax || 'Nicht angegeben' %><br />
-Steuernummer: <strong><%=h @user.company.tax_id || 'Nicht angegeben' %></strong><br />
-USt-ID: <strong><%=h @user.company.vat_id || 'Nicht angegeben' %></strong><br />
+  <strong><%=h @user.company.name %></strong><br />
+  <%= link_to h(@user.company.admin.full_name), @user.company.admin %><br />
+  <%=h @user.company.sender_address_block %><br />
+  <abbr title="E-Mail">M:</abbr> <%=h @user.company.email || 'Nicht angegeben' %><br />
+  <abbr title="Telefon">P:</abbr> <%=h @user.company.phone || 'Nicht angegeben' %><br />
+  <abbr title="Telefax">F:</abbr> <%=h @user.company.fax || 'Nicht angegeben' %><br />
+  Steuernummer: <strong><%=h @user.company.tax_id || 'Nicht angegeben' %></strong><br />
+  USt-ID: <strong><%=h @user.company.vat_id || 'Nicht angegeben' %></strong><br />
 </address>
-
-<% if is_company_admin? %>
-  <p><%= link_to_remote 'Firmendaten bearbeiten',
-    :update => 'company_details',
-    :url    => edit_company_path,
-    :method => :get,
-    :after  => "new Effect.BlindDown('company_details', {duration: 0.5})",
-    :html   => {:href => edit_company_path}%>
-  </p>
-<% end %>
