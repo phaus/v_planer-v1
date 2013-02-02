@@ -13,6 +13,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
+
   <body class="public">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -80,7 +81,7 @@
       <%= yield  %>
     </div>
 
-    <%= footer %>
+    <%= render 'layouts/footer' %>
 
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/jquery.js"></script>
     <script charset="utf-8" type="text/javascript" src="http://static.consolving.de/js/bootstrap.js"></script>
