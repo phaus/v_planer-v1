@@ -1,0 +1,37 @@
+<h2>Vorgänge</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>VG-Nr.</th>
+      <th>Bearbeiter</th>
+      <th>Letztes Update</th>
+      <th>Gesamtpreis (netto)</th>
+      <th>Gesamtpreis (brutto)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @commercial_processes.each do |commercial_process| %>
+      <tr>
+        <td class="decimal"><%= link_to commercial_process.process_no, commercial_process_path(commercial_process) %></td>
+        <td><%= commercial_process.updated_by_full_name %></td>
+        <td><%= commercial_process.updated_at.to_s(current_company.date_format) %></td>
+        <td class="decimal"><%= np commercial_process.total_net_price, 2, '€' %></td>
+        <td class="decimal"><%= np commercial_process.total_gross_price, 2, '€' %></td>
+        <td><%= link_to 'bearbeiten', edit_commercial_process_path(commercial_process) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="decimal"><%= np @commercial_processes.map(&:total_net_price).sum, 2, '€' %></td>
+      <td class="decimal"><%= np @commercial_processes.map(&:total_gross_price).sum, 2, '€' %></td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+<p><%= link_to 'Neuer Vorgang', new_commercial_process_path %></p>

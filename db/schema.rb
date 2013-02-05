@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130110180546) do
+ActiveRecord::Schema.define(:version => 20130126214850) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -84,6 +84,27 @@ ActiveRecord::Schema.define(:version => 20130110180546) do
   add_index "clients", ["company_id"], :name => "company_id"
   add_index "clients", ["contact_person_id"], :name => "contact_person_id"
   add_index "clients", ["owner_id"], :name => "owner_id"
+
+  create_table "commercial_processes", :force => true do |t|
+    t.integer  "client_id",                      :limit => 8
+    t.integer  "sender_id"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.string   "workflow_state"
+    t.string   "process_no"
+    t.string   "title",                                                                         :default => ""
+    t.string   "remarks",                        :limit => 2048
+    t.string   "offer_top_text",                 :limit => 2048
+    t.string   "offer_bottom_text",              :limit => 2048
+    t.string   "offer_confirmation_top_text",    :limit => 1000
+    t.string   "offer_confirmation_bottom_text", :limit => 1000
+    t.decimal  "discount",                                       :precision => 10, :scale => 2
+    t.decimal  "client_discount",                                :precision => 10, :scale => 2
+    t.integer  "implementation_id"
+    t.string   "implementation_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -263,6 +284,20 @@ ActiveRecord::Schema.define(:version => 20130110180546) do
     t.decimal  "price",                        :precision => 10, :scale => 2
   end
 
+  create_table "process_items", :force => true do |t|
+    t.integer  "commercial_process_id"
+    t.integer  "product_id"
+    t.string   "name"
+    t.string   "remarks"
+    t.decimal  "quantity",              :precision => 10, :scale => 2
+    t.string   "unit"
+    t.integer  "cost_calculation_id"
+    t.string   "cost_calculation_type"
+    t.decimal  "vat_percentage",        :precision => 4,  :scale => 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "product_buying_prices", :force => true do |t|
     t.integer  "product_id"
     t.integer  "distributor_id"
@@ -291,6 +326,10 @@ ActiveRecord::Schema.define(:version => 20130110180546) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "delta",              :null => false
+    t.string   "name"
+    t.string   "description"
+    t.string   "long_description"
+    t.string   "internal_remarks"
   end
 
   add_index "products", ["article_type", "article_id"], :name => "article_type"
@@ -315,6 +354,17 @@ ActiveRecord::Schema.define(:version => 20130110180546) do
 
   add_index "rental_periods", ["product_id"], :name => "product_id"
   add_index "rental_periods", ["rental_id"], :name => "rental_id"
+
+  create_table "rental_processes", :force => true do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "delivery_date"
+    t.datetime "return_date"
+    t.decimal  "billed_duration", :precision => 10, :scale => 0
+    t.integer  "process_id"
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+  end
 
   create_table "rentals", :force => true do |t|
     t.datetime "begin"
@@ -413,6 +463,13 @@ ActiveRecord::Schema.define(:version => 20130110180546) do
     t.integer "device_id",                :null => false
   end
 
+  create_table "trivial_cost_calculations", :force => true do |t|
+    t.decimal  "unit_price", :precision => 10, :scale => 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "type"
+  end
+
   create_table "unavailabilities", :force => true do |t|
     t.integer  "rental_period_id"
     t.integer  "product_stock_entry_id"
@@ -436,10 +493,8 @@ ActiveRecord::Schema.define(:version => 20130110180546) do
     t.string   "password_salt",                       :default => "", :null => false
     t.string   "persistence_token",                   :default => "", :null => false
     t.string   "single_access_token",                 :default => "", :null => false
-    t.string   "perishable_token",                    :default => "", :null => false
     t.integer  "login_count",                         :default => 0,  :null => false
     t.integer  "failed_login_count",                  :default => 0,  :null => false
-    t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"
     t.string   "current_login_ip"
@@ -452,5 +507,31 @@ ActiveRecord::Schema.define(:version => 20130110180546) do
   end
 
   add_index "users", ["company_section_id"], :name => "company_section_id"
+
+  create_table "v_planer_audition_change_events", :force => true do |t|
+    t.integer  "target_id"
+    t.string   "target_type"
+    t.string   "action"
+    t.string   "message"
+    t.integer  "triggered_by_id"
+    t.string   "triggered_by_name"
+    t.integer  "on_behalf_of_id"
+    t.string   "on_behalf_of_name"
+    t.integer  "authenticated_user_id"
+    t.string   "authenticated_user_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "v_planer_rental_rental_processes", :force => true do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "delivery_date"
+    t.datetime "return_date"
+    t.decimal  "billed_duration", :precision => 10, :scale => 0
+    t.integer  "process_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

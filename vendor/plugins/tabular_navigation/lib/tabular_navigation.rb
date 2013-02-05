@@ -3,7 +3,7 @@ NAVIGATION_ENTRIES = [
   ['Lieferanten',        :distributors_path],
   ['Kategorien',         :categories_path],
   ['Artikel',            :products_path],
-  ['Vorgänge',           :rentals_path],
+  ['Vorgänge',           :commercial_processes_path],
   ['Rechnungen',         :invoices_path],
   ['Mitarbeiter',        [:users_path, :is_company_admin?]],
   ['Administration',     [:admin_path, :is_admin?]]

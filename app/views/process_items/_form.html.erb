@@ -1,0 +1,19 @@
+<%= form_for [@commercial_process, @process_item] do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :product_id %>
+
+  <%= f.wrapped_text_field :name %>
+  <%= f.wrapped_text_field :remarks %>
+  <%= f.wrapped_text_field :unit %>
+  <%= f.wrapped_text_field :vat_percentage %>
+  <%= f.wrapped_text_field :quantity, :format => '%.2f' %>
+
+  <%= f.fields_for :cost_calculation do |ccf| %>
+    <%= ccf.wrapped_text_field :unit_price, :class => 'unit-eur', :format => '%.2f' %>
+    <%= ccf.wrapped_readonly_value :total_net_price, :class => 'unit-eur', :format => '%.2f' %>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit :class => 'btn btn-primary' %>
+  </div>
+<% end %>

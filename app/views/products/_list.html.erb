@@ -2,21 +2,19 @@
 <div class="span3">
   <div class="well sidebar-nav">
     <ul class="nav nav-list">
+      <li class="nav-header">Aktionen</li>
+      <li><%= link_to 'neues Gerät', new_device_path %></li>
+      <li><%= link_to 'neue Dienstleistung', new_service_path%></li>
+      <li><%= link_to 'neuer Spesenartikel', new_expense_path %></li>
       <li class="nav-header">Kategorien</li>
       <%= category_tabs current_company.categories.not_empty(params[:action]), :active => params[:category_id] || :all %>
     </ul>
   </div>
 </div>
 
-
-<div class="span7">
-  <% if params[:q] %>
-    <h2>Suchergebnisse für '<%= params[:q] %>' (<%= @products.size %>)</h2>
-  <% else %>
-    <h2>Artikel in dieser Kategorie</h2>
-  <% end %>
+<div class="span9">
   <% if @products.any? %>
-    <table class="data" style="width: 100%">
+    <table class="table table-striped">
       <thead>
         <tr>
           <th>Code</th>
@@ -51,25 +49,25 @@
             <% if ['index', 'rentable'].include? params[:action] %>
               <td class="decimal">
                 <% if product.is_rentable? %>
-                  <%= m product.rental_price %>&thinsp;&euro;/<%= product.unit %>
+                  <%= m product.rental_price %> /<%= product.unit %>
                 <% end %>
               </td>
             <% end %>
             <% if ['index', 'sellable'].include? params[:action] %>
               <td class="decimal">
                 <% if product.is_sellable? %>
-                  <%=m product.selling_price %>&thinsp;&euro;/<%= product.unit %>
+                  <%=m product.selling_price %>/<%= product.unit %>
                 <% end %>
               </td>
             <% end %>
             <td>
-              <ul class="toolchain">
-                <li><%= link_to image_tag('icons_16/goto.png'), product %></li>
-                <% if may_edit_products? %>
-                  <li><%= link_to image_tag('icons_16/edit.png'), edit_product_path(product) %></li>
-                  <li><%= link_to image_tag('icons_16/editdelete.png'), product, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete %></li>
+              <div class="btn-group">
+                <%= link_to image_tag('icons_16/goto.png'), product, :class => 'btn' %>
+                <% if true # can? :edit, product %>
+                  <%= link_to image_tag('icons_16/edit.png'), edit_product_path(product), :class => 'btn' %>
+                  <%= link_to image_tag('icons_16/editdelete.png'), product, :confirm => 'Sind wir uns da GANZ sicher?', :method => :delete, :class => 'btn' %>
                 <% end %>
-              </ul>
+              </div>
             </td>
           </tr>
         <% end %>

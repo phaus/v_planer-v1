@@ -1,18 +1,24 @@
-<div class="container">
-  <div class="page-header">
+<div class="page-header">
+  <% if params[:q] %>
+    <h1>Artikel <small>Suchergebnisse für '<%= params[:q] %>' (<%= @products.size %>)</small></h1>
+  <% elsif @category %>
+    <h1>Artikel <small>in Kategorie <em><%= @category.name %></em></small></h1>
+  <% else %>
     <h1>Artikel</h1>
-  </div>
-  <div class="row">
-    <%= render :partial => 'list' %>
-  </div>
-  <div class="row">
-    <div class="well sidebar-nav">
-      <ul class="nav nav-list">
-        <li class="nav-header">Alternative Formate</li>
-        <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
-        <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
-        <!--   <li><%= link_to image_tag('icons_16/text-csv.png') + ' CSV', :format => 'csv' %></li> -->
-      </ul>
-    </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <%= render :partial => 'list' %>
+</div>
+
+<div class="row">
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">Alternative Formate</li>
+      <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+      <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
+      <!--   <li><%= link_to image_tag('icons_16/text-csv.png') + ' CSV', :format => 'csv' %></li> -->
+    </ul>
   </div>
 </div>

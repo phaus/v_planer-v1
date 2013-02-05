@@ -449,7 +449,7 @@ tfoot th,
   padding-right: 1em;
 }
 div.autocomplete {
-  position: absolute;
+  position: relative;
   width: 250px;
   background-color: #fff;
   border: 1px solid #888;

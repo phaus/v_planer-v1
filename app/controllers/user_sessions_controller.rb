@@ -1,5 +1,7 @@
 class UserSessionsController < ApplicationController
 
+  layout 'public'
+
   requires_login_for :destroy
 
   requires_no_login_for :new, :create

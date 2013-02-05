@@ -1,0 +1,14 @@
+<h1>Position bearbeiten</h1>
+
+<div class="row-fluid">
+  <div class="span6">
+    <%= form_for @process_item, :url => edit_commercial_process_process_item_path(@commercial_process, @process_item), :html => {:method => :get} do |f| %>
+      <%= render 'product_search', :f => f %>
+    <% end %>
+  </div>
+
+  <div class="span6">
+    <%= render 'form' %>
+  </div>
+</div>
+

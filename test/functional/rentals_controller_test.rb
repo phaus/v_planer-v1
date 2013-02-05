@@ -50,6 +50,6 @@ class RentalsControllerTest < ActionController::TestCase
       delete :destroy, :id => rentals(:rentals_00001).id
     end
 
-    assert_redirected_to rentals_path
+    assert_redirected_to rental.rental_processes_path
   end
 end

@@ -6,6 +6,9 @@ class RentalsController < UserSpecificController
   before_filter :assure_not_billed,
       :only => [:edit, :update, :delete]
 
+  before_filter :search_clients,
+      :only => [:new, :create, :edit, :update]
+
   include ApplicationHelper
 
   # GET /rentals
@@ -18,6 +21,7 @@ class RentalsController < UserSpecificController
     else
       @from_date = Date.parse(params[:from_date]).at_beginning_of_month
     end
+
     if params[:to_date].blank?
       @to_date = @from_date.at_end_of_month
     else
@@ -100,7 +104,7 @@ class RentalsController < UserSpecificController
   # GET /rentals/new
   # GET /rentals/new.xml
   def new
-    @rental = Rental.new params[:rental]
+    @rental = CommercialProcess.new_rental(params[:rental])
     @rental.sender = current_user.company_section
 
     respond_to do |format|
@@ -118,24 +122,23 @@ class RentalsController < UserSpecificController
   # POST /rentals.xml
   def create
     params[:rental].delete(:user_id)
+    # begin HACK -- this shall be removed
     sanitize_decimal_input!(params[:rental])
     sanitize_new_product_input!(params[:process]||{})
+    # end HACK
+
     @rental = Rental.new params[:rental]
-    @rental.sender = current_user.company_section
-    @rental.user   = current_user
-    @rental.new_device_items_attributes  = params[:process][:new_device_items_attributes] || []
-    @rental.new_service_items_attributes = params[:process][:new_service_items_attributes] || []
+    @rental.select_client!(:as => current_user)
 
     respond_to do |format|
-      if params[:rental][:new_device_items_attributes].nil? and params[:process][:new_device_items_attributes].nil?
-        format.html { render :action => 'new' }
-      elsif @rental.save
-        flash[:notice] = 'Der Vermietvorgang wurde erstellt.'
-        format.html { redirect_to @rental }
-        format.xml  { render :xml => @rental, :status => :created, :location => @rental }
-      else
+      if @rental.halted? or not @rental.save
+        flash[:notice] = t(@rental.halted_because, :scope => 'workflow.halted_because.rental')
         format.html { render :action => 'new' }
         format.xml  { render :xml => @rental.errors, :status => :unprocessable_entity }
+      else
+        flash[:notice] = t('controller.rentals.created')
+        format.html { redirect_to @rental }
+        format.xml  { render :xml => @rental, :status => :created, :location => @rental }
       end
     end
   end
@@ -246,6 +249,20 @@ class RentalsController < UserSpecificController
         item[:product_attributes][:device_attributes][:rental_price] ||= item[:unit_price]
         item[:product_attributes][:company_section_id] = current_user.company_section_id
         rental_attributes[:new_items_attributes] << item
+      end
+    end
+  end
+
+  def search_clients
+    if params[:cq].blank?
+      # use selected user id
+    elsif not params[:cq].blank?
+      clients = Client.matching(params[:cq]).all
+      case clients.count
+      when 0
+        flash[:notice] = t('controller.rentals.no clients found')
+      else
+        @clients = clients
       end
     end
   end

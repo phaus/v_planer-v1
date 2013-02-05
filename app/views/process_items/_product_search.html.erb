@@ -1,0 +1,28 @@
+<h3>Bestehendes Produkt suchen</h3>
+
+<div class="field input-append form-search">
+  <%= text_field_tag :pq, params[:pq], :class => 'search-field', :placeholder => 'Suchbegriff' %>
+  <button name="commit" value="search-product" class="btn">Produkt suchen</button>
+</div>
+
+<div id="autocomplete_product_choices">
+  <% if @products and @products.any? %>
+    <ul class="nav nav-tabs nav-stacked">
+      <% @products.each do |product| %>
+        <li>
+          <%= link_to highlight(product.name, params[:pq]), url_for(:process_item => {:product_id => product.id, :preview => true}) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div id="product_info">
+    <% if f.object.product %>
+      <fieldset>
+        <legend>Gewähltes Produkt</legend>
+        <%= f.object.product.name %><br>
+        <pre><%= f.object.product.description %></pre>
+      </fieldset>
+    <% end %>
+  </div>
+</div>

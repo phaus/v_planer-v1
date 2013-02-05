@@ -8,17 +8,19 @@
         <th>Kontakt</th>
         <th>Ansprechpartner</th>
         <th>Rabatt</th>
+        <th><span style="visibility: hidden">-- Aktionen --</span></th>
       </tr>
-      </thread>
+    </thread>
+
     <tbody>
       <% @clients.each do |client| %>
-        <tr class="<%= cycle 'odd', 'even' %>">
+        <tr>
           <td><%= client.client_no %></td>
           <td><%= link_to h(client.full_name), client %></td>
           <td><%= link_to h(client.company_name), client %></td>
           <td><%= mail_to h(client.email) %><br /><%=h client.phone %></td>
           <td><%=h client.contact_person.login %></td>
-          <td class="decimal"><%= sprintf('%.1f&nbsp;%', client.discount) %></td>
+          <td class="decimal"><%= np client.discount, 1, '%' %></td>
           <td>
             <% if may_edit_client?(client) %>
               <div class="btn-group">

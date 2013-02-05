@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Process:</b>
+  <%= @process_item.process_id %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%= @process_item.product_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @process_item.name %>
+</p>
+
+<p>
+  <b>Remarks:</b>
+  <%= @process_item.remarks %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @process_item.quantity %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%= @process_item.unit %>
+</p>
+
+<p>
+  <b>Cost calculation:</b>
+  <%= @process_item.cost_calculation_id %>
+</p>
+
+<p>
+  <b>Cost calculation type:</b>
+  <%= @process_item.cost_calculation_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_process_item_path(@process_item) %> |
+<%= link_to 'Back', process_items_path %>

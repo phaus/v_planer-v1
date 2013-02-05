@@ -53,7 +53,7 @@
     <%= link_to 'Leihschein anzeigen', rental_path(@rental:format => 'pdf', :class => 'pdf') %>
     <%= link_to 'Bearbeiten', edit_rental_path(@rental), :class => 'edit' %>
     <%= link_to 'Löschen', rental_path(@rental), :method => :delete, :confirm => 'wirklich löschen?', :class => 'delete' %>
-    <%= link_to 'Zurück zur Übersicht', rentals_path, :class => 'back' %>
+  <%= link_to 'Zurück zur Übersicht', rental.rental_processes_path, :class => 'back' %>
   </p>
 
   <p class="alternative_formats">

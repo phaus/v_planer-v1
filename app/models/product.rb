@@ -28,49 +28,7 @@ class Product < ActiveRecord::Base
       :selling_price,
       :to => :article
 
-  define_index do
-    indexes :code
-#     indexes :company_section_id
-    indexes :article_type
-    indexes article(:name),         :as => :name, :sortable => true
-    indexes article(:manufacturer), :as => :manufacturer
-    indexes article(:description),  :as => :description
-
-    has company_section_id,                                  :type => :integer
-    has article(:is_rentable),  :as => :article_is_rentable, :type => :boolean
-    has article(:is_sellable),  :as => :article_is_sellable, :type => :boolean
-    has categories(:id),        :as => :category_ids,        :type => :multi
-
-    set_property :delta => true
-  end
-
-  sphinx_scope :s_service do
-    {:conditions => {:article_type => 'Service'}}
-  end
-
-  sphinx_scope :s_device do
-    {:conditions => {:article_type => 'Device'}}
-  end
-
-  sphinx_scope :s_rentable do
-    {:conditions => {:article_type => 'Device'}, :with => {:article_is_rentable => true}}
-  end
-
-  sphinx_scope :s_sellable do
-    {:conditions => {:article_type => 'Device'}, :with => {:article_is_sellable => true}}
-  end
-
-  sphinx_scope :s_expense do
-    {:conditions => {:article_type => 'Expense'}}
-  end
-
-  sphinx_scope :s_for_company do |company|
-    {:with => {:company_section_id => company.section_ids }}
-  end
-
-  sphinx_scope :s_uncategorized do |company|
-    {:with => {:category_ids => []}}
-  end
+  scope :matching, lambda {|str| where([%q(CONCAT(products.name, '-', products.code, '-', products.description) REGEXP ?), str])}
 
   scope :available_between, lambda {|from_date, to_date|
     where [%q(products.article_id NOT IN (SELECT product_stock_entries.device_id FROM product_stock_entries
@@ -79,15 +37,6 @@ class Product < ActiveRecord::Base
               JOIN rentals          ON rentals.id = rental_periods.rental_id
               WHERE (rentals.end NOT BETWEEN ? AND ?) AND (rentals.begin  NOT BETWEEN ? AND ?))), from_date, to_date, from_date, to_date]
   }
-
-  # FIXME: somehow, the article ID gets interpreted as the product ID
-#   named_scope :rentable,
-#       :joins => %q{JOIN (SELECT devices.id AS articles.id, 'Device' AS articles.type FROM devices WHERE devices.rental_price_i IS NOT NULL) AS articles
-#                     ON articles.id=products.article_id AND articles.type=products.article_type}
-#
-#   named_scope :sellable,
-#       :joins => %q{JOIN (SELECT devices.id AS id, 'Device' AS type FROM devices WHERE devices.selling_price_i IS NOT NULL) AS articles
-#                     ON articles.id=products.article_id AND articles.type=products.article_type}
 
   scope :service, where(:article_type => 'Service')
 

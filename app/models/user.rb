@@ -43,4 +43,17 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.guest
+    User.new :login => 'guest', :forename => 'Gast', :surname => 'Benutzer'
+  end
+
+  protected
+
+  def presence_of_company_name_or_full_name
+    if self.full_name.blank?
+      errors.add 'Personenname darf nicht leer sein.'
+    end
+  end
+
+
 end

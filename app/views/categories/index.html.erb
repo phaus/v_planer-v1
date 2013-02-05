@@ -1,45 +1,45 @@
-<div class="container">
-  <div class="page-header">
-    <h1>Artikelkategorien <small><%= @categories.size %> gefunden</small></h1>
-  </div>
-  <div class="row">
-    <% if @categories.any? %>
-      <table class="table table table-condensed">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Produkte</th>
-            <th>Anmerkungen</th>
-            <th></th>
+<div class="page-header">
+  <h1>Artikelkategorien <small><%= @categories.size %> gefunden</small></h1>
+</div>
+
+<div class="row">
+  <% if @categories.any? %>
+    <table class="table table table-condensed">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Produkte</th>
+          <th>Anmerkungen</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @categories.each do |category| %>
+          <tr class="category" id="category_<%= category.id %>">
+            <td><%= link_to h(category.name), category, :title => 'Verfügbarkeit für Artikel in dieser Kategorie anzeigen' %></td>
+            <td class="decimal"><%= category.products.size %></td>
+            <td><%=h category.description %></td>
+            <td>
+              <div class="btn-group">
+                <%= link_to image_tag('icons_16/edit.png'), edit_category_path(category), :class => "btn" %>
+                <%= link_to image_tag('icons_16/editdelete.png'), category, :confirm => 'WIRKLICH löschen?', :method => :delete, :class => "btn" %>
+              </div>
+            </td>
           </tr>
-        </thead>
-        <tbody>
-          <% @categories.each do |category| %>
-            <tr class="category" id="category_<%= category.id %>">
-              <td><%= link_to h(category.name), category, :title => 'Verfügbarkeit für Artikel in dieser Kategorie anzeigen' %></td>
-              <td class="decimal"><%= category.products.size %></td>
-              <td><%=h category.description %></td>
-              <td>
-                <div class="btn-group">
-                  <%= link_to image_tag('icons_16/edit.png'), edit_category_path(category), :class => "btn" %>
-                  <%= link_to image_tag('icons_16/editdelete.png'), category, :confirm => 'WIRKLICH löschen?', :method => :delete, :class => "btn" %>
-                </div>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    <% else %>
-      <p>Noch keine Kategorien angelegt</p>
-    <% end %>
-  </div>
-  <div class="row">
-    <div class="well sidebar-nav">
-      <ul class="nav nav-list">
-        <li class="nav-header">Alternative Formate</li>
-        <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
-        <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
-      </ul>
-    </div>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>Noch keine Kategorien angelegt</p>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">Alternative Formate</li>
+      <li><%= link_to image_tag('icons_16/text-xml.png') + ' XML', :format => 'xml' %></li>
+      <li><%= link_to image_tag('icons_16/application-json.png') + ' JSON', :format => 'json' %></li>
+    </ul>
   </div>
 </div>

@@ -1,0 +1,24 @@
+<h2>Neue Position</h2>
+
+<%= form_for [@rental, @rental_period] do |f| %>
+  <div class="item product_id field">
+    <%= f.hidden_field :product_id %>
+    <%= f.hidden_field :id %>
+    <%= link_to h(f.object.product.full_name), f.object.product rescue f.object.inspect %><br />
+    <%= f.text_area :comments, :class => 'product_comments' %>
+    <%= f.hidden_field :_destroy, :class => '_delete' %>
+  </div>
+  <div class="decimal item available_count field">
+    <%= f.object.product.availability(f.object.from_date, f.object.to_date).collect(&:last).min rescue 0 %>
+  </div>
+  <div class="decimal item count field">
+    <%= f.text_field :count, :title => 'Menge/Anzahl' %>
+  </div>
+  <div class="decimal item unit_price field">
+    <%= f.text_field :unit_price, :title => 'Netto-Einzelpreis pro Tag für diesen Artikel' %>&thinsp;&euro;
+  </div>
+  <div class="decimal item price field">
+    <%= f.text_field :price, :title => 'Netto-Gesamtpreis pro Tag für diesen Artikel' %>&thinsp;&euro;
+  </div>
+<% end %>
+

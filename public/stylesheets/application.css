@@ -1,25 +1,54 @@
-.field {
+@charset "UTF-8";
+body {
+  padding-top: 120px;
+}
+body.public {
+  padding-top: 60px;
+}
+.actions {
   display: block;
-  float: left;
-  overflow: hidden;
-  width: 320px;
-  border: none;
   clear: both;
 }
-.field label {
+.field {
   display: block;
-  float: left;
+  /*   float: left; */
+
+  overflow: hidden;
+  /*   width: 320px; */
+
   border: none;
-  width: 100px;
-  text-align: right;
-  font-size: 11px;
-  margin: 5px 10px 4px 0px;
+  clear: both;
+  /*  &.date-select {
+    label + input {
+      width: 175px;
+    }
+
+    img {
+      margin: 8px 5px;
+    }
+  }*/
+
+  /*  label {
+    display: block;
+    float: left;
+    border: none;
+    width: 100px;
+    text-align: right;
+    font-size: 11px;
+    margin: 5px 10px 4px 0px;
+  }
+
+  label + input,
+  label + .input-value {
+    width: 200px;
+    float: left;
+    margin: 5px 0;
+  }*/
+
 }
-.field label + input,
-.field label + .input-value {
-  width: 200px;
-  float: left;
-  margin: 5px 0;
+.field .calendar-date-select {
+  color: #666;
+  background: #eeeeee url('images/icons_16/cal_select.png') 98% 50% no-repeat;
 }
 .field.unit-h label:after {
   content: ' [h]';
@@ -29,12 +58,12 @@
 .field.unit-h input {
   text-align: right;
 }
-.field.unit-chf label:after {
-  content: ' [CHF]';
+.field.unit-eur label:after {
+  content: ' [€]';
   color: #888;
 }
-.field.unit-chf .input-value,
-.field.unit-chf input {
+.field.unit-eur .input-value,
+.field.unit-eur input {
   text-align: right;
 }
 .field.unit-km label:after {
@@ -124,4 +153,56 @@
 .field.unit-percent .input-value,
 .field.unit-percent input {
   text-align: right;
+}
+body {
+  background-color: #FFFFFF;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+.footer {
+  background-color: #F5F5F5;
+  border-top: 1px solid #E5E5E5;
+  margin-top: 70px;
+  padding: 30px 0;
+  text-align: center;
+}
+.footer p {
+  color: #777777;
+  margin-bottom: 0;
+}
+.small_spinner {
+  height: 24px;
+}
+.form-signin {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin: 66px auto;
+  max-width: 300px;
+  padding: 19px 29px 29px;
+}
+td.decimal,
+td.money,
+.decimal input,
+.money input {
+  white-space: nowrap;
+  text-align: right;
+  width: 5em;
+}
+.money,
+.decimal {
+  width: 6em;
+  text-align: right;
+  vertical-align: top;
+  white-space: nowrap;
+}
+table.table th {
+  white-space: pre;
+}
+tr.total td {
+  border-bottom: 3px double #333;
 }

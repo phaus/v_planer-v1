@@ -103,3 +103,19 @@ function insert_new_item_in_process_table(search_input, li) {
   li.up('ul').remove();
 }
 
+document.on('dom:loaded', function() {
+  function initCalendarDateSelect(topleveElement) {
+    $(topleveElement).select('.calendar-date-select').each(function(element) {
+      element.writeAttribute('readonly');
+      element.on('click', function(event) {
+        return new CalendarDateSelect(event.element(), {popup: 'force', time: false, year_range: 10});
+      });
+    });
+  }
+  initCalendarDateSelect(document.body);
+
+  // reformat input fields with numerical values
+  $$('input[data-format]').each(function(element) {
+    Picos.reformatInput(element);
+  });
+});

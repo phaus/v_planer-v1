@@ -1,4 +1,8 @@
 VPlaner::Application.routes.draw do
+  mount VPlanerRental::Engine => '/rental', :as => 'rental'
+  mount VPlanerAdmin::Engine  => '/admin',  :as => 'admin'
+  mount VPlanerAudition::Engine  => '/audition'
+
   resources :default_texts
 
   resources :invoice_items
@@ -35,30 +39,15 @@ VPlaner::Application.routes.draw do
     end
   end
 
+  resources :commercial_processes do
+    resources :process_items
+  end
+
   resources :services
 
   resources :expenses
 
   resource :export, :controller => 'export'
-
-  resources :rentals do
-    collection do
-      get :open
-    end
-
-    member do
-      get :offer
-      get :packing_note
-      get :remarks
-      put :remarks
-      get :offer_confirmation
-    end
-    resources :rental_periods
-    resources :rental_periods, :as => :items
-    resources :device_items, :controller => :rental_periods
-    resources :service_items
-    resource :invoice
-  end
 
   resources :sellings do
     collection do
@@ -78,12 +67,6 @@ VPlaner::Application.routes.draw do
     resource :invoice
   end
 
-  resources :rental_periods do
-    collection do
-      get :calendar
-    end
-  end
-
   resources :devices do
     member  do
       get :availability
@@ -95,7 +78,6 @@ VPlaner::Application.routes.draw do
     collection do
       get :search
     end
-    resources :rental_periods
   end
 
   resources :categories do
@@ -111,14 +93,6 @@ VPlaner::Application.routes.draw do
         get :search
       end
     end
-  end
-
-  resource :admin, :controller => 'admin'
-
-  namespace :admin do
-    resources :companies
-    resources :company_sections
-    resources :users
   end
 
   root :to => 'account#show'
